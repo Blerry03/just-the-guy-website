@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Just The Guy Gutters & Exteriors | Gutters & Exterior Services in Mid-Michigan</title>
+
+<meta
+    name="description"
+    content="Just The Guy Gutters & Exteriors provides seamless gutters, gutter screens, gutter repairs, roofing and exterior services throughout Mid-Michigan."
+>
+
+<style>
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+:root {
+    --blue: #1762B5;
+    --dark-blue: #06285C;
+    --deep-blue: #031B40;
+    --green: #2C9622;
+    --green-dark: #237A1B;
+    --green-light: #EAF6E8;
+    --white: #FFFFFF;
+    --off-white: #F7F9FC;
+    --light-gray: #EEF2F6;
+    --gray: #667085;
+    --dark: #172033;
+    --border: #DCE3EA;
+    --shadow: 0 18px 50px rgba(6,40,92,.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    background: white;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.top-bar {
+    background: var(--deep-blue);
+    color: white;
+    font-size: 13px;
+}
+
+.top-bar-inner {
+    min-height: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-bar a {
+    font-weight: 800;
+}
+
+.top-bar a:hover {
+    color: #A9E9A1;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo img {
+    width: 205px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--dark-blue);
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+.nav-quote {
+    background: var(--green);
+    color: white !important;
+    padding: 12px 18px;
+    border-radius: 7px;
+}
+
+.nav-quote:hover {
+    background: var(--green-dark);
+}
+
+.mobile-menu {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 30px;
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,27,64,.96) 0%,
+            rgba(3,27,64,.82) 45%,
+            rgba(3,27,64,.45) 100%
+        ),
+        url("images/project-1.jpg") center/cover no-repeat;
+    transition: background-image .7s ease;
+}
+
+.hero-inner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 450px;
+    gap: 60px;
+    align-items: center;
+    padding: 70px 0;
+}
+
+.hero-content {
+    color: white;
+}
+
+.hero-eyebrow {
+    display: inline-block;
+    color: #B8ECAE;
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: clamp(44px, 6vw, 74px);
+    line-height: 1.02;
+    max-width: 750px;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: #76D86B;
+}
+
+.hero-text {
+    color: #E5ECF6;
+    font-size: 19px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 24px;
+    border-radius: 7px;
+    font-weight: 900;
+    transition: .2s ease;
+}
+
+.button-green {
+    background: var(--green);
+    color: white;
+}
+
+.button-green:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.button-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+.button-outline:hover {
+    background: white;
+    color: var(--dark-blue);
+}
+
+.hero-trust {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    color: #E5ECF6;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hero-trust span::before {
+    content: "✓";
+    color: #76D86B;
+    font-weight: 900;
+    margin-right: 7px;
+}
+
+
+/* =========================================================
+   QUOTE FORM
+   ========================================================= */
+
+.quote-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.3);
+}
+
+.quote-card h2 {
+    color: var(--dark-blue);
+    font-size: 29px;
+    margin-bottom: 6px;
+}
+
+.quote-card-intro {
+    color: var(--gray);
+    margin-bottom: 22px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.required {
+    color: #C62828;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 11px 12px;
+    background: white;
+    color: var(--dark);
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(23,98,181,.1);
+}
+
+.form-group textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+.form-note {
+    color: var(--gray);
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.form-submit {
+    width: 100%;
+    border: 0;
+    background: var(--green);
+    color: white;
+    padding: 14px;
+    border-radius: 7px;
+    font-weight: 900;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.form-submit:hover {
+    background: var(--green-dark);
+}
+
+
+/* =========================================================
+   HERO CAROUSEL CONTROLS
+   ========================================================= */
+
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.4);
+    background: rgba(0,0,0,.2);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.hero-arrow:hover {
+    background: rgba(255,255,255,.2);
+}
+
+.hero-arrow.left {
+    left: 20px;
+}
+
+.hero-arrow.right {
+    right: 20px;
+}
+
+.hero-dots {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 5;
+}
+
+.hero-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.5);
+    border: 0;
+    cursor: pointer;
+}
+
+.hero-dot.active {
+    background: white;
+    transform: scale(1.3);
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.section {
+    padding: 90px 0;
+}
+
+.section-light {
+    background: var(--off-white);
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+.section-eyebrow {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    color: var(--dark-blue);
+    font-size: clamp(35px, 4vw, 52px);
+    line-height: 1.08;
+    margin: 8px 0 14px;
+}
+
+.section-heading p {
+    color: var(--gray);
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(6,40,92,.06);
+    transition: .2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: var(--green-light);
+    display: grid;
+    place-items: center;
+    color: var(--green);
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    color: var(--dark-blue);
+    font-size: 22px;
+    margin-bottom: 9px;
+}
+
+.service-card p {
+    color: var(--gray);
+}
+
+.service-card a {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--green);
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   WHY CHOOSE US
+   ========================================================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.feature {
+    padding: 25px;
+    border-left: 4px solid var(--green);
+    background: white;
+    box-shadow: 0 8px 25px rgba(6,40,92,.06);
+}
+
+.feature h3 {
+    color: var(--dark-blue);
+    margin-bottom: 7px;
+}
+
+.feature p {
+    color: var(--gray);
+}
+
+
+/* =========================================================
+   OUR WORK
+   ========================================================= */
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.work-image {
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--light-gray);
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.work-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   SERVICE AREA MAP
+   ========================================================= */
+
+.area-section {
+    background: var(--deep-blue);
+    color: white;
+}
+
+.area-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.area-section .section-eyebrow {
+    color: #76D86B;
+}
+
+.area-section h2 {
+    color: white;
+}
+
+.area-section p {
+    color: #D7E2F0;
+}
+
+.area-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.area-list div {
+    color: white;
+    font-weight: 700;
+}
+
+.area-list div::before {
+    content: "✓";
+    color: #76D86B;
+    margin-right: 8px;
+}
+
+.map-box {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 4px solid rgba(255,255,255,.12);
+    min-height: 480px;
+    background: #dfe8ee;
+}
+
+#serviceMap {
+    width: 100%;
+    height: 480px;
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.cta {
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--dark-blue)
+        );
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: clamp(34px,4vw,52px);
+    margin-bottom: 12px;
+}
+
+.cta p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #E2EAF5;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: #02142E;
+    color: white;
+    padding: 55px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 40px;
+}
+
+footer h3 {
+    margin-bottom: 12px;
+}
+
+footer p,
+footer a {
+    color: #B9C7D9;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.12);
+    padding-top: 20px;
+    color: #91A2B8;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    nav {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .quote-card {
+        max-width: 650px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .area-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .top-bar-hours {
+        display: none;
+    }
+
+    .top-bar-inner {
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 165px;
+    }
+
+    .hero-inner {
+        padding: 55px 0;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .quote-card {
+        padding: 22px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .area-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-arrow {
+        display: none;
+    }
+}
+
+</style>
+
+
+<!-- Leaflet map -->
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP BAR
+     ========================================================= -->
+
+<div class="top-bar">
+
+    <div class="container top-bar-inner">
+
+        <div>
+            Family Owned • Serving Mid-Michigan
+        </div>
+
+        <div class="top-bar-hours">
+            Monday–Friday • 7:00 AM–7:00 PM
+        </div>
+
+        <a href="tel:5178858953">
+            Call (517) 885-8953
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#" class="logo">
+
+            <img
+                src="images/logo.png"
+                alt="Just The Guy Gutters & Exteriors"
+            >
+
+        </a>
+
+
+        <nav>
+
+            <a href="#services">Services</a>
+
+            <a href="#work">Our Work</a>
+
+            <a href="#service-area">Service Area</a>
+
+            <a href="#quote">Get A Quote</a>
+
+            <a
+                href="tel:5178858953"
+                class="nav-quote"
+            >
+                Call Now
+            </a>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu"
+            onclick="toggleMenu()"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO + QUOTE FORM
+     ========================================================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <button
+        class="hero-arrow left"
+        onclick="previousHero()"
+        aria-label="Previous photo"
+    >
+        ‹
+    </button>
+
+    <button
+        class="hero-arrow right"
+        onclick="nextHero()"
+        aria-label="Next photo"
+    >
+        ›
+    </button>
+
+
+    <div class="container hero-inner">
+
+
+        <!-- HERO TEXT -->
+
+        <div class="hero-content">
+
+            <span class="hero-eyebrow">
+                Seamless Gutters • Gutter Screens • Exterior Services
+            </span>
+
+            <h1>
+                Protect Your Property
+                <span>With Professional Gutters.</span>
+            </h1>
+
+            <p class="hero-text">
+                Just The Guy Gutters & Exteriors provides
+                5-inch and 6-inch seamless gutters, gutter
+                screens, repairs and exterior services
+                throughout Mid-Michigan.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#quote"
+                    class="button button-green"
+                >
+                    Request A Free Quote
+                </a>
+
+                <a
+                    href="tel:5178858953"
+                    class="button button-outline"
+                >
+                    Call (517) 885-8953
+                </a>
+
+            </div>
+
+
+            <div class="hero-trust">
+
+                <span>5" & 6" Seamless Gutters</span>
+
+                <span>Gutter Screens</span>
+
+                <span>Free Estimates</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUOTE FORM -->
+
+        <div
+            class="quote-card"
+            id="quote"
+        >
+
+            <h2>
+                Get A Free Quote
+            </h2>
+
+            <p class="quote-card-intro">
+                Tell us about your project and we'll get back to you.
+            </p>
+
+
+            <form
+                action="https://formsubmit.co/justtheguyguttersandexterior@gmail.com"
+                method="POST"
+                enctype="multipart/form-data"
+            >
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Just The Guy Website Quote Request"
+                >
+
+                <input
+                    type="hidden"
+                    name="_template"
+                    value="table"
+                >
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="true"
+                >
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            First Name <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="First Name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Last Name <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="Last Name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Email <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            name="Email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            name="Phone"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Property Address
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="Property Address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Service Needed
+                            <span class="required">*</span>
+                        </label>
+
+                        <select
+                            name="Service Needed"
+                            required
+                        >
+
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option>
+                                Gutter Installation
+                            </option>
+
+                            <option>
+                                Gutter Screens / Guards
+                            </option>
+
+                            <option>
+                                Gutter Repair
+                            </option>
+
+                            <option>
+                                Gutter Cleaning
+                            </option>
+
+                            <option>
+                                Roofing
+                            </option>
+
+                            <option>
+                                Siding
+                            </option>
+
+                            <option>
+                                Other Exterior Work
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Tell Us About Your Project
+                        </label>
+
+                        <textarea
+                            name="Project Details"
+                            placeholder="Tell us what you need help with..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <button
+                            type="submit"
+                            class="form-submit"
+                        >
+                            Request My Free Quote
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <p class="form-note">
+                    We'll use the information you provide to contact you about your project.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-dots">
+
+        <button
+            class="hero-dot active"
+            onclick="showHero(0)"
+        ></button>
+
+        <button
+            class="hero-dot"
+            onclick="showHero(1)"
+        ></button>
+
+        <button
+            class="hero-dot"
+            onclick="showHero(2)"
+        ></button>
+
+        <button
+            class="hero-dot"
+            onclick="showHero(3)"
+        ></button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICES
+     ========================================================= -->
+
+<section
+    class="section section-light"
+    id="services"
+>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-eyebrow">
+                What We Do
+            </span>
+
+            <h2>
+                Exterior Services Built Around Your Home
+            </h2>
+
+            <p>
+                From seamless gutters to exterior repairs,
+                we help protect your property from the elements.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">⌁</div>
+
+                <h3>
+                    Seamless Gutters
+                </h3>
+
+                <p>
+                    Professional 5-inch and 6-inch seamless
+                    gutter installation designed around your home.
+                </p>
+
+                <a href="gutters.html">
+                    Learn More →
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">✓</div>
+
+                <h3>
+                    Gutter Screens
+                </h3>
+
+                <p>
+                    Help keep leaves and debris out of your
+                    gutters with gutter screen solutions.
+                </p>
+
+                <a href="gutter-guards.html">
+                    Learn More →
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">↻</div>
+
+                <h3>
+                    Gutter Repair
+                </h3>
+
+                <p>
+                    Repairs for damaged gutters, leaks,
+                    corners, downspouts and other problems.
+                </p>
+
+                <a href="repairs.html">
+                    Learn More →
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">⌂</div>
+
+                <h3>
+                    Roofing
+                </h3>
+
+                <p>
+                    Roofing repairs and exterior roofing
+                    services for residential properties.
+                </p>
+
+                <a href="roofing.html">
+                    Learn More →
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">▤</div>
+
+                <h3>
+                    Siding
+                </h3>
+
+                <p>
+                    Exterior siding repairs and related
+                    work to help keep your home protected.
+                </p>
+
+                <a href="siding.html">
+                    Learn More →
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">+</div>
+
+                <h3>
+                    Exterior Services
+                </h3>
+
+                <p>
+                    Need something else done to your exterior?
+                    Contact us and tell us what you need.
+                </p>
+
+                <a href="#quote">
+                    Request A Quote →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHY CHOOSE US
+     ========================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-eyebrow">
+                Why Just The Guy
+            </span>
+
+            <h2>
+                Local. Reliable. Focused on Your Home.
+            </h2>
+
+        </div>
+
+
+        <div class="features">
+
+
+            <div class="feature">
+
+                <h3>
+                    Family Owned
+                </h3>
+
+                <p>
+                    We're a local family-owned business serving
+                    homeowners throughout Mid-Michigan.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>
+                    Free Estimates
+                </h3>
+
+                <p>
+                    Tell us about your project and we'll work
+                    with you to determine what your property needs.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>
+                    Exterior Protection
+                </h3>
+
+                <p>
+                    Our work is focused on helping protect your
+                    home from water and exterior damage.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     OUR WORK
+     ========================================================= -->
+
+<section
+    class="section section-light"
+    id="work"
+>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-eyebrow">
+                Our Work
+            </span>
+
+            <h2>
+                Recent Projects
+            </h2>
+
+            <p>
+                A look at some of the exterior work we've completed.
+            </p>
+
+        </div>
+
+
+        <div class="work-grid">
+
+            <div class="work-image">
+                <img
+                    src="images/project-1.jpg"
+                    alt="Just The Guy exterior project"
+                >
+            </div>
+
+            <div class="work-image">
+                <img
+                    src="images/project-2.jpg"
+                    alt="Just The Guy gutter project"
+                >
+            </div>
+
+            <div class="work-image">
+                <img
+                    src="images/project-3.jpg"
+                    alt="Just The Guy exterior work"
+                >
+            </div>
+
+            <div class="work-image">
+                <img
+                    src="images/project-4.jpg"
+                    alt="Just The Guy completed project"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICE AREA
+     ========================================================= -->
+
+<section
+    class="section area-section"
+    id="service-area"
+>
+
+    <div class="container area-grid">
+
+
+        <div>
+
+            <span class="section-eyebrow">
+                Service Area
+            </span>
+
+            <div class="section-heading">
+
+                <h2>
+                    Proudly Serving Mid-Michigan
+                </h2>
+
+                <p>
+                    We serve homeowners across Mid-Michigan,
+                    including the communities shown below.
+                </p>
+
+            </div>
+
+
+            <div class="area-list">
+
+                <div>Durand</div>
+                <div>Owosso</div>
+                <div>Corunna</div>
+                <div>Perry</div>
+                <div>Morrice</div>
+                <div>Laingsburg</div>
+                <div>Linden</div>
+                <div>Fenton</div>
+                <div>Lansing</div>
+                <div>East Lansing</div>
+                <div>Saginaw</div>
+                <div>Haslett</div>
+                <div>Swartz Creek</div>
+                <div>Flint</div>
+                <div>Midland</div>
+
+            </div>
+
+        </div>
+
+
+        <div class="map-box">
+
+            <div id="serviceMap"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+     ========================================================= -->
+
+<section class="section cta">
+
+    <div class="container">
+
+        <h2>
+            Ready to Protect Your Home?
+        </h2>
+
+        <p>
+            Tell us about your project and request your
+            free estimate today.
+        </p>
+
+        <a
+            href="#quote"
+            class="button button-green"
+        >
+            Get A Free Quote
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+
+        <div>
+
+            <img
+                src="images/logo.png"
+                alt="Just The Guy Gutters & Exteriors"
+                style="width:210px; margin-bottom:15px;"
+            >
+
+            <p>
+                Seamless gutters, gutter screens, repairs
+                and exterior services throughout Mid-Michigan.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Services
+            </h3>
+
+            <div class="footer-links">
+
+                <a href="gutters.html">
+                    Gutter Installation
+                </a>
+
+                <a href="gutter-guards.html">
+                    Gutter Screens
+                </a>
+
+                <a href="repairs.html">
+                    Gutter Repair
+                </a>
+
+                <a href="roofing.html">
+                    Roofing
+                </a>
+
+                <a href="siding.html">
+                    Siding
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <div class="footer-links">
+
+                <a href="tel:5178858953">
+                    (517) 885-8953
+                </a>
+
+                <a href="#quote">
+                    Request A Free Quote
+                </a>
+
+                <a href="#service-area">
+                    Service Area
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        © 2026 Just The Guy Gutters & Exteriors.
+        All rights reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     LEAFLET MAP
+     ========================================================= -->
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+<script>
+
+/* =========================================================
+   HERO PHOTO CAROUSEL
+   ========================================================= */
+
+const heroPhotos = [
+    "images/project-1.jpg",
+    "images/project-2.jpg",
+    "images/project-3.jpg",
+    "images/project-4.jpg"
+];
+
+let currentHero = 0;
+
+
+function showHero(index) {
+
+    currentHero = index;
+
+    const hero = document.querySelector(".hero");
+
+    hero.style.backgroundImage =
+        `linear-gradient(
+            90deg,
+            rgba(3,27,64,.96) 0%,
+            rgba(3,27,64,.82) 45%,
+            rgba(3,27,64,.45) 100%
+        ),
+        url("${heroPhotos[index]}")`;
+
+    document.querySelectorAll(".hero-dot").forEach(
+        (dot, i) => {
+            dot.classList.toggle(
+                "active",
+                i === index
+            );
+        }
+    );
+}
+
+
+function nextHero() {
+
+    currentHero =
+        (currentHero + 1) %
+        heroPhotos.length;
+
+    showHero(currentHero);
+}
+
+
+function previousHero() {
+
+    currentHero =
+        (currentHero - 1 + heroPhotos.length) %
+        heroPhotos.length;
+
+    showHero(currentHero);
+}
+
+
+/* Automatically change photo */
+
+setInterval(
+    nextHero,
+    6000
+);
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+function toggleMenu() {
+
+    const nav = document.querySelector("nav");
+
+    if (nav.style.display === "flex") {
+
+        nav.style.display = "";
+
+    } else {
+
+        nav.style.display = "flex";
+
+        nav.style.position = "absolute";
+        nav.style.top = "82px";
+        nav.style.left = "0";
+        nav.style.right = "0";
+        nav.style.background = "white";
+        nav.style.padding = "20px";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "stretch";
+        nav.style.boxShadow =
+            "0 15px 30px rgba(0,0,0,.12)";
+
+    }
+
+}
+
+
+/* =========================================================
+   SERVICE AREA MAP
+   ========================================================= */
+
+const map =
+    L.map("serviceMap").setView(
+        [42.95, -84.05],
+        9
+    );
+
+
+L.tileLayer(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {
+        attribution:
+            '&copy; OpenStreetMap contributors'
+    }
+).addTo(map);
+
+
+/*
+   Approximate service-area communities.
+   These markers show the communities you listed.
+*/
+
+const serviceCities = [
+
+    ["Durand", 42.912, -83.984],
+    ["Owosso", 43.000, -84.176],
+    ["Corunna", 42.981, -84.118],
+    ["Perry", 42.826, -84.219],
+    ["Morrice", 42.839, -84.177],
+    ["Laingsburg", 42.890, -84.351],
+    ["Linden", 42.814, -83.783],
+    ["Fenton", 42.797, -83.704],
+    ["Lansing", 42.7336, -84.5553],
+    ["East Lansing", 42.7369, -84.4839],
+    ["Saginaw", 43.4195, -83.9508],
+    ["Haslett", 42.7469, -84.4013],
+    ["Swartz Creek", 42.9570, -83.8302],
+    ["Flint", 43.0125, -83.6875],
+    ["Midland", 43.6156, -84.2472]
+
+];
+
+
+serviceCities.forEach(
+    city => {
+
+        L.marker([
+            city[1],
+            city[2]
+        ])
+        .addTo(map)
+        .bindPopup(
+            `<strong>${city[0]}</strong><br>
+             Just The Guy Gutters & Exteriors`
+        );
+
+    }
+);
+
+
+/*
+   Approximate shaded service area.
+*/
+
+const serviceArea = [
+
+    [42.65, -84.60],
+    [42.65, -83.65],
+    [43.70, -83.65],
+    [43.70, -84.45],
+    [43.40, -84.65],
+    [42.65, -84.60]
+
+];
+
+
+L.polygon(
+    serviceArea,
+    {
+        color: "#2C9622",
+        fillColor: "#2C9622",
+        fillOpacity: 0.12,
+        weight: 2
+    }
+).addTo(map);
+
+
+/* =========================================================
+   END
+   ========================================================= */
+
+</script>
+
+</body>
+</html>
