@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -173,14 +174,17 @@ nav a:hover {
     display: flex;
     align-items: center;
     overflow: hidden;
+
     background:
         linear-gradient(
             90deg,
             rgba(3,27,64,.96) 0%,
             rgba(3,27,64,.82) 45%,
-            rgba(3,27,64,.45) 100%
+            rgba(3,27,64,.42) 100%
         ),
-        url("images/project-1.jpg") center/cover no-repeat;
+        url("images/project-01.webp")
+        center/cover no-repeat;
+
     transition: background-image .7s ease;
 }
 
@@ -377,21 +381,26 @@ nav a:hover {
 
 
 /* =========================================================
-   HERO CAROUSEL CONTROLS
+   HERO CAROUSEL
    ========================================================= */
 
 .hero-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
     width: 45px;
     height: 45px;
+
     border-radius: 50%;
     border: 1px solid rgba(255,255,255,.4);
+
     background: rgba(0,0,0,.2);
     color: white;
+
     font-size: 25px;
     cursor: pointer;
+
     z-index: 5;
 }
 
@@ -411,18 +420,24 @@ nav a:hover {
     position: absolute;
     bottom: 22px;
     left: 50%;
+
     transform: translateX(-50%);
+
     display: flex;
     gap: 8px;
+
     z-index: 5;
 }
 
 .hero-dot {
     width: 9px;
     height: 9px;
+
     border-radius: 50%;
+
     background: rgba(255,255,255,.5);
     border: 0;
+
     cursor: pointer;
 }
 
@@ -497,12 +512,17 @@ nav a:hover {
 .service-icon {
     width: 52px;
     height: 52px;
+
     border-radius: 12px;
+
     background: var(--green-light);
+
     display: grid;
     place-items: center;
+
     color: var(--green);
     font-size: 25px;
+
     margin-bottom: 18px;
 }
 
@@ -519,6 +539,7 @@ nav a:hover {
 .service-card a {
     display: inline-block;
     margin-top: 18px;
+
     color: var(--green);
     font-weight: 900;
 }
@@ -536,8 +557,11 @@ nav a:hover {
 
 .feature {
     padding: 25px;
+
     border-left: 4px solid var(--green);
+
     background: white;
+
     box-shadow: 0 8px 25px rgba(6,40,92,.06);
 }
 
@@ -557,26 +581,46 @@ nav a:hover {
 
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 15px;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
 }
 
 .work-image {
     height: 280px;
-    border-radius: 12px;
+
+    border-radius: 14px;
+
     overflow: hidden;
+
     background: var(--light-gray);
+
+    position: relative;
 }
 
 .work-image img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
-    transition: transform .4s ease;
+
+    transition:
+        transform .45s ease,
+        filter .3s ease;
 }
 
 .work-image:hover img {
-    transform: scale(1.05);
+    transform: scale(1.06);
+}
+
+
+/* Make some gallery images larger */
+
+.work-image.large {
+    grid-column: span 2;
+    height: 360px;
 }
 
 
@@ -591,8 +635,12 @@ nav a:hover {
 
 .area-grid {
     display: grid;
-    grid-template-columns: 1fr 1.15fr;
+
+    grid-template-columns:
+        1fr 1.15fr;
+
     gap: 50px;
+
     align-items: center;
 }
 
@@ -610,8 +658,12 @@ nav a:hover {
 
 .area-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap: 10px;
+
     margin-top: 25px;
 }
 
@@ -622,15 +674,22 @@ nav a:hover {
 
 .area-list div::before {
     content: "✓";
+
     color: #76D86B;
+
     margin-right: 8px;
 }
 
 .map-box {
     border-radius: 16px;
+
     overflow: hidden;
-    border: 4px solid rgba(255,255,255,.12);
+
+    border:
+        4px solid rgba(255,255,255,.12);
+
     min-height: 480px;
+
     background: #dfe8ee;
 }
 
@@ -651,7 +710,9 @@ nav a:hover {
             var(--blue),
             var(--dark-blue)
         );
+
     color: white;
+
     text-align: center;
 }
 
@@ -662,7 +723,10 @@ nav a:hover {
 
 .cta p {
     max-width: 650px;
-    margin: 0 auto 25px;
+
+    margin:
+        0 auto 25px;
+
     color: #E2EAF5;
 }
 
@@ -673,14 +737,21 @@ nav a:hover {
 
 footer {
     background: #02142E;
+
     color: white;
-    padding: 55px 0 25px;
+
+    padding:
+        55px 0 25px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr;
+
     gap: 50px;
+
     padding-bottom: 40px;
 }
 
@@ -699,14 +770,20 @@ footer a:hover {
 
 .footer-links {
     display: flex;
+
     flex-direction: column;
+
     gap: 7px;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,.12);
+    border-top:
+        1px solid rgba(255,255,255,.12);
+
     padding-top: 20px;
+
     color: #91A2B8;
+
     font-size: 13px;
 }
 
@@ -750,6 +827,10 @@ footer a:hover {
         grid-template-columns: 1fr 1fr;
     }
 
+    .work-image.large {
+        grid-column: span 2;
+    }
+
     .area-grid {
         grid-template-columns: 1fr;
     }
@@ -758,6 +839,7 @@ footer a:hover {
         grid-template-columns: 1fr 1fr;
     }
 }
+
 
 @media (max-width: 600px) {
 
@@ -813,6 +895,12 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
+    .work-image,
+    .work-image.large {
+        grid-column: span 1;
+        height: 270px;
+    }
+
     .area-list {
         grid-template-columns: 1fr;
     }
@@ -833,7 +921,8 @@ footer a:hover {
 </style>
 
 
-<!-- Leaflet map -->
+<!-- LEAFLET MAP -->
+
 <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -890,13 +979,21 @@ footer a:hover {
 
         <nav>
 
-            <a href="#services">Services</a>
+            <a href="#services">
+                Services
+            </a>
 
-            <a href="#work">Our Work</a>
+            <a href="#work">
+                Our Work
+            </a>
 
-            <a href="#service-area">Service Area</a>
+            <a href="#service-area">
+                Service Area
+            </a>
 
-            <a href="#quote">Get A Quote</a>
+            <a href="#quote">
+                Get A Quote
+            </a>
 
             <a
                 href="tel:5178858953"
@@ -922,12 +1019,16 @@ footer a:hover {
 
 
 <!-- =========================================================
-     HERO + QUOTE FORM
+     HERO
      ========================================================= -->
 
 <main>
 
-<section class="hero" id="home">
+<section
+    class="hero"
+    id="home"
+>
+
 
     <button
         class="hero-arrow left"
@@ -936,6 +1037,7 @@ footer a:hover {
     >
         ‹
     </button>
+
 
     <button
         class="hero-arrow right"
@@ -957,16 +1059,25 @@ footer a:hover {
                 Seamless Gutters • Gutter Screens • Exterior Services
             </span>
 
+
             <h1>
+
                 Protect Your Property
-                <span>With Professional Gutters.</span>
+
+                <span>
+                    With Professional Gutters.
+                </span>
+
             </h1>
 
+
             <p class="hero-text">
+
                 Just The Guy Gutters & Exteriors provides
                 5-inch and 6-inch seamless gutters, gutter
                 screens, repairs and exterior services
                 throughout Mid-Michigan.
+
             </p>
 
 
@@ -978,6 +1089,7 @@ footer a:hover {
                 >
                     Request A Free Quote
                 </a>
+
 
                 <a
                     href="tel:5178858953"
@@ -991,11 +1103,17 @@ footer a:hover {
 
             <div class="hero-trust">
 
-                <span>5" & 6" Seamless Gutters</span>
+                <span>
+                    5" & 6" Seamless Gutters
+                </span>
 
-                <span>Gutter Screens</span>
+                <span>
+                    Gutter Screens
+                </span>
 
-                <span>Free Estimates</span>
+                <span>
+                    Free Estimates
+                </span>
 
             </div>
 
@@ -1013,6 +1131,7 @@ footer a:hover {
                 Get A Free Quote
             </h2>
 
+
             <p class="quote-card-intro">
                 Tell us about your project and we'll get back to you.
             </p>
@@ -1021,7 +1140,6 @@ footer a:hover {
             <form
                 action="https://formsubmit.co/justtheguyguttersandexterior@gmail.com"
                 method="POST"
-                enctype="multipart/form-data"
             >
 
                 <input
@@ -1049,7 +1167,8 @@ footer a:hover {
                     <div class="form-group">
 
                         <label>
-                            First Name <span class="required">*</span>
+                            First Name
+                            <span class="required">*</span>
                         </label>
 
                         <input
@@ -1064,7 +1183,8 @@ footer a:hover {
                     <div class="form-group">
 
                         <label>
-                            Last Name <span class="required">*</span>
+                            Last Name
+                            <span class="required">*</span>
                         </label>
 
                         <input
@@ -1079,7 +1199,8 @@ footer a:hover {
                     <div class="form-group">
 
                         <label>
-                            Email <span class="required">*</span>
+                            Email
+                            <span class="required">*</span>
                         </label>
 
                         <input
@@ -1094,7 +1215,8 @@ footer a:hover {
                     <div class="form-group">
 
                         <label>
-                            Phone <span class="required">*</span>
+                            Phone
+                            <span class="required">*</span>
                         </label>
 
                         <input
@@ -1210,6 +1332,8 @@ footer a:hover {
     </div>
 
 
+    <!-- HERO DOTS -->
+
     <div class="hero-dots">
 
         <button
@@ -1232,6 +1356,16 @@ footer a:hover {
             onclick="showHero(3)"
         ></button>
 
+        <button
+            class="hero-dot"
+            onclick="showHero(4)"
+        ></button>
+
+        <button
+            class="hero-dot"
+            onclick="showHero(5)"
+        ></button>
+
     </div>
 
 </section>
@@ -1247,6 +1381,7 @@ footer a:hover {
 >
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -1271,7 +1406,9 @@ footer a:hover {
 
             <div class="service-card">
 
-                <div class="service-icon">⌁</div>
+                <div class="service-icon">
+                    ⌁
+                </div>
 
                 <h3>
                     Seamless Gutters
@@ -1291,7 +1428,9 @@ footer a:hover {
 
             <div class="service-card">
 
-                <div class="service-icon">✓</div>
+                <div class="service-icon">
+                    ✓
+                </div>
 
                 <h3>
                     Gutter Screens
@@ -1311,7 +1450,9 @@ footer a:hover {
 
             <div class="service-card">
 
-                <div class="service-icon">↻</div>
+                <div class="service-icon">
+                    ↻
+                </div>
 
                 <h3>
                     Gutter Repair
@@ -1331,7 +1472,9 @@ footer a:hover {
 
             <div class="service-card">
 
-                <div class="service-icon">⌂</div>
+                <div class="service-icon">
+                    ⌂
+                </div>
 
                 <h3>
                     Roofing
@@ -1351,7 +1494,9 @@ footer a:hover {
 
             <div class="service-card">
 
-                <div class="service-icon">▤</div>
+                <div class="service-icon">
+                    ▤
+                </div>
 
                 <h3>
                     Siding
@@ -1371,7 +1516,9 @@ footer a:hover {
 
             <div class="service-card">
 
-                <div class="service-icon">+</div>
+                <div class="service-icon">
+                    +
+                </div>
 
                 <h3>
                     Exterior Services
@@ -1402,6 +1549,7 @@ footer a:hover {
 <section class="section">
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -1478,6 +1626,7 @@ footer a:hover {
 
     <div class="container">
 
+
         <div class="section-heading">
 
             <span class="section-eyebrow">
@@ -1495,34 +1644,228 @@ footer a:hover {
         </div>
 
 
+        <!-- PHOTO GALLERY -->
+
         <div class="work-grid">
 
-            <div class="work-image">
+
+            <div class="work-image large">
+
                 <img
-                    src="images/project-1.jpg"
-                    alt="Just The Guy exterior project"
+                    src="images/project-01.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
                 >
+
             </div>
 
-            <div class="work-image">
-                <img
-                    src="images/project-2.jpg"
-                    alt="Just The Guy gutter project"
-                >
-            </div>
 
             <div class="work-image">
+
                 <img
-                    src="images/project-3.jpg"
-                    alt="Just The Guy exterior work"
+                    src="images/project-02.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
                 >
+
             </div>
 
+
             <div class="work-image">
+
                 <img
-                    src="images/project-4.jpg"
-                    alt="Just The Guy completed project"
+                    src="images/project-03.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
                 >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-04.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image large">
+
+                <img
+                    src="images/project-05.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-06.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-07.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-08.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-09.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image large">
+
+                <img
+                    src="images/project-10.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-11.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-12.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-13.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-14.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image large">
+
+                <img
+                    src="images/project-15.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-16.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-17.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-18.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image">
+
+                <img
+                    src="images/project-19.webp"
+                    alt="Just The Guy Gutters & Exteriors project"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="work-image large">
+
+                <img
+                    src="images/team-photo.webp"
+                    alt="Just The Guy Gutters & Exteriors team"
+                    loading="lazy"
+                >
+
             </div>
 
         </div>
@@ -1549,6 +1892,7 @@ footer a:hover {
             <span class="section-eyebrow">
                 Service Area
             </span>
+
 
             <div class="section-heading">
 
@@ -1737,12 +2081,22 @@ footer a:hover {
    HERO PHOTO CAROUSEL
    ========================================================= */
 
+/*
+   These are now the actual optimized photos
+   we prepared for your website.
+*/
+
 const heroPhotos = [
-    "images/project-1.jpg",
-    "images/project-2.jpg",
-    "images/project-3.jpg",
-    "images/project-4.jpg"
+
+    "images/project-01.webp",
+    "images/project-02.webp",
+    "images/project-03.webp",
+    "images/project-04.webp",
+    "images/project-05.webp",
+    "images/project-06.webp"
+
 ];
+
 
 let currentHero = 0;
 
@@ -1751,25 +2105,33 @@ function showHero(index) {
 
     currentHero = index;
 
-    const hero = document.querySelector(".hero");
+    const hero =
+        document.querySelector(".hero");
+
 
     hero.style.backgroundImage =
         `linear-gradient(
             90deg,
             rgba(3,27,64,.96) 0%,
             rgba(3,27,64,.82) 45%,
-            rgba(3,27,64,.45) 100%
+            rgba(3,27,64,.42) 100%
         ),
         url("${heroPhotos[index]}")`;
 
-    document.querySelectorAll(".hero-dot").forEach(
-        (dot, i) => {
-            dot.classList.toggle(
-                "active",
-                i === index
-            );
-        }
-    );
+
+    document
+        .querySelectorAll(".hero-dot")
+        .forEach(
+            (dot, i) => {
+
+                dot.classList.toggle(
+                    "active",
+                    i === index
+                );
+
+            }
+        );
+
 }
 
 
@@ -1780,6 +2142,7 @@ function nextHero() {
         heroPhotos.length;
 
     showHero(currentHero);
+
 }
 
 
@@ -1790,10 +2153,11 @@ function previousHero() {
         heroPhotos.length;
 
     showHero(currentHero);
+
 }
 
 
-/* Automatically change photo */
+/* Automatically change hero photo */
 
 setInterval(
     nextHero,
@@ -1807,7 +2171,9 @@ setInterval(
 
 function toggleMenu() {
 
-    const nav = document.querySelector("nav");
+    const nav =
+        document.querySelector("nav");
+
 
     if (nav.style.display === "flex") {
 
@@ -1818,13 +2184,21 @@ function toggleMenu() {
         nav.style.display = "flex";
 
         nav.style.position = "absolute";
+
         nav.style.top = "82px";
+
         nav.style.left = "0";
+
         nav.style.right = "0";
+
         nav.style.background = "white";
+
         nav.style.padding = "20px";
+
         nav.style.flexDirection = "column";
+
         nav.style.alignItems = "stretch";
+
         nav.style.boxShadow =
             "0 15px 30px rgba(0,0,0,.12)";
 
@@ -1838,7 +2212,8 @@ function toggleMenu() {
    ========================================================= */
 
 const map =
-    L.map("serviceMap").setView(
+    L.map("serviceMap")
+    .setView(
         [42.95, -84.05],
         9
     );
@@ -1853,27 +2228,36 @@ L.tileLayer(
 ).addTo(map);
 
 
-/*
-   Approximate service-area communities.
-   These markers show the communities you listed.
-*/
-
 const serviceCities = [
 
     ["Durand", 42.912, -83.984],
+
     ["Owosso", 43.000, -84.176],
+
     ["Corunna", 42.981, -84.118],
+
     ["Perry", 42.826, -84.219],
+
     ["Morrice", 42.839, -84.177],
+
     ["Laingsburg", 42.890, -84.351],
+
     ["Linden", 42.814, -83.783],
+
     ["Fenton", 42.797, -83.704],
+
     ["Lansing", 42.7336, -84.5553],
+
     ["East Lansing", 42.7369, -84.4839],
+
     ["Saginaw", 43.4195, -83.9508],
+
     ["Haslett", 42.7469, -84.4013],
+
     ["Swartz Creek", 42.9570, -83.8302],
+
     ["Flint", 43.0125, -83.6875],
+
     ["Midland", 43.6156, -84.2472]
 
 ];
@@ -1886,7 +2270,9 @@ serviceCities.forEach(
             city[1],
             city[2]
         ])
+
         .addTo(map)
+
         .bindPopup(
             `<strong>${city[0]}</strong><br>
              Just The Guy Gutters & Exteriors`
@@ -1896,17 +2282,20 @@ serviceCities.forEach(
 );
 
 
-/*
-   Approximate shaded service area.
-*/
+/* Approximate service area */
 
 const serviceArea = [
 
     [42.65, -84.60],
+
     [42.65, -83.65],
+
     [43.70, -83.65],
+
     [43.70, -84.45],
+
     [43.40, -84.65],
+
     [42.65, -84.60]
 
 ];
@@ -1921,11 +2310,6 @@ L.polygon(
         weight: 2
     }
 ).addTo(map);
-
-
-/* =========================================================
-   END
-   ========================================================= */
 
 </script>
 
