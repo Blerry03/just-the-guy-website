@@ -629,6 +629,35 @@
     }
 
     /* =========================
+       JUST THE GUY BRAND DETAILS
+       ========================= */
+    .hero-trust{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:24px;font-size:14px;font-weight:800;color:#fff}
+    .hero-trust span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:8px 12px;border-radius:999px;backdrop-filter:blur(4px)}
+
+    .brand-strip{background:#fff;padding:34px 4%;border-bottom:1px solid var(--border)}
+    .brand-strip-inner{max-width:1200px;margin:auto;text-align:center}
+    .brand-strip h2{font-size:clamp(32px,4vw,52px);color:var(--deep);margin:0 0 10px}
+    .brand-strip h2 span{color:var(--green)}
+    .brand-strip p{max-width:800px;margin:0 auto 25px;color:#536174;font-size:18px}
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left}
+    .trust-card{padding:22px;border-radius:18px;background:#f7f8fa;border:1px solid var(--border)}
+    .trust-card strong{display:block;color:var(--deep);font-size:20px;margin-bottom:6px}
+
+    .process-section{background:#f7f8fa}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .process-step{background:#fff;border-radius:20px;padding:26px;border-bottom:4px solid var(--green);box-shadow:0 10px 30px rgba(3,27,64,.08)}
+    .process-number{font-size:44px;font-weight:900;color:rgba(44,150,34,.25);line-height:1;margin-bottom:10px}
+    .process-step h3{margin:0 0 8px;color:var(--deep);font-size:21px}
+    .process-step p{margin:0;color:#58677b}
+
+    .guy-pop{position:fixed;right:18px;bottom:22px;z-index:100;display:flex;align-items:flex-end;gap:10px}
+    .guy-bubble{position:relative;background:#fff;color:var(--deep);border:3px solid var(--green);border-radius:18px;padding:12px 42px 12px 16px;box-shadow:0 12px 35px rgba(3,27,64,.24);font-weight:900;max-width:230px}
+    .guy-bubble small{display:block;font-weight:600;color:#536174;margin-top:2px}
+    .guy-close{position:absolute;right:9px;top:7px;border:0;background:transparent;color:#68778b;font-size:18px;cursor:pointer}
+    .guy-mascot{width:74px;height:74px;border-radius:50%;background:var(--green);border:4px solid #fff;box-shadow:0 10px 28px rgba(3,27,64,.25);display:grid;place-items:center;color:#fff;font-size:38px;font-weight:900;overflow:hidden}
+    .guy-mascot img{width:100%;height:100%;object-fit:contain}
+
+    /* =========================
        MOBILE
        ========================= */
     @media(max-width:1050px){
@@ -698,6 +727,11 @@
       .cta-inner{flex-direction:column;align-items:flex-start}
 
       .footer-grid{grid-template-columns:1fr}
+      .trust-grid{grid-template-columns:1fr}
+      .process-grid{grid-template-columns:1fr 1fr}
+      .guy-pop{right:10px;bottom:12px}
+      .guy-mascot{width:60px;height:60px;font-size:30px}
+      .guy-bubble{max-width:205px;font-size:14px}
     }
 
     @media(max-width:480px){
@@ -706,6 +740,8 @@
       .service-options{grid-template-columns:1fr}
       .city-link{font-size:12px;padding:9px 15px}
       .about-photo{height:280px}
+      .process-grid{grid-template-columns:1fr}
+      .guy-mascot{display:none}
     }
   </style>
 </head>
@@ -756,13 +792,17 @@
     <div class="hero-content">
       <div class="hero-copy">
         <div class="eyebrow">Family-Owned • Mid-Michigan</div>
-        <h1>Protect Your Property with Professional Gutters</h1>
+        <h1>You Need Just The Guy.</h1>
         <p>
-          Reliable gutter, siding, roofing and exterior services from a local
-          family-owned team. Tell us what you need and we'll help you find the right solution.
+          Gutters, roofing, siding and exterior work from a Mid-Michigan family that treats your home like our own. Good work, straight answers, and no runaround.
         </p>
+        <div class="hero-trust">
+          <span>✓ Family Owned &amp; Operated</span>
+          <span>✓ Fully Insured</span>
+          <span>✓ Local to Mid-Michigan</span>
+        </div>
         <a class="outline-btn" href="#contact">
-          contact us <span>→</span>
+          get your free estimate <span>→</span>
         </a>
       </div>
 
@@ -847,6 +887,19 @@
     </div>
   </section>
 
+  <section class="brand-strip" aria-label="Why choose Just The Guy">
+    <div class="brand-strip-inner">
+      <div class="eyebrow">We Know Just The Guy</div>
+      <h2>Good Work. Good People. <span>No Runaround.</span></h2>
+      <p>Finding someone you trust to work on your home shouldn’t be complicated. We’re a local family business focused on honest service, quality workmanship, and treating every home like it belongs to family.</p>
+      <div class="trust-grid">
+        <div class="trust-card"><strong>Family Owned</strong>You’re working with a real local family — not a national chain or a call center.</div>
+        <div class="trust-card"><strong>Straight Answers</strong>We’ll talk through what your home needs without making the process harder than it has to be.</div>
+        <div class="trust-card"><strong>Work We Stand Behind</strong>We want to leave every property with work we’d be happy to have on our own home.</div>
+      </div>
+    </div>
+  </section>
+
   <!-- =========================
        ABOUT
        ========================= -->
@@ -885,10 +938,8 @@
     <div class="section-inner">
       <div class="section-heading">
         <div class="eyebrow">Our Services</div>
-        <h2>Complete Exterior Solutions</h2>
-        <p>
-          Choose a service category to explore the work we provide for homes and businesses.
-        </p>
+        <h2>What Can We Help With?</h2>
+        <p>From a leaking gutter to a larger exterior project, tell us what’s going on and we’ll help you figure out what your home needs.</p>
       </div>
 
       <div class="service-tabs">
@@ -1004,8 +1055,8 @@
     <div class="section-inner">
       <div class="section-heading">
         <div class="eyebrow">Our Work</div>
-        <h2>Real Projects. Real Homes.</h2>
-        <p>Photos from the work we actually do — supplied and selected for this website.</p>
+        <h2>Work We’re Proud to Put Our Name On.</h2>
+        <p>No stock photos here — just real homes and real projects completed by our team throughout Mid-Michigan.</p>
       </div>
 
       <div class="gallery-grid">
@@ -1029,18 +1080,31 @@
     </div>
   </section>
 
+  <section class="section process-section" id="process">
+    <div class="section-inner">
+      <div class="section-heading">
+        <div class="eyebrow">Working With Us</div>
+        <h2>Simple From Start to Finish.</h2>
+        <p>Home projects are stressful enough. We keep our part straightforward.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step"><div class="process-number">01</div><h3>Give Us a Call</h3><p>Tell us what’s going on and what you’re looking for.</p></div>
+        <div class="process-step"><div class="process-number">02</div><h3>We’ll Take a Look</h3><p>We’ll come to the property, look things over, and talk through your options.</p></div>
+        <div class="process-step"><div class="process-number">03</div><h3>We Get to Work</h3><p>Our crew completes the project with attention to the details that matter.</p></div>
+        <div class="process-step"><div class="process-number">04</div><h3>We Make Sure It’s Right</h3><p>We clean up, check the finished work, and make sure you’re happy with it.</p></div>
+      </div>
+    </div>
+  </section>
+
   <!-- =========================
        SERVICE AREA
        ========================= -->
   <section class="section area-section" id="service-area">
     <div class="section-inner">
       <div class="section-heading">
-        <div class="eyebrow">Mid-Michigan</div>
-        <h2>Our Service Area</h2>
-        <p class="map-note">
-          Serving homeowners and businesses throughout Durand and surrounding Mid-Michigan communities.
-          Select a city to visit its dedicated service page.
-        </p>
+        <div class="eyebrow">Your Local Mid-Michigan Crew</div>
+        <h2>We’re Your Neighbors, Too.</h2>
+        <p class="map-note">Based in Durand and serving homeowners throughout Mid-Michigan. If you’re not sure whether we make it to your area, give us a call — we may still be able to help.</p>
       </div>
 
       <div class="city-list">
@@ -1132,8 +1196,8 @@
   <section class="final-cta" id="contact">
     <div class="cta-inner">
       <div>
-        <h2>Ready to Talk About Your Project?</h2>
-        <p>Request a free quote and tell us what you need.</p>
+        <h2>Need Just The Guy?</h2>
+        <p>Whether you know exactly what your home needs or just want someone to take a look, give us a call. We’re happy to help.</p>
       </div>
       <a class="cta-button" href="#home">Request a Free Quote →</a>
     </div>
@@ -1170,6 +1234,15 @@
       © 2026 Just The Guy Gutters & Exteriors | All Rights Reserved
     </div>
   </footer>
+
+  <aside class="guy-pop" id="guyPop" aria-label="Contact Just The Guy">
+    <a class="guy-bubble" href="#home">
+      You need Just The Guy.
+      <small>Good thing you found us. →</small>
+      <button class="guy-close" id="guyClose" type="button" aria-label="Close">×</button>
+    </a>
+    <a class="guy-mascot" href="#home" aria-label="Request a free estimate" title="Replace this with your thumbs-up mascot image later">👍</a>
+  </aside>
 
   <script>
     /* =========================
@@ -1294,6 +1367,15 @@
 
     window.addEventListener('resize', updateReviews);
     updateReviews();
+
+    /* Cheeky Just The Guy side pop-up */
+    const guyPop = document.getElementById('guyPop');
+    const guyClose = document.getElementById('guyClose');
+    guyClose.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      guyPop.style.display = 'none';
+    });
 
   </script>
 
