@@ -430,38 +430,31 @@
       font-weight:800;
     }
 
+
     /* =========================
-       WORK
+       PROJECT CAROUSEL
        ========================= */
-    .work-section{background:var(--light)}
-    .gallery-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-    }
-    .gallery-item{
-      height:310px;
-      border-radius:18px;
-      overflow:hidden;
-      position:relative;
-      background:#dce2e8;
-    }
-    .gallery-item.large{grid-column:span 2}
-    .gallery-item img{
-      width:100%;height:100%;
-      object-fit:cover;
-      display:block;
-      transition:transform .45s ease;
-    }
-    .gallery-item:hover img{transform:scale(1.04)}
-    .gallery-caption{
-      position:absolute;
-      left:0;right:0;bottom:0;
-      padding:45px 20px 18px;
-      color:#fff;
-      background:linear-gradient(transparent,rgba(3,27,64,.86));
-      font-weight:800;
-    }
+    .project-section{padding:95px 4%;background:var(--light);overflow:hidden}
+    .project-inner{max-width:1400px;margin:auto}
+    .project-heading{text-align:center;max-width:800px;margin:0 auto 45px}
+    .project-heading .eyebrow{margin-bottom:5px}
+    .project-heading h2{color:var(--deep);font-size:clamp(36px,4vw,55px);line-height:1.08;margin:5px 0 14px}
+    .project-heading p{color:#58677b;font-size:17px;margin:auto}
+    .project-carousel{position:relative;display:flex;align-items:center;gap:15px}
+    .project-window{width:100%;overflow:hidden}
+    .project-track{display:flex;gap:20px;transition:transform .5s ease;will-change:transform}
+    .project-slide{flex:0 0 calc((100% - 40px)/3);height:390px;border-radius:20px;overflow:hidden;position:relative;cursor:pointer;background:#dce2e8;box-shadow:0 12px 30px rgba(3,27,64,.12)}
+    .project-slide img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+    .project-slide:hover img{transform:scale(1.05)}
+    .project-slide span{position:absolute;left:0;right:0;bottom:0;padding:55px 20px 20px;color:#fff;font-size:17px;font-weight:800;background:linear-gradient(transparent,rgba(3,27,64,.9))}
+    .project-arrow{flex:0 0 52px;width:52px;height:52px;border:0;border-radius:50%;background:var(--deep);color:#fff;font-size:34px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:transform .2s ease,background .2s ease}
+    .project-arrow:hover{background:var(--green);transform:scale(1.08)}
+    .project-dots{display:flex;justify-content:center;gap:8px;margin-top:25px}
+    .project-dot{width:9px;height:9px;border:0;border-radius:50%;background:#bbc3cc;cursor:pointer;padding:0}
+    .project-dot.active{background:var(--green);transform:scale(1.3)}
+    .project-gallery-button{text-align:center;margin-top:30px}
+    .project-gallery-button a{display:inline-block;background:var(--green);color:#fff;padding:14px 25px;border-radius:999px;font-weight:800;transition:transform .2s ease,filter .2s ease}
+    .project-gallery-button a:hover{transform:translateY(-2px);filter:brightness(1.07)}
 
     /* =========================
        SERVICE AREA / MAP
@@ -714,9 +707,7 @@
       .service-panel{padding:23px}
       .service-detail-grid{grid-template-columns:1fr 1fr}
 
-      .gallery-grid{grid-template-columns:1fr}
-      .gallery-item.large{grid-column:auto}
-      .gallery-item{height:280px}
+      .project-slide{flex:0 0 calc((100% - 20px)/2);height:350px}
 
      .service-map-wrap {
   height: 430px;
@@ -736,6 +727,12 @@
 
     @media(max-width:480px){
       .hero h1{font-size:37px}
+      .project-section{padding:70px 5%}
+      .project-slide{flex:0 0 100%;height:330px}
+      .project-carousel{gap:8px}
+      .project-arrow{position:absolute;z-index:5;width:44px;height:44px;background:rgba(3,27,64,.88)}
+      .project-prev{left:10px}
+      .project-next{right:10px}
       .service-detail-grid{grid-template-columns:1fr}
       .service-options{grid-template-columns:1fr}
       .city-link{font-size:12px;padding:9px 15px}
@@ -1048,41 +1045,89 @@
     </div>
   </section>
 
-  <!-- =========================
-       OUR WORK
-       ========================= -->
-  <section class="section work-section" id="work">
-    <div class="section-inner">
-      <div class="section-heading">
-        <div class="eyebrow">Our Work</div>
-        <h2>Work We’re Proud to Put Our Name On.</h2>
-        <p>No stock photos here — just real homes and real projects completed by our team throughout Mid-Michigan.</p>
+ <!-- =========================
+     PROJECT CAROUSEL
+     ========================= -->
+<section class="project-section" id="work">
+  <div class="project-inner">
+
+    <div class="project-heading">
+      <div class="eyebrow">REAL HOMES. REAL WORK.</div>
+      <h2>Work We're Proud to Put Our Name On.</h2>
+      <p>
+        No stock photos here. Just real projects completed by
+        Just The Guy throughout Mid-Michigan.
+      </p>
+    </div>
+
+    <div class="project-carousel">
+
+      <button class="project-arrow project-prev"
+              id="projectPrev"
+              aria-label="Previous projects">
+        ‹
+      </button>
+
+      <div class="project-window">
+        <div class="project-track" id="projectTrack">
+
+          <div class="project-slide">
+            <img src="images/project-1.jpg"
+                 alt="Just The Guy exterior project">
+            <span>Just The Guy Project</span>
+          </div>
+
+          <div class="project-slide">
+            <img src="images/project-2.jpg"
+                 alt="Just The Guy gutter installation">
+            <span>Gutter Installation</span>
+          </div>
+
+          <div class="project-slide">
+            <img src="images/project-3.jpg"
+                 alt="Just The Guy roofing project">
+            <span>Roofing Project</span>
+          </div>
+
+          <div class="project-slide">
+            <img src="images/project-4.jpg"
+                 alt="Just The Guy siding project">
+            <span>Exterior Project</span>
+          </div>
+
+          <div class="project-slide">
+            <img src="images/project-5.jpg"
+                 alt="Just The Guy project">
+            <span>Another Job Done Right</span>
+          </div>
+
+          <div class="project-slide">
+            <img src="images/project-6.jpg"
+                 alt="Just The Guy project">
+            <span>Mid-Michigan Project</span>
+          </div>
+
+        </div>
       </div>
 
-      <div class="gallery-grid">
-        <a class="gallery-item large" href="gallery.html">
-          <img src="images/IMG_9576.JPEG" alt="Just The Guy project">
-          <div class="gallery-caption">Our Projects →</div>
-        </a>
-      </div>
-    </div>
-  </section>
+      <button class="project-arrow project-next"
+              id="projectNext"
+              aria-label="Next projects">
+        ›
+      </button>
 
-  <section class="section process-section" id="process">
-    <div class="section-inner">
-      <div class="section-heading">
-        <div class="eyebrow">Working With Us</div>
-        <h2>Simple From Start to Finish.</h2>
-        <p>Home projects are stressful enough. We keep our part straightforward.</p>
-      </div>
-      <div class="process-grid">
-        <div class="process-step"><div class="process-number">01</div><h3>Give Us a Call</h3><p>Tell us what’s going on and what you’re looking for.</p></div>
-        <div class="process-step"><div class="process-number">02</div><h3>We’ll Take a Look</h3><p>We’ll come to the property, look things over, and talk through your options.</p></div>
-        <div class="process-step"><div class="process-number">03</div><h3>We Get to Work</h3><p>Our crew completes the project with attention to the details that matter.</p></div>
-        <div class="process-step"><div class="process-number">04</div><h3>We Make Sure It’s Right</h3><p>We clean up, check the finished work, and make sure you’re happy with it.</p></div>
-      </div>
     </div>
-  </section>
+
+    <div class="project-dots" id="projectDots"></div>
+
+    <div class="project-gallery-button">
+      <a href="projects.html">
+        See What We've Been Up To →
+      </a>
+    </div>
+
+  </div>
+</section>
 
   <!-- =========================
        SERVICE AREA
@@ -1312,6 +1357,89 @@
       });
     });
 
+
+    /* =========================
+       PROJECT CAROUSEL
+       ========================= */
+    const projectTrack = document.getElementById('projectTrack');
+    const projectSlides = [...document.querySelectorAll('.project-slide')];
+    const projectPrev = document.getElementById('projectPrev');
+    const projectNext = document.getElementById('projectNext');
+    const projectDots = document.getElementById('projectDots');
+    let projectIndex = 0;
+
+    function projectsPerView(){
+      if (window.innerWidth <= 480) return 1;
+      if (window.innerWidth <= 800) return 2;
+      return 3;
+    }
+
+    function maxProjectIndex(){
+      return Math.max(0, projectSlides.length - projectsPerView());
+    }
+
+    function createProjectDots(){
+      projectDots.innerHTML = '';
+      for (let i = 0; i <= maxProjectIndex(); i++){
+        const dot = document.createElement('button');
+        dot.className = 'project-dot';
+        if (i === projectIndex) dot.classList.add('active');
+        dot.setAttribute('aria-label', `Go to project ${i + 1}`);
+        dot.addEventListener('click', () => {
+          projectIndex = i;
+          updateProjectCarousel();
+        });
+        projectDots.appendChild(dot);
+      }
+    }
+
+    function updateProjectCarousel(){
+      if (!projectSlides.length) return;
+      const maxIndex = maxProjectIndex();
+      if (projectIndex > maxIndex) projectIndex = 0;
+      if (projectIndex < 0) projectIndex = maxIndex;
+      const slideWidth = projectSlides[0].getBoundingClientRect().width;
+      projectTrack.style.transform = `translateX(-${projectIndex * (slideWidth + 20)}px)`;
+      document.querySelectorAll('.project-dot').forEach((dot,index) => {
+        dot.classList.toggle('active', index === projectIndex);
+      });
+    }
+
+    projectNext.addEventListener('click', () => {
+      projectIndex++;
+      if (projectIndex > maxProjectIndex()) projectIndex = 0;
+      updateProjectCarousel();
+    });
+
+    projectPrev.addEventListener('click', () => {
+      projectIndex--;
+      if (projectIndex < 0) projectIndex = maxProjectIndex();
+      updateProjectCarousel();
+    });
+
+    let projectTouchStartX = 0;
+    projectTrack.addEventListener('touchstart', event => {
+      projectTouchStartX = event.changedTouches[0].screenX;
+    }, {passive:true});
+
+    projectTrack.addEventListener('touchend', event => {
+      const difference = event.changedTouches[0].screenX - projectTouchStartX;
+      if (Math.abs(difference) < 45) return;
+      projectIndex += difference < 0 ? 1 : -1;
+      if (projectIndex > maxProjectIndex()) projectIndex = 0;
+      if (projectIndex < 0) projectIndex = maxProjectIndex();
+      updateProjectCarousel();
+    }, {passive:true});
+
+    window.addEventListener('resize', () => {
+      if (projectIndex > maxProjectIndex()) projectIndex = maxProjectIndex();
+      createProjectDots();
+      updateProjectCarousel();
+    });
+
+    createProjectDots();
+    updateProjectCarousel();
+
     /* =========================
        REVIEWS — MANUAL CONTROLS
        Intentionally NOT fast auto-scrolling.
@@ -1366,6 +1494,3 @@
     });
 
   </script>
-
-</body>
-</html>
