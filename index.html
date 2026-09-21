@@ -6,11 +6,6 @@
   <meta name="description" content="Just The Guy Gutters & Exteriors — family-owned gutter, siding, roofing and exterior services serving Mid-Michigan. Request a free quote.">
   <title>Just The Guy Gutters & Exteriors | Mid-Michigan</title>
 
-  <!-- Leaflet map -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIINfQ3F5M4Kp3zLJ7d0q4RkJQ2d8qKQf3U="
-        crossorigin="">
-
   <style>
     :root{
       --blue:#1762B5;
@@ -489,12 +484,20 @@
       font-weight:800;
     }
     .city-link:hover{filter:brightness(1.08)}
-    #service-map{
-      width:100%;
-      height:560px;
-      margin-top:20px;
-      border-top:4px solid var(--deep);
-    }
+  .service-map-wrap {
+  width: 100%;
+  height: 560px;
+  margin-top: 20px;
+  border-top: 4px solid var(--deep);
+  overflow: hidden;
+}
+
+.service-map-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
     .map-note{
       max-width:1000px;
       margin:0 auto 25px;
@@ -686,7 +689,9 @@
       .gallery-item.large{grid-column:auto}
       .gallery-item{height:280px}
 
-      #service-map{height:430px}
+     .service-map-wrap {
+  height: 430px;
+}
 
       .review-card{flex-basis:100%}
       .reviews-header{align-items:flex-start;flex-direction:column}
@@ -1057,7 +1062,14 @@
       </div>
     </div>
 
-    <div id="service-map" aria-label="Interactive map of our Mid-Michigan service area"></div>
+<div class="service-map-wrap">
+  <iframe
+    src="https://www.google.com/maps/d/embed?mid=1B5ChYsvUqbrGByzJUihg3KrpprKT1a8&ehbc=2E312F"
+    title="Just The Guy Gutters & Exteriors Service Area"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
   </section>
 
   <!-- =========================
@@ -1158,11 +1170,6 @@
       © 2026 Just The Guy Gutters & Exteriors | All Rights Reserved
     </div>
   </footer>
-
-  <!-- Leaflet -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-          crossorigin=""></script>
 
   <script>
     /* =========================
@@ -1288,69 +1295,6 @@
     window.addEventListener('resize', updateReviews);
     updateReviews();
 
-    /* =========================
-       SERVICE AREA MAP
-       ========================= */
-    const map = L.map('service-map', {
-      scrollWheelZoom: false
-    }).setView([42.95, -83.85], 9);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    const greenIcon = L.divIcon({
-      className:'custom-map-marker',
-      html:'<div style="width:16px;height:16px;border-radius:50%;background:#2C9622;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.35)"></div>',
-      iconSize:[16,16],
-      iconAnchor:[8,8]
-    });
-
-    const cities = [
-      ['Durand, MI',42.9125,-83.9888,'service-area/durand-mi.html'],
-      ['Owosso, MI',43.0008,-84.1766,'service-area/owosso-mi.html'],
-      ['Corunna, MI',42.9814,-84.1177,'service-area/corunna-mi.html'],
-      ['Perry, MI',42.8264,-84.2194,'service-area/perry-mi.html'],
-      ['Morrice, MI',42.8339,-84.1811,'service-area/morrice-mi.html'],
-      ['Laingsburg, MI',42.8892,-84.3511,'service-area/laingsburg-mi.html'],
-      ['Linden, MI',42.8145,-83.7827,'service-area/linden-mi.html'],
-      ['Fenton, MI',42.7978,-83.7049,'service-area/fenton-mi.html'],
-      ['Lansing, MI',42.7325,-84.5555,'service-area/lansing-mi.html'],
-      ['East Lansing, MI',42.7369,-84.4839,'service-area/east-lansing-mi.html'],
-      ['Saginaw, MI',43.4195,-83.9508,'service-area/saginaw-mi.html'],
-      ['Haslett, MI',42.7469,-84.4013,'service-area/haslett-mi.html'],
-      ['Swartz Creek, MI',42.9575,-83.8305,'service-area/swartz-creek-mi.html'],
-      ['Flint, MI',43.0125,-83.6875,'service-area/flint-mi.html'],
-      ['Midland, MI',43.6156,-84.2472,'service-area/midland-mi.html']
-    ];
-
-    const bounds = [];
-
-    cities.forEach(([name,lat,lng,url]) => {
-      bounds.push([lat,lng]);
-
-      L.marker([lat,lng], {icon:greenIcon})
-        .addTo(map)
-        .bindPopup(`
-          <strong>${name}</strong><br>
-          <a href="${url}" style="color:#1762B5;font-weight:700">
-            View service area →
-          </a>
-        `);
-    });
-
-    // A translucent approximate service-area highlight.
-    // We can replace this later with a more exact territory polygon.
-    L.circle([42.93,-83.86], {
-      radius:47000,
-      color:'#2C9622',
-      weight:3,
-      fillColor:'#2C9622',
-      fillOpacity:.08
-    }).addTo(map);
-
-    map.fitBounds(bounds, {padding:[35,35]});
   </script>
 
 </body>
