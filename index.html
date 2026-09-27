@@ -60,13 +60,26 @@
        ========================= */
 
     .site-header{
-      position:absolute;
-      z-index:20;
+      position:fixed;
+      z-index:1000;
       top:0;
       left:0;
       right:0;
       padding:18px 30px;
       color:#fff;
+      background:transparent;
+      transition:
+        background .3s ease,
+        box-shadow .3s ease,
+        padding .3s ease;
+    }
+
+    .site-header.scrolled{
+      background:rgba(3,27,64,.97);
+      box-shadow:0 8px 30px rgba(0,0,0,.18);
+      padding-top:10px;
+      padding-bottom:10px;
+      backdrop-filter:blur(10px);
     }
 
     .nav-wrap{
@@ -178,7 +191,6 @@
       opacity:1;
     }
 
-    /* FIXED — this was the broken CSS */
     .hero-overlay{
       position:absolute;
       inset:0;
@@ -273,6 +285,33 @@
 
     .outline-btn:hover{
       background:rgba(255,255,255,.1);
+    }
+
+
+    /* =========================
+       ANGLED HERO → REVIEWS
+       ========================= */
+
+    .hero-angle{
+      position:relative;
+      z-index:6;
+      height:105px;
+      margin-top:-105px;
+      background:var(--deep);
+      clip-path:polygon(
+        0 48%,
+        16% 8%,
+        42% 38%,
+        82% 82%,
+        100% 62%,
+        100% 100%,
+        0 100%
+      );
+      pointer-events:none;
+    }
+
+    .reviews-section.reviews-second{
+      padding-top:70px;
     }
 
 
@@ -426,6 +465,107 @@
       max-width:760px;
       margin:auto;
       color:#58677b;
+    }
+
+
+    /* =========================
+       REVIEWS
+       ========================= */
+
+    .reviews-section{
+      background:var(--deep);
+      color:#fff;
+    }
+
+    .reviews-section .section-heading .eyebrow{
+      color:#7ee36e;
+    }
+
+    .reviews-header{
+      max-width:800px;
+      margin:0 auto 30px;
+      background:#fff;
+      color:var(--deep);
+      border-radius:18px;
+      padding:17px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .reviews-header strong{
+      font-size:28px;
+    }
+
+    .reviews-link{
+      color:#fff;
+      background:var(--green);
+      padding:11px 18px;
+      border-radius:999px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .review-stage{
+      max-width:1100px;
+      margin:auto;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .review-track{
+      display:flex;
+      gap:18px;
+      transition:transform .55s ease;
+    }
+
+    .review-card{
+      flex:0 0 calc((100% - 36px)/3);
+      background:#fff;
+      color:var(--text);
+      border-radius:16px;
+      padding:23px;
+      min-height:220px;
+    }
+
+    .stars{
+      color:#f2bd2e;
+      letter-spacing:2px;
+      font-size:19px;
+    }
+
+    .review-card blockquote{
+      margin:12px 0;
+      font-size:15px;
+    }
+
+    .review-card cite{
+      font-style:normal;
+      font-weight:800;
+    }
+
+    .review-controls{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+      margin-top:25px;
+    }
+
+    .review-controls button{
+      width:42px;
+      height:42px;
+      border:0;
+      border-radius:50%;
+      background:#fff;
+      color:var(--green);
+      font-size:21px;
+      cursor:pointer;
+    }
+
+    .review-controls span{
+      font-weight:700;
     }
 
 
@@ -896,107 +1036,6 @@
 
 
     /* =========================
-       REVIEWS
-       ========================= */
-
-    .reviews-section{
-      background:var(--deep);
-      color:#fff;
-    }
-
-    .reviews-section .section-heading .eyebrow{
-      color:#7ee36e;
-    }
-
-    .reviews-header{
-      max-width:800px;
-      margin:0 auto 30px;
-      background:#fff;
-      color:var(--deep);
-      border-radius:18px;
-      padding:17px 24px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .reviews-header strong{
-      font-size:28px;
-    }
-
-    .reviews-link{
-      color:#fff;
-      background:var(--green);
-      padding:11px 18px;
-      border-radius:999px;
-      font-weight:800;
-      white-space:nowrap;
-    }
-
-    .review-stage{
-      max-width:1100px;
-      margin:auto;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .review-track{
-      display:flex;
-      gap:18px;
-      transition:transform .55s ease;
-    }
-
-    .review-card{
-      flex:0 0 calc((100% - 36px)/3);
-      background:#fff;
-      color:var(--text);
-      border-radius:16px;
-      padding:23px;
-      min-height:220px;
-    }
-
-    .stars{
-      color:#f2bd2e;
-      letter-spacing:2px;
-      font-size:19px;
-    }
-
-    .review-card blockquote{
-      margin:12px 0;
-      font-size:15px;
-    }
-
-    .review-card cite{
-      font-style:normal;
-      font-weight:800;
-    }
-
-    .review-controls{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:12px;
-      margin-top:25px;
-    }
-
-    .review-controls button{
-      width:42px;
-      height:42px;
-      border:0;
-      border-radius:50%;
-      background:#fff;
-      color:var(--green);
-      font-size:21px;
-      cursor:pointer;
-    }
-
-    .review-controls span{
-      font-weight:700;
-    }
-
-
-    /* =========================
        FINAL CTA
        ========================= */
 
@@ -1137,12 +1176,6 @@
       overflow:hidden;
     }
 
-    .guy-mascot img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-    }
-
 
     /* =========================
        TABLET
@@ -1240,8 +1273,23 @@
         display:block;
       }
 
+      .hero-angle{
+        height:65px;
+        margin-top:-65px;
+        clip-path:polygon(
+          0 52%,
+          20% 14%,
+          48% 42%,
+          80% 78%,
+          100% 60%,
+          100% 100%,
+          0 100%
+        );
+      }
 
-      /* HERO */
+      .reviews-section.reviews-second{
+        padding-top:55px;
+      }
 
       .hero{
         min-height:auto;
@@ -1272,9 +1320,6 @@
         font-size:12px;
       }
 
-
-      /* FORM */
-
       .quote-card{
         padding:22px;
         width:100%;
@@ -1292,9 +1337,6 @@
         grid-template-columns:1fr 1fr;
       }
 
-
-      /* GENERAL SECTIONS */
-
       .section{
         padding:65px 5%;
       }
@@ -1307,9 +1349,6 @@
         grid-template-columns:1fr;
       }
 
-
-      /* ABOUT */
-
       .about-card{
         grid-template-columns:1fr;
         padding:20px;
@@ -1318,9 +1357,6 @@
       .about-photo{
         height:340px;
       }
-
-
-      /* SERVICES */
 
       .service-tabs{
         grid-template-columns:1fr;
@@ -1348,23 +1384,14 @@
         height:170px;
       }
 
-
-      /* PROJECTS */
-
       .project-slide{
         flex:0 0 calc((100% - 20px)/2);
         height:350px;
       }
 
-
-      /* MAP */
-
       .service-map-wrap{
         height:430px;
       }
-
-
-      /* REVIEWS */
 
       .review-card{
         flex-basis:100%;
@@ -1375,23 +1402,14 @@
         flex-direction:column;
       }
 
-
-      /* CTA */
-
       .cta-inner{
         flex-direction:column;
         align-items:flex-start;
       }
 
-
-      /* FOOTER */
-
       .footer-grid{
         grid-template-columns:1fr;
       }
-
-
-      /* POPUP */
 
       .guy-pop{
         right:10px;
@@ -1917,6 +1935,164 @@
   </section>
 
 
+  <!-- ANGLED TRANSITION -->
+
+  <div
+    class="hero-angle"
+    aria-hidden="true">
+  </div>
+
+
+  <!-- =========================
+       REVIEWS
+       ========================= -->
+
+  <section
+    class="section reviews-section reviews-second"
+    id="reviews">
+
+    <div class="section-inner">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Customer Reviews
+        </div>
+
+        <h2 style="color:#fff;">
+          See What Our Customers Are Saying
+        </h2>
+
+      </div>
+
+
+      <div class="reviews-header">
+
+        <strong>
+          Google Reviews
+        </strong>
+
+        <a
+          class="reviews-link"
+          href="https://www.google.com/maps/place/Just+The+Guy+Gutters+and+Exteriors/@42.8750454,-83.7122394,283796m/data=!3m1!1e3!4m6!3m5!1s0x87162f674484ec95:0x59a92544bafafb59!8m2!3d42.8225341!4d-84.0282171!16s%2Fg%2F11z05phfdt!5m1!1e1?entry=ttu&amp;g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener">
+
+          See All Reviews →
+
+        </a>
+
+      </div>
+
+
+      <div class="review-stage">
+
+        <div
+          class="review-track"
+          id="reviewTrack">
+
+
+          <article class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “The guys were polite and respectful and did a great job.”
+            </blockquote>
+
+            <cite>
+              Kelly H.
+            </cite>
+
+          </article>
+
+
+          <article class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “Josh and crew were awesome. They did the roof and installed
+              5 skylights. They were very professional and knowledgeable.”
+            </blockquote>
+
+            <cite>
+              Dawn S.
+            </cite>
+
+          </article>
+
+
+          <article class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “Great work and very professional. We would highly recommend
+              Just The Guy Gutters.”
+            </blockquote>
+
+            <cite>
+              Customer Review
+            </cite>
+
+          </article>
+
+
+          <article class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “Excellent service from start to finish.”
+            </blockquote>
+
+            <cite>
+              Customer Review
+            </cite>
+
+          </article>
+
+        </div>
+
+      </div>
+
+
+      <div class="review-controls">
+
+        <button
+          type="button"
+          id="reviewPrev"
+          aria-label="Previous review">
+          ←
+        </button>
+
+        <span id="reviewCount">
+          1 / 2
+        </span>
+
+        <button
+          type="button"
+          id="reviewNext"
+          aria-label="Next review">
+          →
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
   <!-- =========================
        BRAND STRIP
        ========================= -->
@@ -2057,8 +2233,6 @@
       </div>
 
 
-      <!-- SERVICE TABS -->
-
       <div class="service-tabs">
 
         <button
@@ -2104,10 +2278,6 @@
 
       </div>
 
-
-      <!-- =========================
-           GUTTERS
-           ========================= -->
 
       <div
         class="service-panel"
@@ -2217,10 +2387,6 @@
       </div>
 
 
-      <!-- =========================
-           SIDING
-           ========================= -->
-
       <div
         class="service-panel"
         id="sidingPanel"
@@ -2315,10 +2481,6 @@
 
       </div>
 
-
-      <!-- =========================
-           ROOFING
-           ========================= -->
 
       <div
         class="service-panel"
@@ -2615,65 +2777,21 @@
 
       <div class="city-list">
 
-        <a class="city-link" href="service-area/durand-mi.html">
-          Durand, MI
-        </a>
-
-        <a class="city-link" href="service-area/owosso-mi.html">
-          Owosso, MI
-        </a>
-
-        <a class="city-link" href="service-area/corunna-mi.html">
-          Corunna, MI
-        </a>
-
-        <a class="city-link" href="service-area/perry-mi.html">
-          Perry, MI
-        </a>
-
-        <a class="city-link" href="service-area/morrice-mi.html">
-          Morrice, MI
-        </a>
-
-        <a class="city-link" href="service-area/laingsburg-mi.html">
-          Laingsburg, MI
-        </a>
-
-        <a class="city-link" href="service-area/linden-mi.html">
-          Linden, MI
-        </a>
-
-        <a class="city-link" href="service-area/fenton-mi.html">
-          Fenton, MI
-        </a>
-
-        <a class="city-link" href="service-area/lansing-mi.html">
-          Lansing, MI
-        </a>
-
-        <a class="city-link" href="service-area/east-lansing-mi.html">
-          East Lansing, MI
-        </a>
-
-        <a class="city-link" href="service-area/saginaw-mi.html">
-          Saginaw, MI
-        </a>
-
-        <a class="city-link" href="service-area/haslett-mi.html">
-          Haslett, MI
-        </a>
-
-        <a class="city-link" href="service-area/swartz-creek-mi.html">
-          Swartz Creek, MI
-        </a>
-
-        <a class="city-link" href="service-area/flint-mi.html">
-          Flint, MI
-        </a>
-
-        <a class="city-link" href="service-area/midland-mi.html">
-          Midland, MI
-        </a>
+        <a class="city-link" href="service-area/durand-mi.html">Durand, MI</a>
+        <a class="city-link" href="service-area/owosso-mi.html">Owosso, MI</a>
+        <a class="city-link" href="service-area/corunna-mi.html">Corunna, MI</a>
+        <a class="city-link" href="service-area/perry-mi.html">Perry, MI</a>
+        <a class="city-link" href="service-area/morrice-mi.html">Morrice, MI</a>
+        <a class="city-link" href="service-area/laingsburg-mi.html">Laingsburg, MI</a>
+        <a class="city-link" href="service-area/linden-mi.html">Linden, MI</a>
+        <a class="city-link" href="service-area/fenton-mi.html">Fenton, MI</a>
+        <a class="city-link" href="service-area/lansing-mi.html">Lansing, MI</a>
+        <a class="city-link" href="service-area/east-lansing-mi.html">East Lansing, MI</a>
+        <a class="city-link" href="service-area/saginaw-mi.html">Saginaw, MI</a>
+        <a class="city-link" href="service-area/haslett-mi.html">Haslett, MI</a>
+        <a class="city-link" href="service-area/swartz-creek-mi.html">Swartz Creek, MI</a>
+        <a class="city-link" href="service-area/flint-mi.html">Flint, MI</a>
+        <a class="city-link" href="service-area/midland-mi.html">Midland, MI</a>
 
       </div>
 
@@ -2683,161 +2801,11 @@
     <div class="service-map-wrap">
 
       <iframe
-        src="https://www.google.com/maps/d/embed?mid=1B5ChYsvUqbrGByzJUihg3KrpprKT1a8&ehbc=2E312F"
+        src="https://www.google.com/maps/d/embed?mid=1B5ChYsvUqbrGByzJUihg3KrpprKT1a8&amp;ehbc=2E312F"
         title="Just The Guy Gutters & Exteriors Service Area"
         loading="lazy"
         allowfullscreen>
       </iframe>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       REVIEWS
-       ========================= -->
-
-  <section
-    class="section reviews-section"
-    id="reviews">
-
-    <div class="section-inner">
-
-      <div class="section-heading">
-
-        <div class="eyebrow">
-          Customer Reviews
-        </div>
-
-        <h2 style="color:#fff;">
-          See What Our Customers Are Saying
-        </h2>
-
-      </div>
-
-
-      <div class="reviews-header">
-
-        <strong>
-          Google Reviews
-        </strong>
-
-        <a
-          class="reviews-link"
-          href="YOUR_GOOGLE_REVIEW_URL"
-          target="_blank"
-          rel="noopener">
-
-          See All Reviews →
-
-        </a>
-
-      </div>
-
-
-      <div class="review-stage">
-
-        <div
-          class="review-track"
-          id="reviewTrack">
-
-
-          <article class="review-card">
-
-            <div class="stars">
-              ★★★★★
-            </div>
-
-            <blockquote>
-              “The guys were polite and respectful and did a great job.”
-            </blockquote>
-
-            <cite>
-              Kelly H.
-            </cite>
-
-          </article>
-
-
-          <article class="review-card">
-
-            <div class="stars">
-              ★★★★★
-            </div>
-
-            <blockquote>
-              “Josh and crew were awesome. They did the roof and installed
-              5 skylights. They were very professional and knowledgeable.”
-            </blockquote>
-
-            <cite>
-              Dawn S.
-            </cite>
-
-          </article>
-
-
-          <article class="review-card">
-
-            <div class="stars">
-              ★★★★★
-            </div>
-
-            <blockquote>
-              “Great work and very professional. We would highly recommend
-              Just The Guy Gutters.”
-            </blockquote>
-
-            <cite>
-              Customer Review
-            </cite>
-
-          </article>
-
-
-          <article class="review-card">
-
-            <div class="stars">
-              ★★★★★
-            </div>
-
-            <blockquote>
-              “Excellent service from start to finish.”
-            </blockquote>
-
-            <cite>
-              Customer Review
-            </cite>
-
-          </article>
-
-        </div>
-
-      </div>
-
-
-      <div class="review-controls">
-
-        <button
-          type="button"
-          id="reviewPrev"
-          aria-label="Previous review">
-          ←
-        </button>
-
-        <span id="reviewCount">
-          1 / 4
-        </span>
-
-        <button
-          type="button"
-          id="reviewNext"
-          aria-label="Next review">
-          →
-        </button>
-
-      </div>
 
     </div>
 
@@ -3015,23 +2983,41 @@
     const mainNav =
       document.getElementById('mainNav');
 
-
     menuToggle.addEventListener('click', () => {
-
       mainNav.classList.toggle('open');
-
     });
-
 
     mainNav.querySelectorAll('a').forEach(link => {
-
       link.addEventListener('click', () => {
-
         mainNav.classList.remove('open');
-
       });
-
     });
+
+
+    /* =========================
+       STICKY HEADER
+       ========================= */
+
+    const siteHeader =
+      document.querySelector('.site-header');
+
+    function updateStickyHeader(){
+
+      if(window.scrollY > 70){
+        siteHeader.classList.add('scrolled');
+      }else{
+        siteHeader.classList.remove('scrolled');
+      }
+
+    }
+
+    window.addEventListener(
+      'scroll',
+      updateStickyHeader,
+      {passive:true}
+    );
+
+    updateStickyHeader();
 
 
     /* =========================
@@ -3042,7 +3028,6 @@
       document.querySelectorAll('.hero-slide');
 
     let heroIndex = 0;
-
 
     if(heroSlides.length > 1){
 
@@ -3077,7 +3062,6 @@
         'input[name="Services[]"]'
       )];
 
-
     quoteForm.addEventListener(
       'submit',
       event => {
@@ -3086,7 +3070,6 @@
           serviceCheckboxes.some(
             box => box.checked
           );
-
 
         if(!selected){
 
@@ -3111,7 +3094,6 @@
 
       }
     );
-
 
     serviceCheckboxes.forEach(box => {
 
@@ -3145,7 +3127,6 @@
         '.service-tab'
       );
 
-
     const servicePanels = {
 
       gutters:
@@ -3165,7 +3146,6 @@
 
     };
 
-
     serviceTabs.forEach(tab => {
 
       tab.addEventListener(
@@ -3173,18 +3153,10 @@
         () => {
 
           serviceTabs.forEach(t => {
-
-            t.classList.remove(
-              'active'
-            );
-
+            t.classList.remove('active');
           });
 
-
-          tab.classList.add(
-            'active'
-          );
-
+          tab.classList.add('active');
 
           Object.values(
             servicePanels
@@ -3195,23 +3167,13 @@
 
           });
 
-
           const selectedPanel =
             servicePanels[
               tab.dataset.service
             ];
 
-
           selectedPanel.style.display =
             'grid';
-
-
-          /*
-            On phones/tablets,
-            automatically show the
-            service details that were
-            just selected.
-          */
 
           if(
             window.innerWidth <= 800
@@ -3264,9 +3226,7 @@
         'projectDots'
       );
 
-
     let projectIndex = 0;
-
 
     function projectsPerView(){
 
@@ -3286,7 +3246,6 @@
 
     }
 
-
     function maxProjectIndex(){
 
       return Math.max(
@@ -3297,11 +3256,9 @@
 
     }
 
-
     function createProjectDots(){
 
       projectDots.innerHTML = '';
-
 
       for(
         let i = 0;
@@ -3314,10 +3271,8 @@
             'button'
           );
 
-
         dot.className =
           'project-dot';
-
 
         if(
           i === projectIndex
@@ -3329,12 +3284,10 @@
 
         }
 
-
         dot.setAttribute(
           'aria-label',
           `Go to project ${i + 1}`
         );
-
 
         dot.addEventListener(
           'click',
@@ -3347,7 +3300,6 @@
           }
         );
 
-
         projectDots.appendChild(
           dot
         );
@@ -3355,7 +3307,6 @@
       }
 
     }
-
 
     function updateProjectCarousel(){
 
@@ -3365,10 +3316,8 @@
         return;
       }
 
-
       const maxIndex =
         maxProjectIndex();
-
 
       if(
         projectIndex > maxIndex
@@ -3377,7 +3326,6 @@
         projectIndex = 0;
 
       }
-
 
       if(
         projectIndex < 0
@@ -3388,19 +3336,16 @@
 
       }
 
-
       const slideWidth =
         projectSlides[0]
           .getBoundingClientRect()
           .width;
-
 
       projectTrack.style.transform =
         `translateX(-${
           projectIndex *
           (slideWidth + 20)
         }px)`;
-
 
       document
         .querySelectorAll(
@@ -3419,13 +3364,11 @@
 
     }
 
-
     projectNext.addEventListener(
       'click',
       () => {
 
         projectIndex++;
-
 
         if(
           projectIndex >
@@ -3436,19 +3379,16 @@
 
         }
 
-
         updateProjectCarousel();
 
       }
     );
-
 
     projectPrev.addEventListener(
       'click',
       () => {
 
         projectIndex--;
-
 
         if(
           projectIndex < 0
@@ -3459,15 +3399,12 @@
 
         }
 
-
         updateProjectCarousel();
 
       }
     );
 
-
     let projectTouchStartX = 0;
-
 
     projectTrack.addEventListener(
       'touchstart',
@@ -3483,7 +3420,6 @@
       }
     );
 
-
     projectTrack.addEventListener(
       'touchend',
       event => {
@@ -3493,19 +3429,16 @@
             .screenX -
           projectTouchStartX;
 
-
         if(
           Math.abs(difference) < 45
         ){
           return;
         }
 
-
         projectIndex +=
           difference < 0
             ? 1
             : -1;
-
 
         if(
           projectIndex >
@@ -3516,7 +3449,6 @@
 
         }
 
-
         if(
           projectIndex < 0
         ){
@@ -3526,7 +3458,6 @@
 
         }
 
-
         updateProjectCarousel();
 
       },
@@ -3534,7 +3465,6 @@
         passive:true
       }
     );
-
 
     window.addEventListener(
       'resize',
@@ -3550,14 +3480,12 @@
 
         }
 
-
         createProjectDots();
 
         updateProjectCarousel();
 
       }
     );
-
 
     createProjectDots();
 
@@ -3585,7 +3513,6 @@
 
     let reviewIndex = 0;
 
-
     function reviewsPerView(){
 
       return window.innerWidth <= 800
@@ -3593,7 +3520,6 @@
         : 3;
 
     }
-
 
     function updateReviews(){
 
@@ -3603,10 +3529,8 @@
         return;
       }
 
-
       const perView =
         reviewsPerView();
-
 
       const maxIndex =
         Math.max(
@@ -3615,29 +3539,24 @@
           perView
         );
 
-
       reviewIndex =
         Math.min(
           reviewIndex,
           maxIndex
         );
 
-
       const cardWidth =
         reviewCards[0]
           .getBoundingClientRect()
           .width;
 
-
       const gap = 18;
-
 
       reviewTrack.style.transform =
         `translateX(-${
           reviewIndex *
           (cardWidth + gap)
         }px)`;
-
 
       reviewCount.textContent =
         `${reviewIndex + 1} / ${
@@ -3649,7 +3568,6 @@
 
     }
 
-
     document
       .getElementById(
         'reviewPrev'
@@ -3660,7 +3578,6 @@
 
           reviewIndex--;
 
-
           if(
             reviewIndex < 0
           ){
@@ -3669,12 +3586,10 @@
 
           }
 
-
           updateReviews();
 
         }
       );
-
 
     document
       .getElementById(
@@ -3691,9 +3606,7 @@
               reviewsPerView()
             );
 
-
           reviewIndex++;
-
 
           if(
             reviewIndex > maxIndex
@@ -3704,18 +3617,15 @@
 
           }
 
-
           updateReviews();
 
         }
       );
 
-
     window.addEventListener(
       'resize',
       updateReviews
     );
-
 
     updateReviews();
 
@@ -3733,7 +3643,6 @@
       document.getElementById(
         'guyClose'
       );
-
 
     guyClose.addEventListener(
       'click',
