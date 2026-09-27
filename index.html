@@ -176,7 +176,7 @@
       max-width:720px;
     }
     .eyebrow{
-      color:#7ee36e;
+      color:#fff;
       text-transform:uppercase;
       letter-spacing:3px;
       font-size:14px;
@@ -1446,7 +1446,19 @@
           panel.style.display = 'none';
         });
 
-        servicePanels[tab.dataset.service].style.display = 'grid';
+        const selectedPanel = servicePanels[tab.dataset.service];
+        selectedPanel.style.display = 'grid';
+
+        // On phones/tablets, automatically bring the newly selected
+        // service details into view so the visitor can see what changed.
+        if (window.innerWidth <= 800) {
+          setTimeout(() => {
+            selectedPanel.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }, 80);
+        }
       });
     });
 
