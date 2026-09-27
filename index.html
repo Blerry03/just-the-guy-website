@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Just The Guy Gutters & Exteriors — family-owned gutter, siding, roofing and exterior services serving Mid-Michigan. Request a free quote.">
+
   <title>Just The Guy Gutters & Exteriors | Mid-Michigan</title>
 
   <style>
@@ -21,63 +22,76 @@
       --radius:22px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
       font-family:Arial, Helvetica, sans-serif;
       color:var(--text);
       background:#fff;
       line-height:1.55;
+      overflow-x:hidden;
     }
-    a{text-decoration:none;color:inherit}
-    button,input,textarea{font:inherit}
+
+    img{
+      max-width:100%;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    button,
+    input,
+    textarea{
+      font:inherit;
+    }
+
 
     /* =========================
        HEADER
        ========================= */
+
     .site-header{
-  position:absolute;
-  z-index:20;
-  top:0;
-  left:0;
-  right:0;
-  padding:18px 30px;
-  color:#fff;
-}
+      position:absolute;
+      z-index:20;
+      top:0;
+      left:0;
+      right:0;
+      padding:18px 30px;
+      color:#fff;
+    }
 
-.nav-wrap{
-  width:100%;
-  margin:0;
-  display:flex;
-  align-items:center;
-  gap:30px;
-}
+    .nav-wrap{
+      width:100%;
+      margin:0;
+      display:flex;
+      align-items:center;
+      gap:30px;
+    }
 
-.brand{
-  display:flex;
-  align-items:center;
-  margin-right:auto;
-}
-
-.brand img{
-  width:175px;
-  height:auto;
-  object-fit:contain;
-  display:block;
-}
     .brand{
-  display:flex;
-  align-items:center;
-  min-width:240px;
-}
-   .brand img{
-  width:240px;
-  max-height:none;
-  height:auto;
-  object-fit:contain;
-  display:block;
-}
+      display:flex;
+      align-items:center;
+      margin-right:auto;
+      min-width:240px;
+    }
+
+    .brand img{
+      width:240px;
+      max-height:none;
+      height:auto;
+      object-fit:contain;
+      display:block;
+    }
+
     .main-nav{
       flex:1;
       display:flex;
@@ -87,6 +101,7 @@
       font-size:15px;
       font-weight:700;
     }
+
     .main-nav a{
       color:#fff;
       opacity:.96;
@@ -94,14 +109,21 @@
       position:relative;
       padding:8px 0;
     }
-    .main-nav a:hover{opacity:.75}
+
+    .main-nav a:hover{
+      opacity:.75;
+    }
+
     .main-nav a.active:after{
       content:"";
       position:absolute;
-      left:0;right:0;bottom:0;
+      left:0;
+      right:0;
+      bottom:0;
       height:2px;
       background:#fff;
     }
+
     .phone-btn{
       background:var(--green);
       color:#fff;
@@ -111,7 +133,11 @@
       white-space:nowrap;
       box-shadow:0 8px 20px rgba(0,0,0,.14);
     }
-    .phone-btn:hover{filter:brightness(1.08)}
+
+    .phone-btn:hover{
+      filter:brightness(1.08);
+    }
+
     .menu-toggle{
       display:none;
       border:0;
@@ -121,9 +147,11 @@
       cursor:pointer;
     }
 
+
     /* =========================
        HERO
        ========================= */
+
     .hero{
       min-height:820px;
       position:relative;
@@ -131,10 +159,12 @@
       color:#fff;
       background:var(--deep);
     }
+
     .hero-slides{
       position:absolute;
       inset:0;
     }
+
     .hero-slide{
       position:absolute;
       inset:0;
@@ -143,18 +173,19 @@
       background-size:cover;
       transition:opacity 1.2s ease;
     }
-    .hero-slide.active{opacity:1}
-   .hero-overlay{
-  position:absolute;
-  inset:0;
-  z-index:1;
-  background:
-  linear-gradient(
-  90deg,
-  rgba(3,27,64,88)
-  rgba(3,27,64,72)
-  rgba(3,27,64,48)
-    };
+
+    .hero-slide.active{
+      opacity:1;
+    }
+
+    /* FIXED — this was the broken CSS */
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+      z-index:1;
+      background:rgba(25,28,32,.48);
+    }
+
     .hero-content{
       position:relative;
       z-index:2;
@@ -167,9 +198,11 @@
       gap:70px;
       align-items:center;
     }
+
     .hero-copy{
       max-width:720px;
     }
+
     .eyebrow{
       color:#fff;
       text-transform:uppercase;
@@ -178,18 +211,39 @@
       font-weight:800;
       margin-bottom:16px;
     }
+
     .hero h1{
       margin:0 0 22px;
       font-size:clamp(44px,5vw,76px);
       line-height:1.04;
       letter-spacing:-2px;
     }
+
     .hero-copy p{
       font-size:20px;
       max-width:650px;
       margin:0 0 30px;
       color:#fff;
     }
+
+    .hero-trust{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 18px;
+      margin-top:24px;
+      font-size:14px;
+      font-weight:800;
+      color:#fff;
+    }
+
+    .hero-trust span{
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.25);
+      padding:8px 12px;
+      border-radius:999px;
+      backdrop-filter:blur(4px);
+    }
+
     .outline-btn{
       display:inline-flex;
       align-items:center;
@@ -204,18 +258,28 @@
       font-size:14px;
       margin-top:18px;
     }
+
     .outline-btn span{
-      width:48px;height:48px;
-      display:grid;place-items:center;
+      width:48px;
+      height:48px;
+      display:grid;
+      place-items:center;
       border-radius:50%;
       background:#fff;
       color:var(--green);
       font-size:26px;
       letter-spacing:0;
     }
-    .outline-btn:hover{background:rgba(255,255,255,.1)}
 
-    /* Quote form */
+    .outline-btn:hover{
+      background:rgba(255,255,255,.1);
+    }
+
+
+    /* =========================
+       QUOTE FORM
+       ========================= */
+
     .quote-card{
       background:rgba(3,27,64,.57);
       border:2px solid rgba(255,255,255,.78);
@@ -224,24 +288,39 @@
       backdrop-filter:blur(6px);
       box-shadow:0 25px 70px rgba(0,0,0,.24);
     }
+
     .quote-card h2{
       margin:0 0 20px;
       font-size:34px;
     }
+
     .form-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:13px;
     }
-    .field{display:flex;flex-direction:column}
-    .field.full{grid-column:1/-1}
+
+    .field{
+      display:flex;
+      flex-direction:column;
+    }
+
+    .field.full{
+      grid-column:1/-1;
+    }
+
     .field label{
       font-size:13px;
       font-weight:700;
       margin-bottom:6px;
     }
-    .field label .req{color:#ff6262}
-    .field input,.field textarea{
+
+    .field label .req{
+      color:#ff6262;
+    }
+
+    .field input,
+    .field textarea{
       width:100%;
       border:0;
       border-radius:7px;
@@ -250,26 +329,31 @@
       padding:12px 13px;
       outline:none;
     }
+
     .field textarea{
       min-height:85px;
       resize:vertical;
     }
+
     .service-box{
       background:#fff;
       color:#111;
       border-radius:8px;
       padding:11px 13px 8px;
     }
+
     .service-title{
       font-size:13px;
       font-weight:700;
       margin-bottom:8px;
     }
+
     .service-options{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:6px 10px;
     }
+
     .service-options label{
       display:flex;
       align-items:center;
@@ -278,10 +362,12 @@
       font-weight:600;
       margin:0;
     }
+
     .service-options input{
       width:auto;
       accent-color:var(--green);
     }
+
     .service-error{
       display:none;
       color:#ff5b5b;
@@ -289,6 +375,7 @@
       font-weight:700;
       margin-top:6px;
     }
+
     .submit-btn{
       border:0;
       background:var(--green);
@@ -299,36 +386,116 @@
       cursor:pointer;
       margin-top:5px;
     }
-    .submit-btn:hover{filter:brightness(1.08)}
+
+    .submit-btn:hover{
+      filter:brightness(1.08);
+    }
+
 
     /* =========================
        SHARED
        ========================= */
+
     .section{
       padding:90px 4%;
     }
+
     .section-inner{
       max-width:1400px;
       margin:auto;
     }
-    .section-heading{text-align:center;margin-bottom:42px}
-    .section-heading .eyebrow{margin-bottom:5px}
+
+    .section-heading{
+      text-align:center;
+      margin-bottom:42px;
+    }
+
+    .section-heading .eyebrow{
+      margin-bottom:5px;
+      color:var(--green);
+    }
+
     .section-heading h2{
       color:var(--deep);
       font-size:clamp(34px,4vw,52px);
       margin:0 0 10px;
       line-height:1.1;
     }
+
     .section-heading p{
       max-width:760px;
       margin:auto;
       color:#58677b;
     }
 
+
+    /* =========================
+       BRAND STRIP
+       ========================= */
+
+    .brand-strip{
+      background:#fff;
+      padding:34px 4%;
+      border-bottom:1px solid var(--border);
+    }
+
+    .brand-strip-inner{
+      max-width:1200px;
+      margin:auto;
+      text-align:center;
+    }
+
+    .brand-strip .eyebrow{
+      color:var(--green);
+    }
+
+    .brand-strip h2{
+      font-size:clamp(32px,4vw,52px);
+      color:var(--deep);
+      margin:0 0 10px;
+    }
+
+    .brand-strip h2 span{
+      color:var(--green);
+    }
+
+    .brand-strip p{
+      max-width:800px;
+      margin:0 auto 25px;
+      color:#536174;
+      font-size:18px;
+    }
+
+    .trust-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      text-align:left;
+    }
+
+    .trust-card{
+      padding:22px;
+      border-radius:18px;
+      background:#f7f8fa;
+      border:1px solid var(--border);
+    }
+
+    .trust-card strong{
+      display:block;
+      color:var(--deep);
+      font-size:20px;
+      margin-bottom:6px;
+    }
+
+
     /* =========================
        ABOUT
        ========================= */
-    .about-section{background:var(--light)}
+
+    .about-section{
+      background:var(--light);
+    }
+
     .about-card{
       border:2px solid var(--green);
       border-radius:22px;
@@ -339,14 +506,26 @@
       gap:36px;
       align-items:center;
     }
+
+    .about-copy .eyebrow{
+      color:var(--green);
+    }
+
     .about-copy h2{
       color:#0d6520;
       font-size:clamp(34px,4vw,55px);
       line-height:1.05;
       margin:0 0 18px;
     }
-    .about-copy h2 span{color:var(--deep)}
-    .about-copy p{margin:0 0 16px}
+
+    .about-copy h2 span{
+      color:var(--deep);
+    }
+
+    .about-copy p{
+      margin:0 0 16px;
+    }
+
     .about-photo{
       width:100%;
       height:500px;
@@ -355,16 +534,22 @@
       display:block;
     }
 
+
     /* =========================
        SERVICES
        ========================= */
-    .services-section{background:#fff}
+
+    .services-section{
+      background:#fff;
+    }
+
     .service-tabs{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:22px;
       margin-bottom:20px;
     }
+
     .service-tab{
       border:0;
       border-radius:20px;
@@ -382,19 +567,38 @@
       background-size:cover;
       background-position:center;
     }
+
     .service-tab:before{
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(0deg,rgba(3,27,64,.95),rgba(3,27,64,.12));
+      background:linear-gradient(
+        0deg,
+        rgba(3,27,64,.95),
+        rgba(3,27,64,.12)
+      );
     }
-    .service-tab>*{position:relative;z-index:1}
+
+    .service-tab > *{
+      position:relative;
+      z-index:1;
+    }
+
     .service-tab.active{
       outline:4px solid var(--green);
       box-shadow:0 15px 35px rgba(44,150,34,.25);
     }
-    .service-tab h3{font-size:34px;margin:0 0 8px}
-    .service-tab p{margin:0;max-width:420px}
+
+    .service-tab h3{
+      font-size:34px;
+      margin:0 0 8px;
+    }
+
+    .service-tab p{
+      margin:0;
+      max-width:420px;
+    }
+
     .service-panel{
       background:var(--deep);
       color:#fff;
@@ -404,6 +608,7 @@
       grid-template-columns:330px 1fr;
       gap:32px;
     }
+
     .service-panel-copy h3{
       color:#7ee36e;
       text-transform:uppercase;
@@ -411,8 +616,17 @@
       font-size:15px;
       margin:0 0 10px;
     }
-    .service-panel-copy h2{font-size:40px;line-height:1.05;margin:0 0 18px}
-    .service-panel-copy p{color:#e5edf8}
+
+    .service-panel-copy h2{
+      font-size:40px;
+      line-height:1.05;
+      margin:0 0 18px;
+    }
+
+    .service-panel-copy p{
+      color:#e5edf8;
+    }
+
     .quote-small{
       display:inline-flex;
       align-items:center;
@@ -424,25 +638,41 @@
       font-weight:800;
       margin-top:10px;
     }
+
     .service-detail-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:14px;
     }
+
     .service-detail{
       background:#fff;
       color:var(--text);
       border-radius:15px;
       padding:12px;
+      overflow:hidden;
     }
+
     .service-detail img{
       width:100%;
       height:130px;
       object-fit:cover;
       border-radius:10px;
+      display:block;
     }
-    .service-detail h4{margin:10px 0 5px;color:var(--deep);font-size:18px}
-    .service-detail p{font-size:14px;margin:0;color:#536174}
+
+    .service-detail h4{
+      margin:10px 0 5px;
+      color:var(--deep);
+      font-size:18px;
+    }
+
+    .service-detail p{
+      font-size:14px;
+      margin:0;
+      color:#536174;
+    }
+
     .service-detail a{
       display:inline-block;
       margin-top:10px;
@@ -454,32 +684,172 @@
     /* =========================
        PROJECT CAROUSEL
        ========================= */
-    .project-section{padding:95px 4%;background:var(--light);overflow:hidden}
-    .project-inner{max-width:1400px;margin:auto}
-    .project-heading{text-align:center;max-width:800px;margin:0 auto 45px}
-    .project-heading .eyebrow{margin-bottom:5px}
-    .project-heading h2{color:var(--deep);font-size:clamp(36px,4vw,55px);line-height:1.08;margin:5px 0 14px}
-    .project-heading p{color:#58677b;font-size:17px;margin:auto}
-    .project-carousel{position:relative;display:flex;align-items:center;gap:15px}
-    .project-window{width:100%;overflow:hidden}
-    .project-track{display:flex;gap:20px;transition:transform .5s ease;will-change:transform}
-    .project-slide{flex:0 0 calc((100% - 40px)/3);height:390px;border-radius:20px;overflow:hidden;position:relative;cursor:pointer;background:#dce2e8;box-shadow:0 12px 30px rgba(3,27,64,.12)}
-    .project-slide img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-    .project-slide:hover img{transform:scale(1.05)}
-    .project-slide span{position:absolute;left:0;right:0;bottom:0;padding:55px 20px 20px;color:#fff;font-size:17px;font-weight:800;background:linear-gradient(transparent,rgba(3,27,64,.9))}
-    .project-arrow{flex:0 0 52px;width:52px;height:52px;border:0;border-radius:50%;background:var(--deep);color:#fff;font-size:34px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:transform .2s ease,background .2s ease}
-    .project-arrow:hover{background:var(--green);transform:scale(1.08)}
-    .project-dots{display:flex;justify-content:center;gap:8px;margin-top:25px}
-    .project-dot{width:9px;height:9px;border:0;border-radius:50%;background:#bbc3cc;cursor:pointer;padding:0}
-    .project-dot.active{background:var(--green);transform:scale(1.3)}
-    .project-gallery-button{text-align:center;margin-top:30px}
-    .project-gallery-button a{display:inline-block;background:var(--green);color:#fff;padding:14px 25px;border-radius:999px;font-weight:800;transition:transform .2s ease,filter .2s ease}
-    .project-gallery-button a:hover{transform:translateY(-2px);filter:brightness(1.07)}
+
+    .project-section{
+      padding:95px 4%;
+      background:var(--light);
+      overflow:hidden;
+    }
+
+    .project-inner{
+      max-width:1400px;
+      margin:auto;
+    }
+
+    .project-heading{
+      text-align:center;
+      max-width:800px;
+      margin:0 auto 45px;
+    }
+
+    .project-heading .eyebrow{
+      margin-bottom:5px;
+      color:var(--green);
+    }
+
+    .project-heading h2{
+      color:var(--deep);
+      font-size:clamp(36px,4vw,55px);
+      line-height:1.08;
+      margin:5px 0 14px;
+    }
+
+    .project-heading p{
+      color:#58677b;
+      font-size:17px;
+      margin:auto;
+    }
+
+    .project-carousel{
+      position:relative;
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .project-window{
+      width:100%;
+      overflow:hidden;
+    }
+
+    .project-track{
+      display:flex;
+      gap:20px;
+      transition:transform .5s ease;
+      will-change:transform;
+    }
+
+    .project-slide{
+      flex:0 0 calc((100% - 40px)/3);
+      height:390px;
+      border-radius:20px;
+      overflow:hidden;
+      position:relative;
+      cursor:pointer;
+      background:#dce2e8;
+      box-shadow:0 12px 30px rgba(3,27,64,.12);
+    }
+
+    .project-slide img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transition:transform .4s ease;
+    }
+
+    .project-slide:hover img{
+      transform:scale(1.05);
+    }
+
+    .project-slide span{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      padding:55px 20px 20px;
+      color:#fff;
+      font-size:17px;
+      font-weight:800;
+      background:linear-gradient(
+        transparent,
+        rgba(3,27,64,.9)
+      );
+    }
+
+    .project-arrow{
+      flex:0 0 52px;
+      width:52px;
+      height:52px;
+      border:0;
+      border-radius:50%;
+      background:var(--deep);
+      color:#fff;
+      font-size:34px;
+      line-height:1;
+      cursor:pointer;
+      display:grid;
+      place-items:center;
+      transition:transform .2s ease, background .2s ease;
+    }
+
+    .project-arrow:hover{
+      background:var(--green);
+      transform:scale(1.08);
+    }
+
+    .project-dots{
+      display:flex;
+      justify-content:center;
+      gap:8px;
+      margin-top:25px;
+    }
+
+    .project-dot{
+      width:9px;
+      height:9px;
+      border:0;
+      border-radius:50%;
+      background:#bbc3cc;
+      cursor:pointer;
+      padding:0;
+    }
+
+    .project-dot.active{
+      background:var(--green);
+      transform:scale(1.3);
+    }
+
+    .project-gallery-button{
+      text-align:center;
+      margin-top:30px;
+    }
+
+    .project-gallery-button a{
+      display:inline-block;
+      background:var(--green);
+      color:#fff;
+      padding:14px 25px;
+      border-radius:999px;
+      font-weight:800;
+      transition:transform .2s ease, filter .2s ease;
+    }
+
+    .project-gallery-button a:hover{
+      transform:translateY(-2px);
+      filter:brightness(1.07);
+    }
+
 
     /* =========================
        SERVICE AREA / MAP
        ========================= */
-    .area-section{padding-bottom:0;background:#fff}
+
+    .area-section{
+      padding-bottom:0;
+      background:#fff;
+    }
+
     .city-list{
       display:flex;
       flex-wrap:wrap;
@@ -488,6 +858,7 @@
       margin:0 auto 28px;
       max-width:1050px;
     }
+
     .city-link{
       background:var(--green);
       color:#fff;
@@ -496,21 +867,26 @@
       font-size:14px;
       font-weight:800;
     }
-    .city-link:hover{filter:brightness(1.08)}
-  .service-map-wrap {
-  width: 100%;
-  height: 560px;
-  margin-top: 20px;
-  border-top: 4px solid var(--deep);
-  overflow: hidden;
-}
 
-.service-map-wrap iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+    .city-link:hover{
+      filter:brightness(1.08);
+    }
+
+    .service-map-wrap{
+      width:100%;
+      height:560px;
+      margin-top:20px;
+      border-top:4px solid var(--deep);
+      overflow:hidden;
+    }
+
+    .service-map-wrap iframe{
+      display:block;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+
     .map-note{
       max-width:1000px;
       margin:0 auto 25px;
@@ -518,13 +894,20 @@
       color:#5b6a7e;
     }
 
+
     /* =========================
        REVIEWS
        ========================= */
+
     .reviews-section{
       background:var(--deep);
       color:#fff;
     }
+
+    .reviews-section .section-heading .eyebrow{
+      color:#7ee36e;
+    }
+
     .reviews-header{
       max-width:800px;
       margin:0 auto 30px;
@@ -537,7 +920,11 @@
       justify-content:space-between;
       gap:20px;
     }
-    .reviews-header strong{font-size:28px}
+
+    .reviews-header strong{
+      font-size:28px;
+    }
+
     .reviews-link{
       color:#fff;
       background:var(--green);
@@ -546,17 +933,20 @@
       font-weight:800;
       white-space:nowrap;
     }
+
     .review-stage{
       max-width:1100px;
       margin:auto;
       position:relative;
       overflow:hidden;
     }
+
     .review-track{
       display:flex;
       gap:18px;
       transition:transform .55s ease;
     }
+
     .review-card{
       flex:0 0 calc((100% - 36px)/3);
       background:#fff;
@@ -565,9 +955,23 @@
       padding:23px;
       min-height:220px;
     }
-    .stars{color:#f2bd2e;letter-spacing:2px;font-size:19px}
-    .review-card blockquote{margin:12px 0;font-size:15px}
-    .review-card cite{font-style:normal;font-weight:800}
+
+    .stars{
+      color:#f2bd2e;
+      letter-spacing:2px;
+      font-size:19px;
+    }
+
+    .review-card blockquote{
+      margin:12px 0;
+      font-size:15px;
+    }
+
+    .review-card cite{
+      font-style:normal;
+      font-weight:800;
+    }
+
     .review-controls{
       display:flex;
       justify-content:center;
@@ -575,8 +979,10 @@
       gap:12px;
       margin-top:25px;
     }
+
     .review-controls button{
-      width:42px;height:42px;
+      width:42px;
+      height:42px;
       border:0;
       border-radius:50%;
       background:#fff;
@@ -584,16 +990,22 @@
       font-size:21px;
       cursor:pointer;
     }
-    .review-controls span{font-weight:700}
+
+    .review-controls span{
+      font-weight:700;
+    }
+
 
     /* =========================
        FINAL CTA
        ========================= */
+
     .final-cta{
       background:var(--blue);
       color:#fff;
       padding:45px 4%;
     }
+
     .cta-inner{
       max-width:1400px;
       margin:auto;
@@ -602,8 +1014,17 @@
       align-items:center;
       gap:30px;
     }
-    .cta-inner h2{margin:0;font-size:34px}
-    .cta-inner p{margin:6px 0 0;color:#e8f0fb}
+
+    .cta-inner h2{
+      margin:0;
+      font-size:34px;
+    }
+
+    .cta-inner p{
+      margin:6px 0 0;
+      color:#e8f0fb;
+    }
+
     .cta-button{
       background:var(--green);
       color:#fff;
@@ -613,14 +1034,17 @@
       white-space:nowrap;
     }
 
+
     /* =========================
        FOOTER
        ========================= */
+
     footer{
       background:var(--deep);
       color:#fff;
       padding:55px 4% 20px;
     }
+
     .footer-grid{
       max-width:1400px;
       margin:auto;
@@ -630,9 +1054,21 @@
       padding-bottom:35px;
       border-bottom:1px solid rgba(255,255,255,.3);
     }
-    .footer-logo{width:175px}
-    footer h3{margin:0 0 15px}
-    footer p{margin:5px 0;color:#dce6f3}
+
+    .footer-logo{
+      width:175px;
+      height:auto;
+    }
+
+    footer h3{
+      margin:0 0 15px;
+    }
+
+    footer p{
+      margin:5px 0;
+      color:#dce6f3;
+    }
+
     .footer-bottom{
       max-width:1400px;
       margin:18px auto 0;
@@ -641,57 +1077,144 @@
       color:#cbd7e6;
     }
 
+
     /* =========================
-       JUST THE GUY BRAND DETAILS
+       POPUP
        ========================= */
-    .hero-trust{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:24px;font-size:14px;font-weight:800;color:#fff}
-    .hero-trust span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:8px 12px;border-radius:999px;backdrop-filter:blur(4px)}
 
-    .brand-strip{background:#fff;padding:34px 4%;border-bottom:1px solid var(--border)}
-    .brand-strip-inner{max-width:1200px;margin:auto;text-align:center}
-    .brand-strip h2{font-size:clamp(32px,4vw,52px);color:var(--deep);margin:0 0 10px}
-    .brand-strip h2 span{color:var(--green)}
-    .brand-strip p{max-width:800px;margin:0 auto 25px;color:#536174;font-size:18px}
-    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left}
-    .trust-card{padding:22px;border-radius:18px;background:#f7f8fa;border:1px solid var(--border)}
-    .trust-card strong{display:block;color:var(--deep);font-size:20px;margin-bottom:6px}
+    .guy-pop{
+      position:fixed;
+      right:18px;
+      bottom:22px;
+      z-index:100;
+      display:flex;
+      align-items:flex-end;
+      gap:10px;
+    }
 
-    .process-section{background:#f7f8fa}
-    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .process-step{background:#fff;border-radius:20px;padding:26px;border-bottom:4px solid var(--green);box-shadow:0 10px 30px rgba(3,27,64,.08)}
-    .process-number{font-size:44px;font-weight:900;color:rgba(44,150,34,.25);line-height:1;margin-bottom:10px}
-    .process-step h3{margin:0 0 8px;color:var(--deep);font-size:21px}
-    .process-step p{margin:0;color:#58677b}
+    .guy-bubble{
+      position:relative;
+      background:#fff;
+      color:var(--deep);
+      border:3px solid var(--green);
+      border-radius:18px;
+      padding:12px 42px 12px 16px;
+      box-shadow:0 12px 35px rgba(3,27,64,.24);
+      font-weight:900;
+      max-width:230px;
+    }
 
-    .guy-pop{position:fixed;right:18px;bottom:22px;z-index:100;display:flex;align-items:flex-end;gap:10px}
-    .guy-bubble{position:relative;background:#fff;color:var(--deep);border:3px solid var(--green);border-radius:18px;padding:12px 42px 12px 16px;box-shadow:0 12px 35px rgba(3,27,64,.24);font-weight:900;max-width:230px}
-    .guy-bubble small{display:block;font-weight:600;color:#536174;margin-top:2px}
-    .guy-close{position:absolute;right:9px;top:7px;border:0;background:transparent;color:#68778b;font-size:18px;cursor:pointer}
-    .guy-mascot{width:74px;height:74px;border-radius:50%;background:var(--green);border:4px solid #fff;box-shadow:0 10px 28px rgba(3,27,64,.25);display:grid;place-items:center;color:#fff;font-size:38px;font-weight:900;overflow:hidden}
-    .guy-mascot img{width:100%;height:100%;object-fit:contain}
+    .guy-bubble small{
+      display:block;
+      font-weight:600;
+      color:#536174;
+      margin-top:2px;
+    }
+
+    .guy-close{
+      position:absolute;
+      right:9px;
+      top:7px;
+      border:0;
+      background:transparent;
+      color:#68778b;
+      font-size:18px;
+      cursor:pointer;
+    }
+
+    .guy-mascot{
+      width:74px;
+      height:74px;
+      border-radius:50%;
+      background:var(--green);
+      border:4px solid #fff;
+      box-shadow:0 10px 28px rgba(3,27,64,.25);
+      display:grid;
+      place-items:center;
+      color:#fff;
+      font-size:38px;
+      font-weight:900;
+      overflow:hidden;
+    }
+
+    .guy-mascot img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+
+
+    /* =========================
+       TABLET
+       ========================= */
+
+    @media(max-width:1050px){
+
+      .main-nav{
+        gap:13px;
+        font-size:13px;
+      }
+
+      .brand{
+        min-width:150px;
+      }
+
+      .brand img{
+        width:135px;
+      }
+
+      .phone-btn{
+        padding:12px 18px;
+        font-size:13px;
+      }
+
+      .hero-content{
+        grid-template-columns:1fr 410px;
+        gap:30px;
+      }
+
+      .service-panel{
+        grid-template-columns:1fr;
+      }
+
+      .service-detail-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
 
     /* =========================
        MOBILE
        ========================= */
-    @media(max-width:1050px){
-      .main-nav{gap:13px;font-size:13px}
-      .brand{min-width:150px}
-      .brand img{width:135px}
-      .phone-btn{padding:12px 18px;font-size:13px}
-      .hero-content{grid-template-columns:1fr 410px;gap:30px}
-      .service-panel{grid-template-columns:1fr}
-      .service-detail-grid{grid-template-columns:repeat(2,1fr)}
-      .footer-grid{grid-template-columns:repeat(2,1fr)}
-    }
 
     @media(max-width:800px){
-      .site-header{padding:12px 5%}
-      .nav-wrap{justify-content:space-between}
-      .brand img{width:135px}
+
+      .site-header{
+        padding:12px 5%;
+      }
+
+      .nav-wrap{
+        justify-content:space-between;
+      }
+
+      .brand{
+        min-width:0;
+      }
+
+      .brand img{
+        width:150px;
+      }
+
       .main-nav{
         display:none;
         position:absolute;
-        top:86px;left:5%;right:5%;
+        top:86px;
+        left:5%;
+        right:5%;
         background:var(--deep);
         border-radius:16px;
         padding:18px;
@@ -700,80 +1223,363 @@
         gap:0;
         box-shadow:var(--shadow);
       }
-      .main-nav.open{display:flex}
-      .main-nav a{padding:13px 5px}
-      .phone-btn{display:none}
-      .menu-toggle{display:block}
 
-      .hero{min-height:auto}
+      .main-nav.open{
+        display:flex;
+      }
+
+      .main-nav a{
+        padding:13px 5px;
+      }
+
+      .phone-btn{
+        display:none;
+      }
+
+      .menu-toggle{
+        display:block;
+      }
+
+
+      /* HERO */
+
+      .hero{
+        min-height:auto;
+      }
+
       .hero-content{
         min-height:auto;
-        padding:135px 5% 55px;
+        padding:120px 5% 55px;
+        grid-template-columns:1fr;
+        gap:40px;
+      }
+
+      .hero-copy{
+        max-width:none;
+      }
+
+      .hero h1{
+        font-size:44px;
+        letter-spacing:-1px;
+      }
+
+      .hero-copy p{
+        font-size:17px;
+      }
+
+      .outline-btn{
+        letter-spacing:2px;
+        font-size:12px;
+      }
+
+
+      /* FORM */
+
+      .quote-card{
+        padding:22px;
+        width:100%;
+      }
+
+      .form-grid{
         grid-template-columns:1fr;
       }
-      .hero-copy{max-width:none}
-      .hero h1{font-size:44px;letter-spacing:-1px}
-      .hero-copy p{font-size:17px}
-      .quote-card{padding:22px}
-      .form-grid{grid-template-columns:1fr}
-      .field.full{grid-column:auto}
-      .service-options{grid-template-columns:1fr 1fr}
 
-      .about-card{grid-template-columns:1fr}
-      .about-photo{height:340px}
+      .field.full{
+        grid-column:auto;
+      }
 
-      .service-tabs{grid-template-columns:1fr}
-      .service-tab{min-height:250px}
-      .service-panel{padding:23px}
-      .service-detail-grid{grid-template-columns:1fr 1fr}
+      .service-options{
+        grid-template-columns:1fr 1fr;
+      }
 
-      .project-slide{flex:0 0 calc((100% - 20px)/2);height:350px}
 
-     .service-map-wrap {
-  height: 430px;
-}
+      /* GENERAL SECTIONS */
 
-      .review-card{flex-basis:100%}
-      .reviews-header{align-items:flex-start;flex-direction:column}
-      .cta-inner{flex-direction:column;align-items:flex-start}
+      .section{
+        padding:65px 5%;
+      }
 
-      .footer-grid{grid-template-columns:1fr}
-      .trust-grid{grid-template-columns:1fr}
-      .process-grid{grid-template-columns:1fr 1fr}
-      .guy-pop{right:10px;bottom:12px}
-      .guy-mascot{width:60px;height:60px;font-size:30px}
-      .guy-bubble{max-width:205px;font-size:14px}
+      .brand-strip{
+        padding:55px 5%;
+      }
+
+      .trust-grid{
+        grid-template-columns:1fr;
+      }
+
+
+      /* ABOUT */
+
+      .about-card{
+        grid-template-columns:1fr;
+        padding:20px;
+      }
+
+      .about-photo{
+        height:340px;
+      }
+
+
+      /* SERVICES */
+
+      .service-tabs{
+        grid-template-columns:1fr;
+        gap:16px;
+      }
+
+      .service-tab{
+        min-height:220px;
+      }
+
+      .service-panel{
+        padding:23px;
+        border-radius:18px;
+      }
+
+      .service-panel-copy h2{
+        font-size:34px;
+      }
+
+      .service-detail-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .service-detail img{
+        height:170px;
+      }
+
+
+      /* PROJECTS */
+
+      .project-slide{
+        flex:0 0 calc((100% - 20px)/2);
+        height:350px;
+      }
+
+
+      /* MAP */
+
+      .service-map-wrap{
+        height:430px;
+      }
+
+
+      /* REVIEWS */
+
+      .review-card{
+        flex-basis:100%;
+      }
+
+      .reviews-header{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+
+      /* CTA */
+
+      .cta-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+
+      /* FOOTER */
+
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+
+      /* POPUP */
+
+      .guy-pop{
+        right:10px;
+        bottom:12px;
+      }
+
+      .guy-mascot{
+        width:60px;
+        height:60px;
+        font-size:30px;
+      }
+
+      .guy-bubble{
+        max-width:205px;
+        font-size:14px;
+      }
     }
 
+
+    /* =========================
+       SMALL PHONES
+       ========================= */
+
     @media(max-width:480px){
-      .hero h1{font-size:37px}
-      .project-section{padding:70px 5%}
-      .project-slide{flex:0 0 100%;height:330px}
-      .project-carousel{gap:8px}
-      .project-arrow{position:absolute;z-index:5;width:44px;height:44px;background:rgba(3,27,64,.88)}
-      .project-prev{left:10px}
-      .project-next{right:10px}
-      .service-detail-grid{grid-template-columns:1fr}
-      .service-options{grid-template-columns:1fr}
-      .city-link{font-size:12px;padding:9px 15px}
-      .about-photo{height:280px}
-      .process-grid{grid-template-columns:1fr}
-      .guy-mascot{display:none}
+
+      .site-header{
+        padding:10px 18px;
+      }
+
+      .brand img{
+        width:145px;
+      }
+
+      .hero-content{
+        padding:110px 18px 45px;
+      }
+
+      .hero h1{
+        font-size:37px;
+      }
+
+      .hero-copy p{
+        font-size:16px;
+      }
+
+      .hero-trust{
+        gap:8px;
+      }
+
+      .hero-trust span{
+        font-size:12px;
+      }
+
+      .outline-btn{
+        width:100%;
+        justify-content:space-between;
+        padding-left:18px;
+      }
+
+      .quote-card{
+        padding:18px;
+      }
+
+      .quote-card h2{
+        font-size:29px;
+      }
+
+      .service-options{
+        grid-template-columns:1fr;
+      }
+
+      .brand-strip h2{
+        font-size:34px;
+      }
+
+      .brand-strip p{
+        font-size:16px;
+      }
+
+      .about-photo{
+        height:280px;
+      }
+
+      .service-tab{
+        min-height:190px;
+        padding:22px;
+      }
+
+      .service-tab h3{
+        font-size:30px;
+      }
+
+      .service-detail-grid{
+        grid-template-columns:1fr;
+      }
+
+      .service-detail img{
+        height:200px;
+      }
+
+      .project-section{
+        padding:70px 5%;
+      }
+
+      .project-slide{
+        flex:0 0 100%;
+        height:330px;
+      }
+
+      .project-carousel{
+        gap:8px;
+      }
+
+      .project-arrow{
+        position:absolute;
+        z-index:5;
+        width:44px;
+        height:44px;
+        background:rgba(3,27,64,.88);
+      }
+
+      .project-prev{
+        left:10px;
+      }
+
+      .project-next{
+        right:10px;
+      }
+
+      .city-list{
+        gap:8px;
+      }
+
+      .city-link{
+        font-size:12px;
+        padding:9px 15px;
+      }
+
+      .reviews-header{
+        padding:18px;
+      }
+
+      .reviews-header strong{
+        font-size:24px;
+      }
+
+      .reviews-link{
+        white-space:normal;
+      }
+
+      .cta-inner h2{
+        font-size:30px;
+      }
+
+      .cta-button{
+        width:100%;
+        text-align:center;
+      }
+
+      .guy-mascot{
+        display:none;
+      }
+
+      .guy-bubble{
+        max-width:190px;
+      }
     }
   </style>
 </head>
+
 
 <body>
 
   <!-- =========================
        HEADER
        ========================= -->
+
   <header class="site-header">
+
     <div class="nav-wrap">
-      <a class="brand" href="#home" aria-label="Just The Guy Gutters & Exteriors home">
-        <!-- Replace with your actual logo filename if different -->
-        <img src="images/LOGO.PNG"
-     alt="Just The Guy Gutters & Exteriors">
+
+      <a class="brand"
+         href="#home"
+         aria-label="Just The Guy Gutters & Exteriors home">
+
+        <img
+          src="images/LOGO.PNG"
+          alt="Just The Guy Gutters & Exteriors">
       </a>
 
       <nav class="main-nav" id="mainNav">
@@ -788,809 +1594,2162 @@
         <a href="#contact">contact</a>
       </nav>
 
-      <a class="phone-btn" href="tel:+15178858953">(517) 885-8953</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      <a class="phone-btn"
+         href="tel:+15178858953">
+        (517) 885-8953
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu">
+        ☰
+      </button>
+
     </div>
+
   </header>
+
 
   <!-- =========================
        HERO
        ========================= -->
+
   <section class="hero" id="home">
+
     <div class="hero-slides" aria-hidden="true">
-      <!-- Use YOUR project photos here -->
-      <div class="hero-slide active" style="background-image:url('images/IMG_1945.JPEG')"></div>
-      <div class="hero-slide" style="background-image:url('images/IMG_4443.JPEG')"></div>
-      <div class="hero-slide" style="background-image:url('images/IMG_7603.JPEG')"></div>
-      <div class="hero-slide" style="background-image:url('images/IMG_8226.JPEG')"></div>
-      <div class="hero-slide" style="background-image:url('images/IMG_4707.JPEG')"></div>
-      <div class="hero-slide" style="background-image:url('images/IMG_8234.PNG')"></div>
+
+      <div
+        class="hero-slide active"
+        style="background-image:url('images/IMG_1945.JPEG')">
+      </div>
+
+      <div
+        class="hero-slide"
+        style="background-image:url('images/IMG_4443.JPEG')">
+      </div>
+
+      <div
+        class="hero-slide"
+        style="background-image:url('images/IMG_7603.JPEG')">
+      </div>
+
+      <div
+        class="hero-slide"
+        style="background-image:url('images/IMG_8226.JPEG')">
+      </div>
+
+      <div
+        class="hero-slide"
+        style="background-image:url('images/IMG_4707.JPEG')">
+      </div>
+
+      <div
+        class="hero-slide"
+        style="background-image:url('images/IMG_8234.PNG')">
+      </div>
+
     </div>
+
     <div class="hero-overlay"></div>
 
+
     <div class="hero-content">
+
       <div class="hero-copy">
-        <div class="eyebrow">Family-Owned • Mid-Michigan</div>
-        <h1>You Need Just The Guy</h1>
+
+        <div class="eyebrow">
+          Family-Owned • Mid-Michigan
+        </div>
+
+        <h1>
+          You Need Just The Guy
+        </h1>
+
         <p>
-          Gutters, roofing, siding and exterior work from a Mid-Michigan family that treats your home like our own. Good work, straight answers, and no runaround.
+          Gutters, roofing, siding and exterior work from a Mid-Michigan
+          family that treats your home like our own. Good work, straight
+          answers, and no runaround.
         </p>
+
         <div class="hero-trust">
           <span>✓ Family Owned &amp; Operated</span>
           <span>✓ Local to Mid-Michigan</span>
         </div>
-      <a class="outline-btn" href="#contact">
-          get your free estimate <span>→</span>
+
+        <a class="outline-btn" href="#contact">
+          get your free estimate
+          <span>→</span>
         </a>
+
       </div>
 
+
+      <!-- QUOTE FORM -->
+
       <div class="quote-card">
+
         <h2>Get a Quote</h2>
 
-        <!-- FormSubmit sends submissions to your email.
-             The visible Google reCAPTCHA can be added once a reCAPTCHA site key
-             is created for the domain. -->
-        <form action="https://formsubmit.co/justtheguyguttersandexterior@gmail.com" method="POST" id="quoteForm">
-          <input type="hidden" name="_subject" value="New Website Quote Request">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="true">
-          <input type="hidden" name="_next" value="#contact">
+        <form
+          action="https://formsubmit.co/justtheguyguttersandexterior@gmail.com"
+          method="POST"
+          id="quoteForm">
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Website Quote Request">
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table">
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="true">
+
+          <input
+            type="hidden"
+            name="_next"
+            value="#contact">
+
 
           <div class="form-grid">
-            <div class="field">
-              <label for="firstName">First Name <span class="req">*</span></label>
-              <input id="firstName" name="First Name" type="text" required>
-            </div>
 
             <div class="field">
-              <label for="lastName">Last Name <span class="req">*</span></label>
-              <input id="lastName" name="Last Name" type="text" required>
+              <label for="firstName">
+                First Name <span class="req">*</span>
+              </label>
+
+              <input
+                id="firstName"
+                name="First Name"
+                type="text"
+                required>
             </div>
 
-            <div class="field">
-              <label for="email">Email <span class="req">*</span></label>
-              <input id="email" name="Email" type="email" required>
-            </div>
 
             <div class="field">
-              <label for="phone">Phone <span class="req">*</span></label>
-              <input id="phone" name="Phone" type="tel" required>
+              <label for="lastName">
+                Last Name <span class="req">*</span>
+              </label>
+
+              <input
+                id="lastName"
+                name="Last Name"
+                type="text"
+                required>
             </div>
+
+
+            <div class="field">
+              <label for="email">
+                Email <span class="req">*</span>
+              </label>
+
+              <input
+                id="email"
+                name="Email"
+                type="email"
+                required>
+            </div>
+
+
+            <div class="field">
+              <label for="phone">
+                Phone <span class="req">*</span>
+              </label>
+
+              <input
+                id="phone"
+                name="Phone"
+                type="tel"
+                required>
+            </div>
+
 
             <div class="field full">
-              <label for="address">Property Address <span class="req">*</span></label>
-              <input id="address" name="Property Address" type="text" required>
+
+              <label for="address">
+                Property Address <span class="req">*</span>
+              </label>
+
+              <input
+                id="address"
+                name="Property Address"
+                type="text"
+                required>
+
             </div>
 
+
             <div class="field full">
+
               <div class="service-box">
+
                 <div class="service-title">
                   Service Needed <span class="req">*</span>
                 </div>
 
                 <div class="service-options">
-                  <label><input type="checkbox" name="Services[]" value="Seamless Gutters"> Seamless Gutters</label>
-                  <label><input type="checkbox" name="Services[]" value="Gutter Guards"> Gutter Guards</label>
-                  <label><input type="checkbox" name="Services[]" value="Gutter Cleaning"> Gutter Cleaning</label>
-                  <label><input type="checkbox" name="Services[]" value="Gutter Repair"> Gutter Repair</label>
-                  <label><input type="checkbox" name="Services[]" value="Siding"> Siding</label>
-                  <label><input type="checkbox" name="Services[]" value="Roofing"> Roofing</label>
-                  <label><input type="checkbox" name="Services[]" value="Other Exterior Work"> Other Exterior Work</label>
+
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="Services[]"
+                      value="Seamless Gutters">
+                    Seamless Gutters
+                  </label>
+
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="Services[]"
+                      value="Gutter Guards">
+                    Gutter Guards
+                  </label>
+
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="Services[]"
+                      value="Gutter Cleaning">
+                    Gutter Cleaning
+                  </label>
+
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="Services[]"
+                      value="Gutter Repair">
+                    Gutter Repair
+                  </label>
+
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="Services[]"
+                      value="Siding">
+                    Siding
+                  </label>
+
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="Services[]"
+                      value="Roofing">
+                    Roofing
+                  </label>
+
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="Services[]"
+                      value="Other Exterior Work">
+                    Other Exterior Work
+                  </label>
+
                 </div>
 
-                <div class="service-error" id="serviceError">
+                <div
+                  class="service-error"
+                  id="serviceError">
                   Please select at least one service.
                 </div>
+
               </div>
+
             </div>
+
 
             <div class="field full">
-              <label for="notes">Notes <span style="font-weight:400">(optional)</span></label>
-              <textarea id="notes" name="Notes" placeholder="Tell us anything else you'd like us to know."></textarea>
+
+              <label for="notes">
+                Notes
+                <span style="font-weight:400">
+                  (optional)
+                </span>
+              </label>
+
+              <textarea
+                id="notes"
+                name="Notes"
+                placeholder="Tell us anything else you'd like us to know."></textarea>
+
             </div>
 
-            <!-- Google reCAPTCHA placeholder:
-                 Replace YOUR_RECAPTCHA_SITE_KEY with your actual site key.
-                 A real checkbox requires the matching Google site key. -->
-            <div class="field full" id="recaptcha-container" style="display:none;">
-              <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+
+            <div
+              class="field full"
+              id="recaptcha-container"
+              style="display:none;">
+
+              <div
+                class="g-recaptcha"
+                data-sitekey="YOUR_RECAPTCHA_SITE_KEY">
+              </div>
+
             </div>
+
 
             <div class="field full">
-              <button class="submit-btn" type="submit">Send Request</button>
+
+              <button
+                class="submit-btn"
+                type="submit">
+                Send Request
+              </button>
+
             </div>
+
           </div>
+
         </form>
+
       </div>
+
     </div>
+
   </section>
 
-  <section class="brand-strip" aria-label="Why choose Just The Guy">
+
+  <!-- =========================
+       BRAND STRIP
+       ========================= -->
+
+  <section
+    class="brand-strip"
+    aria-label="Why choose Just The Guy">
+
     <div class="brand-strip-inner">
-      <div class="eyebrow">We Know Just The Guy</div>
-      <h2>Good Work. Good People. <span>No Runaround.</span></h2>
-      <p>Finding someone you trust to work on your home shouldn’t be complicated. We’re a local family business focused on honest service, quality workmanship, and treating every home like it belongs to family.</p>
-      <div class="trust-grid">
-        <div class="trust-card"><strong>Family Owned</strong>You’re working with a real local family — not a national chain or a call center.</div>
-        <div class="trust-card"><strong>Straight Answers</strong>We’ll talk through what your home needs without making the process harder than it has to be.</div>
-        <div class="trust-card"><strong>Work We Stand Behind</strong>We want to leave every property with work we’d be happy to have on our own home.</div>
+
+      <div class="eyebrow">
+        We Know Just The Guy
       </div>
+
+      <h2>
+        Good Work. Good People.
+        <span>No Runaround.</span>
+      </h2>
+
+      <p>
+        Finding someone you trust to work on your home shouldn’t be
+        complicated. We’re a local family business focused on honest
+        service, quality workmanship, and treating every home like it
+        belongs to family.
+      </p>
+
+
+      <div class="trust-grid">
+
+        <div class="trust-card">
+          <strong>Family Owned</strong>
+          You’re working with a real local family — not a national chain
+          or a call center.
+        </div>
+
+        <div class="trust-card">
+          <strong>Straight Answers</strong>
+          We’ll talk through what your home needs without making the
+          process harder than it has to be.
+        </div>
+
+        <div class="trust-card">
+          <strong>Work We Stand Behind</strong>
+          We want to leave every property with work we’d be happy to
+          have on our own home.
+        </div>
+
+      </div>
+
     </div>
+
   </section>
+
 
   <!-- =========================
        ABOUT
        ========================= -->
-  <section class="section about-section" id="about">
+
+  <section
+    class="section about-section"
+    id="about">
+
     <div class="section-inner">
+
       <div class="about-card">
+
         <div class="about-copy">
-          <div class="eyebrow">A Local Family Business</div>
-          <h2>Built on Hard Work.<br><span>Built Around You.</span></h2>
+
+          <div class="eyebrow">
+            A Local Family Business
+          </div>
+
+          <h2>
+            Built on Hard Work.<br>
+            <span>Built Around You.</span>
+          </h2>
+
           <p>
-            Just The Guy Gutters & Exteriors is a family-owned local business serving
-            homeowners and businesses throughout Mid-Michigan.
+            Just The Guy Gutters & Exteriors is a family-owned local
+            business serving homeowners and businesses throughout
+            Mid-Michigan.
           </p>
+
           <p>
-            We want the website to feel the same way we want the business to feel:
-            personal, straightforward and dependable. When you call, you're dealing
-            with real people who care about the work being done on your property.
+            We want the website to feel the same way we want the
+            business to feel: personal, straightforward and dependable.
+            When you call, you're dealing with real people who care about
+            the work being done on your property.
           </p>
+
           <p>
-            From gutter installation and guards to repairs, siding, roofing and other
-            exterior work, we're here to help protect your property.
+            From gutter installation and guards to repairs, siding,
+            roofing and other exterior work, we're here to help protect
+            your property.
           </p>
+
         </div>
 
-        <!-- Replace with the actual photo of you, your mom and Josh -->
-        <img class="about-photo" src="images/Untitled460_20260525172217.PNG"
-             alt="The Just The Guy Gutters & Exteriors family team">
+
+        <img
+          class="about-photo"
+          src="images/Untitled460_20260525172217.PNG"
+          alt="The Just The Guy Gutters & Exteriors family team">
+
       </div>
+
     </div>
+
   </section>
+
 
   <!-- =========================
        SERVICES
        ========================= -->
-  <section class="section services-section" id="services">
+
+  <section
+    class="section services-section"
+    id="services">
+
     <div class="section-inner">
+
       <div class="section-heading">
-        <div class="eyebrow">Our Services</div>
-        <h2>What Can We Help With?</h2>
-        <p>From a leaking gutter to a larger exterior project, tell us what’s going on and we’ll help you figure out what your home needs.</p>
+
+        <div class="eyebrow">
+          Our Services
+        </div>
+
+        <h2>
+          What Can We Help With?
+        </h2>
+
+        <p>
+          From a leaking gutter to a larger exterior project, tell us
+          what’s going on and we’ll help you figure out what your home
+          needs.
+        </p>
+
       </div>
+
+
+      <!-- SERVICE TABS -->
 
       <div class="service-tabs">
-        <button class="service-tab active"
-                data-service="gutters"
-                style="background-image:url('images/service-gutters.jpg')">
+
+        <button
+          class="service-tab active"
+          data-service="gutters"
+          style="background-image:url('images/service-gutters.jpg')">
+
           <h3>Gutters</h3>
-          <p>Seamless gutters, guards, cleaning and repairs.</p>
+
+          <p>
+            Seamless gutters, guards, cleaning and repairs.
+          </p>
+
         </button>
 
-        <button class="service-tab"
-                data-service="siding"
-                style="background-image:url('images/service-siding.jpg')">
+
+        <button
+          class="service-tab"
+          data-service="siding"
+          style="background-image:url('images/service-siding.jpg')">
+
           <h3>Siding</h3>
-          <p>Siding repairs and exterior siding work.</p>
+
+          <p>
+            Siding repairs and exterior siding work.
+          </p>
+
         </button>
 
-        <button class="service-tab"
-                data-service="roofing"
-                style="background-image:url('images/service-roofing.jpg')">
+
+        <button
+          class="service-tab"
+          data-service="roofing"
+          style="background-image:url('images/service-roofing.jpg')">
+
           <h3>Roofing</h3>
-          <p>Roof repairs and related exterior solutions.</p>
+
+          <p>
+            Roof repairs and related exterior solutions.
+          </p>
+
         </button>
+
       </div>
 
-      <div class="service-panel" id="gutterPanel">
+
+      <!-- =========================
+           GUTTERS
+           ========================= -->
+
+      <div
+        class="service-panel"
+        id="gutterPanel">
+
         <div class="service-panel-copy">
+
           <h3>Gutter Services</h3>
-          <h2>Gutters Built to Protect Your Home</h2>
+
+          <h2>
+            Gutters Built to Protect Your Home
+          </h2>
+
           <p>
-            Explore our gutter services and choose the option that fits your property.
+            Explore our gutter services and choose the option that fits
+            your property.
           </p>
-          <a class="quote-small" href="#home">Request a Free Quote →</a>
+
+          <a
+            class="quote-small"
+            href="#home">
+            Request a Free Quote →
+          </a>
+
         </div>
+
 
         <div class="service-detail-grid">
+
           <article class="service-detail">
-            <img src="images/Untitled460_20260525172217.PNG" alt="Seamless gutter installation">
+
+            <img
+              src="images/Untitled460_20260525172217.PNG"
+              alt="Seamless gutter installation">
+
             <h4>Seamless Gutters</h4>
-            <p>Custom gutter installation for a clean, fitted system.</p>
-            <a href="#home">Learn More →</a>
+
+            <p>
+              Custom gutter installation for a clean, fitted system.
+            </p>
+
+            <a href="#home">
+              Learn More →
+            </a>
+
           </article>
 
+
           <article class="service-detail">
-            <img src="images/work.webp" alt="Gutter guards">
+
+            <img
+              src="images/work.webp"
+              alt="Gutter guards">
+
             <h4>Gutter Guards</h4>
-            <p>Help keep leaves and debris out while reducing maintenance.</p>
-            <a href="#home">Learn More →</a>
+
+            <p>
+              Help keep leaves and debris out while reducing maintenance.
+            </p>
+
+            <a href="#home">
+              Learn More →
+            </a>
+
           </article>
 
+
           <article class="service-detail">
-            <img src="images/IMG_7525.JPEG" alt="Gutter cleaning">
+
+            <img
+              src="images/IMG_7525.JPEG"
+              alt="Gutter cleaning">
+
             <h4>Gutter Cleaning</h4>
-            <p>Remove buildup and help keep water flowing properly.</p>
-            <a href="#home">Learn More →</a>
+
+            <p>
+              Remove buildup and help keep water flowing properly.
+            </p>
+
+            <a href="#home">
+              Learn More →
+            </a>
+
           </article>
+
 
           <article class="service-detail">
-            <img src="images/IMG_8110.JPEG" alt="Gutter repair">
+
+            <img
+              src="images/IMG_8110.JPEG"
+              alt="Gutter repair">
+
             <h4>Gutter Repairs</h4>
-            <p>Address leaks, sagging gutters and other gutter problems.</p>
-            <a href="#home">Learn More →</a>
+
+            <p>
+              Address leaks, sagging gutters and other gutter problems.
+            </p>
+
+            <a href="#home">
+              Learn More →
+            </a>
+
           </article>
-        </div>
-      </div>
-
-     <div class="service-panel" id="sidingPanel" style="display:none;">
-
-  <div class="service-panel-copy">
-    <h3>Siding Services</h3>
-    <h2>Protect and Improve Your Exterior</h2>
-    <p>
-      Siding, soffit, and fascia installation and repairs to protect
-      your home and give your exterior a clean, finished look.
-    </p>
-    <a class="quote-small" href="#home">Request a Free Quote →</a>
-  </div>
-
-  <div class="service-detail-grid">
-
-    <!-- SIDING -->
-    <article class="service-detail">
-      <img src="images/IMG_9532.JPEG" alt="Siding installation and repair">
-      <h4>Siding</h4>
-      <p>
-        Siding installation and repairs to protect your home from the
-        elements while improving its appearance and curb appeal.
-      </p>
-      <a href="#home">Learn More →</a>
-    </article>
-
-    <!-- SOFFIT -->
-    <article class="service-detail">
-      <img src="images/IMG_9532.JPEG" alt="Soffit installation and repair">
-      <h4>Soffit</h4>
-      <p>
-        Soffit installation and repairs to protect your roofline,
-        improve ventilation, and give your home a clean finished appearance.
-      </p>
-      <a href="#home">Learn More →</a>
-    </article>
-
-    <!-- FASCIA -->
-    <article class="service-detail">
-      <img src="images/IMG_9532.JPEG" alt="Fascia installation and repair">
-      <h4>Fascia</h4>
-      <p>
-        Fascia installation and repairs to protect your roofline and
-        provide a strong, finished edge for your gutter system.
-      </p>
-      <a href="#home">Learn More →</a>
-    </article>
-
-  </div>
-
-</div>
-
-   <div class="service-panel" id="roofingPanel" style="display:none;">
-
-  <div class="service-panel-copy">
-    <h3>Roofing Services</h3>
-    <h2>Roofing Built to Protect Your Home</h2>
-    <p>
-      From small repairs to complete roofing systems, we offer dependable
-      roofing solutions built to protect your home through Michigan weather.
-    </p>
-    <a class="quote-small" href="#home">Request a Free Quote →</a>
-  </div>
-
-  <div class="service-detail-grid">
-
-    <!-- ROOF REPAIRS -->
-    <article class="service-detail">
-      <img src="images/IMG_4747.JPEG" alt="Roof repair">
-      <h4>Roof Repairs</h4>
-      <p>
-        Targeted roof repairs to address leaks, damage, and other problem areas.
-      </p>
-      <a href="#home">Learn More →</a>
-    </article>
-
-    <!-- SHINGLE ROOFING -->
-    <article class="service-detail">
-      <img src="images/IMG_4747.JPEG" alt="Shingle roofing">
-      <h4>Shingle Roofing</h4>
-      <p>
-        Reliable asphalt shingle roofing for repairs, replacements,
-        and new installations.
-      </p>
-      <a href="#home">Learn More →</a>
-    </article>
-
-    <!-- METAL ROOFING -->
-    <article class="service-detail">
-      <img src="images/IMG_4747.JPEG" alt="Metal roofing">
-      <h4>Metal Roofing</h4>
-      <p>
-        Long-lasting metal roofing built for durability, weather
-        protection, and a clean finished look.
-      </p>
-      <a href="#home">Learn More →</a>
-    </article>
-
-    <!-- FLAT ROOFING -->
-    <article class="service-detail">
-      <img src="images/IMG_4747.JPEG" alt="Flat roofing">
-      <h4>Flat Roofing</h4>
-      <p>
-        Durable flat roofing solutions designed to protect low-slope
-        and flat roof areas from the elements.
-      </p>
-      <a href="#home">Learn More →</a>
-    </article>
-
-  </div>
-
-</div>
-
- <!-- =========================
-     PROJECT CAROUSEL
-     ========================= -->
-<section class="project-section" id="work">
-  <div class="project-inner">
-
-    <div class="project-heading">
-      <div class="eyebrow">REAL HOMES. REAL WORK.</div>
-      <h2>Work We're Proud to Put Our Name On.</h2>
-      <p>
-        No stock photos here. Just real projects completed by
-        Just The Guy throughout Mid-Michigan.
-      </p>
-    </div>
-
-    <div class="project-carousel">
-
-      <button class="project-arrow project-prev"
-              id="projectPrev"
-              aria-label="Previous projects">
-        ‹
-      </button>
-
-      <div class="project-window">
-        <div class="project-track" id="projectTrack">
-
-          <div class="project-slide">
-            <img src="images/IMG_9756.JPEG"
-               alt="Bancroft MI Gutter Install">
-          </div>
-
-          <div class="project-slide">
-            <img src="images/IMG_9532.JPEG"
-                 alt="Just The Guy gutter installation">
-          </div>
-
-          <div class="project-slide">
-            <img src="images/IMG_9532.JPEG"
-                 alt="Just The Guy soffit project">
-          </div>
-
-          <div class="project-slide">
-            <img src="images/IMG_6983.JPEG"
-                 alt="Just The Guy roofing project">
-            <span>Exterior Project</span>
-          </div>
-
-          <div class="project-slide">
-            <img src="images/Guards.PNG"
-                 alt="Just The Guy project">
-            <span>Another Job Done Right</span>
-          </div>
-
-          <div class="project-slide">
-            <img src="images/IMG_8146.JPEG"
-                 alt="Just The Guy project">
-            <span>Mid-Michigan Project</span>
-          </div>
 
         </div>
+
       </div>
 
-      <button class="project-arrow project-next"
-              id="projectNext"
-              aria-label="Next projects">
-        ›
-      </button>
+
+      <!-- =========================
+           SIDING
+           ========================= -->
+
+      <div
+        class="service-panel"
+        id="sidingPanel"
+        style="display:none;">
+
+        <div class="service-panel-copy">
+
+          <h3>Siding Services</h3>
+
+          <h2>
+            Protect and Improve Your Exterior
+          </h2>
+
+          <p>
+            Siding, soffit, and fascia installation and repairs to
+            protect your home and give your exterior a clean, finished
+            look.
+          </p>
+
+          <a
+            class="quote-small"
+            href="#home">
+            Request a Free Quote →
+          </a>
+
+        </div>
+
+
+        <div class="service-detail-grid">
+
+          <article class="service-detail">
+
+            <img
+              src="images/IMG_9532.JPEG"
+              alt="Siding installation and repair">
+
+            <h4>Siding</h4>
+
+            <p>
+              Siding installation and repairs to protect your home from
+              the elements while improving its appearance and curb appeal.
+            </p>
+
+            <a href="#home">
+              Learn More →
+            </a>
+
+          </article>
+
+
+          <article class="service-detail">
+
+            <img
+              src="images/IMG_9532.JPEG"
+              alt="Soffit installation and repair">
+
+            <h4>Soffit</h4>
+
+            <p>
+              Soffit installation and repairs to protect your roofline,
+              improve ventilation, and give your home a clean finished
+              appearance.
+            </p>
+
+            <a href="#home">
+              Learn More →
+            </a>
+
+          </article>
+
+
+          <article class="service-detail">
+
+            <img
+              src="images/IMG_9532.JPEG"
+              alt="Fascia installation and repair">
+
+            <h4>Fascia</h4>
+
+            <p>
+              Fascia installation and repairs to protect your roofline
+              and provide a strong, finished edge for your gutter system.
+            </p>
+
+            <a href="#home">
+              Learn More →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           ROOFING
+           ========================= -->
+
+      <div
+        class="service-panel"
+        id="roofingPanel"
+        style="display:none;">
+
+        <div class="service-panel-copy">
+
+          <h3>Roofing Services</h3>
+
+          <h2>
+            Roofing Built to Protect Your Home
+          </h2>
+
+          <p>
+            From small repairs to complete roofing systems, we offer
+            dependable roofing solutions built to protect your home
+            through Michigan weather.
+          </p>
+
+          <a
+            class="quote-small"
+            href="#home">
+            Request a Free Quote →
+          </a>
+
+        </div>
+
+
+        <div class="service-detail-grid">
+
+          <article class="service-detail">
+
+            <img
+              src="images/IMG_4747.JPEG"
+              alt="Roof repair">
+
+            <h4>Roof Repairs</h4>
+
+            <p>
+              Targeted roof repairs to address leaks, damage, and other
+              problem areas.
+            </p>
+
+            <a href="#home">
+              Learn More →
+            </a>
+
+          </article>
+
+
+          <article class="service-detail">
+
+            <img
+              src="images/IMG_4747.JPEG"
+              alt="Shingle roofing">
+
+            <h4>Shingle Roofing</h4>
+
+            <p>
+              Reliable asphalt shingle roofing for repairs, replacements,
+              and new installations.
+            </p>
+
+            <a href="#home">
+              Learn More →
+            </a>
+
+          </article>
+
+
+          <article class="service-detail">
+
+            <img
+              src="images/IMG_4747.JPEG"
+              alt="Metal roofing">
+
+            <h4>Metal Roofing</h4>
+
+            <p>
+              Long-lasting metal roofing built for durability, weather
+              protection, and a clean finished look.
+            </p>
+
+            <a href="#home">
+              Learn More →
+            </a>
+
+          </article>
+
+
+          <article class="service-detail">
+
+            <img
+              src="images/IMG_4747.JPEG"
+              alt="Flat roofing">
+
+            <h4>Flat Roofing</h4>
+
+            <p>
+              Durable flat roofing solutions designed to protect
+              low-slope and flat roof areas from the elements.
+            </p>
+
+            <a href="#home">
+              Learn More →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
 
     </div>
 
-    <div class="project-dots" id="projectDots"></div>
+  </section>
 
-    <div class="project-gallery-button">
-      <a href="projects.html">
-        See What We've Been Up To →
-      </a>
+
+  <!-- =========================
+       PROJECT CAROUSEL
+       ========================= -->
+
+  <section
+    class="project-section"
+    id="work">
+
+    <div class="project-inner">
+
+      <div class="project-heading">
+
+        <div class="eyebrow">
+          REAL HOMES. REAL WORK.
+        </div>
+
+        <h2>
+          Work We're Proud to Put Our Name On.
+        </h2>
+
+        <p>
+          No stock photos here. Just real projects completed by
+          Just The Guy throughout Mid-Michigan.
+        </p>
+
+      </div>
+
+
+      <div class="project-carousel">
+
+        <button
+          class="project-arrow project-prev"
+          id="projectPrev"
+          type="button"
+          aria-label="Previous projects">
+          ‹
+        </button>
+
+
+        <div class="project-window">
+
+          <div
+            class="project-track"
+            id="projectTrack">
+
+
+            <div class="project-slide">
+
+              <img
+                src="images/IMG_9756.JPEG"
+                alt="Bancroft MI gutter install">
+
+            </div>
+
+
+            <div class="project-slide">
+
+              <img
+                src="images/IMG_9532.JPEG"
+                alt="Just The Guy gutter installation">
+
+            </div>
+
+
+            <div class="project-slide">
+
+              <img
+                src="images/IMG_9532.JPEG"
+                alt="Just The Guy soffit project">
+
+            </div>
+
+
+            <div class="project-slide">
+
+              <img
+                src="images/IMG_6983.JPEG"
+                alt="Just The Guy roofing project">
+
+              <span>
+                Exterior Project
+              </span>
+
+            </div>
+
+
+            <div class="project-slide">
+
+              <img
+                src="images/Guards.PNG"
+                alt="Just The Guy project">
+
+              <span>
+                Another Job Done Right
+              </span>
+
+            </div>
+
+
+            <div class="project-slide">
+
+              <img
+                src="images/IMG_8146.JPEG"
+                alt="Just The Guy project">
+
+              <span>
+                Mid-Michigan Project
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="project-arrow project-next"
+          id="projectNext"
+          type="button"
+          aria-label="Next projects">
+          ›
+        </button>
+
+      </div>
+
+
+      <div
+        class="project-dots"
+        id="projectDots">
+      </div>
+
+
+      <div class="project-gallery-button">
+
+        <a href="projects.html">
+          See What We've Been Up To →
+        </a>
+
+      </div>
+
     </div>
 
-  </div>
-</section>
+  </section>
+
 
   <!-- =========================
        SERVICE AREA
        ========================= -->
-  <section class="section area-section" id="service-area">
+
+  <section
+    class="section area-section"
+    id="service-area">
+
     <div class="section-inner">
+
       <div class="section-heading">
-        <div class="eyebrow">Your Local Mid-Michigan Crew</div>
-        <h2>We’re Your Neighbors, Too.</h2>
-        <p class="map-note">Based in Durand and serving homeowners throughout Mid-Michigan. If you’re not sure whether we make it to your area, give us a call — we may still be able to help.</p>
+
+        <div class="eyebrow">
+          Your Local Mid-Michigan Crew
+        </div>
+
+        <h2>
+          We’re Your Neighbors, Too.
+        </h2>
+
+        <p class="map-note">
+          Based in Durand and serving homeowners throughout Mid-Michigan.
+          If you’re not sure whether we make it to your area, give us a
+          call — we may still be able to help.
+        </p>
+
       </div>
+
 
       <div class="city-list">
-        <a class="city-link" href="service-area/durand-mi.html">Durand, MI</a>
-        <a class="city-link" href="service-area/owosso-mi.html">Owosso, MI</a>
-        <a class="city-link" href="service-area/corunna-mi.html">Corunna, MI</a>
-        <a class="city-link" href="service-area/perry-mi.html">Perry, MI</a>
-        <a class="city-link" href="service-area/morrice-mi.html">Morrice, MI</a>
-        <a class="city-link" href="service-area/laingsburg-mi.html">Laingsburg, MI</a>
-        <a class="city-link" href="service-area/linden-mi.html">Linden, MI</a>
-        <a class="city-link" href="service-area/fenton-mi.html">Fenton, MI</a>
-        <a class="city-link" href="service-area/lansing-mi.html">Lansing, MI</a>
-        <a class="city-link" href="service-area/east-lansing-mi.html">East Lansing, MI</a>
-        <a class="city-link" href="service-area/saginaw-mi.html">Saginaw, MI</a>
-        <a class="city-link" href="service-area/haslett-mi.html">Haslett, MI</a>
-        <a class="city-link" href="service-area/swartz-creek-mi.html">Swartz Creek, MI</a>
-        <a class="city-link" href="service-area/flint-mi.html">Flint, MI</a>
-        <a class="city-link" href="service-area/midland-mi.html">Midland, MI</a>
+
+        <a class="city-link" href="service-area/durand-mi.html">
+          Durand, MI
+        </a>
+
+        <a class="city-link" href="service-area/owosso-mi.html">
+          Owosso, MI
+        </a>
+
+        <a class="city-link" href="service-area/corunna-mi.html">
+          Corunna, MI
+        </a>
+
+        <a class="city-link" href="service-area/perry-mi.html">
+          Perry, MI
+        </a>
+
+        <a class="city-link" href="service-area/morrice-mi.html">
+          Morrice, MI
+        </a>
+
+        <a class="city-link" href="service-area/laingsburg-mi.html">
+          Laingsburg, MI
+        </a>
+
+        <a class="city-link" href="service-area/linden-mi.html">
+          Linden, MI
+        </a>
+
+        <a class="city-link" href="service-area/fenton-mi.html">
+          Fenton, MI
+        </a>
+
+        <a class="city-link" href="service-area/lansing-mi.html">
+          Lansing, MI
+        </a>
+
+        <a class="city-link" href="service-area/east-lansing-mi.html">
+          East Lansing, MI
+        </a>
+
+        <a class="city-link" href="service-area/saginaw-mi.html">
+          Saginaw, MI
+        </a>
+
+        <a class="city-link" href="service-area/haslett-mi.html">
+          Haslett, MI
+        </a>
+
+        <a class="city-link" href="service-area/swartz-creek-mi.html">
+          Swartz Creek, MI
+        </a>
+
+        <a class="city-link" href="service-area/flint-mi.html">
+          Flint, MI
+        </a>
+
+        <a class="city-link" href="service-area/midland-mi.html">
+          Midland, MI
+        </a>
+
       </div>
+
     </div>
 
-<div class="service-map-wrap">
-  <iframe
-    src="https://www.google.com/maps/d/embed?mid=1B5ChYsvUqbrGByzJUihg3KrpprKT1a8&ehbc=2E312F"
-    title="Just The Guy Gutters & Exteriors Service Area"
-    loading="lazy"
-    allowfullscreen>
-  </iframe>
-</div>
+
+    <div class="service-map-wrap">
+
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1B5ChYsvUqbrGByzJUihg3KrpprKT1a8&ehbc=2E312F"
+        title="Just The Guy Gutters & Exteriors Service Area"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
   </section>
+
 
   <!-- =========================
        REVIEWS
        ========================= -->
-  <section class="section reviews-section" id="reviews">
+
+  <section
+    class="section reviews-section"
+    id="reviews">
+
     <div class="section-inner">
+
       <div class="section-heading">
-        <div class="eyebrow">Customer Reviews</div>
-        <h2 style="color:#fff">See What Our Customers Are Saying</h2>
+
+        <div class="eyebrow">
+          Customer Reviews
+        </div>
+
+        <h2 style="color:#fff;">
+          See What Our Customers Are Saying
+        </h2>
+
       </div>
+
 
       <div class="reviews-header">
-        <strong>Google Reviews</strong>
-        <!-- Replace with your actual Google Business review URL -->
-        <a class="reviews-link" href="YOUR_GOOGLE_REVIEW_URL" target="_blank" rel="noopener">
+
+        <strong>
+          Google Reviews
+        </strong>
+
+        <a
+          class="reviews-link"
+          href="YOUR_GOOGLE_REVIEW_URL"
+          target="_blank"
+          rel="noopener">
+
           See All Reviews →
+
         </a>
+
       </div>
+
 
       <div class="review-stage">
-        <div class="review-track" id="reviewTrack">
-          <article class="review-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>“The guys were polite and respectful and did a great job.”</blockquote>
-            <cite>Kelly H.</cite>
-          </article>
+
+        <div
+          class="review-track"
+          id="reviewTrack">
+
 
           <article class="review-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>“Josh and crew were awesome. They did the roof and installed 5 skylights. They were very professional and knowledgeable.”</blockquote>
-            <cite>Dawn S.</cite>
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “The guys were polite and respectful and did a great job.”
+            </blockquote>
+
+            <cite>
+              Kelly H.
+            </cite>
+
           </article>
 
-          <article class="review-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>“Great work and very professional. We would highly recommend Just The Guy Gutters.”</blockquote>
-            <cite>Customer Review</cite>
-          </article>
 
           <article class="review-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>“Excellent service from start to finish.”</blockquote>
-            <cite>Customer Review</cite>
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “Josh and crew were awesome. They did the roof and installed
+              5 skylights. They were very professional and knowledgeable.”
+            </blockquote>
+
+            <cite>
+              Dawn S.
+            </cite>
+
           </article>
+
+
+          <article class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “Great work and very professional. We would highly recommend
+              Just The Guy Gutters.”
+            </blockquote>
+
+            <cite>
+              Customer Review
+            </cite>
+
+          </article>
+
+
+          <article class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “Excellent service from start to finish.”
+            </blockquote>
+
+            <cite>
+              Customer Review
+            </cite>
+
+          </article>
+
         </div>
+
       </div>
+
 
       <div class="review-controls">
-        <button type="button" id="reviewPrev" aria-label="Previous review">←</button>
-        <span id="reviewCount">1 / 4</span>
-        <button type="button" id="reviewNext" aria-label="Next review">→</button>
+
+        <button
+          type="button"
+          id="reviewPrev"
+          aria-label="Previous review">
+          ←
+        </button>
+
+        <span id="reviewCount">
+          1 / 4
+        </span>
+
+        <button
+          type="button"
+          id="reviewNext"
+          aria-label="Next review">
+          →
+        </button>
+
       </div>
+
     </div>
+
   </section>
+
 
   <!-- =========================
        FINAL CTA
        ========================= -->
-  <section class="final-cta" id="contact">
+
+  <section
+    class="final-cta"
+    id="contact">
+
     <div class="cta-inner">
+
       <div>
-        <h2>Need Just The Guy?</h2>
-        <p>Whether you know exactly what your home needs or just want someone to take a look, give us a call. We’re happy to help.</p>
+
+        <h2>
+          Need Just The Guy?
+        </h2>
+
+        <p>
+          Whether you know exactly what your home needs or just want
+          someone to take a look, give us a call. We’re happy to help.
+        </p>
+
       </div>
-      <a class="cta-button" href="#home">Request a Free Quote →</a>
+
+
+      <a
+        class="cta-button"
+        href="#home">
+
+        Request a Free Quote →
+
+      </a>
+
     </div>
+
   </section>
+
 
   <!-- =========================
        FOOTER
        ========================= -->
+
   <footer>
+
     <div class="footer-grid">
-      <div>
-        <img class="footer-logo" src="images/logo.png" alt="Just The Guy Gutters & Exteriors">
-      </div>
 
       <div>
-        <h3>Our Location</h3>
-        <p>Durand, MI 48429</p>
+
+        <img
+          class="footer-logo"
+          src="images/LOGO.PNG"
+          alt="Just The Guy Gutters & Exteriors">
+
       </div>
 
-      <div>
-        <h3>Contact</h3>
-        <p><a href="tel:+15178858953">(517) 885-8953</a></p>
-        <p><a href="mailto:justtheguyguttersandexterior@gmail.com">Email Us</a></p>
-      </div>
 
       <div>
-        <h3>Hours</h3>
-        <p>Mon - Fri: 7:00 am - 7:00 pm</p>
-        <p>Sat - Sun: By Appointment</p>
+
+        <h3>
+          Our Location
+        </h3>
+
+        <p>
+          Durand, MI 48429
+        </p>
+
       </div>
+
+
+      <div>
+
+        <h3>
+          Contact
+        </h3>
+
+        <p>
+          <a href="tel:+15178858953">
+            (517) 885-8953
+          </a>
+        </p>
+
+        <p>
+          <a href="mailto:justtheguyguttersandexterior@gmail.com">
+            Email Us
+          </a>
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Hours
+        </h3>
+
+        <p>
+          Mon - Fri: 7:00 am - 7:00 pm
+        </p>
+
+        <p>
+          Sat - Sun: By Appointment
+        </p>
+
+      </div>
+
     </div>
+
 
     <div class="footer-bottom">
+
       © 2026 Just The Guy Gutters & Exteriors | All Rights Reserved
+
     </div>
+
   </footer>
 
-  <aside class="guy-pop" id="guyPop" aria-label="Contact Just The Guy">
-    <a class="guy-bubble" href="#home">
+
+  <!-- =========================
+       JUST THE GUY POPUP
+       ========================= -->
+
+  <aside
+    class="guy-pop"
+    id="guyPop"
+    aria-label="Contact Just The Guy">
+
+    <a
+      class="guy-bubble"
+      href="#home">
+
       You need Just The Guy.
-      <small>Good thing you found us. →</small>
-      <button class="guy-close" id="guyClose" type="button" aria-label="Close">×</button>
+
+      <small>
+        Good thing you found us. →
+      </small>
+
+      <button
+        class="guy-close"
+        id="guyClose"
+        type="button"
+        aria-label="Close">
+        ×
+      </button>
+
     </a>
-    <a class="guy-mascot" href="#home" aria-label="Request a free estimate" title="Replace this with your thumbs-up mascot image later">👍</a>
+
+
+    <a
+      class="guy-mascot"
+      href="#home"
+      aria-label="Request a free estimate">
+
+      👍
+
+    </a>
+
   </aside>
 
+
   <script>
+
     /* =========================
        MOBILE MENU
        ========================= */
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
+
+    const menuToggle =
+      document.getElementById('menuToggle');
+
+    const mainNav =
+      document.getElementById('mainNav');
+
 
     menuToggle.addEventListener('click', () => {
+
       mainNav.classList.toggle('open');
+
     });
 
+
     mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => mainNav.classList.remove('open'));
+
+      link.addEventListener('click', () => {
+
+        mainNav.classList.remove('open');
+
+      });
+
     });
+
 
     /* =========================
        HERO SLIDESHOW
        ========================= */
-    const heroSlides = document.querySelectorAll('.hero-slide');
+
+    const heroSlides =
+      document.querySelectorAll('.hero-slide');
+
     let heroIndex = 0;
 
-    setInterval(() => {
-      heroSlides[heroIndex].classList.remove('active');
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      heroSlides[heroIndex].classList.add('active');
-    }, 3500);
+
+    if(heroSlides.length > 1){
+
+      setInterval(() => {
+
+        heroSlides[heroIndex]
+          .classList.remove('active');
+
+        heroIndex =
+          (heroIndex + 1) % heroSlides.length;
+
+        heroSlides[heroIndex]
+          .classList.add('active');
+
+      },3500);
+
+    }
+
 
     /* =========================
        QUOTE FORM VALIDATION
        ========================= */
-    const quoteForm = document.getElementById('quoteForm');
-    const serviceError = document.getElementById('serviceError');
-    const serviceCheckboxes = [...document.querySelectorAll('input[name="Services[]"]')];
 
-    quoteForm.addEventListener('submit', (event) => {
-      const selected = serviceCheckboxes.some(box => box.checked);
+    const quoteForm =
+      document.getElementById('quoteForm');
 
-      if (!selected) {
-        event.preventDefault();
-        serviceError.style.display = 'block';
-        document.querySelector('.service-box').scrollIntoView({
-          behavior:'smooth',
-          block:'center'
-        });
-      } else {
-        serviceError.style.display = 'none';
+    const serviceError =
+      document.getElementById('serviceError');
+
+    const serviceCheckboxes =
+      [...document.querySelectorAll(
+        'input[name="Services[]"]'
+      )];
+
+
+    quoteForm.addEventListener(
+      'submit',
+      event => {
+
+        const selected =
+          serviceCheckboxes.some(
+            box => box.checked
+          );
+
+
+        if(!selected){
+
+          event.preventDefault();
+
+          serviceError.style.display =
+            'block';
+
+          document
+            .querySelector('.service-box')
+            .scrollIntoView({
+              behavior:'smooth',
+              block:'center'
+            });
+
+        }else{
+
+          serviceError.style.display =
+            'none';
+
+        }
+
       }
-    });
+    );
+
 
     serviceCheckboxes.forEach(box => {
-      box.addEventListener('change', () => {
-        if (serviceCheckboxes.some(item => item.checked)) {
-          serviceError.style.display = 'none';
+
+      box.addEventListener(
+        'change',
+        () => {
+
+          if(
+            serviceCheckboxes.some(
+              item => item.checked
+            )
+          ){
+
+            serviceError.style.display =
+              'none';
+
+          }
+
         }
-      });
+      );
+
     });
+
 
     /* =========================
        SERVICES TABS
        ========================= */
-    const serviceTabs = document.querySelectorAll('.service-tab');
+
+    const serviceTabs =
+      document.querySelectorAll(
+        '.service-tab'
+      );
+
+
     const servicePanels = {
-      gutters: document.getElementById('gutterPanel'),
-      siding: document.getElementById('sidingPanel'),
-      roofing: document.getElementById('roofingPanel')
+
+      gutters:
+        document.getElementById(
+          'gutterPanel'
+        ),
+
+      siding:
+        document.getElementById(
+          'sidingPanel'
+        ),
+
+      roofing:
+        document.getElementById(
+          'roofingPanel'
+        )
+
     };
 
+
     serviceTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        serviceTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
 
-        Object.values(servicePanels).forEach(panel => {
-          panel.style.display = 'none';
-        });
+      tab.addEventListener(
+        'click',
+        () => {
 
-        const selectedPanel = servicePanels[tab.dataset.service];
-        selectedPanel.style.display = 'grid';
+          serviceTabs.forEach(t => {
 
-        // On phones/tablets, automatically bring the newly selected
-        // service details into view so the visitor can see what changed.
-        if (window.innerWidth <= 800) {
-          setTimeout(() => {
-            selectedPanel.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }, 80);
+            t.classList.remove(
+              'active'
+            );
+
+          });
+
+
+          tab.classList.add(
+            'active'
+          );
+
+
+          Object.values(
+            servicePanels
+          ).forEach(panel => {
+
+            panel.style.display =
+              'none';
+
+          });
+
+
+          const selectedPanel =
+            servicePanels[
+              tab.dataset.service
+            ];
+
+
+          selectedPanel.style.display =
+            'grid';
+
+
+          /*
+            On phones/tablets,
+            automatically show the
+            service details that were
+            just selected.
+          */
+
+          if(
+            window.innerWidth <= 800
+          ){
+
+            setTimeout(() => {
+
+              selectedPanel
+                .scrollIntoView({
+                  behavior:'smooth',
+                  block:'start'
+                });
+
+            },80);
+
+          }
+
         }
-      });
+      );
+
     });
 
 
     /* =========================
        PROJECT CAROUSEL
        ========================= */
-    const projectTrack = document.getElementById('projectTrack');
-    const projectSlides = [...document.querySelectorAll('.project-slide')];
-    const projectPrev = document.getElementById('projectPrev');
-    const projectNext = document.getElementById('projectNext');
-    const projectDots = document.getElementById('projectDots');
+
+    const projectTrack =
+      document.getElementById(
+        'projectTrack'
+      );
+
+    const projectSlides =
+      [...document.querySelectorAll(
+        '.project-slide'
+      )];
+
+    const projectPrev =
+      document.getElementById(
+        'projectPrev'
+      );
+
+    const projectNext =
+      document.getElementById(
+        'projectNext'
+      );
+
+    const projectDots =
+      document.getElementById(
+        'projectDots'
+      );
+
+
     let projectIndex = 0;
 
+
     function projectsPerView(){
-      if (window.innerWidth <= 480) return 1;
-      if (window.innerWidth <= 800) return 2;
+
+      if(
+        window.innerWidth <= 480
+      ){
+        return 1;
+      }
+
+      if(
+        window.innerWidth <= 800
+      ){
+        return 2;
+      }
+
       return 3;
+
     }
+
 
     function maxProjectIndex(){
-      return Math.max(0, projectSlides.length - projectsPerView());
+
+      return Math.max(
+        0,
+        projectSlides.length -
+        projectsPerView()
+      );
+
     }
+
 
     function createProjectDots(){
+
       projectDots.innerHTML = '';
-      for (let i = 0; i <= maxProjectIndex(); i++){
-        const dot = document.createElement('button');
-        dot.className = 'project-dot';
-        if (i === projectIndex) dot.classList.add('active');
-        dot.setAttribute('aria-label', `Go to project ${i + 1}`);
-        dot.addEventListener('click', () => {
-          projectIndex = i;
-          updateProjectCarousel();
-        });
-        projectDots.appendChild(dot);
+
+
+      for(
+        let i = 0;
+        i <= maxProjectIndex();
+        i++
+      ){
+
+        const dot =
+          document.createElement(
+            'button'
+          );
+
+
+        dot.className =
+          'project-dot';
+
+
+        if(
+          i === projectIndex
+        ){
+
+          dot.classList.add(
+            'active'
+          );
+
+        }
+
+
+        dot.setAttribute(
+          'aria-label',
+          `Go to project ${i + 1}`
+        );
+
+
+        dot.addEventListener(
+          'click',
+          () => {
+
+            projectIndex = i;
+
+            updateProjectCarousel();
+
+          }
+        );
+
+
+        projectDots.appendChild(
+          dot
+        );
+
       }
+
     }
+
 
     function updateProjectCarousel(){
-      if (!projectSlides.length) return;
-      const maxIndex = maxProjectIndex();
-      if (projectIndex > maxIndex) projectIndex = 0;
-      if (projectIndex < 0) projectIndex = maxIndex;
-      const slideWidth = projectSlides[0].getBoundingClientRect().width;
-      projectTrack.style.transform = `translateX(-${projectIndex * (slideWidth + 20)}px)`;
-      document.querySelectorAll('.project-dot').forEach((dot,index) => {
-        dot.classList.toggle('active', index === projectIndex);
-      });
+
+      if(
+        !projectSlides.length
+      ){
+        return;
+      }
+
+
+      const maxIndex =
+        maxProjectIndex();
+
+
+      if(
+        projectIndex > maxIndex
+      ){
+
+        projectIndex = 0;
+
+      }
+
+
+      if(
+        projectIndex < 0
+      ){
+
+        projectIndex =
+          maxIndex;
+
+      }
+
+
+      const slideWidth =
+        projectSlides[0]
+          .getBoundingClientRect()
+          .width;
+
+
+      projectTrack.style.transform =
+        `translateX(-${
+          projectIndex *
+          (slideWidth + 20)
+        }px)`;
+
+
+      document
+        .querySelectorAll(
+          '.project-dot'
+        )
+        .forEach(
+          (dot,index) => {
+
+            dot.classList.toggle(
+              'active',
+              index === projectIndex
+            );
+
+          }
+        );
+
     }
 
-    projectNext.addEventListener('click', () => {
-      projectIndex++;
-      if (projectIndex > maxProjectIndex()) projectIndex = 0;
-      updateProjectCarousel();
-    });
 
-    projectPrev.addEventListener('click', () => {
-      projectIndex--;
-      if (projectIndex < 0) projectIndex = maxProjectIndex();
-      updateProjectCarousel();
-    });
+    projectNext.addEventListener(
+      'click',
+      () => {
+
+        projectIndex++;
+
+
+        if(
+          projectIndex >
+          maxProjectIndex()
+        ){
+
+          projectIndex = 0;
+
+        }
+
+
+        updateProjectCarousel();
+
+      }
+    );
+
+
+    projectPrev.addEventListener(
+      'click',
+      () => {
+
+        projectIndex--;
+
+
+        if(
+          projectIndex < 0
+        ){
+
+          projectIndex =
+            maxProjectIndex();
+
+        }
+
+
+        updateProjectCarousel();
+
+      }
+    );
+
 
     let projectTouchStartX = 0;
-    projectTrack.addEventListener('touchstart', event => {
-      projectTouchStartX = event.changedTouches[0].screenX;
-    }, {passive:true});
 
-    projectTrack.addEventListener('touchend', event => {
-      const difference = event.changedTouches[0].screenX - projectTouchStartX;
-      if (Math.abs(difference) < 45) return;
-      projectIndex += difference < 0 ? 1 : -1;
-      if (projectIndex > maxProjectIndex()) projectIndex = 0;
-      if (projectIndex < 0) projectIndex = maxProjectIndex();
-      updateProjectCarousel();
-    }, {passive:true});
 
-    window.addEventListener('resize', () => {
-      if (projectIndex > maxProjectIndex()) projectIndex = maxProjectIndex();
-      createProjectDots();
-      updateProjectCarousel();
-    });
+    projectTrack.addEventListener(
+      'touchstart',
+      event => {
+
+        projectTouchStartX =
+          event.changedTouches[0]
+            .screenX;
+
+      },
+      {
+        passive:true
+      }
+    );
+
+
+    projectTrack.addEventListener(
+      'touchend',
+      event => {
+
+        const difference =
+          event.changedTouches[0]
+            .screenX -
+          projectTouchStartX;
+
+
+        if(
+          Math.abs(difference) < 45
+        ){
+          return;
+        }
+
+
+        projectIndex +=
+          difference < 0
+            ? 1
+            : -1;
+
+
+        if(
+          projectIndex >
+          maxProjectIndex()
+        ){
+
+          projectIndex = 0;
+
+        }
+
+
+        if(
+          projectIndex < 0
+        ){
+
+          projectIndex =
+            maxProjectIndex();
+
+        }
+
+
+        updateProjectCarousel();
+
+      },
+      {
+        passive:true
+      }
+    );
+
+
+    window.addEventListener(
+      'resize',
+      () => {
+
+        if(
+          projectIndex >
+          maxProjectIndex()
+        ){
+
+          projectIndex =
+            maxProjectIndex();
+
+        }
+
+
+        createProjectDots();
+
+        updateProjectCarousel();
+
+      }
+    );
+
 
     createProjectDots();
+
     updateProjectCarousel();
 
+
     /* =========================
-       REVIEWS — MANUAL CONTROLS
-       Intentionally NOT fast auto-scrolling.
+       REVIEWS
        ========================= */
-    const reviewTrack = document.getElementById('reviewTrack');
-    const reviewCards = [...document.querySelectorAll('.review-card')];
-    const reviewCount = document.getElementById('reviewCount');
+
+    const reviewTrack =
+      document.getElementById(
+        'reviewTrack'
+      );
+
+    const reviewCards =
+      [...document.querySelectorAll(
+        '.review-card'
+      )];
+
+    const reviewCount =
+      document.getElementById(
+        'reviewCount'
+      );
+
     let reviewIndex = 0;
 
+
     function reviewsPerView(){
-      return window.innerWidth <= 800 ? 1 : 3;
+
+      return window.innerWidth <= 800
+        ? 1
+        : 3;
+
     }
+
 
     function updateReviews(){
-      const perView = reviewsPerView();
-      const maxIndex = Math.max(0, reviewCards.length - perView);
-      reviewIndex = Math.min(reviewIndex, maxIndex);
 
-      const cardWidth = reviewCards[0].getBoundingClientRect().width;
+      if(
+        !reviewCards.length
+      ){
+        return;
+      }
+
+
+      const perView =
+        reviewsPerView();
+
+
+      const maxIndex =
+        Math.max(
+          0,
+          reviewCards.length -
+          perView
+        );
+
+
+      reviewIndex =
+        Math.min(
+          reviewIndex,
+          maxIndex
+        );
+
+
+      const cardWidth =
+        reviewCards[0]
+          .getBoundingClientRect()
+          .width;
+
+
       const gap = 18;
 
+
       reviewTrack.style.transform =
-        `translateX(-${reviewIndex * (cardWidth + gap)}px)`;
+        `translateX(-${
+          reviewIndex *
+          (cardWidth + gap)
+        }px)`;
+
 
       reviewCount.textContent =
-        `${reviewIndex + 1} / ${Math.max(1, maxIndex + 1)}`;
+        `${reviewIndex + 1} / ${
+          Math.max(
+            1,
+            maxIndex + 1
+          )
+        }`;
+
     }
 
-    document.getElementById('reviewPrev').addEventListener('click', () => {
-      reviewIndex--;
-      if (reviewIndex < 0) reviewIndex = 0;
-      updateReviews();
-    });
 
-    document.getElementById('reviewNext').addEventListener('click', () => {
-      const maxIndex = Math.max(0, reviewCards.length - reviewsPerView());
-      reviewIndex++;
-      if (reviewIndex > maxIndex) reviewIndex = maxIndex;
-      updateReviews();
-    });
+    document
+      .getElementById(
+        'reviewPrev'
+      )
+      .addEventListener(
+        'click',
+        () => {
 
-    window.addEventListener('resize', updateReviews);
+          reviewIndex--;
+
+
+          if(
+            reviewIndex < 0
+          ){
+
+            reviewIndex = 0;
+
+          }
+
+
+          updateReviews();
+
+        }
+      );
+
+
+    document
+      .getElementById(
+        'reviewNext'
+      )
+      .addEventListener(
+        'click',
+        () => {
+
+          const maxIndex =
+            Math.max(
+              0,
+              reviewCards.length -
+              reviewsPerView()
+            );
+
+
+          reviewIndex++;
+
+
+          if(
+            reviewIndex > maxIndex
+          ){
+
+            reviewIndex =
+              maxIndex;
+
+          }
+
+
+          updateReviews();
+
+        }
+      );
+
+
+    window.addEventListener(
+      'resize',
+      updateReviews
+    );
+
+
     updateReviews();
 
-    /* Cheeky Just The Guy side pop-up */
-    const guyPop = document.getElementById('guyPop');
-    const guyClose = document.getElementById('guyClose');
-    guyClose.addEventListener('click', (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      guyPop.style.display = 'none';
-    });
+
+    /* =========================
+       JUST THE GUY POPUP
+       ========================= */
+
+    const guyPop =
+      document.getElementById(
+        'guyPop'
+      );
+
+    const guyClose =
+      document.getElementById(
+        'guyClose'
+      );
+
+
+    guyClose.addEventListener(
+      'click',
+      event => {
+
+        event.preventDefault();
+
+        event.stopPropagation();
+
+        guyPop.style.display =
+          'none';
+
+      }
+    );
 
   </script>
+
+</body>
+</html>
