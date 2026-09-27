@@ -458,70 +458,98 @@
 
     /* =========================
        PROJECT CAROUSEL
+       Desktop advances 3 photos at a time, tablet 2, phone 1.
        ========================= */
-    .project-section{padding:95px 4%;background:var(--light);overflow:hidden}
-    .project-inner{max-width:1400px;margin:auto}
-    .project-heading{text-align:center;max-width:800px;margin:0 auto 45px}
-    .project-heading .eyebrow{margin-bottom:5px}
-    .project-heading h2{color:var(--deep);font-size:clamp(36px,4vw,55px);line-height:1.08;margin:5px 0 14px}
-    .project-heading p{color:#58677b;font-size:17px;margin:auto}
-    .project-carousel{position:relative;display:flex;align-items:center;gap:15px}
-    .project-window{width:100%;overflow:hidden}
-    .project-track{display:flex;gap:20px;transition:transform .5s ease;will-change:transform}
-    .project-slide{flex:0 0 calc((100% - 40px)/3);height:390px;border-radius:20px;overflow:hidden;position:relative;cursor:pointer;background:#dce2e8;box-shadow:0 12px 30px rgba(3,27,64,.12)}
-    .project-slide img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-    .project-slide:hover img{transform:scale(1.05)}
-    .project-slide span{position:absolute;left:0;right:0;bottom:0;padding:55px 20px 20px;color:#fff;font-size:17px;font-weight:800;background:linear-gradient(transparent,rgba(3,27,64,.9))}
-    .project-arrow{flex:0 0 52px;width:52px;height:52px;border:0;border-radius:50%;background:var(--deep);color:#fff;font-size:34px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:transform .2s ease,background .2s ease}
-    .project-arrow:hover{background:var(--green);transform:scale(1.08)}
-    .project-dots{display:flex;justify-content:center;gap:8px;margin-top:25px}
-    .project-dot{width:9px;height:9px;border:0;border-radius:50%;background:#bbc3cc;cursor:pointer;padding:0}
-    .project-dot.active{background:var(--green);transform:scale(1.3)}
-    .project-gallery-button{text-align:center;margin-top:30px}
-    .project-gallery-button a{display:inline-block;background:var(--green);color:#fff;padding:14px 25px;border-radius:999px;font-weight:800;transition:transform .2s ease,filter .2s ease}
-    .project-gallery-button a:hover{transform:translateY(-2px);filter:brightness(1.07)}
+    const projectTrack = document.getElementById('projectTrack');
+    const projectSlides = [...document.querySelectorAll('.project-slide')];
+    const projectPrev = document.getElementById('projectPrev');
+    const projectNext = document.getElementById('projectNext');
+    const projectDots = document.getElementById('projectDots');
+    let projectIndex = 0;
 
-    /* =========================
-       SERVICE AREA / MAP
-       ========================= */
-    .area-section{padding-bottom:0;background:#fff}
-    .city-list{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:12px;
-      margin:0 auto 28px;
-      max-width:1050px;
+    function projectsPerView(){
+      if (window.innerWidth <= 480) return 1;
+      if (window.innerWidth <= 800) return 2;
+      return 3;
     }
-    .city-link{
-      background:var(--green);
-      color:#fff;
-      border-radius:999px;
-      padding:10px 21px;
-      font-size:14px;
-      font-weight:800;
-    }
-    .city-link:hover{filter:brightness(1.08)}
-  .service-map-wrap {
-  width: 100%;
-  height: 560px;
-  margin-top: 20px;
-  border-top: 4px solid var(--deep);
-  overflow: hidden;
-}
 
-.service-map-wrap iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-    .map-note{
-      max-width:1000px;
-      margin:0 auto 25px;
-      text-align:center;
-      color:#5b6a7e;
+    function projectPageStarts(){
+      const step = projectsPerView();
+      const starts = [];
+      for (let i = 0; i < projectSlides.length; i += step) starts.push(i);
+      return starts.length ? starts : [0];
     }
+
+    function currentProjectPage(){
+      const starts = projectPageStarts();
+      let nearest = 0;
+      starts.forEach((start, i) => {
+        if (Math.abs(start - projectIndex) < Math.abs(starts[nearest] - projectIndex)) nearest = i;
+      });
+      return nearest;
+    }
+
+    function createProjectDots(){
+      const starts = projectPageStarts();
+      projectDots.innerHTML = '';
+      starts.forEach((start, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'project-dot';
+        if (i === currentProjectPage()) dot.classList.add('active');
+        dot.setAttribute('aria-label', `Go to project group ${i + 1}`);
+        dot.addEventListener('click', () => {
+          projectIndex = start;
+          updateProjectCarousel();
+        });
+        projectDots.appendChild(dot);
+      });
+    }
+
+    function updateProjectCarousel(){
+      if (!projectSlides.length) return;
+      const starts = projectPageStarts();
+      if (!starts.includes(projectIndex)) projectIndex = starts[currentProjectPage()];
+
+      const slideWidth = projectSlides[0].getBoundingClientRect().width;
+      projectTrack.style.transform = `translateX(-${projectIndex * (slideWidth + 20)}px)`;
+
+      document.querySelectorAll('.project-dot').forEach((dot,index) => {
+        dot.classList.toggle('active', index === currentProjectPage());
+      });
+    }
+
+    function moveProjectPage(direction){
+      const starts = projectPageStarts();
+      let page = currentProjectPage() + direction;
+      if (page >= starts.length) page = 0;
+      if (page < 0) page = starts.length - 1;
+      projectIndex = starts[page];
+      updateProjectCarousel();
+    }
+
+    projectNext.addEventListener('click', () => moveProjectPage(1));
+    projectPrev.addEventListener('click', () => moveProjectPage(-1));
+
+    let projectTouchStartX = 0;
+    projectTrack.addEventListener('touchstart', event => {
+      projectTouchStartX = event.changedTouches[0].screenX;
+    }, {passive:true});
+
+    projectTrack.addEventListener('touchend', event => {
+      const difference = event.changedTouches[0].screenX - projectTouchStartX;
+      if (Math.abs(difference) < 45) return;
+      moveProjectPage(difference < 0 ? 1 : -1);
+    }, {passive:true});
+
+    window.addEventListener('resize', () => {
+      projectIndex = 0;
+      createProjectDots();
+      updateProjectCarousel();
+    });
+
+    createProjectDots();
+    updateProjectCarousel();
+
 
     /* =========================
        REVIEWS
@@ -652,13 +680,14 @@
     .hero-trust{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:24px;font-size:14px;font-weight:800;color:#fff}
     .hero-trust span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:8px 12px;border-radius:999px;backdrop-filter:blur(4px)}
 
-    .brand-strip{background:#fff;padding:34px 4%;border-bottom:1px solid var(--border)}
+    .brand-strip{background:var(--green);padding:50px 4%;border-bottom:0;color:#fff}
     .brand-strip-inner{max-width:1200px;margin:auto;text-align:center}
-    .brand-strip h2{font-size:clamp(32px,4vw,52px);color:var(--deep);margin:0 0 10px}
-    .brand-strip h2 span{color:var(--green)}
-    .brand-strip p{max-width:800px;margin:0 auto 25px;color:#536174;font-size:18px}
+    .brand-strip .eyebrow{color:#fff}
+    .brand-strip h2{font-size:clamp(32px,4vw,52px);color:#fff;margin:0 0 10px}
+    .brand-strip h2 span{color:#fff}
+    .brand-strip p{max-width:800px;margin:0 auto 25px;color:rgba(255,255,255,.92);font-size:18px}
     .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left}
-    .trust-card{padding:22px;border-radius:18px;background:#f7f8fa;border:1px solid var(--border)}
+    .trust-card{padding:22px;border-radius:18px;background:#fff;border:1px solid rgba(255,255,255,.5);color:var(--text);box-shadow:0 10px 28px rgba(3,27,64,.12)}
     .trust-card strong{display:block;color:var(--deep);font-size:20px;margin-bottom:6px}
 
     .process-section{background:#f7f8fa}
@@ -727,9 +756,11 @@
       .about-card{grid-template-columns:1fr}
       .about-photo{height:340px}
 
-      .service-tabs{grid-template-columns:1fr}
-      .service-tab{min-height:250px}
-      .service-panel{padding:23px}
+      /* On phones/tablets the service panels are moved directly under
+         the service button that was tapped, so the change is immediately visible. */
+      .service-tabs{grid-template-columns:1fr;gap:14px}
+      .service-tab{min-height:210px}
+      .service-tabs .service-panel{width:100%;padding:23px;margin:0 0 8px;border-radius:18px}
       .service-detail-grid{grid-template-columns:1fr 1fr}
 
       .project-slide{flex:0 0 calc((100% - 20px)/2);height:350px}
@@ -1428,26 +1459,68 @@
     });
 
     /* =========================
-       SERVICES TABS
+       SERVICES TABS / MOBILE ACCORDION
        ========================= */
-    const serviceTabs = document.querySelectorAll('.service-tab');
+    const serviceTabs = [...document.querySelectorAll('.service-tab')];
+    const serviceTabsWrap = document.querySelector('.service-tabs');
     const servicePanels = {
       gutters: document.getElementById('gutterPanel'),
       siding: document.getElementById('sidingPanel'),
       roofing: document.getElementById('roofingPanel')
     };
 
-    serviceTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        serviceTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
+    // Remember where the desktop panels belong so we can restore them
+    // when the browser becomes wider again.
+    const desktopPanelHome = document.createComment('desktop service panels');
+    serviceTabsWrap.after(desktopPanelHome);
 
-        Object.values(servicePanels).forEach(panel => {
-          panel.style.display = 'none';
+    function arrangeServiceLayout(){
+      if (window.innerWidth <= 800) {
+        // Mobile: each panel sits immediately below its matching button.
+        serviceTabs.forEach(tab => {
+          const panel = servicePanels[tab.dataset.service];
+          tab.after(panel);
         });
+      } else {
+        // Desktop: buttons stay together across the top and the active
+        // service panel appears underneath them.
+        let anchor = desktopPanelHome;
+        ['gutters','siding','roofing'].forEach(key => {
+          anchor.after(servicePanels[key]);
+          anchor = servicePanels[key];
+        });
+      }
+    }
 
-        servicePanels[tab.dataset.service].style.display = 'grid';
-      });
+    function openService(tab){
+      const key = tab.dataset.service;
+      const panel = servicePanels[key];
+      const wasOpen = tab.classList.contains('active') && panel.style.display !== 'none';
+
+      serviceTabs.forEach(t => t.classList.remove('active'));
+      Object.values(servicePanels).forEach(p => p.style.display = 'none');
+
+      // Desktop always keeps one tab open. On mobile, tapping the open
+      // service again collapses it like an accordion.
+      if (window.innerWidth <= 800 && wasOpen) return;
+
+      tab.classList.add('active');
+      panel.style.display = 'grid';
+    }
+
+    serviceTabs.forEach(tab => {
+      tab.addEventListener('click', () => openService(tab));
+    });
+
+    arrangeServiceLayout();
+
+    window.addEventListener('resize', () => {
+      arrangeServiceLayout();
+      // Make sure the currently selected panel stays visible after resize.
+      const activeTab = document.querySelector('.service-tab.active') || serviceTabs[0];
+      Object.values(servicePanels).forEach(p => p.style.display = 'none');
+      activeTab.classList.add('active');
+      servicePanels[activeTab.dataset.service].style.display = 'grid';
     });
 
 
@@ -1584,6 +1657,3 @@
       event.preventDefault();
       event.stopPropagation();
       guyPop.style.display = 'none';
-    });
-
-  </script>
