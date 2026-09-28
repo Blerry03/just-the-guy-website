@@ -293,26 +293,27 @@
        ========================= */
 
     .hero-angle{
-      position:relative;
-      z-index:6;
-      height:105px;
-      margin-top:-105px;
-      background:var(--deep);
-      clip-path:polygon(
-        0 48%,
-        16% 8%,
-        42% 38%,
-        82% 82%,
-        100% 62%,
-        100% 100%,
-        0 100%
-      );
-      pointer-events:none;
-    }
+  position:relative;
+  z-index:6;
+  height:112px;          /* 2px taller */
+  margin-top:-110px;
+  margin-bottom:-2px;    /* overlap reviews */
+  background:var(--deep);
 
+  clip-path:polygon(
+    0 58%,
+    18% 12%,
+    45% 43%,
+    80% 84%,
+    100% 64%,
+    100% 100%,
+    0 100%
+  );
+
+  pointer-events:none;
+}
     .reviews-section.reviews-second{
       padding-top:70px;
-       margin-top:-3px;
 }
 
 
@@ -474,9 +475,10 @@
        ========================= */
 
     .reviews-section{
-      background:var(--deep);
-      color:#fff;
-    }
+     background:var(--deep);
+  color:#fff;
+  border:0;
+}
 
     .reviews-section .section-heading .eyebrow{
       color:#7ee36e;
