@@ -631,34 +631,47 @@
     }
 
 
-  /* =========================
+ /* =========================
    ABOUT
    ========================= */
 
 .about-section{
   background:var(--deep);
+  padding:90px 4%;
 }
 
 .about-card{
+  max-width:1200px;
+  margin:0 auto;
+
+  background:#fff;
   border:2px solid var(--green);
   border-radius:22px;
-  background:#fff;
-  padding:38px;
+
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:50px;
   align-items:center;
+  gap:55px;
+
+  padding:38px;
+  overflow:hidden;
 }
 
+
+/* LEFT SIDE */
+
 .about-copy{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
+  display:block;
+  width:100%;
 }
 
 .about-copy .eyebrow{
   color:var(--green);
-  margin-bottom:14px;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin:0 0 14px;
 }
 
 .about-copy h2{
@@ -673,19 +686,28 @@
 }
 
 .about-copy p{
-  margin:0 0 18px;
+  display:block;
+  width:100%;
   max-width:600px;
+
+  color:#536174;
+  font-size:17px;
+  line-height:1.6;
+
+  margin:0 0 18px;
 }
+
 
 /* MEET THE FAMILY BUTTON */
 
 .about-button{
   display:inline-flex;
+  width:auto;
+
   align-items:center;
   justify-content:center;
-  gap:12px;
 
-  margin-top:10px;
+  margin-top:8px;
   padding:14px 25px;
 
   background:var(--blue);
@@ -710,26 +732,68 @@
   box-shadow:0 12px 25px rgba(23,98,181,.32);
 }
 
-/* FAMILY PHOTO */
+
+/* RIGHT SIDE / FAMILY PHOTO */
 
 .about-photo-link{
   display:block;
   width:100%;
+  height:500px;
+
   border-radius:18px;
   overflow:hidden;
 }
 
 .about-photo{
-  width:100%;
-  height:500px;
-  object-fit:cover;
-  border-radius:18px;
   display:block;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  object-position:center;
+
+  border-radius:18px;
+
   transition:transform .4s ease;
 }
 
 .about-photo-link:hover .about-photo{
   transform:scale(1.025);
+}
+
+
+/* TABLET / MOBILE */
+
+@media(max-width:800px){
+
+  .about-section{
+    padding:65px 5%;
+  }
+
+  .about-card{
+    grid-template-columns:1fr;
+    gap:28px;
+    padding:20px;
+  }
+
+  .about-photo-link{
+    height:340px;
+  }
+
+  .about-photo{
+    height:100%;
+  }
+
+}
+
+
+@media(max-width:480px){
+
+  .about-photo-link{
+    height:280px;
+  }
+
 }
     /* =========================
        SERVICES
