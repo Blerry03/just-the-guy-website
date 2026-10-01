@@ -631,7 +631,7 @@
     }
 
 
-   /* =========================
+  /* =========================
    ABOUT
    ========================= */
 
@@ -643,22 +643,29 @@
   border:2px solid var(--green);
   border-radius:22px;
   background:#fff;
-  padding:26px;
+  padding:38px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:36px;
+  gap:50px;
   align-items:center;
+}
+
+.about-copy{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
 }
 
 .about-copy .eyebrow{
   color:var(--green);
+  margin-bottom:14px;
 }
 
 .about-copy h2{
   color:#0d6520;
-  font-size:clamp(34px,4vw,55px);
-  line-height:1.05;
-  margin:0 0 18px;
+  font-size:clamp(38px,4vw,55px);
+  line-height:1.02;
+  margin:0 0 22px;
 }
 
 .about-copy h2 span{
@@ -666,28 +673,48 @@
 }
 
 .about-copy p{
-  margin:0 0 16px;
+  margin:0 0 18px;
+  max-width:600px;
 }
+
+/* MEET THE FAMILY BUTTON */
 
 .about-button{
   display:inline-flex;
   align-items:center;
+  justify-content:center;
+  gap:12px;
+
   margin-top:10px;
-  padding:13px 22px;
-  background:var(--green);
+  padding:14px 25px;
+
+  background:var(--blue);
   color:#fff;
+
   border-radius:999px;
+
+  font-size:16px;
   font-weight:800;
-  transition:transform .2s ease, filter .2s ease;
+
+  box-shadow:0 8px 20px rgba(23,98,181,.25);
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
 }
 
 .about-button:hover{
+  background:var(--navy);
   transform:translateY(-2px);
-  filter:brightness(1.08);
+  box-shadow:0 12px 25px rgba(23,98,181,.32);
 }
+
+/* FAMILY PHOTO */
 
 .about-photo-link{
   display:block;
+  width:100%;
   border-radius:18px;
   overflow:hidden;
 }
@@ -704,7 +731,6 @@
 .about-photo-link:hover .about-photo{
   transform:scale(1.025);
 }
-
     /* =========================
        SERVICES
        ========================= */
@@ -2125,14 +2151,13 @@
      ABOUT
      ========================= -->
 
-<section
-  class="section about-section"
-  id="about">
+<section class="section about-section" id="about">
 
   <div class="section-inner">
 
     <div class="about-card">
 
+      <!-- LEFT SIDE -->
       <div class="about-copy">
 
         <div class="eyebrow">
@@ -2145,10 +2170,10 @@
         </h2>
 
         <p>
-          Just The Guy Gutters & Exteriors is a family-owned business
-          right here in Mid-Michigan. We're the people answering the
-          phone, coming to your home, putting together your estimate,
-          and doing the work.
+          Just The Guy Gutters &amp; Exteriors is a family-owned business
+          right here in Mid-Michigan. We're the people answering the phone,
+          coming to your home, putting together your estimate, and doing
+          the work.
         </p>
 
         <p>
@@ -2162,6 +2187,8 @@
 
       </div>
 
+
+      <!-- RIGHT SIDE / FAMILY PHOTO -->
       <a
         class="about-photo-link"
         href="about.html"
@@ -2170,7 +2197,7 @@
         <img
           class="about-photo"
           src="images/Untitled460_20260525172217.PNG"
-          alt="The family behind Just The Guy Gutters & Exteriors">
+          alt="The family behind Just The Guy Gutters &amp; Exteriors">
 
       </a>
 
