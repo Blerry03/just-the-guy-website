@@ -631,52 +631,79 @@
     }
 
 
-    /* =========================
-       ABOUT
-       ========================= */
+   /* =========================
+   ABOUT
+   ========================= */
 
-    .about-section{
-      background:--deep:#031B40;;
-    }
+.about-section{
+  background:var(--deep);
+}
 
-    .about-card{
-      border:2px solid var(--green);
-      border-radius:22px;
-      background:#fff;
-      padding:26px;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:36px;
-      align-items:center;
-    }
+.about-card{
+  border:2px solid var(--green);
+  border-radius:22px;
+  background:#fff;
+  padding:26px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:36px;
+  align-items:center;
+}
 
-    .about-copy .eyebrow{
-      color:var(--green);
-    }
+.about-copy .eyebrow{
+  color:var(--green);
+}
 
-    .about-copy h2{
-      color:#0d6520;
-      font-size:clamp(34px,4vw,55px);
-      line-height:1.05;
-      margin:0 0 18px;
-    }
+.about-copy h2{
+  color:#0d6520;
+  font-size:clamp(34px,4vw,55px);
+  line-height:1.05;
+  margin:0 0 18px;
+}
 
-    .about-copy h2 span{
-      color:var(--deep);
-    }
+.about-copy h2 span{
+  color:var(--deep);
+}
 
-    .about-copy p{
-      margin:0 0 16px;
-    }
+.about-copy p{
+  margin:0 0 16px;
+}
 
-    .about-photo{
-      width:100%;
-      height:500px;
-      object-fit:cover;
-      border-radius:18px;
-      display:block;
-    }
+.about-button{
+  display:inline-flex;
+  align-items:center;
+  margin-top:10px;
+  padding:13px 22px;
+  background:var(--green);
+  color:#fff;
+  border-radius:999px;
+  font-weight:800;
+  transition:transform .2s ease, filter .2s ease;
+}
 
+.about-button:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.08);
+}
+
+.about-photo-link{
+  display:block;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.about-photo{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  border-radius:18px;
+  display:block;
+  transition:transform .4s ease;
+}
+
+.about-photo-link:hover .about-photo{
+  transform:scale(1.025);
+}
 
     /* =========================
        SERVICES
@@ -2094,57 +2121,64 @@
     </div>
 
   </section>
-  <!-- =========================
-       ABOUT
-       ========================= -->
+ <!-- =========================
+     ABOUT
+     ========================= -->
 
-  <section
-    class="section about-section"
-    id="about">
+<section
+  class="section about-section"
+  id="about">
 
-    <div class="section-inner">
+  <div class="section-inner">
 
-      <div class="about-card">
+    <div class="about-card">
 
-        <div class="about-copy">
+      <div class="about-copy">
 
-          <div class="eyebrow">
-           THE FAMILY BEHIND JUST THE GUY
-          </div>
-
-          <h2>
-            Built on Hard Work.<br>
-            <span>Built Together.</span>
-          </h2>
-
-          <p>
-           Just The Guy Gutters & Exteriors is a family-owned business right here in Mid-Michigan. We're the people answering the phone, coming to your home, putting together your estimate, and doing the work.
-          </p>
-
-          <p>
-            There’s a lot more to our story than a logo and a work truck. Get to know the family behind Just The Guy.
-Meet the Family
-          </p>
-
+        <div class="eyebrow">
+          THE FAMILY BEHIND JUST THE GUY
         </div>
-        
-<a class="about-button" href="about.html">
-  Meet the Family →
-</a>
 
-        <img
-          class="about-photo">
-        <img
-          class="about-photo"
-          src="images/Untitled460_20260525172217.PNG"
-          alt="The family behing Just The Guy Gutters & Exteriors">
-      </a>
+        <h2>
+          Built on Hard Work.<br>
+          <span>Built Together.</span>
+        </h2>
+
+        <p>
+          Just The Guy Gutters & Exteriors is a family-owned business
+          right here in Mid-Michigan. We're the people answering the
+          phone, coming to your home, putting together your estimate,
+          and doing the work.
+        </p>
+
+        <p>
+          There’s a lot more to our story than a logo and a work truck.
+          Get to know the family behind Just The Guy.
+        </p>
+
+        <a class="about-button" href="about.html">
+          Meet the Family →
+        </a>
 
       </div>
 
+      <a
+        class="about-photo-link"
+        href="about.html"
+        aria-label="Meet the family behind Just The Guy">
+
+        <img
+          class="about-photo"
+          src="images/Untitled460_20260525172217.PNG"
+          alt="The family behind Just The Guy Gutters & Exteriors">
+
+      </a>
+
     </div>
 
-  </section>
+  </div>
+
+</section>
 
    <!-- =========================
        SERVICES
