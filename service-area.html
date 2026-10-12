@@ -442,83 +442,43 @@
       border: 2px solid var(--green);
     }
 
-    /* MAP */
+    /* CUSTOM GOOGLE SERVICE AREA MAP */
 
     .map-section {
       padding: 105px 0;
       background: white;
     }
 
-    .map-layout {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      align-items: center;
-      gap: 65px;
-    }
-
-    .map-copy h2 {
-      margin: 0 0 23px;
-      color: var(--deep);
-      font-size: clamp(34px, 4vw, 49px);
-    }
-
-    .map-copy h2 span {
-      color: var(--green);
-    }
-
-    .map-copy p {
-      margin: 0 0 20px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .map-points {
-      margin: 27px 0;
-    }
-
-    .map-point {
-      display: flex;
-      align-items: flex-start;
-      gap: 13px;
-      margin-bottom: 17px;
-      color: var(--deep);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .map-point::before {
-      content: "✓";
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      background: #E6F4E4;
-      color: var(--green);
-      font-size: 13px;
-    }
-
-    .map-frame {
+    .google-map-container {
+      width: 100%;
+      height: 550px;
       overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 24px;
+      border-top: 4px solid var(--deep);
+      border-bottom: 4px solid var(--deep);
       background: #E7EEF5;
-      box-shadow: var(--shadow);
     }
 
-    .map-frame iframe {
+    .google-map-container iframe {
       display: block;
       width: 100%;
-      height: 460px;
-      border: 0;
+      height: 100%;
+      border: none;
     }
 
-    .map-caption {
-      padding: 15px 20px;
-      background: var(--light);
+    .google-map-note {
+      margin: 25px auto 0;
+      text-align: center;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 15px;
+    }
+
+    .google-map-note a {
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .google-map-note a:hover {
+      text-decoration: underline;
     }
 
     /* LOCATION CHECK */
@@ -745,7 +705,6 @@
       }
 
       .intro-layout,
-      .map-layout,
       .check-card {
         gap: 35px;
       }
@@ -772,7 +731,6 @@
       }
 
       .intro-layout,
-      .map-layout,
       .check-card {
         grid-template-columns: 1fr;
       }
@@ -783,6 +741,10 @@
 
       .check-card {
         padding: 30px;
+      }
+
+      .google-map-container {
+        height: 420px;
       }
 
       .footer-grid {
@@ -824,7 +786,7 @@
         font-size: 25px;
       }
 
-      .map-frame iframe {
+      .google-map-container {
         height: 350px;
       }
 
@@ -1109,56 +1071,42 @@
       </div>
     </section>
 
-    <!-- MAP -->
+    <!-- CUSTOM GOOGLE SERVICE AREA MAP -->
     <section class="map-section">
-      <div class="container map-layout">
+      <div class="container">
 
-        <div class="map-copy">
-          <span class="eyebrow">BASED IN DURAND, MICHIGAN</span>
+        <div class="section-heading">
+          <span class="eyebrow">EXPLORE OUR COVERAGE</span>
 
-          <h2>
-            Your Local Crew.<br>
-            <span>A Wider Reach.</span>
-          </h2>
+          <h2>See Where We Work.</h2>
 
           <p>
-            Our home base is in Durand, but our work
-            takes us to communities throughout
-            Mid-Michigan.
+            Based in Durand, Michigan, we're proud to serve
+            homeowners throughout Mid-Michigan. Explore our
+            service area below, and don't hesitate to reach
+            out if your town isn't shown.
           </p>
-
-          <p>
-            We don't want homeowners to feel like
-            they have to rule us out just because
-            their town isn't listed.
-          </p>
-
-          <div class="map-points">
-            <div class="map-point">Based in Shiawassee County</div>
-            <div class="map-point">Serving multiple Mid-Michigan regions</div>
-            <div class="map-point">Availability depends on the project and location</div>
-          </div>
-
-          <a href="#check-area" class="btn">
-            Ask About Your Location →
-          </a>
         </div>
 
-        <div class="map-frame">
-          <iframe
-            title="Map centered on Durand, Michigan"
-            src="https://www.google.com/maps?q=Durand%2C%20Michigan&z=8&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen>
-          </iframe>
+      </div>
 
-          <div class="map-caption">
-            Map centered on our hometown of Durand, Michigan.
-            This is not an exact service-area boundary.
-          </div>
-        </div>
+      <div class="google-map-container">
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1B5ChYsvUqbrGByzJUihg3KrpprKT1a8&amp;ehbc=2E312F"
+          title="Just The Guy Gutters & Exteriors Service Area Map"
+          width="100%"
+          height="550"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
 
+      <div class="container">
+        <p class="google-map-note">
+          Don't see your location on the map?
+          <a href="#check-area">Ask us if we service your area →</a>
+        </p>
       </div>
     </section>
 
@@ -1336,7 +1284,7 @@
     });
 
     // LOCATION INQUIRY
-    // This opens an email draft; it does not check availability automatically.
+    // Opens an email draft; does not check availability automatically.
     const locationForm = document.getElementById("locationForm");
     const locationInput = document.getElementById("locationInput");
     const checkResult = document.getElementById("checkResult");
