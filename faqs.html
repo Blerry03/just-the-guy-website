@@ -1,0 +1,1841 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Frequently Asked Questions | Just The Guy Gutters & Exteriors</title>
+  <meta name="description" content="Answers to common questions about seamless gutters, gutter guards, gutter cleaning, repairs, estimates, and service areas from Just The Guy Gutters & Exteriors in Mid-Michigan.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --deep: #031B40;
+      --navy: #06285C;
+      --blue: #1762B5;
+      --green: #2C9622;
+      --green-light: #91E887;
+      --text: #142033;
+      --muted: #5B6B7F;
+      --light: #F5F7FA;
+      --white: #FFFFFF;
+      --border: #E2E8EF;
+      --shadow: 0 20px 55px rgba(3,27,64,.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--text);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: "Manrope", Arial, sans-serif;
+      letter-spacing: -.04em;
+      line-height: 1.2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+
+    .container {
+      width: min(1250px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 28px;
+      border: 0;
+      border-radius: 100px;
+      background: var(--green);
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      background: #247E1D;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,.65);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.12);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--green-light);
+      outline-offset: 4px;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--deep);
+      box-shadow: 0 5px 25px rgba(0,0,0,.12);
+    }
+
+    .nav-wrap {
+      max-width: 1600px;
+      min-height: 88px;
+      margin: auto;
+      padding: 10px 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand { flex-shrink: 0; }
+    .brand img { width: 195px; }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .main-nav a {
+      position: relative;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover { color: #A3E69A; }
+
+    .main-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      height: 2px;
+      background: var(--green-light);
+    }
+
+    .phone-btn {
+      flex-shrink: 0;
+      padding: 13px 19px;
+      border-radius: 50px;
+      background: var(--green);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 29px;
+    }
+
+    /* HERO */
+
+    .faq-hero {
+      position: relative;
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--deep);
+      color: white;
+    }
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(3,27,64,.97) 0%,
+          rgba(3,27,64,.85) 48%,
+          rgba(3,27,64,.42) 100%
+        ),
+        url("images/IMG_7603.JPEG");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 105px 0 115px;
+    }
+
+    .hero-copy { max-width: 820px; }
+
+    .faq-hero .eyebrow { color: var(--green-light); }
+
+    .faq-hero h1 {
+      margin: 0 0 25px;
+      font-size: clamp(43px, 6vw, 76px);
+    }
+
+    .faq-hero h1 span { color: var(--green-light); }
+
+    .faq-hero p {
+      max-width: 640px;
+      margin: 0 0 28px;
+      color: #E6EEF7;
+      font-size: 19px;
+      line-height: 1.85;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 25px;
+      color: #F0F6FC;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-trust span::before {
+      content: "✓";
+      margin-right: 8px;
+      color: var(--green-light);
+    }
+
+    /* INTRODUCTION */
+
+    .intro-section {
+      padding: 100px 0 85px;
+      background: white;
+    }
+
+    .intro-layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .intro-copy h2 {
+      margin: 0 0 24px;
+      color: var(--deep);
+      font-size: clamp(35px, 4.5vw, 53px);
+    }
+
+    .intro-copy h2 span { color: var(--green); }
+
+    .intro-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .intro-card {
+      padding: 40px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--light);
+      box-shadow: var(--shadow);
+    }
+
+    .intro-card-icon {
+      display: grid;
+      place-items: center;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+      border-radius: 17px;
+      background: #E6F4E4;
+      color: var(--green);
+      font-family: "Manrope", sans-serif;
+      font-size: 31px;
+      font-weight: 800;
+    }
+
+    .intro-card h3 {
+      margin: 0 0 13px;
+      color: var(--deep);
+      font-size: 28px;
+    }
+
+    .intro-card p {
+      margin: 0 0 25px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* CATEGORY NAVIGATION */
+
+    .category-section {
+      padding: 80px 0;
+      background: var(--light);
+    }
+
+    .section-heading {
+      max-width: 790px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 18px;
+      color: var(--deep);
+      font-size: clamp(34px, 4.5vw, 53px);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 185px;
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: 19px;
+      background: white;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .category-number {
+      margin-bottom: 23px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .1em;
+    }
+
+    .category-card h3 {
+      margin: 0 0 10px;
+      color: var(--deep);
+      font-size: 19px;
+    }
+
+    .category-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .category-arrow {
+      margin-top: auto;
+      padding-top: 18px;
+      color: var(--green);
+      font-size: 20px;
+    }
+
+    /* FAQ MAIN */
+
+    .faq-main {
+      padding: 105px 0;
+      background: white;
+    }
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 265px minmax(0, 1fr);
+      align-items: start;
+      gap: 65px;
+    }
+
+    .faq-sidebar {
+      position: sticky;
+      top: 115px;
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--light);
+    }
+
+    .faq-sidebar h3 {
+      margin: 0 0 18px;
+      color: var(--deep);
+      font-size: 18px;
+    }
+
+    .faq-sidebar a {
+      display: block;
+      padding: 10px 0;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .faq-sidebar a:hover { color: var(--green); }
+
+    .faq-sidebar .sidebar-divider {
+      height: 1px;
+      margin: 20px 0;
+      background: var(--border);
+    }
+
+    .faq-sidebar p {
+      margin: 0 0 17px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .faq-sidebar .btn {
+      width: 100%;
+      padding: 13px;
+      font-size: 12px;
+    }
+
+    .faq-search {
+      margin-bottom: 45px;
+    }
+
+    .faq-search label {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--deep);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .search-field {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 19px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--light);
+    }
+
+    .search-icon {
+      color: var(--green);
+      font-size: 20px;
+    }
+
+    .search-field input {
+      width: 100%;
+      padding: 18px 0;
+      border: 0;
+      outline: none;
+      background: transparent;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .search-field:focus-within {
+      outline: 2px solid var(--green);
+      outline-offset: 2px;
+    }
+
+    .faq-group {
+      margin-bottom: 62px;
+      scroll-margin-top: 120px;
+    }
+
+    .faq-group:last-of-type { margin-bottom: 0; }
+
+    .group-heading {
+      margin-bottom: 23px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .group-heading .eyebrow { margin-bottom: 9px; }
+
+    .group-heading h2 {
+      margin: 0;
+      color: var(--deep);
+      font-size: clamp(27px, 3vw, 36px);
+    }
+
+    .faq-item {
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: white;
+      overflow: hidden;
+    }
+
+    .faq-item[open] {
+      border-color: #B9D9B5;
+      box-shadow: 0 10px 25px rgba(3,27,64,.05);
+    }
+
+    .faq-item summary {
+      position: relative;
+      padding: 22px 60px 22px 24px;
+      color: var(--deep);
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.6;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      color: var(--green);
+      font-size: 27px;
+      font-weight: 400;
+    }
+
+    .faq-item[open] summary::after { content: "−"; }
+
+    .faq-answer {
+      padding: 0 24px 24px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .faq-answer p {
+      margin: 0 0 12px;
+    }
+
+    .faq-answer p:last-child { margin-bottom: 0; }
+
+    .faq-answer a {
+      color: var(--green);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .faq-empty {
+      display: none;
+      padding: 35px;
+      border-radius: 16px;
+      background: var(--light);
+      text-align: center;
+    }
+
+    .faq-empty h3 {
+      margin: 0 0 10px;
+      color: var(--deep);
+    }
+
+    .faq-empty p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* RESOURCES */
+
+    .resources-section {
+      padding: 100px 0;
+      background: var(--light);
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .resource-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 21px;
+      background: white;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .resource-image {
+      height: 205px;
+      overflow: hidden;
+      background: #E7EEF5;
+    }
+
+    .resource-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .3s;
+    }
+
+    .resource-card:hover .resource-image img {
+      transform: scale(1.04);
+    }
+
+    .resource-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 27px;
+    }
+
+    .resource-tag {
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 15px;
+      padding: 7px 12px;
+      border-radius: 50px;
+      background: #EAF5E9;
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .resource-content h3 {
+      margin: 0 0 13px;
+      color: var(--deep);
+      font-size: 21px;
+    }
+
+    .resource-content p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .resource-link {
+      margin-top: auto;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    /* CTA */
+
+    .final-cta {
+      padding: 105px 20px;
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(23,98,181,.3),
+          transparent 40%
+        ),
+        var(--deep);
+      color: white;
+      text-align: center;
+    }
+
+    .final-cta-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .final-cta .eyebrow { color: var(--green-light); }
+
+    .final-cta h2 {
+      margin: 0 0 23px;
+      font-size: clamp(37px, 5vw, 58px);
+    }
+
+    .final-cta h2 span { color: var(--green-light); }
+
+    .final-cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #D6E3F1;
+      font-size: 18px;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 70px 0 25px;
+      background: #02132D;
+      color: #D5E0EE;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 45px;
+      margin-bottom: 45px;
+    }
+
+    .footer-logo {
+      width: 185px;
+      margin-bottom: 18px;
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    footer h3 {
+      margin: 0 0 20px;
+      color: white;
+      font-size: 17px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 13px;
+    }
+
+    footer a:hover { color: var(--green-light); }
+    footer p { font-size: 13px; }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1250px) {
+      .main-nav { gap: 11px; }
+      .main-nav a { font-size: 11px; }
+      .brand img { width: 155px; }
+    }
+
+    @media (max-width: 1050px) {
+      .menu-toggle { display: block; }
+      .phone-btn { display: none; }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 18px 5%;
+        background: var(--deep);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 15px 30px rgba(0,0,0,.2);
+      }
+
+      .main-nav.open { display: flex; }
+
+      .main-nav a {
+        padding: 13px 5px;
+        font-size: 14px;
+      }
+
+      .intro-layout { gap: 35px; }
+
+      .faq-layout {
+        grid-template-columns: 215px minmax(0, 1fr);
+        gap: 30px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .faq-hero { min-height: 490px; }
+      .hero-inner { padding: 85px 0; }
+      .faq-hero p { font-size: 17px; }
+
+      .intro-section,
+      .category-section,
+      .faq-main,
+      .resources-section {
+        padding: 75px 0;
+      }
+
+      .intro-layout,
+      .faq-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-sidebar { display: none; }
+
+      .resource-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .category-grid,
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container { width: calc(100% - 34px); }
+      .nav-wrap { min-height: 75px; }
+      .brand img { width: 150px; }
+      .faq-hero h1 { font-size: 43px; }
+      .intro-copy p { font-size: 16px; }
+      .intro-card { padding: 27px; }
+      .faq-item summary { padding: 20px 53px 20px 19px; }
+      .faq-answer { padding: 0 19px 22px; }
+
+      .cta-actions { flex-direction: column; }
+      .cta-actions .btn { width: 100%; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-wrap">
+
+      <a class="brand" href="index.html" aria-label="Just The Guy Home">
+        <img src="images/LOGO.PNG" alt="Just The Guy Gutters & Exteriors">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">home</a>
+        <a href="about.html">about us</a>
+        <a href="services.html">services</a>
+        <a href="service-area.html">areas we serve</a>
+        <a href="resources.html">resources</a>
+        <a href="reviews.html">reviews</a>
+        <a class="active" href="faqs.html" aria-current="page">faqs</a>
+        <a href="work.html">gallery</a>
+        <a href="contact.html">contact</a>
+      </nav>
+
+      <a class="phone-btn" href="tel:+15178858953">
+        (517) 885-8953
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="mainNav"
+        aria-expanded="false">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="faq-hero">
+      <div class="hero-background" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+
+          <span class="eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+
+          <h1>
+            Questions?<br>
+            <span>We've Got Answers.</span>
+          </h1>
+
+          <p>
+            Gutters, estimates, scheduling, service areas,
+            and everything in between. We're here to make
+            the process a little easier to understand.
+          </p>
+
+          <div class="hero-trust">
+            <span>Clear Answers</span>
+            <span>Helpful Information</span>
+            <span>Local, Family-Owned Business</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro-section">
+      <div class="container intro-layout">
+
+        <div class="intro-copy">
+          <span class="eyebrow">HERE TO HELP</span>
+
+          <h2>
+            No Question<br>
+            <span>Is a Bad Question.</span>
+          </h2>
+
+          <p>
+            We understand that most homeowners aren't
+            experts in gutters, downspouts, or exterior
+            repairs. And you shouldn't have to be.
+          </p>
+
+          <p>
+            Whether you're planning a new installation,
+            trying to solve a drainage problem, or
+            wondering what to expect when working
+            with us, we're happy to help.
+          </p>
+
+          <p>
+            We've answered some of the questions
+            homeowners commonly ask below.
+          </p>
+        </div>
+
+        <div class="intro-card">
+          <div class="intro-card-icon" aria-hidden="true">?</div>
+
+          <h3>Can't Find Your Answer?</h3>
+
+          <p>
+            Every home and project is a little different.
+            If you have a question we haven't covered,
+            feel free to reach out to us directly.
+          </p>
+
+          <a href="contact.html" class="btn">
+            Ask Us a Question →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CATEGORY NAVIGATION -->
+    <section class="category-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">FIND WHAT YOU'RE LOOKING FOR</span>
+
+          <h2>Browse by Topic.</h2>
+
+          <p>
+            Jump to the questions that matter most
+            to you, or browse everything below.
+          </p>
+        </div>
+
+        <div class="category-grid">
+
+          <a class="category-card" href="#general">
+            <span class="category-number">01 / ABOUT US</span>
+            <h3>General Questions</h3>
+            <p>Who we are and where we work.</p>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="category-card" href="#gutters">
+            <span class="category-number">02 / GUTTERS</span>
+            <h3>Gutter Services</h3>
+            <p>Installation, cleaning, guards, and repairs.</p>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="category-card" href="#estimates">
+            <span class="category-number">03 / GETTING STARTED</span>
+            <h3>Estimates & Scheduling</h3>
+            <p>What to expect when requesting service.</p>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="category-card" href="#exteriors">
+            <span class="category-number">04 / OTHER WORK</span>
+            <h3>Exterior Services</h3>
+            <p>Siding, roofing, soffit, and fascia questions.</p>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- QUESTIONS -->
+    <section class="faq-main">
+      <div class="container faq-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="faq-sidebar">
+          <h3>On This Page</h3>
+
+          <a href="#general">General Questions</a>
+          <a href="#gutters">Gutter Services</a>
+          <a href="#estimates">Estimates & Scheduling</a>
+          <a href="#exteriors">Exterior Services</a>
+
+          <div class="sidebar-divider"></div>
+
+          <h3>Need a Hand?</h3>
+
+          <p>
+            We're happy to talk through your project
+            and answer your questions.
+          </p>
+
+          <a href="contact.html" class="btn">
+            Contact Us →
+          </a>
+        </aside>
+
+        <div class="faq-content">
+
+          <!-- SEARCH -->
+          <div class="faq-search">
+            <label for="faqSearch">Looking for something specific?</label>
+
+            <div class="search-field">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+
+              <input
+                type="search"
+                id="faqSearch"
+                placeholder="Search questions and answers...">
+            </div>
+          </div>
+
+          <!-- GENERAL -->
+          <div class="faq-group" id="general">
+            <div class="group-heading">
+              <span class="eyebrow">01 / ABOUT JUST THE GUY</span>
+              <h2>General Questions</h2>
+            </div>
+
+            <details class="faq-item">
+              <summary>Are you a family-owned business?</summary>
+              <div class="faq-answer">
+                <p>
+                  Yes! Just The Guy Gutters & Exteriors is
+                  a family-owned business based in Durand,
+                  Michigan. We're proud to serve our
+                  surrounding communities and take a
+                  personal approach to the work we do.
+                </p>
+                <p>
+                  You can learn more about our family on
+                  our <a href="about.html">About Us page</a>.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Where are you located?</summary>
+              <div class="faq-answer">
+                <p>
+                  We're based in Durand, Michigan, in
+                  Shiawassee County. We travel to
+                  surrounding Mid-Michigan communities
+                  for projects.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What areas do you serve?</summary>
+              <div class="faq-answer">
+                <p>
+                  We serve Durand, Owosso, Corunna,
+                  Perry, Morrice, Flint, Grand Blanc,
+                  Fenton, Linden, Lansing, East Lansing,
+                  and other communities throughout
+                  Mid-Michigan. We also take on select
+                  projects in the Saginaw, Midland,
+                  and Bay City areas.
+                </p>
+                <p>
+                  Visit our
+                  <a href="service-area.html">Areas We Serve page</a>
+                  to explore our service map.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What if my town isn't listed in your service area?</summary>
+              <div class="faq-answer">
+                <p>
+                  Feel free to contact us anyway!
+                  Project availability depends on
+                  your location, the type of work,
+                  and our schedule. We're happy to
+                  let you know whether we can help.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What types of properties do you work on?</summary>
+              <div class="faq-answer">
+                <p>
+                  We work on residential properties
+                  and consider other types of projects,
+                  including commercial and multi-building
+                  properties, depending on the scope
+                  of the work.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <!-- GUTTERS -->
+          <div class="faq-group" id="gutters">
+            <div class="group-heading">
+              <span class="eyebrow">02 / OUR SPECIALTY</span>
+              <h2>Gutter Services</h2>
+            </div>
+
+            <details class="faq-item">
+              <summary>What gutter services do you offer?</summary>
+              <div class="faq-answer">
+                <p>
+                  Our gutter services include seamless
+                  gutter installation, gutter replacement,
+                  downspouts, gutter guards, gutter
+                  cleaning, and repairs.
+                </p>
+                <p>
+                  Visit our
+                  <a href="gutters.html">Gutter Services page</a>
+                  for more information.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What are seamless gutters?</summary>
+              <div class="faq-answer">
+                <p>
+                  Seamless gutters are custom-formed
+                  to fit the measurements of your
+                  home or building. Unlike sectional
+                  gutters, they have fewer joints
+                  along straight runs, which reduces
+                  potential leak points and provides
+                  a clean appearance.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you offer both 5-inch and 6-inch gutters?</summary>
+              <div class="faq-answer">
+                <p>
+                  Yes. We work with both 5-inch and
+                  6-inch seamless gutter systems.
+                  The right size depends on factors
+                  such as roof area, pitch, and
+                  expected water flow.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I choose the color of my gutters?</summary>
+              <div class="faq-answer">
+                <p>
+                  Yes! Seamless gutters are available
+                  in a variety of colors. We can
+                  discuss available options to help
+                  you find something that complements
+                  your home's exterior.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you install gutter guards?</summary>
+              <div class="faq-answer">
+                <p>
+                  Yes. We offer gutter guard installation
+                  to help reduce leaves and larger debris
+                  entering your gutters.
+                </p>
+                <p>
+                  Gutter guards can reduce maintenance,
+                  but no system eliminates the need
+                  for occasional inspection and cleaning.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>How often should gutters be cleaned?</summary>
+              <div class="faq-answer">
+                <p>
+                  For many homes, checking and cleaning
+                  gutters at least twice a year is a
+                  good starting point, typically in
+                  the spring and fall.
+                </p>
+                <p>
+                  Homes with heavy tree coverage may
+                  require more frequent cleaning.
+                  You can learn more in our
+                  <a href="resources.html#cleaning-guide">gutter cleaning guide</a>.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can you repair my gutters instead of replacing them?</summary>
+              <div class="faq-answer">
+                <p>
+                  In many cases, yes. Depending on
+                  the condition of the system, we may
+                  be able to address issues such as
+                  leaking corners, loose sections,
+                  drainage problems, or improper pitch
+                  without replacing everything.
+                </p>
+                <p>
+                  We can help evaluate which option
+                  makes sense for your situation.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Why are my gutters overflowing?</summary>
+              <div class="faq-answer">
+                <p>
+                  Overflowing gutters can be caused
+                  by clogged gutters, blocked downspouts,
+                  improper pitch, insufficient capacity,
+                  or other drainage issues.
+                </p>
+                <p>
+                  The best solution depends on the
+                  underlying cause, so an inspection
+                  may be needed.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can you replace just one section of gutter?</summary>
+              <div class="faq-answer">
+                <p>
+                  Sometimes. If the surrounding system
+                  is in good condition and a replacement
+                  section can be installed properly,
+                  a partial replacement may be possible.
+                  We'll need to evaluate the existing
+                  gutter and the area involved.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you install and replace downspouts?</summary>
+              <div class="faq-answer">
+                <p>
+                  Yes. We install and replace downspouts
+                  as part of complete gutter systems
+                  and individual drainage projects.
+                  Proper downspout placement helps
+                  direct roof runoff away from
+                  vulnerable areas around your home.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <!-- ESTIMATES -->
+          <div class="faq-group" id="estimates">
+            <div class="group-heading">
+              <span class="eyebrow">03 / WORKING WITH US</span>
+              <h2>Estimates & Scheduling</h2>
+            </div>
+
+            <details class="faq-item">
+              <summary>Do you offer free estimates?</summary>
+              <div class="faq-answer">
+                <p>
+                  Yes! You can request a free estimate
+                  by contacting us through our website
+                  or calling (517) 885-8953.
+                </p>
+                <p>
+                  <a href="index.html#contact">Request your estimate here</a>.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>How do I request an estimate?</summary>
+              <div class="faq-answer">
+                <p>
+                  You can submit a request through our
+                  website, call us at
+                  <a href="tel:+15178858953">(517) 885-8953</a>,
+                  or email us.
+                </p>
+                <p>
+                  Sharing your property location,
+                  the type of service you need,
+                  and any helpful photos can give
+                  us a better understanding
+                  of your project.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do I need to be home for an estimate?</summary>
+              <div class="faq-answer">
+                <p>
+                  Not necessarily. Some exterior
+                  projects can be measured and
+                  evaluated without anyone being
+                  home, provided we have permission
+                  and safe access to the areas
+                  that need to be inspected.
+                </p>
+                <p>
+                  If we need to discuss details
+                  with you on-site, we'll coordinate
+                  that beforehand.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>How soon can you schedule my project?</summary>
+              <div class="faq-answer">
+                <p>
+                  Scheduling depends on our current
+                  workload, weather conditions,
+                  material availability, and the
+                  scope of your project.
+                </p>
+                <p>
+                  We'll discuss scheduling
+                  availability with you when
+                  reviewing your project.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>How long does gutter installation take?</summary>
+              <div class="faq-answer">
+                <p>
+                  Installation time depends on the
+                  size of the building, accessibility,
+                  roof height, number of downspouts,
+                  and whether existing gutters
+                  need to be removed.
+                </p>
+                <p>
+                  Many residential installations
+                  can be completed in a day,
+                  while larger or more complicated
+                  projects may take longer.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What happens if the weather is bad on installation day?</summary>
+              <div class="faq-answer">
+                <p>
+                  Safety and installation conditions
+                  come first. Rain, high winds,
+                  ice, and other weather conditions
+                  may require us to adjust the
+                  schedule.
+                </p>
+                <p>
+                  If weather affects your appointment,
+                  we'll work with you to coordinate
+                  another suitable time.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you remove and dispose of old gutters?</summary>
+              <div class="faq-answer">
+                <p>
+                  We can include removal and disposal
+                  of existing gutters as part of a
+                  replacement project. The exact
+                  scope will be outlined in your
+                  estimate.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>How much does a new gutter system cost?</summary>
+              <div class="faq-answer">
+                <p>
+                  Pricing depends on the total gutter
+                  footage, building height, gutter
+                  size, downspouts, accessories,
+                  and installation conditions.
+                </p>
+                <p>
+                  Because every property is different,
+                  we recommend requesting an estimate
+                  for accurate pricing.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What payment methods do you accept?</summary>
+              <div class="faq-answer">
+                <p>
+                  Payment options can be discussed
+                  when your estimate is prepared.
+                  Contact us if you have a specific
+                  payment method you'd like to use.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <!-- EXTERIORS -->
+          <div class="faq-group" id="exteriors">
+            <div class="group-heading">
+              <span class="eyebrow">04 / BEYOND GUTTERS</span>
+              <h2>Exterior Services</h2>
+            </div>
+
+            <details class="faq-item">
+              <summary>Do you offer services other than gutters?</summary>
+              <div class="faq-answer">
+                <p>
+                  Yes. In addition to our gutter
+                  services, we can help coordinate
+                  certain exterior projects involving
+                  siding, soffit, fascia, and roofing
+                  through independent subcontractors.
+                </p>
+                <p>
+                  Contact us with your project details
+                  to see what options are available.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Does your own crew perform siding and roofing work?</summary>
+              <div class="faq-answer">
+                <p>
+                  Our crew specializes in gutter
+                  installation and related services.
+                  For siding, roofing, and certain
+                  other exterior projects, we
+                  coordinate work with independent
+                  subcontractors rather than
+                  performing those services
+                  with our own gutter crew.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can you help with damaged soffit or fascia?</summary>
+              <div class="faq-answer">
+                <p>
+                  We can discuss soffit and fascia
+                  projects and help coordinate
+                  appropriate exterior work
+                  when available.
+                </p>
+                <p>
+                  The best approach depends on
+                  the extent of the damage and
+                  whether any underlying issues
+                  need to be addressed.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can you coordinate small roofing repairs?</summary>
+              <div class="faq-answer">
+                <p>
+                  Depending on the project and
+                  availability, we may be able
+                  to help coordinate certain
+                  roofing repairs through
+                  independent subcontractors.
+                </p>
+                <p>
+                  Send us a description of the
+                  problem and any photos you have
+                  so we can discuss the next steps.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I ask about multiple exterior services at once?</summary>
+              <div class="faq-answer">
+                <p>
+                  Absolutely. If you're planning
+                  gutter work along with another
+                  exterior project, let us know
+                  what you're hoping to accomplish.
+                  We can discuss what services
+                  may be available and how
+                  the work could be coordinated.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <!-- NO RESULTS -->
+          <div class="faq-empty" id="faqEmpty" aria-live="polite">
+            <h3>No Matching Questions Found.</h3>
+            <p>
+              Try searching for a different term,
+              or contact us directly and we'll
+              be happy to help.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ADDITIONAL RESOURCES -->
+    <section class="resources-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">WANT TO LEARN MORE?</span>
+
+          <h2>Helpful Homeowner Resources.</h2>
+
+          <p>
+            Explore our homeowner guides for
+            more information about maintaining
+            and protecting your property.
+          </p>
+        </div>
+
+        <div class="resource-grid">
+
+          <a class="resource-card" href="resources.html#cleaning-guide">
+            <div class="resource-image">
+              <img
+                src="images/IMG_7603.JPEG"
+                alt="Residential gutter system"
+                loading="lazy">
+            </div>
+
+            <div class="resource-content">
+              <span class="resource-tag">Gutter Maintenance</span>
+
+              <h3>How Often Should You Clean Your Gutters?</h3>
+
+              <p>
+                Learn about seasonal cleaning
+                and the signs that your gutters
+                need attention.
+              </p>
+
+              <span class="resource-link">Read the Guide →</span>
+            </div>
+          </a>
+
+          <a class="resource-card" href="resources.html#guards-guide">
+            <div class="resource-image">
+              <img
+                src="images/Guards.PNG"
+                alt="Gutter guard material"
+                loading="lazy">
+            </div>
+
+            <div class="resource-content">
+              <span class="resource-tag">Gutter Protection</span>
+
+              <h3>Are Gutter Guards Worth It?</h3>
+
+              <p>
+                Learn what gutter guards can
+                help with and why maintenance
+                is still important.
+              </p>
+
+              <span class="resource-link">Read the Guide →</span>
+            </div>
+          </a>
+
+          <a class="resource-card" href="resources.html#drainage-guide">
+            <div class="resource-image">
+              <img
+                src="images/IMG_4443.JPEG"
+                alt="Exterior gutter project"
+                loading="lazy">
+            </div>
+
+            <div class="resource-content">
+              <span class="resource-tag">Drainage</span>
+
+              <h3>Where Should Your Downspouts Drain?</h3>
+
+              <p>
+                Understand the importance of
+                directing rainwater away
+                from your foundation.
+              </p>
+
+              <span class="resource-link">Read the Guide →</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="final-cta-inner">
+
+        <span class="eyebrow">STILL HAVE QUESTIONS?</span>
+
+        <h2>
+          We're Here to Help.<br>
+          <span>You Need Just The Guy.</span>
+        </h2>
+
+        <p>
+          Whether you have a quick question
+          or you're ready to start a project,
+          we'd love to hear from you.
+        </p>
+
+        <div class="cta-actions">
+          <a href="index.html#contact" class="btn">
+            Get Your Free Estimate →
+          </a>
+
+          <a href="tel:+15178858953" class="btn btn-outline">
+            Call (517) 885-8953
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <img
+            class="footer-logo"
+            src="images/LOGO.PNG"
+            alt="Just The Guy Gutters & Exteriors">
+
+          <p>
+            A family-owned Mid-Michigan exterior company,
+            specializing in seamless gutters and helping
+            homeowners care for their properties.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Our Services</a>
+          <a href="work.html">Gallery</a>
+          <a href="reviews.html">Reviews</a>
+        </div>
+
+        <div>
+          <h3>Services</h3>
+          <a href="gutters.html">Gutters</a>
+          <a href="siding.html">Siding</a>
+          <a href="roofing.html">Roofing</a>
+          <a href="service-area.html">Areas We Serve</a>
+          <a href="faqs.html">FAQs</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>Durand, Michigan</p>
+          <a href="tel:+15178858953">(517) 885-8953</a>
+          <a href="mailto:justtheguyguttersandexterior@gmail.com">
+            Email Us
+          </a>
+          <a href="contact.html">Contact Us</a>
+          <a href="index.html#contact">Request an Estimate</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year">2026</span>
+        Just The Guy Gutters & Exteriors.
+        All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
+
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // FAQ SEARCH
+    const faqSearch = document.getElementById("faqSearch");
+    const faqGroups = document.querySelectorAll(".faq-group");
+    const faqEmpty = document.getElementById("faqEmpty");
+
+    faqSearch.addEventListener("input", () => {
+      const query = faqSearch.value.trim().toLowerCase();
+      let totalVisible = 0;
+
+      faqGroups.forEach(group => {
+        const questions = group.querySelectorAll(".faq-item");
+        let groupVisible = 0;
+
+        questions.forEach(question => {
+          const questionText = question.textContent.toLowerCase();
+          const matches = questionText.includes(query);
+
+          question.hidden = !matches;
+          question.style.display = matches ? "" : "none";
+
+          if (matches) {
+            groupVisible++;
+            totalVisible++;
+          }
+        });
+
+        group.hidden = groupVisible === 0;
+        group.style.display = groupVisible > 0 ? "" : "none";
+      });
+
+      faqEmpty.style.display =
+        totalVisible === 0 ? "block" : "none";
+    });
+
+    // COPYRIGHT YEAR
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
