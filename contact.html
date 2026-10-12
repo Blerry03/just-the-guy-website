@@ -1,29 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<form
-  id="contactForm"
-  action="https://formsubmit.co/ajax/justtheguyguttersandexterior@gmail.com"
-  method="POST">
+  <title>Contact Us | Just The Guy Gutters & Exteriors</title>
+  <meta name="description" content="Contact Just The Guy Gutters & Exteriors in Durand, Michigan. Request a free estimate for seamless gutters, gutter guards, cleaning, repairs, and exterior projects throughout Mid-Michigan.">
 
-  <input
-    type="hidden"
-    name="_subject"
-    value="New Website Estimate Request - Just The Guy">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <input
-    type="hidden"
-    name="_captcha"
-    value="false">
+  <style>
+    :root {
+      --deep: #031B40;
+      --navy: #06285C;
+      --blue: #1762B5;
+      --green: #2C9622;
+      --green-light: #91E887;
+      --text: #142033;
+      --muted: #5B6B7F;
+      --light: #F5F7FA;
+      --white: #FFFFFF;
+      --border: #E2E8EF;
+      --shadow: 0 20px 55px rgba(3,27,64,.10);
+    }
 
-  <input
-    type="hidden"
-    name="_template"
-    value="table">
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-  <!-- Spam protection -->
-  <input
-    type="text"
-    name="_honey"
-    style="position:absolute;left:-9999px"
-    tabindex="-1"
-    autocomplete="off"
-    aria-hidden="true">
+    body {
+      margin: 0;
+      background: white;
+      color: var(--text);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: "Manrope", Arial, sans-serif;
+      letter-spacing: -.04em;
+      line-height: 1.2;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .container {
+      width: min(1250px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 28px;
+      border: 0;
+      border-radius: 100px;
+      background: var(--green);
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      background: #247E1D;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,.65);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.12);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible {
+      outline: 3px solid var(--green-light);
+      outline-offset: 3px;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--deep);
+      box-shadow: 0 5px 25px rgba(0,0,0,.12);
+    }
+
+    .nav-wrap {
+      max-width: 1600px;
+      min-height: 88px;
+      margin: auto;
+      padding: 10px 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand { flex-shrink: 0; }
+    .brand img { width: 195px; }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .main-nav a {
+      position: relative;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover { color: #A3E69A; }
+
+    .main-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      height: 2px;
+      background: var(--green-light);
+    }
+
+    .phone-btn {
+      flex-shrink: 0;
+      padding: 13px 19px;
+      border-radius: 50px;
+      background: var(--green);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 29px;
+    }
+
+    /* HERO */
+
+    .contact-hero {
+      position: relative;
+      min-height: 525px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--deep);
+      color: white;
+    }
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(3,27,64,.97) 0%,
+          rgba(3,27,64,.85) 48%,
+          rgba(3,27,64,.40) 100%
+        ),
+        url("images/IMG_7603.JPEG");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 100px 0 110px;
+    }
+
+    .hero-copy { max-width: 830px; }
+
+    .contact-hero .eyebrow {
+      color: var(--green-light);
+    }
+
+    .contact-hero h1 {
+      margin: 0 0 25px;
+      font-size: clamp(43px, 6vw, 76px);
+    }
+
+    .contact-hero h1 span {
+      color: var(--green-light);
+    }
+
+    .contact-hero p {
+      max-width: 660px;
+      margin: 0 0 29px;
+      color: #E6EEF7;
+      font-size: 19px;
+      line-height: 1.85;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 25px;
+      color: #F0F6FC;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-trust span::before {
+      content: "✓";
+      margin-right: 8px;
+      color: var(--green-light);
+    }
+
+    /* CONTACT OPTIONS */
+
+    .contact-options {
+      padding: 85px 0;
+      background: white;
+    }
+
+    .section-heading {
+      max-width: 790px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 18px;
+      color: var(--deep);
+      font-size: clamp(34px, 4.5vw, 53px);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .contact-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 23px;
+    }
+
+    .contact-card {
+      padding: 34px;
+      border: 1px solid var(--border);
+      border-radius: 21px;
+      background: white;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-icon {
+      display: grid;
+      place-items: center;
+      width: 59px;
+      height: 59px;
+      margin-bottom: 24px;
+      border-radius: 17px;
+      background: #E9F5E7;
+      color: var(--green);
+    }
+
+    .contact-icon svg {
+      width: 27px;
+      height: 27px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 12px;
+      color: var(--deep);
+      font-size: 23px;
+    }
+
+    .contact-card p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-card a.card-link {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 800;
+      overflow-wrap: anywhere;
+    }
+
+    /* CONTACT FORM */
+
+    .form-section {
+      padding: 105px 0;
+      background: var(--light);
+      scroll-margin-top: 100px;
+    }
+
+    .form-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+      align-items: start;
+      gap: 65px;
+    }
+
+    .form-intro h2 {
+      margin: 0 0 25px;
+      color: var(--deep);
+      font-size: clamp(36px, 4.5vw, 54px);
+    }
+
+    .form-intro h2 span { color: var(--green); }
+
+    .form-intro > p {
+      margin: 0 0 19px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .form-benefits {
+      display: grid;
+      gap: 23px;
+      margin: 35px 0;
+    }
+
+    .form-benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .benefit-check {
+      display: grid;
+      flex-shrink: 0;
+      place-items: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: #E4F2E2;
+      color: var(--green);
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .form-benefit h3 {
+      margin: 0 0 5px;
+      color: var(--deep);
+      font-size: 16px;
+    }
+
+    .form-benefit p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .form-photo {
+      overflow: hidden;
+      margin-top: 38px;
+      border-radius: 21px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-photo img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .form-card {
+      padding: 42px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .form-card-header {
+      margin-bottom: 30px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .form-card-header .eyebrow { margin-bottom: 10px; }
+
+    .form-card-header h3 {
+      margin: 0 0 11px;
+      color: var(--deep);
+      font-size: 29px;
+    }
+
+    .form-card-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 19px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+      min-width: 0;
+    }
+
+    .form-field label {
+      color: var(--deep);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .required { color: var(--green); }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      min-width: 0;
+      padding: 15px 16px;
+      border: 1px solid #DCE4ED;
+      border-radius: 11px;
+      background: #FBFCFE;
+      color: var(--text);
+      font-size: 14px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(44,150,34,.12);
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: #8996A7;
+    }
+
+    .form-field textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    .form-field select { cursor: pointer; }
+
+    .field-note {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .upload-field {
+      padding: 21px;
+      border: 1.5px dashed #B9CADC;
+      border-radius: 13px;
+      background: var(--light);
+    }
+
+    .upload-field input {
+      padding: 10px 0;
+      border: 0;
+      background: transparent;
+    }
+
+    .upload-field input::file-selector-button {
+      margin-right: 12px;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+      color: var(--deep);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 5px;
+      padding: 18px 25px;
+      border-radius: 12px;
+      font-size: 15px;
+    }
+
+    .privacy-note {
+      margin: 17px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* PROCESS */
+
+    .process-section {
+      padding: 105px 0;
+      background: white;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .process-card {
+      position: relative;
+      padding: 34px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--light);
+    }
+
+    .step-number {
+      display: block;
+      margin-bottom: 25px;
+      color: var(--green);
+      font-family: "Manrope", sans-serif;
+      font-size: 37px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .process-card h3 {
+      margin: 0 0 12px;
+      color: var(--deep);
+      font-size: 21px;
+    }
+
+    .process-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* SERVICE AREA */
+
+    .area-section {
+      padding: 95px 0;
+      background: var(--light);
+    }
+
+    .area-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .area-copy h2 {
+      margin: 0 0 23px;
+      color: var(--deep);
+      font-size: clamp(34px, 4.5vw, 52px);
+    }
+
+    .area-copy h2 span { color: var(--green); }
+
+    .area-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .area-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 23px;
+      box-shadow: var(--shadow);
+    }
+
+    .area-image img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+    }
+
+    .area-image-label {
+      position: absolute;
+      right: 17px;
+      bottom: 17px;
+      left: 17px;
+      padding: 17px 20px;
+      border-radius: 12px;
+      background: rgba(3,27,64,.92);
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    /* FAQ TEASER */
+
+    .faq-section {
+      padding: 100px 0;
+      background: white;
+    }
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      align-items: start;
+      gap: 75px;
+    }
+
+    .faq-intro h2 {
+      margin: 0 0 20px;
+      color: var(--deep);
+      font-size: clamp(34px, 4vw, 48px);
+    }
+
+    .faq-intro h2 span { color: var(--green); }
+
+    .faq-intro p {
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .faq-item {
+      margin-bottom: 13px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .faq-item summary {
+      position: relative;
+      padding: 21px 55px 21px 22px;
+      color: var(--deep);
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      top: 13px;
+      right: 22px;
+      color: var(--green);
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    .faq-item[open] summary::after { content: "−"; }
+
+    .faq-answer {
+      padding: 0 22px 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .faq-answer a {
+      color: var(--green);
+      font-weight: 800;
+      text-decoration: underline;
+    }
+
+    /* FINAL CTA */
+
+    .final-cta {
+      padding: 105px 20px;
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(23,98,181,.3),
+          transparent 40%
+        ),
+        var(--deep);
+      color: white;
+      text-align: center;
+    }
+
+    .final-cta-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .final-cta .eyebrow { color: var(--green-light); }
+
+    .final-cta h2 {
+      margin: 0 0 23px;
+      font-size: clamp(37px, 5vw, 58px);
+    }
+
+    .final-cta h2 span { color: var(--green-light); }
+
+    .final-cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #D6E3F1;
+      font-size: 18px;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 70px 0 25px;
+      background: #02132D;
+      color: #D5E0EE;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 45px;
+      margin-bottom: 45px;
+    }
+
+    .footer-logo {
+      width: 185px;
+      margin-bottom: 18px;
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    footer h3 {
+      margin: 0 0 20px;
+      color: white;
+      font-size: 17px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    footer a:hover { color: var(--green-light); }
+    footer p { font-size: 13px; }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1250px) {
+      .main-nav { gap: 11px; }
+      .main-nav a { font-size: 11px; }
+      .brand img { width: 155px; }
+    }
+
+    @media (max-width: 1050px) {
+      .menu-toggle { display: block; }
+      .phone-btn { display: none; }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 18px 5%;
+        background: var(--deep);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 15px 30px rgba(0,0,0,.2);
+      }
+
+      .main-nav.open { display: flex; }
+
+      .main-nav a {
+        padding: 13px 5px;
+        font-size: 14px;
+      }
+
+      .form-layout,
+      .area-layout,
+      .faq-layout {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .contact-hero { min-height: 470px; }
+      .hero-inner { padding: 85px 0; }
+      .contact-hero p { font-size: 17px; }
+
+      .contact-options,
+      .form-section,
+      .process-section,
+      .area-section,
+      .faq-section {
+        padding: 75px 0;
+      }
+
+      .contact-card-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .form-layout,
+      .area-layout,
+      .faq-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .form-photo { display: none; }
+      .area-image img { height: 320px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .contact-card-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field-grid { grid-template-columns: 1fr; }
+      .form-card { padding: 26px 20px; }
+    }
+
+    @media (max-width: 520px) {
+      .container { width: calc(100% - 34px); }
+      .nav-wrap { min-height: 75px; }
+      .brand img { width: 150px; }
+      .contact-hero h1 { font-size: 43px; }
+
+      .cta-actions { flex-direction: column; }
+      .cta-actions .btn { width: 100%; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-wrap">
+
+      <a class="brand" href="index.html" aria-label="Just The Guy Home">
+        <img src="images/LOGO.PNG" alt="Just The Guy Gutters & Exteriors">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">home</a>
+        <a href="about.html">about us</a>
+        <a href="services.html">services</a>
+        <a href="service-area.html">areas we serve</a>
+        <a href="resources.html">resources</a>
+        <a href="reviews.html">reviews</a>
+        <a href="faqs.html">faqs</a>
+        <a href="work.html">gallery</a>
+        <a class="active" href="contact.html" aria-current="page">contact</a>
+      </nav>
+
+      <a class="phone-btn" href="tel:+15178858953">
+        (517) 885-8953
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="mainNav"
+        aria-expanded="false">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="contact-hero">
+      <div class="hero-background" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+
+          <span class="eyebrow">LET'S GET IN TOUCH</span>
+
+          <h1>
+            Have a Project?<br>
+            <span>We've Got You.</span>
+          </h1>
+
+          <p>
+            Whether you're looking for a free estimate,
+            have a question about your gutters, or need
+            help with an exterior project, we're here
+            to make getting started easy.
+          </p>
+
+          <div class="hero-trust">
+            <span>Free Estimates</span>
+            <span>Friendly Communication</span>
+            <span>Family-Owned & Local</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT OPTIONS -->
+    <section class="contact-options">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">REACH OUT YOUR WAY</span>
+
+          <h2>We're Easy to Reach.</h2>
+
+          <p>
+            Have a quick question or ready to start
+            a project? Choose whichever way works
+            best for you.
+          </p>
+        </div>
+
+        <div class="contact-card-grid">
+
+          <!-- PHONE -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.09 5.18 2 2 0 0 1 5.08 3h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.79a2 2 0 0 1-.45 2.11L9.05 10.9a16 16 0 0 0 4.05 4.05l1.28-1.27a2 2 0 0 1 2.11-.45c.89.33 1.83.56 2.79.69A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+
+            <h3>Give Us a Call.</h3>
+
+            <p>
+              Want to speak with us directly?
+              Give us a call to discuss your
+              project or ask a question.
+            </p>
+
+            <a class="card-link" href="tel:+15178858953">
+              (517) 885-8953 →
+            </a>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-10 7L2 7"/>
+              </svg>
+            </div>
+
+            <h3>Send an Email.</h3>
+
+            <p>
+              Prefer to write everything out?
+              Send us your questions, project
+              details, or photos by email.
+            </p>
+
+            <a
+              class="card-link"
+              href="mailto:justtheguyguttersandexterior@gmail.com">
+              Email Our Team →
+            </a>
+          </div>
+
+          <!-- ESTIMATE -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="5" y="3" width="14" height="18" rx="2"/>
+                <path d="M9 3.5h6M9 9h6M9 13h6M9 17h3"/>
+              </svg>
+            </div>
+
+            <h3>Request an Estimate.</h3>
+
+            <p>
+              Tell us what you need using
+              our contact form. We'll review
+              your project information and
+              follow up with you.
+            </p>
+
+            <a class="card-link" href="#estimate-form">
+              Start Your Request →
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ESTIMATE FORM -->
+    <section class="form-section" id="estimate-form">
+      <div class="container form-layout">
+
+        <div class="form-intro">
+          <span class="eyebrow">GET YOUR FREE ESTIMATE</span>
+
+          <h2>
+            Tell Us About<br>
+            <span>Your Project.</span>
+          </h2>
+
+          <p>
+            Every home and project is a little
+            different. Give us some information
+            about what you're looking to have
+            done, and we'll help you figure
+            out the next steps.
+          </p>
+
+          <p>
+            You don't need to know all the
+            measurements or technical details.
+            Just tell us what you're experiencing
+            or hoping to accomplish.
+          </p>
+
+          <div class="form-benefits">
+
+            <div class="form-benefit">
+              <span class="benefit-check">✓</span>
+              <div>
+                <h3>Start With a Free Estimate</h3>
+                <p>
+                  Tell us what you need so we can
+                  review your project.
+                </p>
+              </div>
+            </div>
+
+            <div class="form-benefit">
+              <span class="benefit-check">✓</span>
+              <div>
+                <h3>Share the Details</h3>
+                <p>
+                  Include your location, service type,
+                  and any helpful information.
+                </p>
+              </div>
+            </div>
+
+            <div class="form-benefit">
+              <span class="benefit-check">✓</span>
+              <div>
+                <h3>We'll Follow Up</h3>
+                <p>
+                  We'll review your request and
+                  contact you about the next steps.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="form-photo">
+            <img
+              src="images/IMG_1945.JPEG"
+              alt="Gutter project by Just The Guy"
+              loading="lazy">
+          </div>
+        </div>
+
+        <div class="form-card">
+
+          <div class="form-card-header">
+            <span class="eyebrow">PROJECT REQUEST</span>
+
+            <h3>Let's Get Started.</h3>
+
+            <p>
+              Fill out the form below and we'll
+              get back to you about your project.
+            </p>
+          </div>
+
+          <!-- AJAX form submission, without page redirect -->
+          <form id="contactForm" action="https://formsubmit.co/ajax/justtheguyguttersandexterior@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Website Estimate Request - Just The Guy">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <!-- NAME -->
+            <div class="field-grid">
+
+              <div class="form-field">
+                <label for="firstName">
+                  First Name <span class="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="firstName"
+                  name="First Name"
+                  placeholder="First name"
+                  autocomplete="given-name"
+                  required>
+              </div>
+
+              <div class="form-field">
+                <label for="lastName">
+                  Last Name <span class="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="lastName"
+                  name="Last Name"
+                  placeholder="Last name"
+                  autocomplete="family-name"
+                  required>
+              </div>
+
+            </div>
+
+            <!-- CONTACT INFORMATION -->
+            <div class="field-grid">
+
+              <div class="form-field">
+                <label for="email">
+                  Email Address <span class="required">*</span>
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required>
+              </div>
+
+              <div class="form-field">
+                <label for="phone">
+                  Phone Number <span class="required">*</span>
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="Phone Number"
+                  placeholder="(555) 555-5555"
+                  autocomplete="tel"
+                  required>
+              </div>
+
+            </div>
+
+            <!-- PROPERTY ADDRESS -->
+            <div class="form-field">
+              <label for="address">
+                Project Address <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="address"
+                name="Project Street Address"
+                placeholder="Street address"
+                autocomplete="street-address"
+                required>
+            </div>
+
+            <div class="field-grid">
+
+              <div class="form-field">
+                <label for="city">
+                  City <span class="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="city"
+                  name="Project City"
+                  placeholder="City"
+                  autocomplete="address-level2"
+                  required>
+              </div>
+
+              <div class="form-field">
+                <label for="zip">
+                  ZIP Code <span class="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="zip"
+                  name="Project ZIP Code"
+                  placeholder="ZIP code"
+                  autocomplete="postal-code"
+                  inputmode="numeric"
+                  pattern="[0-9]{5}(-[0-9]{4})?"
+                  required>
+              </div>
+
+            </div>
+
+            <!-- SERVICE -->
+            <div class="form-field">
+              <label for="service">
+                What Service Do You Need?
+                <span class="required">*</span>
+              </label>
+
+              <select id="service" name="Requested Service" required>
+                <option value="" disabled selected>
+                  Select a service
+                </option>
+
+                <option value="Seamless Gutter Installation">
+                  Seamless Gutter Installation
+                </option>
+
+                <option value="Gutter Replacement">
+                  Gutter Replacement
+                </option>
+
+                <option value="Gutter Guards">
+                  Gutter Guards
+                </option>
+
+                <option value="Gutter Cleaning">
+                  Gutter Cleaning
+                </option>
+
+                <option value="Gutter Repair">
+                  Gutter Repair
+                </option>
+
+                <option value="Downspouts">
+                  Downspouts
+                </option>
+
+                <option value="Soffit or Fascia">
+                  Soffit / Fascia
+                </option>
+
+                <option value="Siding">
+                  Siding
+                </option>
+
+                <option value="Roofing">
+                  Roofing
+                </option>
+
+                <option value="Multiple Services">
+                  Multiple Services
+                </option>
+
+                <option value="Other">
+                  Other / Not Sure
+                </option>
+              </select>
+            </div>
+
+            <!-- PROPERTY TYPE -->
+            <div class="field-grid">
+
+              <div class="form-field">
+                <label for="propertyType">
+                  Property Type
+                </label>
+
+                <select id="propertyType" name="Property Type">
+                  <option value="" selected>
+                    Select property type
+                  </option>
+
+                  <option>Residential Home</option>
+                  <option>Garage / Outbuilding</option>
+                  <option>Commercial Building</option>
+                  <option>Multi-Family Property</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="timeline">
+                  Preferred Timeline
+                </label>
+
+                <select id="timeline" name="Preferred Timeline">
+                  <option value="" selected>
+                    Select timeline
+                  </option>
+
+                  <option>As Soon As Possible</option>
+                  <option>Within 1-2 Weeks</option>
+                  <option>Within a Month</option>
+                  <option>Within 1-3 Months</option>
+                  <option>Just Planning Ahead</option>
+                  <option>Flexible</option>
+                </select>
+              </div>
+
+            </div>
+
+            <!-- PROJECT DETAILS -->
+            <div class="form-field">
+              <label for="message">
+                Tell Us About Your Project
+                <span class="required">*</span>
+              </label>
+
+              <textarea
+                id="message"
+                name="Project Details"
+                placeholder="Tell us what you're looking to have done, any problems you're experiencing, or anything else we should know..."
+                required></textarea>
+            </div>
+
+            <!-- PHOTOS: Send separately by email -->
+            <div class="form-field">
+              <label>Have Photos of Your Project?</label>
+              <div class="upload-field">
+                <p style="margin:0 0 10px;color:#5B6B7F;font-size:14px;">Photos can help us better understand your project! After submitting your request, please email photos directly to our team.</p>
+                <a href="mailto:justtheguyguttersandexterior@gmail.com?subject=Photos%20for%20My%20Estimate%20Request" style="color:#2C9622;font-weight:800;font-size:14px;">Email Your Project Photos →</a>
+              </div>
+            </div>
+
+            <!-- CONTACT PREFERENCE -->
+            <div class="form-field">
+              <label for="contactPreference">
+                Preferred Contact Method
+              </label>
+
+              <select
+                id="contactPreference"
+                name="Preferred Contact Method">
+
+                <option value="" selected>
+                  No preference
+                </option>
+
+                <option>Phone Call</option>
+                <option>Text Message</option>
+                <option>Email</option>
+              </select>
+            </div>
+
+            <button class="btn submit-btn" type="submit" id="submitBtn">
+              Submit My Request →
+            </button>
+
+            <div id="formStatus" role="status" aria-live="polite" style="display:none;margin-top:20px;padding:20px;border-radius:12px;text-align:center;"></div>
+
+            <p class="privacy-note">
+              Your information will only be used to
+              respond to your inquiry and discuss
+              your requested services.
+            </p>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="process-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">WHAT HAPPENS NEXT?</span>
+
+          <h2>A Simple Process.</h2>
+
+          <p>
+            We want getting started to feel
+            straightforward, not complicated.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <div class="process-card">
+            <span class="step-number">01</span>
+
+            <h3>Reach Out.</h3>
+
+            <p>
+              Submit the form, give us a call,
+              or send us an email with some
+              information about your project.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span class="step-number">02</span>
+
+            <h3>We'll Review It.</h3>
+
+            <p>
+              We'll look over your request
+              and determine what additional
+              information or measurements
+              may be needed.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span class="step-number">03</span>
+
+            <h3>Plan the Next Step.</h3>
+
+            <p>
+              We'll discuss your estimate,
+              scheduling, and what comes next
+              based on your specific project.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICE AREA -->
+    <section class="area-section">
+      <div class="container area-layout">
+
+        <div class="area-copy">
+          <span class="eyebrow">PROUDLY SERVING MID-MICHIGAN</span>
+
+          <h2>
+            Local Roots.<br>
+            <span>Room to Travel.</span>
+          </h2>
+
+          <p>
+            Just The Guy Gutters & Exteriors
+            is based in Durand, Michigan,
+            and serves homeowners throughout
+            Shiawassee County and surrounding
+            Mid-Michigan communities.
+          </p>
+
+          <p>
+            We regularly consider projects
+            throughout the Flint and Lansing
+            areas, along with select projects
+            farther out depending on the
+            work and our schedule.
+          </p>
+
+          <p>
+            Not sure whether we travel to
+            your location? Take a look at
+            our service area map or reach
+            out and ask.
+          </p>
+
+          <a href="service-area.html" class="btn">
+            View Areas We Serve →
+          </a>
+        </div>
+
+        <div class="area-image">
+          <img
+            src="images/IMG_7603.JPEG"
+            alt="Completed gutter project in Mid-Michigan"
+            loading="lazy">
+
+          <div class="area-image-label">
+            Based in Durand • Serving Mid-Michigan
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container faq-layout">
+
+        <div class="faq-intro">
+          <span class="eyebrow">A FEW COMMON QUESTIONS</span>
+
+          <h2>
+            Before You<br>
+            <span>Reach Out.</span>
+          </h2>
+
+          <p>
+            Have a question about estimates,
+            scheduling, or your project?
+            Here are a few answers that
+            might help.
+          </p>
+
+          <a href="faqs.html" class="btn">
+            View All FAQs →
+          </a>
+        </div>
+
+        <div>
+
+          <details class="faq-item">
+            <summary>Do you offer free estimates?</summary>
+            <div class="faq-answer">
+              Yes! You can request a free estimate
+              through our website or by calling us.
+              We'll review your project information
+              and discuss the next steps.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do I need to know my gutter measurements?</summary>
+            <div class="faq-answer">
+              No. You can simply describe what you
+              need done. We can discuss measurements
+              and other project details as part
+              of the estimate process.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do I need to be home for an estimate?</summary>
+            <div class="faq-answer">
+              Not always. Some exterior projects
+              can be evaluated without anyone
+              home if we have permission and
+              safe access. We'll coordinate
+              with you if an on-site meeting
+              is needed.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What if I'm outside your usual service area?</summary>
+            <div class="faq-answer">
+              Feel free to contact us. Availability
+              depends on the location and project.
+              You can also view our
+              <a href="service-area.html">service area map</a>.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I send photos of my project?</summary>
+            <div class="faq-answer">
+              Absolutely! Photos can help us
+              understand what you're looking
+              to have done. After submitting the form,
+              please email them directly to us.
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="final-cta-inner">
+
+        <span class="eyebrow">READY WHEN YOU ARE</span>
+
+        <h2>
+          Let's Make It Happen.<br>
+          <span>You Need Just The Guy.</span>
+        </h2>
+
+        <p>
+          From a simple gutter repair to a
+          complete new gutter system,
+          we're here to help you take
+          the next step.
+        </p>
+
+        <div class="cta-actions">
+          <a href="#estimate-form" class="btn">
+            Request Your Free Estimate →
+          </a>
+
+          <a href="tel:+15178858953" class="btn btn-outline">
+            Call (517) 885-8953
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <img
+            class="footer-logo"
+            src="images/LOGO.PNG"
+            alt="Just The Guy Gutters & Exteriors">
+
+          <p>
+            A family-owned Mid-Michigan exterior company,
+            specializing in seamless gutters and helping
+            homeowners care for their properties.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Our Services</a>
+          <a href="work.html">Gallery</a>
+          <a href="reviews.html">Reviews</a>
+        </div>
+
+        <div>
+          <h3>Services</h3>
+          <a href="gutters.html">Gutters</a>
+          <a href="siding.html">Siding</a>
+          <a href="roofing.html">Roofing</a>
+          <a href="service-area.html">Areas We Serve</a>
+          <a href="faqs.html">FAQs</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>Durand, Michigan</p>
+          <a href="tel:+15178858953">(517) 885-8953</a>
+          <a href="mailto:justtheguyguttersandexterior@gmail.com">
+            Email Us
+          </a>
+          <a href="contact.html">Contact Us</a>
+          <a href="contact.html#estimate-form">Request an Estimate</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year">2026</span>
+        Just The Guy Gutters & Exteriors.
+        All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
+
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // AJAX CONTACT FORM
+    const contactForm = document.getElementById("contactForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const formStatus = document.getElementById("formStatus");
+
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!contactForm.reportValidity()) return;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending Your Request...";
+      formStatus.style.display = "none";
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: new FormData(contactForm),
+          headers: { "Accept": "application/json" }
+        });
+        const result = await response.json();
+        if (!response.ok || (result.success !== "true" && result.success !== true)) {
+          throw new Error("Form service did not confirm success.");
+        }
+        formStatus.style.display = "block";
+        formStatus.style.background = "#E9F7E7";
+        formStatus.style.color = "#205F1B";
+        formStatus.innerHTML = `<strong style="font-size:19px;">✓ Your Estimate Request Has Been Sent!</strong><p style="margin:10px 0 0;font-size:14px;">Thank you for contacting Just The Guy Gutters &amp; Exteriors! We've received your request and will be in touch as soon as possible.</p>`;
+        contactForm.reset();
+      } catch (error) {
+        formStatus.style.display = "block";
+        formStatus.style.background = "#FFF0EF";
+        formStatus.style.color = "#A32B24";
+        formStatus.innerHTML = `<strong>We couldn't confirm your request was sent.</strong><p style="margin:8px 0 0;font-size:14px;">Please try again or call us at <a href="tel:+15178858953" style="text-decoration:underline;">(517) 885-8953</a>.</p>`;
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit My Request →";
+      }
+    });
+
+    // COPYRIGHT YEAR
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
