@@ -1,0 +1,413 @@
+
+<!-- SERVICE AREA MAP SECTION -->
+<section class="coverage-section" id="coverage-map">
+  <div class="coverage-container">
+
+    <div class="coverage-heading">
+      <span class="coverage-eyebrow">PROUDLY SERVING MID-MICHIGAN</span>
+      <h2>See Where We Work.</h2>
+      <p>
+        Based in Durand, we serve homeowners and businesses
+        throughout Mid-Michigan. Select a region below to
+        explore some of the communities we regularly travel to.
+      </p>
+    </div>
+
+    <div class="coverage-layout">
+
+      <!-- MAP -->
+      <div class="coverage-map-card">
+        <div class="coverage-map-header">
+          <div>
+            <strong>Our Service Area</strong>
+            <span>Durand, Michigan & Surrounding Communities</span>
+          </div>
+          <span class="coverage-map-badge">MID-MICHIGAN</span>
+        </div>
+
+        <div class="coverage-map-frame">
+          <iframe
+            id="coverageMap"
+            title="Map of Just The Guy service area"
+            src="https://www.google.com/maps?q=Durand%2C%20Michigan&z=9&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="coverage-map-footer">
+          <span class="coverage-location-dot"></span>
+          <span>Locally based in Durand, MI</span>
+        </div>
+      </div>
+
+      <!-- REGION SELECTOR -->
+      <div class="coverage-regions">
+        <h3>Explore Our Service Regions</h3>
+        <p class="coverage-region-intro">
+          Click a region to explore its communities on the map.
+        </p>
+
+        <button class="coverage-region active"
+                data-location="Durand, Michigan"
+                data-zoom="10">
+          <span class="coverage-region-icon">01</span>
+          <span class="coverage-region-text">
+            <strong>Shiawassee County</strong>
+            <small>Durand, Owosso, Corunna, Perry, Morrice & More</small>
+          </span>
+          <span class="coverage-arrow">↗</span>
+        </button>
+
+        <button class="coverage-region"
+                data-location="Flint, Michigan"
+                data-zoom="10">
+          <span class="coverage-region-icon">02</span>
+          <span class="coverage-region-text">
+            <strong>Greater Flint</strong>
+            <small>Flint, Grand Blanc, Swartz Creek, Linden & Fenton</small>
+          </span>
+          <span class="coverage-arrow">↗</span>
+        </button>
+
+        <button class="coverage-region"
+                data-location="Lansing, Michigan"
+                data-zoom="10">
+          <span class="coverage-region-icon">03</span>
+          <span class="coverage-region-text">
+            <strong>Greater Lansing</strong>
+            <small>Lansing, East Lansing, Haslett & Nearby Areas</small>
+          </span>
+          <span class="coverage-arrow">↗</span>
+        </button>
+
+        <button class="coverage-region"
+                data-location="Saginaw, Michigan"
+                data-zoom="9">
+          <span class="coverage-region-icon">04</span>
+          <span class="coverage-region-text">
+            <strong>Tri-Cities & Beyond</strong>
+            <small>Saginaw, Bay City, Midland, Freeland & Auburn</small>
+          </span>
+          <span class="coverage-arrow">↗</span>
+        </button>
+
+        <div class="coverage-help">
+          <strong>Don't See Your City?</strong>
+          <p>
+            We travel beyond these communities for qualifying
+            projects. Contact us and we'll let you know
+            whether we can make it out to your property.
+          </p>
+          <a href="index.html#contact">
+            Check Your Location <span>→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .coverage-section {
+    padding: 100px 4%;
+    background: #f4f7fa;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .coverage-container {
+    max-width: 1350px;
+    margin: auto;
+  }
+
+  .coverage-heading {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 45px;
+  }
+
+  .coverage-eyebrow {
+    color: #2C9622;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+  }
+
+  .coverage-heading h2 {
+    color: #031B40;
+    font-size: clamp(36px, 4vw, 54px);
+    letter-spacing: -1.5px;
+    margin: 12px 0 15px;
+  }
+
+  .coverage-heading p {
+    color: #627187;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .coverage-layout {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 25px;
+    align-items: stretch;
+  }
+
+  .coverage-map-card {
+    background: white;
+    border: 1px solid #dfe7ee;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(3,27,64,.07);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .coverage-map-header {
+    padding: 23px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .coverage-map-header strong {
+    display: block;
+    color: #031B40;
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .coverage-map-header span:not(.coverage-map-badge) {
+    color: #738197;
+    font-size: 12px;
+  }
+
+  .coverage-map-badge {
+    color: #1762B5;
+    background: #e9f2fc;
+    border-radius: 7px;
+    padding: 9px 12px;
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .coverage-map-frame {
+    flex: 1;
+    min-height: 480px;
+    background: #dce6ef;
+  }
+
+  .coverage-map-frame iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    border: 0;
+    display: block;
+  }
+
+  .coverage-map-footer {
+    padding: 17px 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #52657a;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .coverage-location-dot {
+    width: 9px;
+    height: 9px;
+    background: #2C9622;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(44,150,34,.12);
+  }
+
+  .coverage-regions {
+    background: white;
+    border: 1px solid #dfe7ee;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 15px 40px rgba(3,27,64,.07);
+  }
+
+  .coverage-regions h3 {
+    font-size: 22px;
+    color: #031B40;
+    margin: 0 0 8px;
+  }
+
+  .coverage-region-intro {
+    color: #6c7a8e;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .coverage-region {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 14px;
+    margin-bottom: 11px;
+    background: #f6f8fa;
+    border: 1px solid #e4ebf2;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: .25s ease;
+    font: inherit;
+  }
+
+  .coverage-region:hover {
+    border-color: #1762B5;
+    transform: translateX(3px);
+  }
+
+  .coverage-region.active {
+    background: #edf5ff;
+    border-color: #1762B5;
+    box-shadow: 0 0 0 1px #1762B5;
+  }
+
+  .coverage-region-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    background: #e2ebf4;
+    color: #1762B5;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .coverage-region.active .coverage-region-icon {
+    background: #1762B5;
+    color: white;
+  }
+
+  .coverage-region-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .coverage-region-text strong {
+    display: block;
+    color: #031B40;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .coverage-region-text small {
+    display: block;
+    color: #69798c;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .coverage-arrow {
+    color: #1762B5;
+    font-size: 19px;
+    font-weight: 800;
+  }
+
+  .coverage-help {
+    margin-top: 23px;
+    background: #031B40;
+    color: white;
+    padding: 24px;
+    border-radius: 13px;
+  }
+
+  .coverage-help strong {
+    font-size: 17px;
+  }
+
+  .coverage-help p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #c6d6e8;
+  }
+
+  .coverage-help a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    color: #95e98b;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .coverage-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .coverage-map-frame,
+    .coverage-map-frame iframe {
+      min-height: 420px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .coverage-section {
+      padding: 70px 5%;
+    }
+
+    .coverage-regions {
+      padding: 18px;
+    }
+
+    .coverage-map-header {
+      padding: 18px;
+    }
+
+    .coverage-map-badge {
+      display: none;
+    }
+
+    .coverage-map-frame,
+    .coverage-map-frame iframe {
+      min-height: 340px;
+    }
+  }
+</style>
+
+<script>
+  // INTERACTIVE SERVICE AREA MAP
+  const coverageButtons =
+    document.querySelectorAll(".coverage-region");
+
+  const coverageMap =
+    document.getElementById("coverageMap");
+
+  coverageButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      coverageButtons.forEach(item =>
+        item.classList.remove("active")
+      );
+
+      button.classList.add("active");
+
+      const location = button.dataset.location;
+      const zoom = button.dataset.zoom || "10";
+
+      const mapURL =
+        "https://www.google.com/maps?q=" +
+        encodeURIComponent(location) +
+        "&z=" + zoom +
+        "&output=embed";
+
+      coverageMap.src = mapURL;
+    });
+  });
+</script>
