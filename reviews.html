@@ -1,0 +1,1279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Customer Reviews | Just The Guy Gutters & Exteriors</title>
+  <meta name="description" content="Read real customer reviews of Just The Guy Gutters & Exteriors, a family-owned gutter and exterior company serving Durand and Mid-Michigan.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --deep: #031B40;
+      --navy: #06285C;
+      --blue: #1762B5;
+      --green: #2C9622;
+      --green-light: #91E887;
+      --text: #142033;
+      --muted: #5B6B7F;
+      --light: #F5F7FA;
+      --white: #FFFFFF;
+      --border: #E2E8EF;
+      --shadow: 0 20px 55px rgba(3,27,64,.10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: white;
+      color: var(--text);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: "Manrope", Arial, sans-serif;
+      letter-spacing: -.04em;
+      line-height: 1.2;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; cursor: pointer; }
+
+    .container {
+      width: min(1250px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 28px;
+      border: 0;
+      border-radius: 100px;
+      background: var(--green);
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      background: #247E1D;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,.65);
+      background: transparent;
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,.12); }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--green-light);
+      outline-offset: 4px;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--deep);
+      box-shadow: 0 5px 25px rgba(0,0,0,.12);
+    }
+
+    .nav-wrap {
+      max-width: 1600px;
+      min-height: 88px;
+      margin: auto;
+      padding: 10px 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand { flex-shrink: 0; }
+    .brand img { width: 195px; }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .main-nav a {
+      position: relative;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover { color: #A3E69A; }
+
+    .main-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      height: 2px;
+      background: var(--green-light);
+    }
+
+    .phone-btn {
+      flex-shrink: 0;
+      padding: 13px 19px;
+      border-radius: 50px;
+      background: var(--green);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 29px;
+    }
+
+    /* HERO */
+
+    .reviews-hero {
+      position: relative;
+      min-height: 555px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--deep);
+      color: white;
+    }
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(3,27,64,.97) 0%,
+          rgba(3,27,64,.86) 48%,
+          rgba(3,27,64,.35) 100%
+        ),
+        url("images/IMG_7603.JPEG");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 105px 0 115px;
+    }
+
+    .hero-copy { max-width: 820px; }
+    .reviews-hero .eyebrow { color: var(--green-light); }
+
+    .reviews-hero h1 {
+      margin: 0 0 25px;
+      font-size: clamp(43px, 6vw, 76px);
+    }
+
+    .reviews-hero h1 span { color: var(--green-light); }
+
+    .reviews-hero p {
+      max-width: 640px;
+      margin: 0 0 30px;
+      color: #E6EEF7;
+      font-size: 19px;
+      line-height: 1.85;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 25px;
+      color: #F0F6FC;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-trust span::before {
+      content: "✓";
+      margin-right: 8px;
+      color: var(--green-light);
+    }
+
+    /* INTRO */
+
+    .intro-section {
+      padding: 100px 0;
+      background: white;
+    }
+
+    .intro-layout {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .intro-copy h2 {
+      margin: 0 0 24px;
+      color: var(--deep);
+      font-size: clamp(35px, 4.5vw, 53px);
+    }
+
+    .intro-copy h2 span { color: var(--green); }
+
+    .intro-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .intro-photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .intro-photo img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .photo-label {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      left: 18px;
+      padding: 16px 20px;
+      border-radius: 12px;
+      background: rgba(3,27,64,.92);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+      backdrop-filter: blur(8px);
+    }
+
+    /* FEATURED REVIEW */
+
+    .featured-section {
+      padding: 95px 0;
+      background: var(--deep);
+      color: white;
+    }
+
+    .featured-layout {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .featured-intro .eyebrow { color: var(--green-light); }
+
+    .featured-intro h2 {
+      margin: 0 0 20px;
+      font-size: clamp(34px, 4.5vw, 51px);
+    }
+
+    .featured-intro h2 span { color: var(--green-light); }
+
+    .featured-intro p {
+      margin: 0;
+      color: #D4E0ED;
+      font-size: 16px;
+    }
+
+    .featured-review {
+      padding: 45px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 24px;
+      background: rgba(255,255,255,.08);
+    }
+
+    .stars {
+      color: #E8AD22;
+      font-size: 21px;
+      letter-spacing: 3px;
+      line-height: 1.4;
+    }
+
+    .featured-review blockquote {
+      margin: 22px 0 25px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(20px, 2.5vw, 27px);
+      font-weight: 700;
+      line-height: 1.7;
+      letter-spacing: -.025em;
+    }
+
+    .review-author {
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .featured-review .review-author { color: var(--green-light); }
+
+    /* REVIEW CARDS */
+
+    .reviews-section {
+      padding: 105px 0;
+      background: var(--light);
+    }
+
+    .section-heading {
+      max-width: 800px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 18px;
+      color: var(--deep);
+      font-size: clamp(34px, 4.5vw, 53px);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 23px;
+    }
+
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      padding: 33px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 8px 28px rgba(3,27,64,.04);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .review-card .stars {
+      margin-bottom: 21px;
+      font-size: 18px;
+    }
+
+    .review-card blockquote {
+      flex: 1;
+      margin: 0 0 28px;
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .review-card-footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .review-avatar {
+      display: grid;
+      flex-shrink: 0;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background: #E6F3E4;
+      color: var(--green);
+      font-family: "Manrope", sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .review-author-name {
+      color: var(--deep);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .review-author-type {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .review-note {
+      max-width: 720px;
+      margin: 35px auto 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* VALUES */
+
+    .values-section {
+      padding: 105px 0;
+      background: white;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .value-card {
+      padding: 34px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+
+    .value-icon {
+      display: grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      margin-bottom: 23px;
+      border-radius: 15px;
+      background: #E9F5E7;
+      color: var(--green);
+      font-family: "Manrope", sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .value-card h3 {
+      margin: 0 0 13px;
+      color: var(--deep);
+      font-size: 21px;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* LEAVE REVIEW */
+
+    .leave-review-section {
+      padding: 105px 0;
+      background: var(--light);
+    }
+
+    .leave-review-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .leave-review-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .leave-review-image img {
+      width: 100%;
+      height: 465px;
+      object-fit: cover;
+    }
+
+    .leave-review-copy h2 {
+      margin: 0 0 23px;
+      color: var(--deep);
+      font-size: clamp(34px, 4.5vw, 52px);
+    }
+
+    .leave-review-copy h2 span { color: var(--green); }
+
+    .leave-review-copy p {
+      margin: 0 0 19px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .review-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .secondary-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 14px 5px;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    /* FINAL CTA */
+
+    .final-cta {
+      padding: 105px 20px;
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(23,98,181,.3),
+          transparent 40%
+        ),
+        var(--deep);
+      color: white;
+      text-align: center;
+    }
+
+    .final-cta-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .final-cta .eyebrow { color: var(--green-light); }
+
+    .final-cta h2 {
+      margin: 0 0 23px;
+      font-size: clamp(37px, 5vw, 58px);
+    }
+
+    .final-cta h2 span { color: var(--green-light); }
+
+    .final-cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #D6E3F1;
+      font-size: 18px;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 70px 0 25px;
+      background: #02132D;
+      color: #D5E0EE;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 45px;
+      margin-bottom: 45px;
+    }
+
+    .footer-logo {
+      width: 185px;
+      margin-bottom: 18px;
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    footer h3 {
+      margin: 0 0 20px;
+      color: white;
+      font-size: 17px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 13px;
+    }
+
+    footer a:hover { color: var(--green-light); }
+    footer p { font-size: 13px; }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1250px) {
+      .main-nav { gap: 11px; }
+      .main-nav a { font-size: 11px; }
+      .brand img { width: 155px; }
+    }
+
+    @media (max-width: 1050px) {
+      .menu-toggle { display: block; }
+      .phone-btn { display: none; }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 18px 5%;
+        background: var(--deep);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 15px 30px rgba(0,0,0,.2);
+      }
+
+      .main-nav.open { display: flex; }
+
+      .main-nav a {
+        padding: 13px 5px;
+        font-size: 14px;
+      }
+
+      .intro-layout,
+      .featured-layout,
+      .leave-review-layout { gap: 35px; }
+    }
+
+    @media (max-width: 800px) {
+      .reviews-hero { min-height: 480px; }
+      .hero-inner { padding: 85px 0; }
+      .reviews-hero p { font-size: 17px; }
+
+      .intro-section,
+      .featured-section,
+      .reviews-section,
+      .values-section,
+      .leave-review-section {
+        padding: 75px 0;
+      }
+
+      .intro-layout,
+      .featured-layout,
+      .leave-review-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-photo img,
+      .leave-review-image img { height: 350px; }
+
+      .reviews-grid,
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .reviews-grid,
+      .values-grid { grid-template-columns: 1fr; }
+
+      .featured-review { padding: 30px 24px; }
+      .review-card { padding: 27px; }
+    }
+
+    @media (max-width: 520px) {
+      .container { width: calc(100% - 34px); }
+      .nav-wrap { min-height: 75px; }
+      .brand img { width: 150px; }
+      .reviews-hero h1 { font-size: 43px; }
+
+      .cta-actions { flex-direction: column; }
+      .cta-actions .btn { width: 100%; }
+
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-wrap">
+
+      <a class="brand" href="index.html" aria-label="Just The Guy Home">
+        <img src="images/LOGO.PNG" alt="Just The Guy Gutters & Exteriors">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">home</a>
+        <a href="about.html">about us</a>
+        <a href="services.html">services</a>
+        <a href="service-area.html">areas we serve</a>
+        <a href="resources.html">resources</a>
+        <a class="active" href="reviews.html" aria-current="page">reviews</a>
+        <a href="faqs.html">faqs</a>
+        <a href="work.html">gallery</a>
+        <a href="contact.html">contact</a>
+      </nav>
+
+      <a class="phone-btn" href="tel:+15178858953">
+        (517) 885-8953
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="mainNav"
+        aria-expanded="false">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="reviews-hero">
+      <div class="hero-background" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+
+          <span class="eyebrow">HEAR IT FROM OUR CUSTOMERS</span>
+
+          <h1>
+            Good Work.<br>
+            <span>Good Words.</span>
+          </h1>
+
+          <p>
+            We're proud of the work we do, but
+            hearing what our customers have
+            to say means even more. Take a
+            look at some of the feedback
+            we've received.
+          </p>
+
+          <div class="hero-trust">
+            <span>Real Customer Feedback</span>
+            <span>Family-Owned Business</span>
+            <span>Mid-Michigan Proud</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro-section">
+      <div class="container intro-layout">
+
+        <div class="intro-copy">
+          <span class="eyebrow">OUR REPUTATION MATTERS</span>
+
+          <h2>
+            Your Trust Means<br>
+            <span>Everything to Us.</span>
+          </h2>
+
+          <p>
+            As a family-owned business,
+            we know how important it is
+            to feel comfortable with the
+            people working on your home.
+          </p>
+
+          <p>
+            We want our customers to feel
+            heard, informed, and confident
+            in the work being done.
+            From the first conversation
+            to the finished project,
+            the experience matters.
+          </p>
+
+          <p>
+            We're grateful for every
+            customer who takes the time
+            to share their experience
+            with Just The Guy.
+          </p>
+        </div>
+
+        <div class="intro-photo">
+          <img
+            src="images/IMG_1945.JPEG"
+            alt="Gutter project by Just The Guy"
+            loading="lazy">
+
+          <div class="photo-label">
+            Quality work and customer relationships
+            we take pride in.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURED REVIEW -->
+    <section class="featured-section">
+      <div class="container featured-layout">
+
+        <div class="featured-intro">
+          <span class="eyebrow">CUSTOMER SPOTLIGHT</span>
+
+          <h2>
+            Words That<br>
+            <span>Keep Us Going.</span>
+          </h2>
+
+          <p>
+            There's nothing better than
+            knowing a customer is happy
+            with the work we completed.
+          </p>
+        </div>
+
+        <div class="featured-review">
+          <div class="stars" aria-label="Five stars">
+            ★★★★★
+          </div>
+
+          <blockquote>
+            “FANTASTIC job! Once I contact Josh his team jumped
+            into action and installed a complete Gutter &
+            Downspout system on my home. The quality is top notch-
+            would highly recommend, and will plan to use again!”
+          </blockquote>
+
+          <div class="review-author">— Russell M.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section class="reviews-section" id="customer-reviews">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">CUSTOMER EXPERIENCES</span>
+
+          <h2>Don't Just Take Our Word for It.</h2>
+
+          <p>
+            Here are a few of the reviews
+            shared by customers we've
+            had the pleasure of working with.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+
+          <!-- TIM -->
+          <article class="review-card">
+            <div class="stars" aria-label="Five stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “We had a minor repair that was completed
+              quickly and at a very fair price. I highly
+              recommend Just the Guy Gutters and Exteriors.”
+            </blockquote>
+
+            <div class="review-card-footer">
+              <div class="review-avatar" aria-hidden="true">T</div>
+
+              <div>
+                <div class="review-author-name">Tim W.</div>
+                <div class="review-author-type">Customer Review</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- KACI -->
+          <article class="review-card">
+            <div class="stars" aria-label="Five stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “I would highly recommend. On-time, honest
+              and very professional. Went above and beyond.
+              I am extremely happy with the company and
+              work preformed.”
+            </blockquote>
+
+            <div class="review-card-footer">
+              <div class="review-avatar" aria-hidden="true">K</div>
+
+              <div>
+                <div class="review-author-name">Kaci H.</div>
+                <div class="review-author-type">Customer Review</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- TODD -->
+          <article class="review-card">
+            <div class="stars" aria-label="Five stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “Josh and Blue were great!!! They put up a gutter
+              on our garage. They answered all of our questions.
+              They were so nice and polite!! Definitely,
+              do business with them again! Thank you
+              Just The Guy!!”
+            </blockquote>
+
+            <div class="review-card-footer">
+              <div class="review-avatar" aria-hidden="true">T</div>
+
+              <div>
+                <div class="review-author-name">Todd G.</div>
+                <div class="review-author-type">Customer Review</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- RUSSELL -->
+          <article class="review-card">
+            <div class="stars" aria-label="Five stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “FANTASTIC job! Once I contact Josh his team
+              jumped into action and installed a complete
+              Gutter & Downspout system on my home. The
+              quality is top notch- would highly recommend,
+              and will plan to use again!”
+            </blockquote>
+
+            <div class="review-card-footer">
+              <div class="review-avatar" aria-hidden="true">R</div>
+
+              <div>
+                <div class="review-author-name">Russell M.</div>
+                <div class="review-author-type">Customer Review</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="review-note">
+          Reviews are displayed as provided by customers.
+          Additional feedback may be available through
+          our public business profiles.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">THE EXPERIENCE WE AIM TO PROVIDE</span>
+
+          <h2>More Than Just Gutters.</h2>
+
+          <p>
+            We believe the way you treat
+            people matters just as much
+            as the finished work.
+          </p>
+        </div>
+
+        <div class="values-grid">
+
+          <div class="value-card">
+            <div class="value-icon" aria-hidden="true">✓</div>
+
+            <h3>Honest Communication.</h3>
+
+            <p>
+              We believe customers deserve
+              clear answers, realistic expectations,
+              and the information they need
+              to make decisions about their property.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon" aria-hidden="true">★</div>
+
+            <h3>Attention to Detail.</h3>
+
+            <p>
+              The small details can make
+              a big difference. We take
+              pride in clean installations
+              and work that's done with care.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon" aria-hidden="true">♡</div>
+
+            <h3>A Personal Approach.</h3>
+
+            <p>
+              We're a family-owned company,
+              not a faceless operation.
+              We want every customer to feel
+              like their project matters.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LEAVE A REVIEW -->
+    <section class="leave-review-section">
+      <div class="container leave-review-layout">
+
+        <div class="leave-review-image">
+          <img
+            src="images/IMG_7525.JPEG"
+            alt="Completed exterior gutter project"
+            loading="lazy">
+        </div>
+
+        <div class="leave-review-copy">
+          <span class="eyebrow">WORKED WITH US BEFORE?</span>
+
+          <h2>
+            We'd Love to<br>
+            <span>Hear From You.</span>
+          </h2>
+
+          <p>
+            If we've worked on your home
+            or property, we'd love to hear
+            about your experience.
+          </p>
+
+          <p>
+            Customer feedback helps us
+            continue improving and helps
+            other homeowners learn what
+            it's like to work with our team.
+          </p>
+
+          <p>
+            Whether you'd like to share
+            something you appreciated or
+            have feedback for us,
+            we're always happy to listen.
+          </p>
+
+          <div class="review-actions">
+            <!--
+              Replace this Google Maps search link with
+              your direct Google review URL once available.
+            -->
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Just+The+Guy+Gutters+%26+Exteriors+Durand+Michigan"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn">
+              Find Us on Google →
+            </a>
+
+            <a href="contact.html" class="secondary-link">
+              Send Us Feedback →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="final-cta-inner">
+
+        <span class="eyebrow">READY TO WORK WITH US?</span>
+
+        <h2>
+          Let's Make Your Home<br>
+          <span>Our Next Great Project.</span>
+        </h2>
+
+        <p>
+          From seamless gutter installations
+          to repairs and gutter guards,
+          we're ready to help you take
+          the next step.
+        </p>
+
+        <div class="cta-actions">
+          <a href="contact.html#estimate-form" class="btn">
+            Request Your Free Estimate →
+          </a>
+
+          <a href="tel:+15178858953" class="btn btn-outline">
+            Call (517) 885-8953
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <img
+            class="footer-logo"
+            src="images/LOGO.PNG"
+            alt="Just The Guy Gutters & Exteriors">
+
+          <p>
+            A family-owned Mid-Michigan exterior company,
+            specializing in seamless gutters and helping
+            homeowners care for their properties.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Our Services</a>
+          <a href="work.html">Gallery</a>
+          <a href="reviews.html">Reviews</a>
+        </div>
+
+        <div>
+          <h3>Services</h3>
+          <a href="gutters.html">Gutters</a>
+          <a href="siding.html">Siding</a>
+          <a href="roofing.html">Roofing</a>
+          <a href="service-area.html">Areas We Serve</a>
+          <a href="faqs.html">FAQs</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>Durand, Michigan</p>
+          <a href="tel:+15178858953">(517) 885-8953</a>
+          <a href="mailto:justtheguyguttersandexterior@gmail.com">
+            Email Us
+          </a>
+          <a href="contact.html">Contact Us</a>
+          <a href="contact.html#estimate-form">Request an Estimate</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year">2026</span>
+        Just The Guy Gutters & Exteriors.
+        All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
+
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // COPYRIGHT YEAR
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
