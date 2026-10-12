@@ -11,7 +11,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -223,6 +222,11 @@
       box-shadow: 0 22px 55px rgba(3,27,64,.15);
     }
 
+    .service-card:focus-visible {
+      outline: 3px solid var(--green);
+      outline-offset: 4px;
+    }
+
     .service-image {
       height: 250px;
       overflow: hidden;
@@ -291,10 +295,6 @@
 
     .service-card.featured {
       border: 2px solid var(--green);
-    }
-
-    .service-card.featured .service-label {
-      color: var(--green);
     }
 
     /* CONTACT CTA */
@@ -452,6 +452,19 @@
         grid-template-columns: 1fr;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .service-card,
+      .service-image img,
+      .service-link span,
+      .btn {
+        transition: none;
+      }
+    }
   </style>
 </head>
 
@@ -461,7 +474,7 @@
   <header class="site-header">
     <div class="nav-wrap">
 
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Just The Guy Home">
         <img src="images/LOGO.PNG"
              alt="Just The Guy Gutters & Exteriors">
       </a>
@@ -546,7 +559,7 @@
 
               <div class="service-link">
                 Explore Gutter Services
-                <span>→</span>
+                <span aria-hidden="true">→</span>
               </div>
             </div>
           </a>
@@ -564,12 +577,14 @@
               <h3>Siding</h3>
               <p>
                 Siding installation and repairs, soffit,
-                fascia, trim, and additional exterior work.
+                fascia, trim, and additional exterior work
+                coordinated with independent contractors
+                where appropriate.
               </p>
 
               <div class="service-link">
                 Explore Siding Services
-                <span>→</span>
+                <span aria-hidden="true">→</span>
               </div>
             </div>
           </a>
@@ -593,7 +608,7 @@
 
               <div class="service-link">
                 Explore Roofing Services
-                <span>→</span>
+                <span aria-hidden="true">→</span>
               </div>
             </div>
           </a>
@@ -681,6 +696,11 @@
         String(isOpen)
       );
 
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
+
       menuToggle.textContent = isOpen ? "×" : "☰";
     });
 
@@ -688,6 +708,7 @@
       link.addEventListener("click", () => {
         mainNav.classList.remove("open");
         menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
         menuToggle.textContent = "☰";
       });
     });
