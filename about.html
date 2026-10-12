@@ -1,1145 +1,1299 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+  <title>Meet Our Family | Just The Guy Gutters & Exteriors</title>
+  <meta name="description" content="Meet Sara, Josh, and Blue, the family behind Just The Guy Gutters & Exteriors. Proudly family-owned and serving homeowners throughout Mid-Michigan.">
 
-  <meta
-    name="description"
-    content="Meet the family behind Just The Guy Gutters & Exteriors, a family-owned exterior company serving Mid-Michigan.">
-
-  <title>
-    About Us | Just The Guy Gutters & Exteriors
-  </title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
-    :root{
-      --blue:#1762B5;
-      --navy:#06285C;
-      --deep:#031B40;
-      --green:#2C9622;
-      --light:#f7f8fa;
-      --text:#142033;
-      --white:#fff;
-      --border:#dfe5ec;
-      --shadow:0 18px 50px rgba(3,27,64,.16);
+    :root {
+      --deep: #031B40;
+      --navy: #06285C;
+      --blue: #1762B5;
+      --green: #2C9622;
+      --green-light: #91E887;
+      --text: #142033;
+      --muted: #5B6B7F;
+      --light: #F5F7FA;
+      --white: #FFFFFF;
+      --border: #E2E8EF;
+      --shadow: 0 20px 55px rgba(3,27,64,.10);
     }
 
-
-    *{
-      box-sizing:border-box;
+    * {
+      box-sizing: border-box;
     }
 
-
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
     }
 
-
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background:#fff;
-      line-height:1.55;
-      overflow-x:hidden;
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--white);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
-
-    img{
-      max-width:100%;
+    h1, h2, h3 {
+      font-family: "Manrope", Arial, sans-serif;
+      letter-spacing: -.04em;
+      line-height: 1.15;
     }
 
-
-    a{
-      color:inherit;
-      text-decoration:none;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1250px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 28px;
+      border-radius: 100px;
+      background: var(--green);
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      background: #247E1D;
+      transform: translateY(-2px);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--green-light);
+      outline-offset: 4px;
+    }
 
     /* =========================
        HEADER
-       ========================= */
+    ========================= */
 
-    .site-header{
-      position:fixed;
-      z-index:1000;
-      top:0;
-      left:0;
-      right:0;
-      padding:18px 30px;
-      color:#fff;
-      background:var(--deep);
-      box-shadow:0 8px 30px rgba(0,0,0,.15);
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--deep);
+      box-shadow: 0 5px 25px rgba(0,0,0,.12);
     }
 
-
-    .nav-wrap{
-      width:100%;
-      margin:0;
-      display:flex;
-      align-items:center;
-      gap:30px;
+    .nav-wrap {
+      max-width: 1600px;
+      min-height: 88px;
+      margin: auto;
+      padding: 10px 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
     }
 
-
-    .brand{
-      display:flex;
-      align-items:center;
-      margin-right:auto;
-      min-width:240px;
+    .brand {
+      flex-shrink: 0;
     }
 
-
-    .brand img{
-      width:240px;
-      height:auto;
-      display:block;
+    .brand img {
+      width: 195px;
     }
 
-
-    .main-nav{
-      flex:1;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:22px;
-      font-size:15px;
-      font-weight:700;
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
     }
 
-
-    .main-nav a{
-      color:#fff;
-      opacity:.96;
-      white-space:nowrap;
-      position:relative;
-      padding:8px 0;
+    .main-nav a {
+      position: relative;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
     }
 
-
-    .main-nav a:hover{
-      opacity:.75;
+    .main-nav a:hover {
+      color: #A3E69A;
     }
 
-
-    .main-nav a.active:after{
-      content:"";
-      position:absolute;
-      left:0;
-      right:0;
-      bottom:0;
-      height:2px;
-      background:#fff;
+    .main-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      height: 2px;
+      background: var(--green-light);
     }
 
-
-    .phone-btn{
-      background:var(--green);
-      color:#fff;
-      padding:14px 27px;
-      border-radius:999px;
-      font-weight:800;
-      white-space:nowrap;
-      box-shadow:0 8px 20px rgba(0,0,0,.14);
+    .phone-btn {
+      flex-shrink: 0;
+      padding: 13px 19px;
+      border-radius: 50px;
+      background: var(--green);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
     }
 
-
-    .phone-btn:hover{
-      filter:brightness(1.08);
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 29px;
     }
-
-
-    .menu-toggle{
-      display:none;
-      border:0;
-      background:transparent;
-      color:#fff;
-      font-size:28px;
-      cursor:pointer;
-    }
-
 
     /* =========================
-       ABOUT HERO
-       ========================= */
+       HERO
+    ========================= */
 
-    .about-hero{
-      background:var(--deep);
-      color:#fff;
-      padding:210px 5% 110px;
-      text-align:center;
+    .about-hero {
+      position: relative;
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--deep);
+      color: white;
     }
 
-
-    .about-hero-inner{
-      max-width:900px;
-      margin:auto;
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(3,27,64,.96) 0%,
+          rgba(3,27,64,.83) 45%,
+          rgba(3,27,64,.48) 100%
+        ),
+        url("images/Untitled460_20260525172217.PNG");
+      background-size: cover;
+      background-position: center;
     }
 
-
-    .eyebrow{
-      color:#7ee36e;
-      text-transform:uppercase;
-      letter-spacing:3px;
-      font-size:14px;
-      font-weight:800;
-      margin-bottom:15px;
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 105px 0 115px;
     }
 
-
-    .about-hero h1{
-      font-size:clamp(45px,6vw,76px);
-      line-height:1.04;
-      letter-spacing:-2px;
-      margin:0 0 25px;
+    .hero-copy {
+      max-width: 790px;
     }
 
-
-    .about-hero h1 span{
-      color:#7ee36e;
+    .about-hero .eyebrow {
+      color: var(--green-light);
     }
 
-
-    .about-hero p{
-      max-width:760px;
-      margin:0 auto;
-      font-size:19px;
-      color:#e6edf7;
+    .about-hero h1 {
+      margin: 0 0 25px;
+      font-size: clamp(43px, 6vw, 77px);
+      line-height: 1.08;
     }
 
+    .about-hero h1 span {
+      color: var(--green-light);
+    }
+
+    .about-hero p {
+      max-width: 650px;
+      margin: 0 0 30px;
+      color: #E6EEF7;
+      font-size: 19px;
+      line-height: 1.85;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 25px;
+      color: #F0F6FC;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-trust span::before {
+      content: "✓";
+      margin-right: 8px;
+      color: var(--green-light);
+    }
 
     /* =========================
-       INTRO
-       ========================= */
+       INTRODUCTION
+    ========================= */
 
-    .intro{
-      padding:85px 5%;
-      background:#fff;
+    .intro-section {
+      position: relative;
+      padding: 100px 0;
+      background: white;
     }
 
-
-    .intro-inner{
-      max-width:950px;
-      margin:auto;
-      text-align:center;
+    .intro-layout {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 80px;
     }
 
-
-    .intro .eyebrow{
-      color:var(--green);
+    .intro-copy h2 {
+      margin: 0 0 24px;
+      color: var(--deep);
+      font-size: clamp(35px, 4.5vw, 55px);
     }
 
-
-    .intro h2{
-      color:var(--deep);
-      font-size:clamp(34px,4vw,52px);
-      line-height:1.08;
-      margin:0 0 20px;
+    .intro-copy h2 span {
+      color: var(--green);
     }
 
-
-    .intro p{
-      color:#536174;
-      font-size:18px;
-      max-width:820px;
-      margin:0 auto 15px;
+    .intro-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 17px;
     }
 
+    .intro-photo {
+      position: relative;
+      border-radius: 24px;
+    }
+
+    .intro-photo img {
+      width: 100%;
+      height: 490px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .photo-caption {
+      position: absolute;
+      left: -25px;
+      bottom: 25px;
+      max-width: 250px;
+      padding: 20px 24px;
+      border-radius: 15px;
+      background: var(--deep);
+      color: white;
+      box-shadow: 0 15px 40px rgba(3,27,64,.20);
+    }
+
+    .photo-caption strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 17px;
+    }
+
+    .photo-caption span {
+      color: #D9E5F1;
+      font-size: 13px;
+    }
 
     /* =========================
-       FAMILY
-       ========================= */
+       OUR VALUES
+    ========================= */
 
-    .family-section{
-      padding:30px 5% 100px;
-      background:var(--light);
+    .values-section {
+      padding: 75px 0;
+      background: var(--light);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
-
-    .family-inner{
-      max-width:1200px;
-      margin:auto;
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
     }
 
-
-    .family-heading{
-      text-align:center;
-      margin-bottom:50px;
+    .value-card {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 19px;
+      background: white;
     }
 
-
-    .family-heading .eyebrow{
-      color:var(--green);
+    .value-icon {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 17px;
+      border-radius: 12px;
+      background: #EAF5E9;
+      color: var(--green);
+      font-size: 24px;
+      font-weight: 800;
     }
 
-
-    .family-heading h2{
-      color:var(--deep);
-      font-size:clamp(36px,4vw,54px);
-      margin:0;
-      line-height:1.08;
+    .value-card h3 {
+      margin: 0 0 10px;
+      color: var(--deep);
+      font-size: 19px;
     }
 
-
-    .family-member{
-      background:#fff;
-      border-radius:24px;
-      padding:28px;
-      display:grid;
-      grid-template-columns:430px 1fr;
-      gap:50px;
-      align-items:center;
-      margin-bottom:35px;
-      box-shadow:0 12px 35px rgba(3,27,64,.08);
-      border:1px solid var(--border);
+    .value-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
     }
-
-
-    .family-member.reverse{
-      grid-template-columns:1fr 430px;
-    }
-
-
-    .family-member.reverse .member-photo{
-      order:2;
-    }
-
-
-    .member-photo{
-      width:100%;
-      height:440px;
-      background:#e5e9ee;
-      border-radius:18px;
-      overflow:hidden;
-    }
-
-
-    .member-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-
-
-    .member-role{
-      color:var(--green);
-      font-size:13px;
-      font-weight:900;
-      text-transform:uppercase;
-      letter-spacing:2px;
-      margin-bottom:7px;
-    }
-
-
-    .member-copy h3{
-      color:var(--deep);
-      font-size:42px;
-      line-height:1.05;
-      margin:0 0 17px;
-    }
-
-
-    .member-copy p{
-      color:#536174;
-      font-size:17px;
-      margin:0 0 14px;
-    }
-
-
-    /* PHOTO PLACEHOLDER */
-
-    .photo-placeholder{
-      width:100%;
-      height:100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-direction:column;
-      text-align:center;
-      padding:30px;
-      color:#748195;
-      background:#edf0f3;
-    }
-
-
-    .photo-placeholder strong{
-      color:var(--deep);
-      font-size:20px;
-      margin-bottom:5px;
-    }
-
 
     /* =========================
-       CLOSING CTA
-       ========================= */
+       MEET THE FAMILY
+    ========================= */
 
-    .family-cta{
-      background:var(--blue);
-      color:#fff;
-      padding:85px 5%;
-      text-align:center;
+    .family-section {
+      padding: 110px 0;
+      background: white;
     }
 
-
-    .family-cta-inner{
-      max-width:800px;
-      margin:auto;
+    .section-heading {
+      max-width: 780px;
+      margin: 0 auto 60px;
+      text-align: center;
     }
 
-
-    .family-cta .eyebrow{
-      color:#fff;
+    .section-heading h2 {
+      margin: 0 0 18px;
+      color: var(--deep);
+      font-size: clamp(36px, 4.5vw, 55px);
     }
 
-
-    .family-cta h2{
-      font-size:clamp(38px,5vw,58px);
-      line-height:1.05;
-      margin:0 0 18px;
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
     }
 
-
-    .family-cta p{
-      max-width:680px;
-      margin:0 auto 30px;
-      color:#e7effa;
-      font-size:18px;
+    .family-member {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 75px;
+      margin-bottom: 100px;
     }
 
-
-    .cta-button{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      background:var(--green);
-      color:#fff;
-      padding:15px 27px;
-      border-radius:999px;
-      font-weight:800;
-      box-shadow:0 10px 25px rgba(0,0,0,.15);
+    .family-member:last-child {
+      margin-bottom: 0;
     }
 
-
-    .cta-button:hover{
-      filter:brightness(1.08);
-      transform:translateY(-2px);
+    .family-member.reverse {
+      grid-template-columns: 1.1fr .9fr;
     }
 
+    .family-member.reverse .member-photo {
+      order: 2;
+    }
+
+    .member-photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      background: #E8EDF2;
+      box-shadow: var(--shadow);
+    }
+
+    .member-photo img {
+      width: 100%;
+      height: 510px;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+
+    .member-photo:hover img {
+      transform: scale(1.025);
+    }
+
+    .member-copy {
+      max-width: 600px;
+    }
+
+    .member-role {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 9px 15px;
+      border-radius: 50px;
+      background: #EAF5E9;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .member-copy h3 {
+      margin: 0 0 22px;
+      color: var(--deep);
+      font-size: clamp(40px, 5vw, 60px);
+    }
+
+    .member-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .member-divider {
+      width: 65px;
+      height: 4px;
+      margin: 28px 0;
+      border-radius: 5px;
+      background: var(--green);
+    }
+
+    /* =========================
+       PERSONAL TOUCH SECTION
+    ========================= */
+
+    .personal-section {
+      padding: 95px 0;
+      background: var(--light);
+    }
+
+    .personal-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .personal-photo {
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .personal-photo img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+
+    .personal-copy h2 {
+      margin: 0 0 22px;
+      color: var(--deep);
+      font-size: clamp(34px, 4vw, 50px);
+    }
+
+    .personal-copy h2 span {
+      color: var(--green);
+    }
+
+    .personal-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .personal-copy .btn {
+      margin-top: 15px;
+    }
+
+    /* =========================
+       FINAL CTA
+    ========================= */
+
+    .family-cta {
+      position: relative;
+      overflow: hidden;
+      padding: 105px 20px;
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(23,98,181,.3),
+          transparent 40%
+        ),
+        var(--deep);
+      color: white;
+      text-align: center;
+    }
+
+    .family-cta-inner {
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .family-cta .eyebrow {
+      color: var(--green-light);
+    }
+
+    .family-cta h2 {
+      margin: 0 0 23px;
+      font-size: clamp(37px, 5vw, 60px);
+    }
+
+    .family-cta h2 span {
+      color: var(--green-light);
+    }
+
+    .family-cta p {
+      max-width: 650px;
+      margin: 0 auto 32px;
+      color: #D6E3F1;
+      font-size: 18px;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,.65);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.12);
+    }
 
     /* =========================
        FOOTER
-       ========================= */
+    ========================= */
 
-    footer{
-      background:var(--deep);
-      color:#fff;
-      padding:55px 5% 20px;
+    footer {
+      padding: 70px 0 25px;
+      background: #02132D;
+      color: #D5E0EE;
     }
 
-
-    .footer-grid{
-      max-width:1200px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:1.4fr 1fr 1fr;
-      gap:50px;
-      padding-bottom:35px;
-      border-bottom:1px solid rgba(255,255,255,.25);
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 45px;
+      margin-bottom: 45px;
     }
 
-
-    .footer-logo{
-      width:190px;
-      height:auto;
-      margin-bottom:15px;
+    .footer-logo {
+      width: 185px;
+      margin-bottom: 18px;
     }
 
-
-    footer h3{
-      margin:0 0 15px;
+    .footer-about p {
+      max-width: 330px;
+      margin: 0;
+      font-size: 14px;
     }
 
-
-    footer p{
-      margin:6px 0;
-      color:#dce6f3;
+    footer h3 {
+      margin: 0 0 20px;
+      color: white;
+      font-size: 17px;
     }
 
-
-    footer a:hover{
-      opacity:.75;
+    footer a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 13px;
     }
 
-
-    .footer-bottom{
-      max-width:1200px;
-      margin:18px auto 0;
-      text-align:center;
-      font-size:13px;
-      color:#cbd7e6;
+    footer a:hover {
+      color: var(--green-light);
     }
 
+    footer p {
+      font-size: 13px;
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      text-align: center;
+      font-size: 12px;
+    }
 
     /* =========================
-       TABLET
-       ========================= */
+       RESPONSIVE
+    ========================= */
 
-    @media(max-width:1050px){
-
-      .main-nav{
-        gap:13px;
-        font-size:13px;
+    @media (max-width: 1250px) {
+      .main-nav {
+        gap: 11px;
       }
 
-
-      .brand{
-        min-width:150px;
+      .main-nav a {
+        font-size: 11px;
       }
 
+      .brand img {
+        width: 155px;
+      }
+    }
 
-      .brand img{
-        width:135px;
+    @media (max-width: 1050px) {
+      .menu-toggle {
+        display: block;
       }
 
-
-      .phone-btn{
-        padding:12px 18px;
-        font-size:13px;
+      .phone-btn {
+        display: none;
       }
 
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 18px 5%;
+        background: var(--deep);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 15px 30px rgba(0,0,0,.2);
+      }
 
+      .main-nav.open {
+        display: flex;
+      }
+
+      .main-nav a {
+        padding: 13px 5px;
+        font-size: 14px;
+      }
+
+      .intro-layout,
       .family-member,
-      .family-member.reverse{
-        grid-template-columns:350px 1fr;
+      .family-member.reverse,
+      .personal-layout {
+        gap: 35px;
       }
-
     }
 
-
-    /* =========================
-       MOBILE
-       ========================= */
-
-    @media(max-width:800px){
-
-      .site-header{
-        padding:12px 5%;
+    @media (max-width: 800px) {
+      .about-hero {
+        min-height: 490px;
       }
 
-
-      .nav-wrap{
-        justify-content:space-between;
+      .hero-inner {
+        padding: 85px 0;
       }
 
-
-      .brand{
-        min-width:0;
+      .about-hero p {
+        font-size: 17px;
       }
 
-
-      .brand img{
-        width:150px;
+      .intro-section,
+      .family-section,
+      .personal-section {
+        padding: 75px 0;
       }
 
-
-      .main-nav{
-        display:none;
-        position:absolute;
-        top:86px;
-        left:5%;
-        right:5%;
-        background:var(--deep);
-        border-radius:16px;
-        padding:18px;
-        flex-direction:column;
-        align-items:stretch;
-        gap:0;
-        box-shadow:var(--shadow);
-      }
-
-
-      .main-nav.open{
-        display:flex;
-      }
-
-
-      .main-nav a{
-        padding:13px 5px;
-      }
-
-
-      .phone-btn{
-        display:none;
-      }
-
-
-      .menu-toggle{
-        display:block;
-      }
-
-
-      .about-hero{
-        padding:150px 6% 80px;
-      }
-
-
-      .about-hero h1{
-        font-size:45px;
-      }
-
-
-      .about-hero p{
-        font-size:17px;
-      }
-
-
-      .intro{
-        padding:65px 6%;
-      }
-
-
-      .family-section{
-        padding:20px 5% 70px;
-      }
-
-
+      .intro-layout,
       .family-member,
-      .family-member.reverse{
-        grid-template-columns:1fr;
-        gap:25px;
-        padding:20px;
+      .family-member.reverse,
+      .personal-layout {
+        grid-template-columns: 1fr;
       }
 
-
-      .family-member.reverse .member-photo{
-        order:0;
+      .intro-photo {
+        margin-top: 20px;
       }
 
-
-      .member-photo{
-        height:390px;
+      .intro-photo img {
+        height: 380px;
       }
 
-
-      .member-copy h3{
-        font-size:36px;
+      .photo-caption {
+        left: 15px;
+        bottom: 15px;
       }
 
-
-      .footer-grid{
-        grid-template-columns:1fr;
+      .values-grid {
+        grid-template-columns: 1fr;
       }
 
+      .family-member {
+        margin-bottom: 75px;
+      }
+
+      .family-member.reverse .member-photo {
+        order: 0;
+      }
+
+      .member-photo img {
+        height: 420px;
+      }
+
+      .personal-photo img {
+        height: 350px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
-
-    /* =========================
-       SMALL PHONES
-       ========================= */
-
-    @media(max-width:480px){
-
-      .brand img{
-        width:145px;
+    @media (max-width: 520px) {
+      .container {
+        width: calc(100% - 34px);
       }
 
-
-      .about-hero{
-        padding:135px 20px 65px;
+      .nav-wrap {
+        min-height: 75px;
       }
 
-
-      .about-hero h1{
-        font-size:38px;
+      .brand img {
+        width: 150px;
       }
 
-
-      .member-photo{
-        height:330px;
+      .about-hero h1 {
+        font-size: 43px;
       }
 
-
-      .member-copy h3{
-        font-size:32px;
+      .intro-copy p,
+      .member-copy p,
+      .personal-copy p {
+        font-size: 16px;
       }
 
-
-      .family-cta{
-        padding:65px 20px;
+      .intro-photo img {
+        height: 300px;
       }
 
-
-      .cta-button{
-        width:100%;
+      .member-photo img {
+        height: 340px;
       }
 
+      .member-copy h3 {
+        font-size: 42px;
+      }
+
+      .personal-photo img {
+        height: 290px;
+      }
+
+      .cta-actions {
+        flex-direction: column;
+      }
+
+      .cta-actions .btn {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
   </style>
-
 </head>
-
 
 <body>
 
-
-  <!-- =========================
-       HEADER
-       ========================= -->
-
+  <!-- HEADER -->
   <header class="site-header">
-
     <div class="nav-wrap">
 
-      <a
-        class="brand"
-        href="index.html"
-        aria-label="Just The Guy Gutters & Exteriors home">
-
-        <img
-          src="images/LOGO.PNG"
-          alt="Just The Guy Gutters & Exteriors">
-
+      <a class="brand" href="index.html" aria-label="Just The Guy Home">
+        <img src="images/LOGO.PNG" alt="Just The Guy Gutters & Exteriors">
       </a>
 
-
-      <nav class="main-nav" id="mainNav">
-
-        <a href="index.html">
-          home
-        </a>
-
-        <a class="active" href="about.html">
-          about us
-        </a>
-
-        <a href="index.html#services">
-          services
-        </a>
-
-        <a href="index.html#service-area">
-          areas we serve
-        </a>
-
-        <a href="index.html#resources">
-          resources
-        </a>
-
-        <a href="index.html#reviews">
-          reviews
-        </a>
-
-        <a href="index.html#faqs">
-          faqs
-        </a>
-
-        <a href="index.html#work">
-          gallery
-        </a>
-
-        <a href="index.html#contact">
-          contact
-        </a>
-
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">home</a>
+        <a class="active" href="about.html" aria-current="page">about us</a>
+        <a href="services.html">services</a>
+        <a href="service-area.html">areas we serve</a>
+        <a href="resources.html">resources</a>
+        <a href="reviews.html">reviews</a>
+        <a href="faqs.html">faqs</a>
+        <a href="work.html">gallery</a>
+        <a href="contact.html">contact</a>
       </nav>
 
-
-      <a
-        class="phone-btn"
-        href="tel:+15178858953">
-
+      <a class="phone-btn" href="tel:+15178858953">
         (517) 885-8953
-
       </a>
-
 
       <button
         class="menu-toggle"
         id="menuToggle"
         type="button"
-        aria-label="Open menu">
-
+        aria-label="Open menu"
+        aria-controls="mainNav"
+        aria-expanded="false">
         ☰
-
       </button>
 
     </div>
-
   </header>
 
+  <main>
 
+    <!-- HERO -->
+    <section class="about-hero">
+      <div class="hero-background" aria-hidden="true"></div>
 
-  <!-- =========================
-       HERO
-       ========================= -->
+      <div class="container hero-inner">
+        <div class="hero-copy">
 
-  <section class="about-hero">
+          <span class="eyebrow">
+            FAMILY-OWNED • MID-MICHIGAN
+          </span>
 
-    <div class="about-hero-inner">
+          <h1>
+            Meet the Family<br>
+            <span>Behind the Work.</span>
+          </h1>
 
-      <div class="eyebrow">
-        Family-Owned • Mid-Michigan
+          <p>
+            We're more than a name on a truck.
+            We're a local family working together to help
+            homeowners throughout Mid-Michigan take care
+            of the places they call home.
+          </p>
+
+          <div class="hero-trust">
+            <span>Family-Owned & Operated</span>
+            <span>Local to Mid-Michigan</span>
+            <span>Real People, Real Work</span>
+          </div>
+
+        </div>
       </div>
+    </section>
 
-      <h1>
-        Meet the Family<br>
-        <span>Behind the Work.</span>
-      </h1>
+    <!-- OUR STORY -->
+    <section class="intro-section">
+      <div class="container intro-layout">
 
-      <p>
-        Just The Guy Gutters &amp; Exteriors is a family-owned
-        business built right here in Mid-Michigan. When you work
-        with us, you're working with the actual people behind the
-        name.
-      </p>
+        <div class="intro-copy">
+          <span class="eyebrow">OUR FAMILY. OUR BUSINESS.</span>
 
-    </div>
+          <h2>
+            More Than a Name<br>
+            <span>on a Work Truck.</span>
+          </h2>
 
-  </section>
+          <p>
+            Just The Guy Gutters & Exteriors is a family-owned
+            business based right here in Durand, Michigan.
+            We aren't a huge company with a different department
+            handling every part of your project.
+          </p>
 
+          <p>
+            We're a family working together. From answering
+            the phone and putting together estimates to
+            taking measurements and showing up at your home,
+            we're personally involved in the work we do.
+          </p>
 
-
-  <!-- =========================
-       OUR STORY
-       ========================= -->
-
-  <section class="intro">
-
-    <div class="intro-inner">
-
-      <div class="eyebrow">
-        Our Family. Our Business.
-      </div>
-
-      <h2>
-        More Than a Name on a Work Truck
-      </h2>
-
-      <p>
-        We're not a huge company with a different person handling
-        every part of your project. We're a local family working
-        together to take care of homes throughout Mid-Michigan.
-      </p>
-
-      <p>
-        From answering the phone and putting together estimates to
-        showing up at your home and doing the work, our family is
-        involved every step of the way.
-      </p>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       MEET THE FAMILY
-       ========================= -->
-
-  <section class="family-section">
-
-    <div class="family-inner">
-
-
-      <div class="family-heading">
-
-        <div class="eyebrow">
-          Meet Just The Guy
+          <p>
+            We believe homeowners deserve clear answers,
+            quality craftsmanship, and people who genuinely
+            care about the finished result.
+          </p>
         </div>
 
+        <div class="intro-photo">
+          <img
+            src="images/Untitled460_20260525172217.PNG"
+            alt="The family behind Just The Guy Gutters & Exteriors"
+            loading="lazy">
+
+          <div class="photo-caption">
+            <strong>From Our Family to Yours.</strong>
+            <span>Proud to call Mid-Michigan home.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-section">
+      <div class="container">
+
+        <div class="values-grid">
+
+          <div class="value-card">
+            <div class="value-icon">✓</div>
+            <h3>Honest Communication</h3>
+            <p>
+              We believe in explaining the work, answering
+              questions, and keeping customers informed.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">⌂</div>
+            <h3>Care for Your Home</h3>
+            <p>
+              Your home matters. We pay attention to the
+              details and treat every project with care.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">★</div>
+            <h3>Family Business Values</h3>
+            <p>
+              We're building a business our family can
+              stand behind and our community can rely on.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET THE FAMILY -->
+    <section class="family-section" id="family">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">THE PEOPLE BEHIND JUST THE GUY</span>
+          <h2>Get to Know Our Family.</h2>
+          <p>
+            When you contact Just The Guy, these are some
+            of the people helping make your project happen.
+          </p>
+        </div>
+
+        <!-- SARA -->
+        <article class="family-member">
+
+          <div class="member-photo">
+            <img
+              src="images/IMG_3918.JPEG"
+              alt="Sara, owner of Just The Guy Gutters & Exteriors"
+              loading="lazy">
+          </div>
+
+          <div class="member-copy">
+            <span class="member-role">OWNER</span>
+            <h3>Meet Sara.</h3>
+
+            <p>
+              Sara is the owner of Just The Guy Gutters & Exteriors
+              and the person behind the family-owned business
+              we've built here in Mid-Michigan.
+            </p>
+
+            <p>
+              She helps guide the business and the values
+              behind it, with a focus on treating customers
+              with respect and building something meaningful
+              for the family.
+            </p>
+
+            <div class="member-divider"></div>
+
+            <p>
+              To us, being family-owned means our name is
+              attached to the work, and that matters.
+            </p>
+          </div>
+
+        </article>
+
+        <!-- JOSH -->
+        <article class="family-member reverse">
+
+          <div class="member-copy">
+            <span class="member-role">FIELD OPERATIONS & CREW LEAD</span>
+            <h3>Meet Josh.</h3>
+
+            <p>
+              Josh brings hands-on exterior construction
+              experience to Just The Guy and plays a major
+              role in the work happening out in the field.
+            </p>
+
+            <p>
+              From looking at potential projects and putting
+              together estimates to organizing crews and
+              helping with installations, Josh works to
+              keep projects moving from start to finish.
+            </p>
+
+            <div class="member-divider"></div>
+
+            <p>
+              His experience and practical knowledge are
+              an important part of the work we do.
+            </p>
+          </div>
+
+          <div class="member-photo">
+            <img
+              src="images/IMG_4557.JPEG"
+              alt="Josh of Just The Guy Gutters & Exteriors"
+              loading="lazy">
+          </div>
+
+        </article>
+
+        <!-- BLUE -->
+        <article class="family-member">
+
+          <div class="member-photo">
+            <img
+              src="images/IMG_4457.JPEG"
+              alt="Blue of Just The Guy Gutters & Exteriors"
+              loading="lazy">
+          </div>
+
+          <div class="member-copy">
+            <span class="member-role">OPERATIONS & MARKETING</span>
+            <h3>Meet Blue.</h3>
+
+            <p>
+              Blue works across several parts of Just The Guy,
+              from communicating with customers and helping
+              prepare estimates to marketing, scheduling,
+              and daily operations.
+            </p>
+
+            <p>
+              Blue is also involved in fieldwork, including
+              taking measurements, preparing gutters,
+              coordinating work on-site, and helping
+              make sure the details come together.
+            </p>
+
+            <div class="member-divider"></div>
+
+            <p>
+              Whether it's behind a computer or out on
+              a job site, Blue helps connect the office
+              side of the business with the work happening
+              at your home.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PERSONAL TOUCH -->
+    <section class="personal-section">
+      <div class="container personal-layout">
+
+        <div class="personal-photo">
+          <img
+            src="images/IMG_1945.JPEG"
+            alt="A project completed by Just The Guy Gutters & Exteriors"
+            loading="lazy">
+        </div>
+
+        <div class="personal-copy">
+          <span class="eyebrow">WHY WE DO WHAT WE DO</span>
+
+          <h2>
+            Your Home Matters.<br>
+            <span>So Does Our Name.</span>
+          </h2>
+
+          <p>
+            We know that inviting a contractor to work
+            on your home is a big decision.
+          </p>
+
+          <p>
+            That's why we want the experience to feel
+            straightforward and personal. We want you
+            to know who you're talking to, understand
+            what's being done, and feel comfortable
+            asking questions.
+          </p>
+
+          <p>
+            We're proud to be a small business, and
+            we believe that personal connection is
+            one of our biggest strengths.
+          </p>
+
+          <a href="work.html" class="btn">
+            See Our Work →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="family-cta">
+      <div class="family-cta-inner">
+
+        <span class="eyebrow">FROM OUR FAMILY TO YOUR HOME</span>
+
         <h2>
-          The People Behind the Business
+          You Need<br>
+          <span>Just The Guy.</span>
         </h2>
 
+        <p>
+          Whether you already know what your home needs
+          or just want someone to take a look, we'd
+          love to hear about your project.
+        </p>
+
+        <div class="cta-actions">
+          <a href="index.html#contact" class="btn">
+            Get Your Free Estimate →
+          </a>
+
+          <a href="tel:+15178858953" class="btn btn-outline">
+            Call (517) 885-8953
+          </a>
+        </div>
+
       </div>
+    </section>
 
+  </main>
 
-
-  <!-- =====================
-     SARA
-     ===================== -->
-
-<article class="family-member">
-
-  <div class="member-photo">
-
-    <img
-      src="images/IMG_3918.JPEG"
-      alt="Sara of Just The Guy Gutters & Exteriors">
-
-  </div>
-
-
-  <div class="member-copy">
-
-    <div class="member-role">
-      Owner
-    </div>
-
-    <h3>
-      Sara
-    </h3>
-
-    <p>
-      Sara is the owner of Just The Guy Gutters &amp; Exteriors
-      and an important part of the family behind the business.
-    </p>
-
-    <p>
-      We'll add more of Sara's story here — including her role
-      in the company, what led to Just The Guy, and what being
-      a family-owned business means to her.
-    </p>
-
-  </div>
-
-</article>
-
-
- <!-- =====================
-     JOSH
-     ===================== -->
-
-<article class="family-member reverse">
-
-  <div class="member-copy">
-
-    <div class="member-role">
-      Crew Lead
-    </div>
-
-    <h3>
-      Josh
-    </h3>
-
-    <p>
-      Josh works hands-on in the field and helps lead the work
-      behind Just The Guy.
-    </p>
-
-    <p>
-      We'll add more about Josh here — including his experience,
-      the work he specializes in, and the role he plays in making
-      sure each project is done right.
-    </p>
-
-  </div>
-
-
-  <div class="member-photo">
-
-    <img
-      src="images/IMG_4557.JPEG"
-      alt="Josh of Just The Guy Gutters & Exteriors">
-
-  </div>
-
-</article>
-
-
-
-<!-- =====================
-     BLUE
-     ===================== -->
-
-<article class="family-member">
-
-  <div class="member-photo">
-
-    <img
-      src="images/IMG_4457.JPEG"
-      alt="Blue of Just The Guy Gutters & Exteriors">
-
-  </div>
-
-
-  <div class="member-copy">
-
-    <div class="member-role">
-      Operations &amp; Marketing
-    </div>
-
-    <h3>
-      Blue
-    </h3>
-
-    <p>
-      Blue works throughout the business, helping with customers,
-      estimates, marketing, and the day-to-day work that keeps
-      Just The Guy moving.
-    </p>
-
-    <p>
-      Blue also works hands-on in the field, making this a business
-      where the people you talk to are often the same people you'll
-      see working on your home.
-    </p>
-
-  </div>
-
-</article>
-
-
-
-  <!-- =========================
-       FAMILY CTA
-       ========================= -->
-
-  <section class="family-cta">
-
-    <div class="family-cta-inner">
-
-      <div class="eyebrow">
-        From Our Family to Your Home
-      </div>
-
-      <h2>
-        You Need Just The Guy.
-      </h2>
-
-      <p>
-        Whether you know exactly what your home needs or just want
-        someone to take a look, give us a call. We're happy to help.
-      </p>
-
-      <a
-        class="cta-button"
-        href="index.html#home">
-
-        Get Your Free Estimate →
-
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       FOOTER
-       ========================= -->
-
+  <!-- FOOTER -->
   <footer>
+    <div class="container">
 
-    <div class="footer-grid">
+      <div class="footer-grid">
 
+        <div class="footer-about">
+          <img
+            class="footer-logo"
+            src="images/LOGO.PNG"
+            alt="Just The Guy Gutters & Exteriors">
 
-      <div>
+          <p>
+            A family-owned Mid-Michigan exterior company,
+            specializing in seamless gutters and helping
+            homeowners care for their properties.
+          </p>
+        </div>
 
-        <img
-          class="footer-logo"
-          src="images/LOGO.PNG"
-          alt="Just The Guy Gutters & Exteriors">
+        <div>
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Our Services</a>
+          <a href="work.html">Gallery</a>
+          <a href="reviews.html">Reviews</a>
+        </div>
 
-        <p>
-          Family-owned exterior services serving Mid-Michigan.
-        </p>
+        <div>
+          <h3>Services</h3>
+          <a href="gutters.html">Gutters</a>
+          <a href="siding.html">Siding</a>
+          <a href="roofing.html">Roofing</a>
+          <a href="service-area.html">Areas We Serve</a>
+          <a href="faqs.html">FAQs</a>
+        </div>
 
-      </div>
-
-
-      <div>
-
-        <h3>
-          Contact
-        </h3>
-
-        <p>
-          <a href="tel:+15178858953">
-            (517) 885-8953
-          </a>
-        </p>
-
-        <p>
+        <div>
+          <h3>Contact</h3>
+          <p>Durand, Michigan</p>
+          <a href="tel:+15178858953">(517) 885-8953</a>
           <a href="mailto:justtheguyguttersandexterior@gmail.com">
-            justtheguyguttersandexterior@gmail.com
+            Email Us
           </a>
-        </p>
-
-        <p>
-          Durand, MI 48429
-        </p>
+          <a href="contact.html">Contact Us</a>
+          <a href="index.html#contact">Request an Estimate</a>
+        </div>
 
       </div>
 
-
-      <div>
-
-        <h3>
-          Hours
-        </h3>
-
-        <p>
-          Monday – Friday<br>
-          7:00 AM – 7:00 PM
-        </p>
-
-        <p>
-          Saturday – Sunday<br>
-          By Appointment
-        </p>
-
+      <div class="footer-bottom">
+        © <span id="year">2026</span>
+        Just The Guy Gutters & Exteriors.
+        All Rights Reserved.
       </div>
 
-
     </div>
-
-
-    <div class="footer-bottom">
-
-      © 2026 Just The Guy Gutters &amp; Exteriors.
-      All Rights Reserved.
-
-    </div>
-
   </footer>
 
-
-
-  <!-- =========================
-       MOBILE MENU
-       ========================= -->
-
   <script>
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
 
-    const menuToggle =
-      document.getElementById('menuToggle');
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
 
-    const mainNav =
-      document.getElementById('mainNav');
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
 
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
 
-    menuToggle.addEventListener('click', () => {
-
-      mainNav.classList.toggle('open');
-
+      menuToggle.textContent = isOpen ? "×" : "☰";
     });
 
-
-    mainNav.querySelectorAll('a').forEach(link => {
-
-      link.addEventListener('click', () => {
-
-        mainNav.classList.remove('open');
-
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+        menuToggle.textContent = "☰";
       });
-
     });
 
+    // COPYRIGHT YEAR
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
 
-
 </body>
-
 </html>
