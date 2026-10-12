@@ -1,0 +1,1495 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore seamless gutters, gutter guards, cleaning, repairs, siding and roofing services from Just The Guy Gutters & Exteriors in Mid-Michigan.">
+  <title>Our Services | Just The Guy Gutters & Exteriors</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #1762B5;
+      --green: #2C9622;
+      --navy: #101D31;
+      --navy-light: #1B304A;
+      --ink: #17263A;
+      --muted: #617187;
+      --line: #DFE7EE;
+      --light: #F4F7FA;
+      --white: #FFFFFF;
+      --radius: 20px;
+      --shadow: 0 16px 45px rgba(17,37,63,.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: white;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1,h2,h3,h4 {
+      font-family: "Manrope", sans-serif;
+      letter-spacing: -.045em;
+      line-height: 1.17;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    button { font: inherit; cursor: pointer; }
+
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1180px, calc(100% - 44px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: .17em;
+      font-size: 12px;
+      font-weight: 800;
+      margin: 0 0 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 50px;
+      padding: 14px 23px;
+      border-radius: 9px;
+      font-weight: 800;
+      font-size: 14px;
+      transition: .25s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-green {
+      color: white;
+      background: var(--green);
+      box-shadow: 0 10px 25px rgba(44,150,34,.18);
+    }
+
+    .btn-green:hover { background: #237F1B; }
+
+    .btn-blue {
+      color: white;
+      background: var(--blue);
+    }
+
+    .btn-blue:hover { background: #104D93; }
+
+    .btn-outline {
+      color: var(--navy);
+      border-color: #C7D4E0;
+      background: white;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    /* HEADER */
+
+    .topbar {
+      background: var(--navy);
+      color: #D5E0ED;
+      font-size: 12px;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 10px 0;
+    }
+
+    .topbar a { color: white; font-weight: 700; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 82px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 47px;
+      height: 47px;
+      border-radius: 12px;
+      color: white;
+      background: linear-gradient(145deg,var(--blue),var(--navy));
+      font-family: "Manrope", sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 17px;
+      line-height: 1.15;
+      letter-spacing: -.04em;
+    }
+
+    .brand-name span {
+      display: block;
+      margin-top: 4px;
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a:not(.btn) {
+      color: #415269;
+      font-size: 13px;
+      font-weight: 700;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--blue); }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      font-size: 27px;
+      color: var(--navy);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background:
+        radial-gradient(circle at 82% 22%,rgba(23,98,181,.38),transparent 34%),
+        linear-gradient(125deg,#0D192B,#162C48 70%,#153D65);
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      right: -150px;
+      bottom: -250px;
+      width: 650px;
+      height: 650px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 90px rgba(255,255,255,.018),
+        0 0 0 190px rgba(255,255,255,.012);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding: 105px 0 115px;
+      max-width: 850px;
+    }
+
+    .hero .eyebrow { color: #8EE184; }
+
+    .hero h1 {
+      font-size: clamp(43px,6.5vw,76px);
+      margin: 0 0 24px;
+      font-weight: 800;
+    }
+
+    .hero h1 span { color: #83DA78; }
+
+    .hero p.lead {
+      max-width: 650px;
+      font-size: clamp(16px,2vw,19px);
+      line-height: 1.85;
+      color: #C7D6E6;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero .btn-outline {
+      color: white;
+      border-color: rgba(255,255,255,.32);
+      background: rgba(255,255,255,.07);
+    }
+
+    .hero .btn-outline:hover {
+      background: rgba(255,255,255,.16);
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 50px;
+      color: #D9E6F1;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-points span:before {
+      content: "✓";
+      color: #91E88A;
+      margin-right: 9px;
+    }
+
+    /* SERVICE NAVIGATION */
+
+    .service-nav-wrap {
+      position: relative;
+      z-index: 10;
+      margin-top: -37px;
+    }
+
+    .service-nav {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 8px;
+      padding: 9px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 18px 55px rgba(12,32,57,.13);
+    }
+
+    .service-tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 19px 12px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 14px;
+      transition: .2s ease;
+    }
+
+    .service-tab:hover { background: var(--light); }
+
+    .service-tab.primary {
+      background: var(--blue);
+      color: white;
+    }
+
+    .service-tab .symbol { font-size: 22px; }
+
+    /* INTRO */
+
+    .intro {
+      text-align: center;
+      padding: 110px 0 35px;
+    }
+
+    .intro h2 {
+      font-size: clamp(31px,4vw,49px);
+      margin: 0 auto 19px;
+      max-width: 760px;
+    }
+
+    .intro p:not(.eyebrow) {
+      color: var(--muted);
+      line-height: 1.85;
+      max-width: 670px;
+      margin: 0 auto;
+    }
+
+    /* SECTIONS */
+
+    .service-section {
+      padding: 95px 0;
+      scroll-margin-top: 90px;
+    }
+
+    .section-light { background: var(--light); }
+
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 35px;
+      margin-bottom: 39px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(32px,4vw,48px);
+      margin: 0 0 17px;
+    }
+
+    .section-header p:not(.eyebrow) {
+      color: var(--muted);
+      max-width: 660px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .section-header .btn { flex-shrink: 0; }
+
+    .feature-strip {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 1px;
+      overflow: hidden;
+      border-radius: 15px;
+      margin: 30px 0 42px;
+      background: #D9E4ED;
+      border: 1px solid #D9E4ED;
+    }
+
+    .feature {
+      background: #EDF5FC;
+      padding: 24px;
+    }
+
+    .feature strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: .3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+      border-color: #C7D9E9;
+    }
+
+    .card-visual {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      background: linear-gradient(135deg,#DAE5EF,#B5C9DD);
+    }
+
+    .card-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+    }
+
+    .service-card:hover img { transform: scale(1.05); }
+
+    .card-number {
+      position: absolute;
+      top: 17px;
+      left: 17px;
+      background: rgba(255,255,255,.94);
+      color: var(--navy);
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: .1em;
+    }
+
+    .card-body {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-body h3 {
+      font-size: 24px;
+      margin: 0 0 13px;
+    }
+
+    .card-body p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.85;
+      margin: 0 0 20px;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 27px;
+    }
+
+    .card-tags span {
+      background: #F0F5F9;
+      border: 1px solid #E5EDF3;
+      padding: 7px 10px;
+      border-radius: 6px;
+      color: #52677D;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .card-link {
+      margin-top: auto;
+      padding-top: 17px;
+      border-top: 1px solid var(--line);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-link:hover { color: var(--green); }
+
+    /* PARTNER SERVICES */
+
+    .partner-intro {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 35px;
+      align-items: center;
+      padding: 35px;
+      margin-bottom: 42px;
+      border-radius: var(--radius);
+      background: var(--navy);
+      color: white;
+    }
+
+    .partner-intro h3 {
+      font-size: 27px;
+      margin: 0 0 14px;
+    }
+
+    .partner-intro p {
+      color: #CAD7E5;
+      font-size: 14px;
+      line-height: 1.85;
+      margin: 0;
+    }
+
+    .partner-badge {
+      justify-self: end;
+      max-width: 330px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 15px;
+      background: rgba(255,255,255,.06);
+    }
+
+    .partner-badge strong {
+      display: block;
+      color: #9CE794;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    .partner-badge span {
+      color: #D3E0EC;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .partner-note {
+      margin-top: 28px;
+      font-size: 12px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    /* WHY US */
+
+    .why {
+      background: var(--navy);
+      color: white;
+      padding: 95px 0;
+    }
+
+    .why h2 {
+      font-size: clamp(31px,4vw,47px);
+      margin: 0 0 42px;
+      max-width: 680px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .why-item {
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 16px;
+      padding: 30px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .why-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 22px;
+      border-radius: 12px;
+      background: rgba(44,150,34,.19);
+      color: #9AE691;
+      font-size: 23px;
+    }
+
+    .why-item h3 { font-size: 18px; }
+
+    .why-item p {
+      color: #B8C9D9;
+      line-height: 1.8;
+      font-size: 13px;
+    }
+
+    /* FINAL CTA */
+
+    .final-cta {
+      padding: 100px 0;
+      text-align: center;
+      background: white;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(34px,5vw,56px);
+      max-width: 740px;
+      margin: 0 auto 20px;
+    }
+
+    .final-cta p:not(.eyebrow) {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer {
+      background: #0C1727;
+      color: #BDCAD9;
+      padding: 60px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 45px;
+    }
+
+    footer h3 { color: white; font-size: 18px; }
+
+    footer p, footer a {
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    footer a:hover { color: #8DD982; }
+
+    .footer-bottom {
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      font-size: 12px;
+    }
+
+    /* REVEAL ANIMATION */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,*:before,*:after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 900px) {
+      .menu-toggle { display: block; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        padding: 24px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+        background: white;
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open { display: flex; }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .partner-intro { grid-template-columns: 1fr; }
+      .partner-badge { justify-self: stretch; max-width: none; }
+    }
+
+    @media(max-width: 650px) {
+      .topbar-inner { justify-content: center; }
+      .topbar-inner span:first-child { display: none; }
+
+      .hero-inner { padding: 76px 0 100px; }
+      .hero-points { gap: 13px; }
+
+      .service-nav {
+        gap: 4px;
+        padding: 6px;
+      }
+
+      .service-tab {
+        flex-direction: column;
+        gap: 6px;
+        padding: 14px 5px;
+        font-size: 11px;
+      }
+
+      .service-tab .symbol { font-size: 20px; }
+
+      .intro { padding-top: 85px; }
+      .service-section { padding: 70px 0; }
+
+      .cards,.feature-strip,.why-grid,.footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-visual { height: 210px; }
+      .card-body { padding: 25px; }
+
+      .partner-intro { padding: 25px; }
+      .why { padding: 70px 0; }
+      .final-cta { padding: 75px 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Family-Owned & Operated • Proudly Serving Mid-Michigan</span>
+      <a href="tel:5178858953">Call Us: (517) 885-8953</a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Just The Guy home">
+        <div class="brand-mark">JTG</div>
+        <div class="brand-name">
+          JUST THE GUY
+          <span>Gutters & Exteriors</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-controls="navLinks"
+        aria-expanded="false">☰</button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="services.html" class="active" aria-current="page">Services</a>
+        <a href="index.html#gallery">Our Work</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact" class="btn btn-green">Get a Free Estimate ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <p class="eyebrow">OUR SERVICES • MID-MICHIGAN</p>
+
+          <h1>
+            Your Home Deserves
+            <span>The Right Guy.</span>
+          </h1>
+
+          <p class="lead">
+            From custom seamless gutters to larger exterior projects,
+            we're here to help protect what matters most.
+            Quality workmanship, straightforward communication,
+            and a local team that cares about the details.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-green" href="index.html#contact">
+              Request a Free Estimate ↗
+            </a>
+            <a class="btn btn-outline" href="#gutters">
+              Explore Our Services ↓
+            </a>
+          </div>
+
+          <div class="hero-points">
+            <span>Family Owned</span>
+            <span>Locally Operated</span>
+            <span>Quality Focused</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE CATEGORY NAV -->
+    <div class="container service-nav-wrap">
+      <nav class="service-nav" aria-label="Service categories">
+        <a class="service-tab primary" href="#gutters">
+          <span class="symbol">▤</span> Gutter Services
+        </a>
+        <a class="service-tab" href="#siding">
+          <span class="symbol">⌂</span> Siding & Exterior
+        </a>
+        <a class="service-tab" href="#roofing">
+          <span class="symbol">⌃</span> Roofing
+        </a>
+      </nav>
+    </div>
+
+    <!-- INTRO -->
+    <section class="intro container reveal">
+      <p class="eyebrow">WHAT WE DO</p>
+      <h2>One Place to Start. The Right Solution for Your Home.</h2>
+      <p>
+        Every property is different. Whether you're replacing an aging
+        gutter system, dealing with drainage issues, or planning an
+        exterior improvement, we'll help you explore your options
+        and figure out the next step.
+      </p>
+    </section>
+
+    <!-- GUTTERS -->
+    <section id="gutters" class="service-section">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div>
+            <p class="eyebrow">01 / OUR SPECIALTY</p>
+            <h2>Professional Gutter Services.</h2>
+            <p>
+              Gutters are what we do best. From precise measurements
+              and custom seamless fabrication to installation, maintenance,
+              and repairs, we focus on systems that look good and
+              move water where it belongs.
+            </p>
+          </div>
+          <a href="index.html#contact" class="btn btn-blue">
+            Get a Gutter Estimate ↗
+          </a>
+        </div>
+
+        <div class="feature-strip reveal">
+          <div class="feature">
+            <strong>Custom-Fit Seamless Gutters</strong>
+            <p>Fabricated to fit your property's measurements.</p>
+          </div>
+          <div class="feature">
+            <strong>5" & 6" Gutter Options</strong>
+            <p>Options to match different rooflines and drainage needs.</p>
+          </div>
+          <div class="feature">
+            <strong>Complete Drainage Solutions</strong>
+            <p>Gutters, downspouts, guards, and repairs.</p>
+          </div>
+        </div>
+
+        <div class="cards">
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/seamless-gutters.jpg"
+                   alt="Custom seamless gutter installation"
+                   loading="lazy">
+              <span class="card-number">01 / INSTALLATION</span>
+            </div>
+            <div class="card-body">
+              <h3>Seamless Gutter Installation</h3>
+              <p>
+                Upgrade your home with custom-measured seamless
+                aluminum gutters designed for a clean appearance
+                and dependable drainage. We offer 5-inch and
+                6-inch systems, with color options to complement
+                your exterior.
+              </p>
+              <div class="card-tags">
+                <span>5" & 6" Gutters</span>
+                <span>Custom Fabrication</span>
+                <span>Downspouts</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Request Installation Estimate <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/gutter-guards.jpg"
+                   alt="Gutter guard installation"
+                   loading="lazy">
+              <span class="card-number">02 / PROTECTION</span>
+            </div>
+            <div class="card-body">
+              <h3>Gutter Guards</h3>
+              <p>
+                Reduce leaves and debris entering your gutters
+                with professionally installed gutter protection.
+                We'll help determine whether guards make sense
+                for your home and existing gutter system.
+              </p>
+              <div class="card-tags">
+                <span>Debris Protection</span>
+                <span>Reduced Maintenance</span>
+                <span>Professional Installation</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Explore Gutter Guards <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/gutter-cleaning.jpg"
+                   alt="Gutter cleaning and maintenance"
+                   loading="lazy">
+              <span class="card-number">03 / MAINTENANCE</span>
+            </div>
+            <div class="card-body">
+              <h3>Gutter Cleaning</h3>
+              <p>
+                Keep your drainage system functioning properly
+                by removing accumulated leaves, dirt, and debris.
+                We can also identify visible issues that may
+                require additional attention.
+              </p>
+              <div class="card-tags">
+                <span>Debris Removal</span>
+                <span>Downspout Checks</span>
+                <span>Maintenance</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Schedule Gutter Cleaning <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/gutter-repair.jpg"
+                   alt="Gutter repair and adjustment"
+                   loading="lazy">
+              <span class="card-number">04 / REPAIR</span>
+            </div>
+            <div class="card-body">
+              <h3>Gutter Repairs</h3>
+              <p>
+                Leaking corners, loose gutters, drainage problems,
+                and damaged downspouts don't always require a
+                complete replacement. We'll assess the issue
+                and recommend a practical solution.
+              </p>
+              <div class="card-tags">
+                <span>Leak Repairs</span>
+                <span>Repitching</span>
+                <span>Downspout Repairs</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Request a Repair Estimate <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SIDING -->
+    <section id="siding" class="service-section section-light">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div>
+            <p class="eyebrow">02 / ADDITIONAL EXTERIOR SERVICES</p>
+            <h2>Siding, Soffit & Fascia.</h2>
+            <p>
+              Protect your home's exterior while improving its
+              appearance. We can help with siding and related
+              exterior projects, including work coordinated
+              with experienced independent contractors.
+            </p>
+          </div>
+          <a href="index.html#contact" class="btn btn-blue">
+            Discuss Your Project ↗
+          </a>
+        </div>
+
+        <div class="partner-intro reveal">
+          <div>
+            <p class="eyebrow" style="color:#91E38A">
+              HOW THESE PROJECTS WORK
+            </p>
+            <h3>Good Work Starts With the Right People.</h3>
+            <p>
+              For certain siding and larger exterior projects,
+              Just The Guy works with independent subcontractors
+              who specialize in that type of work. We'll discuss
+              your project and clarify who will be responsible
+              for completing it before work begins.
+            </p>
+          </div>
+
+          <div class="partner-badge">
+            <strong>Specialized Project Coordination</strong>
+            <span>
+              Some services may be performed by independent
+              contractors rather than our in-house gutter crew.
+              Project arrangements and availability are confirmed
+              during the estimating process.
+            </span>
+          </div>
+        </div>
+
+        <div class="cards">
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/siding.jpg"
+                   alt="Residential exterior siding"
+                   loading="lazy">
+              <span class="card-number">01 / SIDING</span>
+            </div>
+            <div class="card-body">
+              <h3>Siding Installation & Repairs</h3>
+              <p>
+                From damaged sections to larger siding projects,
+                we can help you explore solutions for protecting
+                and refreshing your home's exterior.
+                Project scope and installation arrangements
+                are confirmed during estimating.
+              </p>
+              <div class="card-tags">
+                <span>Siding Repairs</span>
+                <span>Exterior Improvements</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Discuss Siding Work <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/soffit.jpg"
+                   alt="Soffit along a residential roofline"
+                   loading="lazy">
+              <span class="card-number">02 / SOFFIT</span>
+            </div>
+            <div class="card-body">
+              <h3>Soffit Installation & Repair</h3>
+              <p>
+                Damaged or aging soffit can affect the appearance
+                and protection of your roofline. We can assist
+                with repairs and replacement work appropriate
+                for your property's needs.
+              </p>
+              <div class="card-tags">
+                <span>Soffit Repairs</span>
+                <span>Roofline Finishing</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Request a Soffit Estimate <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/fascia.jpg"
+                   alt="Fascia and gutter roofline finishing"
+                   loading="lazy">
+              <span class="card-number">03 / FASCIA</span>
+            </div>
+            <div class="card-body">
+              <h3>Fascia Repairs & Wrapping</h3>
+              <p>
+                Your fascia plays an important role in supporting
+                the gutter system and finishing your roofline.
+                We offer fascia-related repairs and aluminum
+                wrapping services where appropriate.
+              </p>
+              <div class="card-tags">
+                <span>Fascia Wraps</span>
+                <span>Repairs</span>
+                <span>Roofline Details</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Get a Fascia Estimate <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/exterior-repair.jpg"
+                   alt="Residential exterior repair work"
+                   loading="lazy">
+              <span class="card-number">04 / EXTERIOR</span>
+            </div>
+            <div class="card-body">
+              <h3>Additional Exterior Repairs</h3>
+              <p>
+                Need help with exterior trim, corner posts,
+                or another problem around your home?
+                Tell us about the project and we'll let
+                you know whether it's something we can
+                handle or help coordinate.
+              </p>
+              <div class="card-tags">
+                <span>Exterior Trim</span>
+                <span>Corner Posts</span>
+                <span>Small Repairs</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Tell Us About Your Project <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="partner-note">
+          Note: The contractor performing a particular project,
+          the scope of work, and contractual responsibilities
+          will be identified before the project proceeds.
+        </p>
+      </div>
+    </section>
+
+    <!-- ROOFING -->
+    <section id="roofing" class="service-section">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div>
+            <p class="eyebrow">03 / COORDINATED ROOFING SERVICES</p>
+            <h2>Roofing Solutions.</h2>
+            <p>
+              Your roof is one of your home's most important
+              protective systems. We can help you discuss
+              repair and roofing project needs, with specialized
+              work coordinated through independent contractors
+              where appropriate.
+            </p>
+          </div>
+          <a href="index.html#contact" class="btn btn-blue">
+            Request a Roofing Consultation ↗
+          </a>
+        </div>
+
+        <div class="partner-intro reveal">
+          <div>
+            <p class="eyebrow" style="color:#91E38A">
+              WORKING WITH SPECIALIZED CONTRACTORS
+            </p>
+            <h3>The Right Crew for the Right Project.</h3>
+            <p>
+              Roofing projects may be completed by experienced
+              independent subcontractors we work with.
+              We'll explain the project arrangements and
+              who will be performing the work before
+              any work is scheduled.
+            </p>
+          </div>
+
+          <div class="partner-badge">
+            <strong>Clear Communication</strong>
+            <span>
+              We'll help you understand the proposed work
+              and the role of any independent contractor.
+              Available roofing systems and project scope
+              depend on the contractor and property.
+            </span>
+          </div>
+        </div>
+
+        <div class="cards">
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/roof-repair.jpg"
+                   alt="Residential roof repair"
+                   loading="lazy">
+              <span class="card-number">01 / REPAIR</span>
+            </div>
+            <div class="card-body">
+              <h3>Roof Repairs</h3>
+              <p>
+                Missing shingles, leaks, flashing issues,
+                and other localized damage can compromise
+                your home's protection. We can help assess
+                the next steps and coordinate suitable
+                repair work.
+              </p>
+              <div class="card-tags">
+                <span>Leaks</span>
+                <span>Flashing</span>
+                <span>Storm Damage</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Ask About Roof Repairs <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/shingle-roof.jpg"
+                   alt="Asphalt shingle residential roof"
+                   loading="lazy">
+              <span class="card-number">02 / SHINGLE</span>
+            </div>
+            <div class="card-body">
+              <h3>Asphalt Shingle Roofing</h3>
+              <p>
+                Whether you're considering a shingle repair
+                or a full roof replacement, we can discuss
+                your project and help coordinate the
+                appropriate contractor.
+              </p>
+              <div class="card-tags">
+                <span>Shingle Repairs</span>
+                <span>Roof Replacement</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Discuss Shingle Roofing <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/metal-roof.jpg"
+                   alt="Residential metal roofing"
+                   loading="lazy">
+              <span class="card-number">03 / METAL</span>
+            </div>
+            <div class="card-body">
+              <h3>Metal Roofing</h3>
+              <p>
+                Interested in the appearance and durability
+                of a metal roof? Contact us to discuss your
+                project and whether a suitable contractor
+                is available.
+              </p>
+              <div class="card-tags">
+                <span>Metal Roofing</span>
+                <span>Project Consultation</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Ask About Metal Roofing <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-visual">
+              <img src="images/flat-roof.jpg"
+                   alt="Low-slope roofing system"
+                   loading="lazy">
+              <span class="card-number">04 / LOW SLOPE</span>
+            </div>
+            <div class="card-body">
+              <h3>Flat & Low-Slope Roofing</h3>
+              <p>
+                Flat and low-slope roofs require specialized
+                materials and installation methods.
+                We can discuss your needs and determine
+                whether an appropriate roofing contractor
+                is available for the project.
+              </p>
+              <div class="card-tags">
+                <span>Low-Slope Roofs</span>
+                <span>Specialized Work</span>
+              </div>
+              <a class="card-link" href="index.html#contact">
+                Discuss Your Roofing Project <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="partner-note">
+          Roofing service availability is subject to contractor
+          availability, project requirements, and agreed scope.
+          Any subcontractor involvement will be explained
+          before work begins.
+        </p>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why">
+      <div class="container">
+        <p class="eyebrow" style="color:#93E58A">
+          THE JUST THE GUY DIFFERENCE
+        </p>
+
+        <h2>Good Work. Straight Answers. No Runaround.</h2>
+
+        <div class="why-grid">
+          <div class="why-item reveal">
+            <div class="why-icon">⌂</div>
+            <h3>Family-Owned & Local</h3>
+            <p>
+              We're a Mid-Michigan family business that
+              values our reputation and the people
+              we work for.
+            </p>
+          </div>
+
+          <div class="why-item reveal">
+            <div class="why-icon">✓</div>
+            <h3>Attention to Detail</h3>
+            <p>
+              From measurements to the finishing touches,
+              we believe the little details matter.
+            </p>
+          </div>
+
+          <div class="why-item reveal">
+            <div class="why-icon">↗</div>
+            <h3>Honest Communication</h3>
+            <p>
+              We'll talk through your options and be clear
+              about what we can do and who will
+              perform the work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta">
+      <div class="container reveal">
+        <p class="eyebrow">LET'S GET STARTED</p>
+        <h2>You Need Just The Guy. Good Thing You Found Us.</h2>
+        <p>
+          Ready for a gutter upgrade, need a repair,
+          or have a bigger exterior project in mind?
+          Tell us what you're looking for and
+          we'll help you figure out the next step.
+        </p>
+
+        <div class="cta-actions">
+          <a href="index.html#contact" class="btn btn-green">
+            Get Your Free Estimate ↗
+          </a>
+          <a href="tel:5178858953" class="btn btn-outline">
+            Call (517) 885-8953
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Just The Guy Gutters & Exteriors</h3>
+          <p>
+            Family-owned and operated in Mid-Michigan.
+            Specializing in seamless gutter systems
+            and helping customers with exterior projects.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="#gutters">Gutter Services</a></p>
+          <p><a href="#siding">Siding & Exterior</a></p>
+          <p><a href="#roofing">Roofing</a></p>
+        </div>
+
+        <div>
+          <h3>Get in Touch</h3>
+          <p>Durand, Michigan</p>
+          <p><a href="tel:5178858953">(517) 885-8953</a></p>
+          <p>
+            <a href="mailto:justtheguyguttersandexterior@gmail.com">
+              Email Us
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year">2026</span>
+        Just The Guy Gutters & Exteriors.
+        All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // SCROLL REVEAL
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add("visible"));
+    }
+
+    // CURRENT YEAR
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // IMAGE FALLBACK
+    // Hide broken image elements if their file is missing.
+    document.querySelectorAll(".card-visual img").forEach(img => {
+      img.addEventListener("error", () => {
+        img.style.display = "none";
+      });
+    });
+  </script>
+
+</body>
+</html>
