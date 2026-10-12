@@ -4,707 +4,453 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore seamless gutter installation, gutter guards, gutter cleaning, repairs, and additional exterior services from Just The Guy Gutters & Exteriors in Mid-Michigan.">
+
   <title>Our Services | Just The Guy Gutters & Exteriors</title>
+
+  <meta name="description" content="Explore gutter, siding, and roofing services from Just The Guy Gutters & Exteriors in Mid-Michigan.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --navy: #031B40;
-      --navy2: #06285C;
+      --navy-light: #092A58;
       --blue: #1762B5;
       --green: #2C9622;
-      --text: #142033;
-      --muted: #617085;
+      --text: #142238;
+      --muted: #65758A;
       --light: #F5F7FA;
-      --border: #DFE6EE;
       --white: #FFFFFF;
-      --shadow: 0 16px 42px rgba(3,27,64,.09);
+      --border: #E1E8F0;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      background: white;
-      color: var(--text);
       font-family: "DM Sans", Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
+      background: var(--white);
+      color: var(--text);
     }
 
-    a { text-decoration: none; color: inherit; }
-    img { display: block; max-width: 100%; }
-    button { font: inherit; cursor: pointer; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
     h1, h2, h3 {
       font-family: "Manrope", sans-serif;
-      letter-spacing: -.045em;
-      line-height: 1.14;
+      letter-spacing: -0.045em;
     }
 
     .container {
-      width: min(1220px, calc(100% - 44px));
-      margin: auto;
+      width: min(1200px, calc(100% - 40px));
+      margin: 0 auto;
     }
 
-    .eyebrow {
-      display: block;
-      margin-bottom: 14px;
-      color: var(--green);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 15px 24px;
-      min-height: 50px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 800;
-      transition: .25s ease;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-green {
-      background: var(--green);
-      color: white;
-    }
-
-    .btn-green:hover { background: #247E1D; }
-
-    .btn-blue {
-      background: var(--blue);
-      color: white;
-    }
-
-    .btn-outline {
-      border: 1px solid #C9D6E3;
-      color: var(--navy);
-      background: white;
-    }
-
-    /* NAVIGATION */
+    /* HEADER */
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 100;
       background: var(--navy);
-      box-shadow: 0 5px 25px rgba(0,0,0,.13);
+      box-shadow: 0 5px 25px rgba(0,0,0,.12);
     }
 
     .nav-wrap {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      min-height: 88px;
+      gap: 20px;
+      min-height: 85px;
       padding: 10px 3%;
     }
 
     .brand img {
-      width: 200px;
+      width: 190px;
       height: auto;
     }
 
     .main-nav {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 20px;
-      flex: 1;
+      gap: 18px;
     }
 
     .main-nav a {
       position: relative;
       color: white;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       white-space: nowrap;
-      opacity: .94;
+      transition: opacity .2s;
     }
 
-    .main-nav a:hover { opacity: .7; }
+    .main-nav a:hover {
+      opacity: .7;
+    }
 
     .main-nav a.active::after {
       content: "";
       position: absolute;
-      height: 2px;
-      bottom: -8px;
       left: 0;
       right: 0;
-      background: #80D875;
+      bottom: -8px;
+      height: 2px;
+      background: #83DC78;
     }
 
     .phone-btn {
-      padding: 13px 21px;
-      border-radius: 999px;
       background: var(--green);
       color: white;
-      font-size: 13px;
+      padding: 13px 20px;
+      border-radius: 50px;
+      font-size: 12px;
       font-weight: 800;
       white-space: nowrap;
     }
 
     .menu-toggle {
       display: none;
-      border: 0;
-      background: none;
+      background: transparent;
+      border: none;
       color: white;
       font-size: 28px;
+      cursor: pointer;
     }
 
     /* HERO */
 
     .hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      color: white;
       background:
-        linear-gradient(90deg, rgba(3,27,64,.96) 0%,
-        rgba(3,27,64,.88) 50%,
-        rgba(3,27,64,.55) 100%),
-        url("images/IMG_1945.JPEG") center/cover;
+        radial-gradient(circle at 85% 20%, rgba(23,98,181,.28), transparent 35%),
+        linear-gradient(125deg, #031B40, #092A58);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 115px;
     }
 
-    .hero-inner {
-      padding: 110px 0 120px;
-      max-width: 840px;
+    .eyebrow {
+      display: block;
+      color: #83DC78;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
     }
-
-    .hero .eyebrow { color: #85DD79; }
 
     .hero h1 {
-      margin: 0 0 24px;
-      font-size: clamp(43px, 6vw, 75px);
-      font-weight: 800;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.15;
+      margin: 0 0 22px;
     }
 
-    .hero h1 span { color: #80DC75; }
+    .hero h1 span {
+      color: #83DC78;
+    }
 
-    .hero-description {
-      max-width: 680px;
-      color: #DCE7F3;
-      font-size: 18px;
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #D6E3F1;
+      font-size: 17px;
       line-height: 1.85;
-      margin: 0 0 30px;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    /* SERVICES */
+
+    .services {
+      background: var(--light);
+      padding: 90px 0 110px;
     }
-
-    .hero .btn-outline {
-      background: rgba(255,255,255,.08);
-      color: white;
-      border-color: rgba(255,255,255,.35);
-    }
-
-    .hero-trust {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 22px;
-      margin-top: 43px;
-      color: #E3EDF6;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .hero-trust span::before {
-      content: "✓";
-      margin-right: 8px;
-      color: #91E586;
-    }
-
-    /* CATEGORY LINKS */
-
-    .category-wrap {
-      position: relative;
-      z-index: 5;
-      margin-top: -40px;
-    }
-
-    .category-nav {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 9px;
-      padding: 9px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: 0 15px 40px rgba(3,27,64,.14);
-    }
-
-    .category-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 65px;
-      padding: 12px;
-      border-radius: 11px;
-      font-size: 14px;
-      font-weight: 800;
-      transition: .2s;
-    }
-
-    .category-link:hover { background: #EEF4FA; }
-
-    .category-link.featured {
-      background: var(--navy2);
-      color: white;
-    }
-
-    /* INTRO */
-
-    .intro {
-      padding: 105px 0 75px;
-      text-align: center;
-    }
-
-    .intro h2 {
-      max-width: 800px;
-      margin: 0 auto 20px;
-      font-size: clamp(32px,4vw,49px);
-    }
-
-    .intro p {
-      max-width: 680px;
-      margin: auto;
-      color: var(--muted);
-      line-height: 1.85;
-      font-size: 15px;
-    }
-
-    /* SECTIONS */
-
-    .section {
-      padding: 90px 0;
-      scroll-margin-top: 90px;
-    }
-
-    .section-light { background: var(--light); }
 
     .section-heading {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 30px;
-      margin-bottom: 36px;
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-heading .eyebrow {
+      color: var(--green);
     }
 
     .section-heading h2 {
-      margin: 0 0 17px;
-      font-size: clamp(32px,4vw,48px);
+      font-size: clamp(30px, 4vw, 44px);
+      margin: 0 0 15px;
     }
 
     .section-heading p {
-      max-width: 670px;
+      max-width: 650px;
+      margin: auto;
       color: var(--muted);
-      font-size: 15px;
-      line-height: 1.85;
-      margin: 0;
-    }
-
-    /* GUTTER FEATURE */
-
-    .gutter-highlight {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      overflow: hidden;
-      margin-bottom: 28px;
-      border-radius: 22px;
-      background: var(--navy);
-      color: white;
-    }
-
-    .gutter-highlight img {
-      width: 100%;
-      height: 100%;
-      min-height: 350px;
-      object-fit: cover;
-    }
-
-    .gutter-highlight-content {
-      padding: clamp(28px,4vw,55px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .gutter-highlight h3 {
-      margin: 0 0 18px;
-      font-size: clamp(27px,3vw,38px);
-    }
-
-    .gutter-highlight p {
-      color: #C9D8E8;
       line-height: 1.8;
-      margin: 0 0 24px;
     }
 
-    .gutter-highlight .eyebrow { color: #88E07E; }
-
-    .gutter-highlight .btn { align-self: flex-start; }
-
-    /* CARDS */
-
-    .cards {
+    .service-grid {
       display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
     }
 
     .service-card {
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       background: white;
+      border-radius: 20px;
+      overflow: hidden;
       border: 1px solid var(--border);
-      border-radius: 19px;
-      transition: .25s ease;
+      box-shadow: 0 10px 35px rgba(3,27,64,.06);
+      transition: transform .3s, box-shadow .3s;
     }
 
     .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
+      transform: translateY(-8px);
+      box-shadow: 0 22px 55px rgba(3,27,64,.15);
     }
 
-    .card-image {
-      position: relative;
-      height: 235px;
+    .service-image {
+      height: 250px;
       overflow: hidden;
-      background: #DDE7F0;
+      background: #DCE7F1;
     }
 
-    .card-image img {
+    .service-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform .5s ease;
+      transition: transform .5s;
     }
 
-    .service-card:hover .card-image img {
-      transform: scale(1.04);
+    .service-card:hover img {
+      transform: scale(1.06);
     }
 
-    .card-label {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      background: white;
-      color: var(--navy);
-      border-radius: 7px;
-      padding: 9px 12px;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .09em;
-      text-transform: uppercase;
-    }
-
-    .card-body {
-      padding: 29px;
+    .service-content {
       display: flex;
       flex-direction: column;
       flex: 1;
+      padding: 28px;
     }
 
-    .card-body h3 {
-      font-size: 24px;
+    .service-label {
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 10px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .service-content h3 {
+      font-size: 27px;
       margin: 0 0 13px;
     }
 
-    .card-body p {
-      margin: 0 0 22px;
+    .service-content p {
       color: var(--muted);
       font-size: 14px;
       line-height: 1.8;
+      margin: 0 0 25px;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 25px;
-    }
-
-    .tags span {
-      padding: 7px 10px;
-      border-radius: 6px;
-      background: #EFF4F8;
-      color: #53667B;
-      font-size: 11px;
-      font-weight: 700;
-    }
-
-    .card-link {
+    .service-link {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-top: auto;
-      padding-top: 17px;
+      padding-top: 19px;
       border-top: 1px solid var(--border);
       color: var(--blue);
       font-size: 13px;
       font-weight: 800;
     }
 
-    .card-link:hover { color: var(--green); }
-
-    /* SUBCONTRACTOR INFORMATION */
-
-    .contractor-panel {
-      display: grid;
-      grid-template-columns: 1.3fr .7fr;
-      gap: 35px;
-      align-items: center;
-      padding: 36px;
-      margin-bottom: 30px;
-      background: var(--navy);
-      color: white;
-      border-radius: 20px;
-    }
-
-    .contractor-panel h3 {
-      font-size: 27px;
-      margin: 0 0 15px;
-    }
-
-    .contractor-panel p {
-      margin: 0;
-      color: #CFDCEB;
-      font-size: 14px;
-      line-height: 1.85;
-    }
-
-    .contractor-panel .eyebrow { color: #91E586; }
-
-    .contractor-detail {
-      padding: 25px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.15);
-    }
-
-    .contractor-detail strong {
-      display: block;
-      margin-bottom: 10px;
-      color: #9AE68F;
-      font-size: 14px;
-    }
-
-    .contractor-detail p { font-size: 12px; }
-
-    .section-note {
-      color: #6A798A;
-      font-size: 12px;
-      line-height: 1.8;
-      margin-top: 23px;
-    }
-
-    /* WHY CHOOSE US */
-
-    .why {
-      background: var(--navy);
-      color: white;
-      padding: 95px 0;
-    }
-
-    .why .eyebrow { color: #91E586; }
-
-    .why h2 {
-      font-size: clamp(32px,4vw,47px);
-      margin: 0 0 36px;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 20px;
-    }
-
-    .why-item {
-      padding: 30px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.13);
-      background: rgba(255,255,255,.045);
-    }
-
-    .why-item .number {
-      display: inline-block;
-      margin-bottom: 22px;
-      color: #91E586;
-      font-weight: 800;
-      font-size: 14px;
-    }
-
-    .why-item h3 {
-      margin: 0 0 12px;
+    .service-link span {
       font-size: 20px;
+      transition: transform .2s;
     }
 
-    .why-item p {
-      margin: 0;
-      color: #BFCFE0;
-      font-size: 13px;
+    .service-card:hover .service-link span {
+      transform: translateX(5px);
+    }
+
+    .service-card.featured {
+      border: 2px solid var(--green);
+    }
+
+    .service-card.featured .service-label {
+      color: var(--green);
+    }
+
+    /* CONTACT CTA */
+
+    .cta {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 85px 20px;
+    }
+
+    .cta h2 {
+      font-size: clamp(30px, 4vw, 47px);
+      margin: 0 0 18px;
+    }
+
+    .cta p {
+      color: #C8D7E8;
+      max-width: 580px;
+      margin: 0 auto 28px;
       line-height: 1.8;
     }
 
-    /* CTA */
-
-    .final-cta {
-      text-align: center;
-      padding: 100px 0;
-      background: white;
+    .btn {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      padding: 16px 28px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 800;
+      transition: .25s;
     }
 
-    .final-cta h2 {
-      max-width: 800px;
-      margin: 0 auto 20px;
-      font-size: clamp(34px,5vw,55px);
-    }
-
-    .final-cta p {
-      max-width: 610px;
-      margin: 0 auto 30px;
-      color: var(--muted);
-      line-height: 1.85;
-    }
-
-    .cta-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
+    .btn:hover {
+      background: #237E1C;
+      transform: translateY(-2px);
     }
 
     /* FOOTER */
 
     footer {
-      background: var(--navy);
-      color: white;
-      padding: 65px 0 25px;
+      background: #02132D;
+      color: #CAD8E7;
+      padding: 60px 0 25px;
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr;
       gap: 45px;
-      padding-bottom: 40px;
+      margin-bottom: 45px;
     }
 
-    .footer-logo { width: 190px; }
+    .footer-logo {
+      width: 180px;
+    }
 
     footer h3 {
-      margin: 0 0 18px;
+      color: white;
       font-size: 17px;
+      margin: 0 0 18px;
     }
 
     footer p, footer a {
       font-size: 13px;
-      color: #CEDBE9;
       line-height: 1.9;
     }
 
-    footer a:hover { color: #94E88B; }
+    footer a:hover {
+      color: #91E586;
+    }
 
     .footer-bottom {
-      padding-top: 22px;
-      border-top: 1px solid rgba(255,255,255,.15);
-      font-size: 12px;
-      color: #BACADD;
+      border-top: 1px solid rgba(255,255,255,.13);
+      padding-top: 23px;
       text-align: center;
+      font-size: 12px;
     }
 
     /* MOBILE */
 
-    @media (max-width: 1100px) {
-      .main-nav { gap: 12px; }
-      .main-nav a { font-size: 11px; }
-      .brand img { width: 145px; }
-      .phone-btn { padding: 12px 15px; }
+    @media (max-width: 1150px) {
+      .main-nav {
+        gap: 10px;
+      }
+
+      .main-nav a {
+        font-size: 11px;
+      }
+
+      .brand img {
+        width: 145px;
+      }
     }
 
-    @media (max-width: 850px) {
-      .menu-toggle { display: block; }
-      .phone-btn { display: none; }
+    @media (max-width: 950px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .phone-btn {
+        display: none;
+      }
 
       .main-nav {
         display: none;
         position: absolute;
         top: 100%;
-        left: 3%;
-        right: 3%;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: var(--navy);
         flex-direction: column;
         align-items: stretch;
-        padding: 18px;
         gap: 0;
-        border-radius: 0 0 16px 16px;
-        background: var(--navy);
-        box-shadow: var(--shadow);
       }
 
-      .main-nav.open { display: flex; }
+      .main-nav.open {
+        display: flex;
+      }
 
       .main-nav a {
         padding: 13px 5px;
         font-size: 14px;
       }
 
-      .section-heading {
-        flex-direction: column;
-        align-items: flex-start;
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .gutter-highlight { grid-template-columns: 1fr; }
-
-      .gutter-highlight img {
-        height: 300px;
-        min-height: 0;
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
       }
-
-      .contractor-panel { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 650px) {
-      .hero-inner { padding: 80px 0 100px; }
-      .hero-description { font-size: 16px; }
-
-      .category-link {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-        font-size: 11px;
+      .hero {
+        padding: 75px 20px 85px;
       }
 
-      .intro { padding: 85px 0 50px; }
-      .section { padding: 65px 0; }
+      .services {
+        padding: 65px 0 75px;
+      }
 
-      .cards, .why-grid, .footer-grid {
+      .service-grid {
         grid-template-columns: 1fr;
       }
 
-      .card-image { height: 210px; }
-      .card-body { padding: 24px; }
-      .contractor-panel { padding: 25px; }
+      .service-image {
+        height: 230px;
+      }
 
-      .why { padding: 70px 0; }
-      .final-cta { padding: 75px 0; }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -715,8 +461,9 @@
   <header class="site-header">
     <div class="nav-wrap">
 
-      <a class="brand" href="index.html" aria-label="Just The Guy Home">
-        <img src="images/LOGO.PNG" alt="Just The Guy Gutters & Exteriors">
+      <a class="brand" href="index.html">
+        <img src="images/LOGO.PNG"
+             alt="Just The Guy Gutters & Exteriors">
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Main navigation">
@@ -735,10 +482,13 @@
         (517) 885-8953
       </a>
 
-      <button class="menu-toggle" id="menuToggle"
-              aria-label="Open navigation"
+      <button class="menu-toggle"
+              id="menuToggle"
+              aria-label="Open menu"
               aria-controls="mainNav"
-              aria-expanded="false">☰</button>
+              aria-expanded="false">
+        ☰
+      </button>
     </div>
   </header>
 
@@ -746,568 +496,125 @@
 
     <!-- HERO -->
     <section class="hero">
-      <div class="container hero-inner">
-        <span class="eyebrow">FAMILY OWNED • MID-MICHIGAN</span>
+      <div class="container">
+        <span class="eyebrow">JUST THE GUY GUTTERS & EXTERIORS</span>
 
         <h1>
-          Exterior Services.<br>
-          <span>Done the Right Way.</span>
+          The Right Service.<br>
+          <span>The Right Guy.</span>
         </h1>
 
-        <p class="hero-description">
-          Quality gutter systems are our specialty. From custom
-          seamless gutters and maintenance to additional exterior
-          improvements, we're here to help you protect your
-          home and keep it looking its best.
-        </p>
-
-        <div class="hero-actions">
-          <a href="index.html#contact" class="btn btn-green">
-            Get Your Free Estimate →
-          </a>
-          <a href="#gutters" class="btn btn-outline">
-            Explore Services ↓
-          </a>
-        </div>
-
-        <div class="hero-trust">
-          <span>Family Owned & Operated</span>
-          <span>Local to Mid-Michigan</span>
-          <span>Attention to Detail</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICE NAV -->
-    <div class="container category-wrap">
-      <nav class="category-nav" aria-label="Service categories">
-        <a href="#gutters" class="category-link featured">
-          Gutters ↗
-        </a>
-        <a href="#siding" class="category-link">
-          Siding & Exterior ↗
-        </a>
-        <a href="#roofing" class="category-link">
-          Roofing ↗
-        </a>
-      </nav>
-    </div>
-
-    <!-- INTRO -->
-    <section class="intro container">
-      <span class="eyebrow">WHAT WE DO</span>
-      <h2>Protecting Your Home, From the Roofline Down.</h2>
-      <p>
-        Every home is different. Whether you need a complete
-        gutter system, a repair, or help with a larger exterior
-        project, we'll talk through your options and help you
-        determine the right next step.
-      </p>
-    </section>
-
-    <!-- GUTTERS -->
-    <section class="section" id="gutters">
-      <div class="container">
-
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">01 / OUR SPECIALTY</span>
-            <h2>Gutter Services.</h2>
-            <p>
-              From measuring and fabricating seamless gutters
-              to installation, repairs, and cleaning, gutters
-              are the foundation of what we do.
-            </p>
-          </div>
-
-          <a href="index.html#contact" class="btn btn-blue">
-            Request a Gutter Estimate →
-          </a>
-        </div>
-
-        <div class="gutter-highlight">
-          <div class="gutter-highlight-content">
-            <span class="eyebrow">BUILT TO FIT YOUR HOME</span>
-            <h3>Seamless Gutters. Clean Lines. Reliable Drainage.</h3>
-            <p>
-              Our seamless aluminum gutters are custom-measured
-              and fabricated for your property. We offer 5-inch
-              and 6-inch options, along with downspouts and
-              color choices that complement your home.
-            </p>
-            <a href="index.html#contact" class="btn btn-green">
-              Get a Free Estimate →
-            </a>
-          </div>
-          <img src="images/IMG_4443.JPEG"
-               alt="Completed exterior gutter installation"
-               loading="lazy">
-        </div>
-
-        <div class="cards">
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/IMG_1945.JPEG"
-                   alt="Seamless gutter installation project"
-                   loading="lazy">
-              <span class="card-label">Installation</span>
-            </div>
-            <div class="card-body">
-              <h3>Seamless Gutter Installation</h3>
-              <p>
-                Custom-fabricated aluminum gutters designed to
-                fit your roofline, complement your exterior,
-                and direct water away from your property.
-              </p>
-              <div class="tags">
-                <span>5" & 6" Gutters</span>
-                <span>Downspouts</span>
-                <span>Color Options</span>
-              </div>
-              <a class="card-link" href="index.html#contact">
-                Request an Estimate <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/Guards.PNG"
-                   alt="Gutter guard installation"
-                   loading="lazy">
-              <span class="card-label">Protection</span>
-            </div>
-            <div class="card-body">
-              <h3>Gutter Guards</h3>
-              <p>
-                Help reduce leaves and debris collecting
-                in your gutters with professionally installed
-                gutter protection.
-              </p>
-              <div class="tags">
-                <span>Debris Protection</span>
-                <span>Reduced Maintenance</span>
-              </div>
-              <a class="card-link" href="index.html#contact">
-                Explore Gutter Guards <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/IMG_7603.JPEG"
-                   alt="Gutter maintenance project"
-                   loading="lazy">
-              <span class="card-label">Maintenance</span>
-            </div>
-            <div class="card-body">
-              <h3>Gutter Cleaning</h3>
-              <p>
-                Remove accumulated leaves, dirt, and debris
-                to help your gutter system drain properly.
-                We can also check for visible issues that
-                may need attention.
-              </p>
-              <div class="tags">
-                <span>Debris Removal</span>
-                <span>Maintenance</span>
-              </div>
-              <a class="card-link" href="index.html#contact">
-                Schedule Cleaning <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/IMG_8226.JPEG"
-                   alt="Residential gutter system"
-                   loading="lazy">
-              <span class="card-label">Repairs</span>
-            </div>
-            <div class="card-body">
-              <h3>Gutter Repairs</h3>
-              <p>
-                Leaking corners, loose sections, improper
-                pitch, and damaged downspouts don't always
-                require replacing the entire system.
-              </p>
-              <div class="tags">
-                <span>Leaks</span>
-                <span>Repitching</span>
-                <span>Downspout Repairs</span>
-              </div>
-              <a class="card-link" href="index.html#contact">
-                Request a Repair <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SIDING -->
-    <section class="section section-light" id="siding">
-      <div class="container">
-
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">02 / ADDITIONAL EXTERIOR SERVICES</span>
-            <h2>Siding, Soffit & Fascia.</h2>
-            <p>
-              From damaged siding to roofline improvements,
-              we can help with exterior projects that
-              protect and refresh your property.
-            </p>
-          </div>
-          <a href="index.html#contact" class="btn btn-blue">
-            Discuss Your Project →
-          </a>
-        </div>
-
-        <div class="contractor-panel">
-          <div>
-            <span class="eyebrow">HOW WE HANDLE THESE PROJECTS</span>
-            <h3>The Right People for the Right Work.</h3>
-            <p>
-              For certain siding and larger exterior projects,
-              Just The Guy works with experienced independent
-              subcontractors. We'll explain the arrangements
-              and who will be performing the work before
-              the project moves forward.
-            </p>
-          </div>
-
-          <div class="contractor-detail">
-            <strong>Specialized Exterior Work</strong>
-            <p>
-              Some services may be performed by independent
-              contractors rather than our in-house gutter crew.
-              Availability and project details are confirmed
-              during the estimate process.
-            </p>
-          </div>
-        </div>
-
-        <div class="cards">
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/IMG_9532.JPEG"
-                   alt="Exterior siding project"
-                   loading="lazy">
-              <span class="card-label">Siding</span>
-            </div>
-            <div class="card-body">
-              <h3>Siding Installation & Repairs</h3>
-              <p>
-                Whether you're dealing with damaged siding
-                or considering a larger exterior update,
-                we can help discuss your options and
-                coordinate suitable work.
-              </p>
-              <div class="tags">
-                <span>Repairs</span>
-                <span>Exterior Improvements</span>
-              </div>
-              <a href="index.html#contact" class="card-link">
-                Discuss Siding Work <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/IMG_4707.JPEG"
-                   alt="Residential roofline and soffit"
-                   loading="lazy">
-              <span class="card-label">Soffit</span>
-            </div>
-            <div class="card-body">
-              <h3>Soffit Installation & Repairs</h3>
-              <p>
-                Help maintain a clean, protected roofline
-                with appropriate soffit repairs or
-                replacement work.
-              </p>
-              <div class="tags">
-                <span>Soffit</span>
-                <span>Roofline Repairs</span>
-              </div>
-              <a href="index.html#contact" class="card-link">
-                Request an Estimate <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/IMG_8234.PNG"
-                   alt="Residential fascia and roofline"
-                   loading="lazy">
-              <span class="card-label">Fascia</span>
-            </div>
-            <div class="card-body">
-              <h3>Fascia Repairs & Wrapping</h3>
-              <p>
-                Improve the appearance and protection
-                of your roofline with fascia-related
-                repairs and aluminum wrapping.
-              </p>
-              <div class="tags">
-                <span>Aluminum Wraps</span>
-                <span>Repairs</span>
-              </div>
-              <a href="index.html#contact" class="card-link">
-                Request Fascia Work <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/IMG_4443.JPEG"
-                   alt="Residential exterior work"
-                   loading="lazy">
-              <span class="card-label">Exterior</span>
-            </div>
-            <div class="card-body">
-              <h3>Additional Exterior Repairs</h3>
-              <p>
-                Need help with trim, corner posts, or another
-                exterior issue? Tell us what you're working
-                on and we'll see whether we can help.
-              </p>
-              <div class="tags">
-                <span>Trim</span>
-                <span>Corner Posts</span>
-                <span>Repairs</span>
-              </div>
-              <a href="index.html#contact" class="card-link">
-                Tell Us About Your Project <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ROOFING -->
-    <section class="section" id="roofing">
-      <div class="container">
-
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">03 / COORDINATED ROOFING SERVICES</span>
-            <h2>Roofing Solutions.</h2>
-            <p>
-              Whether you're dealing with damage or planning
-              a larger roof improvement, we can discuss your
-              needs and help coordinate appropriate work.
-            </p>
-          </div>
-          <a href="index.html#contact" class="btn btn-blue">
-            Discuss Roofing →
-          </a>
-        </div>
-
-        <div class="contractor-panel">
-          <div>
-            <span class="eyebrow">SPECIALIZED CONTRACTOR WORK</span>
-            <h3>Experienced Hands. Clear Communication.</h3>
-            <p>
-              Roofing projects may be completed by independent
-              roofing subcontractors we work with. We'll
-              explain who will perform the work and how
-              the project will be handled before it begins.
-            </p>
-          </div>
-
-          <div class="contractor-detail">
-            <strong>Roofing Project Coordination</strong>
-            <p>
-              Roofing options depend on the project,
-              contractor availability, and agreed scope.
-              We'll clarify those details during
-              the estimate process.
-            </p>
-          </div>
-        </div>
-
-        <div class="cards">
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/IMG_7603.JPEG"
-                   alt="Residential roof and exterior"
-                   loading="lazy">
-              <span class="card-label">Roof Repair</span>
-            </div>
-            <div class="card-body">
-              <h3>Roof Repairs</h3>
-              <p>
-                Missing shingles, leaks, flashing problems,
-                and localized roof damage can require
-                professional attention.
-              </p>
-              <div class="tags">
-                <span>Leaks</span>
-                <span>Flashing</span>
-                <span>Storm Damage</span>
-              </div>
-              <a href="index.html#contact" class="card-link">
-                Ask About Repairs <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/IMG_8226.JPEG"
-                   alt="Residential roof"
-                   loading="lazy">
-              <span class="card-label">Shingle Roofing</span>
-            </div>
-            <div class="card-body">
-              <h3>Asphalt Shingle Roofing</h3>
-              <p>
-                Explore options for shingle repairs
-                and roof replacement with an appropriate
-                roofing contractor.
-              </p>
-              <div class="tags">
-                <span>Shingle Repairs</span>
-                <span>Replacement</span>
-              </div>
-              <a href="index.html#contact" class="card-link">
-                Discuss Shingle Roofing <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/IMG_4707.JPEG"
-                   alt="Residential roofline"
-                   loading="lazy">
-              <span class="card-label">Metal Roofing</span>
-            </div>
-            <div class="card-body">
-              <h3>Metal Roofing</h3>
-              <p>
-                Interested in metal roofing? Contact us
-                to discuss the project and whether
-                a suitable contractor is available.
-              </p>
-              <div class="tags">
-                <span>Metal Roofing</span>
-                <span>Consultation</span>
-              </div>
-              <a href="index.html#contact" class="card-link">
-                Ask About Metal Roofing <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="card-image">
-              <img src="images/IMG_8234.PNG"
-                   alt="Building roofline"
-                   loading="lazy">
-              <span class="card-label">Low-Slope Roofing</span>
-            </div>
-            <div class="card-body">
-              <h3>Flat & Low-Slope Roofing</h3>
-              <p>
-                Low-slope roofing requires specialized
-                systems and installation methods.
-                Contact us to discuss availability
-                for your particular project.
-              </p>
-              <div class="tags">
-                <span>Flat Roofing</span>
-                <span>Low-Slope Systems</span>
-              </div>
-              <a href="index.html#contact" class="card-link">
-                Discuss Your Project <span>↗</span>
-              </a>
-            </div>
-          </article>
-
-        </div>
-
-        <p class="section-note">
-          Roofing and siding projects are subject to contractor
-          availability and project requirements. Any independent
-          contractor involvement and responsibilities will be
-          explained before work begins.
-        </p>
-      </div>
-    </section>
-
-    <!-- WHY US -->
-    <section class="why">
-      <div class="container">
-        <span class="eyebrow">THE JUST THE GUY DIFFERENCE</span>
-        <h2>Good Work. Good People. No Runaround.</h2>
-
-        <div class="why-grid">
-          <div class="why-item">
-            <span class="number">01 / LOCAL</span>
-            <h3>Family-Owned & Operated</h3>
-            <p>
-              We're a local Mid-Michigan business
-              that cares about our customers
-              and our reputation.
-            </p>
-          </div>
-
-          <div class="why-item">
-            <span class="number">02 / QUALITY</span>
-            <h3>Attention to Detail</h3>
-            <p>
-              From accurate measurements to the
-              finishing touches, we focus on
-              getting the details right.
-            </p>
-          </div>
-
-          <div class="why-item">
-            <span class="number">03 / COMMUNICATION</span>
-            <h3>Straight Answers</h3>
-            <p>
-              We believe in clear communication
-              about your options, project scope,
-              and who will be doing the work.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="final-cta">
-      <div class="container">
-        <span class="eyebrow">READY TO GET STARTED?</span>
-        <h2>You Need Just The Guy. Good Thing You Found Us.</h2>
         <p>
-          From seamless gutters to larger exterior projects,
-          tell us what you need and we'll help you
-          figure out the next step.
+          From seamless gutters to exterior improvements,
+          we're here to help protect your home.
+          Explore our services below to find exactly
+          what you're looking for.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICE SELECTION -->
+    <section class="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">WHAT CAN WE HELP WITH?</span>
+          <h2>Explore Our Services.</h2>
+          <p>
+            Select a category to learn more about
+            the services available for your property.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <!-- GUTTERS -->
+          <a href="gutters.html" class="service-card featured">
+            <div class="service-image">
+              <img src="images/IMG_1945.JPEG"
+                   alt="Seamless gutter installation"
+                   loading="lazy">
+            </div>
+
+            <div class="service-content">
+              <span class="service-label">OUR SPECIALTY</span>
+              <h3>Gutters</h3>
+              <p>
+                Seamless gutter installation, gutter guards,
+                cleaning, repairs, and downspout solutions.
+              </p>
+
+              <div class="service-link">
+                Explore Gutter Services
+                <span>→</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- SIDING -->
+          <a href="siding.html" class="service-card">
+            <div class="service-image">
+              <img src="images/IMG_9532.JPEG"
+                   alt="Residential siding project"
+                   loading="lazy">
+            </div>
+
+            <div class="service-content">
+              <span class="service-label">EXTERIOR IMPROVEMENTS</span>
+              <h3>Siding</h3>
+              <p>
+                Siding installation and repairs, soffit,
+                fascia, trim, and additional exterior work.
+              </p>
+
+              <div class="service-link">
+                Explore Siding Services
+                <span>→</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- ROOFING -->
+          <a href="roofing.html" class="service-card">
+            <div class="service-image">
+              <img src="images/IMG_8226.JPEG"
+                   alt="Residential roofing project"
+                   loading="lazy">
+            </div>
+
+            <div class="service-content">
+              <span class="service-label">ROOFING SOLUTIONS</span>
+              <h3>Roofing</h3>
+              <p>
+                Roof repairs, shingle roofing, and
+                additional roofing projects coordinated
+                with independent contractors.
+              </p>
+
+              <div class="service-link">
+                Explore Roofing Services
+                <span>→</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <span class="eyebrow">NEED HELP DECIDING?</span>
+        <h2>Not Sure What Your Home Needs?</h2>
+        <p>
+          Tell us about your project and we'll help
+          you determine the best next step.
         </p>
 
-        <div class="cta-buttons">
-          <a href="index.html#contact" class="btn btn-green">
-            Request a Free Estimate →
-          </a>
-          <a href="tel:+15178858953" class="btn btn-outline">
-            Call (517) 885-8953
-          </a>
-        </div>
+        <a href="contact.html" class="btn">
+          Request a Free Estimate →
+        </a>
       </div>
     </section>
 
@@ -1317,6 +624,7 @@
   <footer>
     <div class="container">
       <div class="footer-grid">
+
         <div>
           <img class="footer-logo"
                src="images/LOGO.PNG"
@@ -1329,12 +637,11 @@
         </div>
 
         <div>
-          <h3>Explore</h3>
+          <h3>Quick Links</h3>
           <p><a href="index.html">Home</a></p>
           <p><a href="about.html">About Us</a></p>
           <p><a href="services.html">Services</a></p>
           <p><a href="service-area.html">Areas We Serve</a></p>
-          <p><a href="work.html">Gallery</a></p>
         </div>
 
         <div>
@@ -1351,6 +658,7 @@
             </a>
           </p>
         </div>
+
       </div>
 
       <div class="footer-bottom">
@@ -1366,10 +674,14 @@
     const mainNav = document.getElementById("mainNav");
 
     menuToggle.addEventListener("click", () => {
-      const open = mainNav.classList.toggle("open");
+      const isOpen = mainNav.classList.toggle("open");
 
-      menuToggle.setAttribute("aria-expanded", String(open));
-      menuToggle.textContent = open ? "×" : "☰";
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.textContent = isOpen ? "×" : "☰";
     });
 
     mainNav.querySelectorAll("a").forEach(link => {
