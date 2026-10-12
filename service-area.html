@@ -1,413 +1,1384 @@
 
-<!-- SERVICE AREA MAP SECTION -->
-<section class="coverage-section" id="coverage-map">
-  <div class="coverage-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="coverage-heading">
-      <span class="coverage-eyebrow">PROUDLY SERVING MID-MICHIGAN</span>
-      <h2>See Where We Work.</h2>
-      <p>
-        Based in Durand, we serve homeowners and businesses
-        throughout Mid-Michigan. Select a region below to
-        explore some of the communities we regularly travel to.
-      </p>
+  <title>Areas We Serve | Just The Guy Gutters & Exteriors</title>
+  <meta name="description" content="Just The Guy Gutters & Exteriors proudly serves Durand, Owosso, Flint, Lansing, Fenton, Saginaw, and surrounding Mid-Michigan communities. Explore our service areas and request a free estimate.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --deep: #031B40;
+      --navy: #06285C;
+      --blue: #1762B5;
+      --green: #2C9622;
+      --green-light: #91E887;
+      --text: #142033;
+      --muted: #5B6B7F;
+      --light: #F5F7FA;
+      --white: #FFFFFF;
+      --border: #E2E8EF;
+      --shadow: 0 20px 55px rgba(3,27,64,.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--text);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: "Manrope", Arial, sans-serif;
+      letter-spacing: -.04em;
+      line-height: 1.15;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1250px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 28px;
+      border: 0;
+      border-radius: 100px;
+      background: var(--green);
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      background: #247E1D;
+      transform: translateY(-2px);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 3px solid var(--green-light);
+      outline-offset: 4px;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--deep);
+      box-shadow: 0 5px 25px rgba(0,0,0,.12);
+    }
+
+    .nav-wrap {
+      max-width: 1600px;
+      min-height: 88px;
+      margin: auto;
+      padding: 10px 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      width: 195px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .main-nav a {
+      position: relative;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover {
+      color: #A3E69A;
+    }
+
+    .main-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      height: 2px;
+      background: var(--green-light);
+    }
+
+    .phone-btn {
+      flex-shrink: 0;
+      padding: 13px 19px;
+      border-radius: 50px;
+      background: var(--green);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 29px;
+    }
+
+    /* HERO */
+
+    .area-hero {
+      position: relative;
+      min-height: 565px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--deep);
+      color: white;
+    }
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(3,27,64,.96) 0%,
+          rgba(3,27,64,.83) 48%,
+          rgba(3,27,64,.35) 100%
+        ),
+        url("images/IMG_7603.JPEG");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 105px 0 120px;
+    }
+
+    .hero-copy {
+      max-width: 780px;
+    }
+
+    .area-hero .eyebrow {
+      color: var(--green-light);
+    }
+
+    .area-hero h1 {
+      margin: 0 0 25px;
+      font-size: clamp(43px, 6vw, 76px);
+    }
+
+    .area-hero h1 span {
+      color: var(--green-light);
+    }
+
+    .area-hero p {
+      max-width: 630px;
+      margin: 0 0 30px;
+      color: #E6EEF7;
+      font-size: 19px;
+      line-height: 1.85;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 25px;
+      color: #F0F6FC;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-trust span::before {
+      content: "✓";
+      margin-right: 8px;
+      color: var(--green-light);
+    }
+
+    /* INTRODUCTION */
+
+    .intro-section {
+      padding: 100px 0 85px;
+      background: white;
+    }
+
+    .intro-layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .intro-copy h2 {
+      margin: 0 0 24px;
+      color: var(--deep);
+      font-size: clamp(35px, 4.5vw, 53px);
+    }
+
+    .intro-copy h2 span {
+      color: var(--green);
+    }
+
+    .intro-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .home-base-card {
+      padding: 42px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--light);
+      box-shadow: var(--shadow);
+    }
+
+    .home-base-icon {
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 17px;
+      background: #E6F4E4;
+      color: var(--green);
+      font-size: 30px;
+    }
+
+    .home-base-card h3 {
+      margin: 0 0 13px;
+      color: var(--deep);
+      font-size: 29px;
+    }
+
+    .home-base-card p {
+      margin: 0 0 25px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .home-base-label {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    /* REGION DIRECTORY */
+
+    .regions-section {
+      padding: 105px 0;
+      background: var(--light);
+    }
+
+    .section-heading {
+      max-width: 790px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 18px;
+      color: var(--deep);
+      font-size: clamp(34px, 4.5vw, 53px);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .region-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: white;
+      box-shadow: 0 10px 30px rgba(3,27,64,.05);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .region-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(3,27,64,.12);
+    }
+
+    .region-top {
+      position: relative;
+      padding: 30px 32px;
+      background:
+        radial-gradient(
+          circle at 100% 0%,
+          rgba(23,98,181,.28),
+          transparent 50%
+        ),
+        var(--deep);
+      color: white;
+    }
+
+    .region-number {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--green-light);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .15em;
+    }
+
+    .region-top h3 {
+      margin: 0 0 10px;
+      font-size: 29px;
+    }
+
+    .region-top p {
+      margin: 0;
+      color: #D6E3F1;
+      font-size: 14px;
+    }
+
+    .region-body {
+      padding: 30px 32px;
+    }
+
+    .region-body > p {
+      margin: 0 0 17px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .city-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .city-list span {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      background: var(--light);
+      color: var(--deep);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .region-card.featured {
+      border: 2px solid var(--green);
+    }
+
+    /* MAP */
+
+    .map-section {
+      padding: 105px 0;
+      background: white;
+    }
+
+    .map-layout {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .map-copy h2 {
+      margin: 0 0 23px;
+      color: var(--deep);
+      font-size: clamp(34px, 4vw, 49px);
+    }
+
+    .map-copy h2 span {
+      color: var(--green);
+    }
+
+    .map-copy p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .map-points {
+      margin: 27px 0;
+    }
+
+    .map-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      margin-bottom: 17px;
+      color: var(--deep);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .map-point::before {
+      content: "✓";
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #E6F4E4;
+      color: var(--green);
+      font-size: 13px;
+    }
+
+    .map-frame {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: #E7EEF5;
+      box-shadow: var(--shadow);
+    }
+
+    .map-frame iframe {
+      display: block;
+      width: 100%;
+      height: 460px;
+      border: 0;
+    }
+
+    .map-caption {
+      padding: 15px 20px;
+      background: var(--light);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* LOCATION CHECK */
+
+    .check-section {
+      padding: 90px 0;
+      background: var(--light);
+    }
+
+    .check-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+      padding: 55px;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .check-copy h2 {
+      margin: 0 0 20px;
+      color: var(--deep);
+      font-size: clamp(32px, 4vw, 45px);
+    }
+
+    .check-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .check-form {
+      padding: 30px;
+      border-radius: 18px;
+      background: var(--light);
+    }
+
+    .check-form label {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--deep);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .check-form input {
+      width: 100%;
+      padding: 15px 16px;
+      border: 1px solid #D7E0EA;
+      border-radius: 10px;
+      background: white;
+      color: var(--text);
+    }
+
+    .check-form .btn {
+      width: 100%;
+      margin-top: 13px;
+    }
+
+    .check-result {
+      margin-top: 17px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* CTA */
+
+    .final-cta {
+      padding: 100px 20px;
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(23,98,181,.3),
+          transparent 40%
+        ),
+        var(--deep);
+      color: white;
+      text-align: center;
+    }
+
+    .final-cta-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .final-cta .eyebrow {
+      color: var(--green-light);
+    }
+
+    .final-cta h2 {
+      margin: 0 0 23px;
+      font-size: clamp(37px, 5vw, 58px);
+    }
+
+    .final-cta h2 span {
+      color: var(--green-light);
+    }
+
+    .final-cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #D6E3F1;
+      font-size: 18px;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,.65);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.12);
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 70px 0 25px;
+      background: #02132D;
+      color: #D5E0EE;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 45px;
+      margin-bottom: 45px;
+    }
+
+    .footer-logo {
+      width: 185px;
+      margin-bottom: 18px;
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    footer h3 {
+      margin: 0 0 20px;
+      color: white;
+      font-size: 17px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 13px;
+    }
+
+    footer a:hover {
+      color: var(--green-light);
+    }
+
+    footer p {
+      font-size: 13px;
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1250px) {
+      .main-nav {
+        gap: 11px;
+      }
+
+      .main-nav a {
+        font-size: 11px;
+      }
+
+      .brand img {
+        width: 155px;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .phone-btn {
+        display: none;
+      }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 18px 5%;
+        background: var(--deep);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 15px 30px rgba(0,0,0,.2);
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+
+      .main-nav a {
+        padding: 13px 5px;
+        font-size: 14px;
+      }
+
+      .intro-layout,
+      .map-layout,
+      .check-card {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .area-hero {
+        min-height: 490px;
+      }
+
+      .hero-inner {
+        padding: 85px 0;
+      }
+
+      .area-hero p {
+        font-size: 17px;
+      }
+
+      .intro-section,
+      .regions-section,
+      .map-section,
+      .check-section {
+        padding: 75px 0;
+      }
+
+      .intro-layout,
+      .map-layout,
+      .check-card {
+        grid-template-columns: 1fr;
+      }
+
+      .region-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .check-card {
+        padding: 30px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: calc(100% - 34px);
+      }
+
+      .nav-wrap {
+        min-height: 75px;
+      }
+
+      .brand img {
+        width: 150px;
+      }
+
+      .area-hero h1 {
+        font-size: 43px;
+      }
+
+      .intro-copy p {
+        font-size: 16px;
+      }
+
+      .home-base-card {
+        padding: 28px;
+      }
+
+      .region-top,
+      .region-body {
+        padding: 25px;
+      }
+
+      .region-top h3 {
+        font-size: 25px;
+      }
+
+      .map-frame iframe {
+        height: 350px;
+      }
+
+      .check-card {
+        padding: 20px;
+      }
+
+      .check-form {
+        padding: 20px;
+      }
+
+      .cta-actions {
+        flex-direction: column;
+      }
+
+      .cta-actions .btn {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-wrap">
+
+      <a class="brand" href="index.html" aria-label="Just The Guy Home">
+        <img src="images/LOGO.PNG" alt="Just The Guy Gutters & Exteriors">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">home</a>
+        <a href="about.html">about us</a>
+        <a href="services.html">services</a>
+        <a class="active" href="service-area.html" aria-current="page">areas we serve</a>
+        <a href="resources.html">resources</a>
+        <a href="reviews.html">reviews</a>
+        <a href="faqs.html">faqs</a>
+        <a href="work.html">gallery</a>
+        <a href="contact.html">contact</a>
+      </nav>
+
+      <a class="phone-btn" href="tel:+15178858953">
+        (517) 885-8953
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="mainNav"
+        aria-expanded="false">
+        ☰
+      </button>
+
     </div>
+  </header>
 
-    <div class="coverage-layout">
+  <main>
 
-      <!-- MAP -->
-      <div class="coverage-map-card">
-        <div class="coverage-map-header">
-          <div>
-            <strong>Our Service Area</strong>
-            <span>Durand, Michigan & Surrounding Communities</span>
+    <!-- HERO -->
+    <section class="area-hero">
+      <div class="hero-background" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+
+          <span class="eyebrow">
+            PROUDLY SERVING MID-MICHIGAN
+          </span>
+
+          <h1>
+            Local to You.<br>
+            <span>Here to Help.</span>
+          </h1>
+
+          <p>
+            Based in Durand, Michigan, we're proud to help
+            homeowners throughout Mid-Michigan protect
+            and care for their homes.
+          </p>
+
+          <div class="hero-trust">
+            <span>Family-Owned & Operated</span>
+            <span>Based in Durand, MI</span>
+            <span>Serving Surrounding Communities</span>
           </div>
-          <span class="coverage-map-badge">MID-MICHIGAN</span>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro-section">
+      <div class="container intro-layout">
+
+        <div class="intro-copy">
+          <span class="eyebrow">YOUR LOCAL EXTERIOR COMPANY</span>
+
+          <h2>
+            Mid-Michigan Is<br>
+            <span>Our Home, Too.</span>
+          </h2>
+
+          <p>
+            Just The Guy Gutters & Exteriors is a
+            family-owned business based in Durand,
+            Michigan. We work with homeowners
+            throughout Shiawassee County and
+            surrounding Mid-Michigan communities.
+          </p>
+
+          <p>
+            Whether you're just down the road or
+            a little farther out, we're happy to
+            hear about your project.
+          </p>
+
+          <p>
+            Our service area extends beyond our
+            immediate hometown, and project
+            availability can vary by location
+            and type of work.
+          </p>
         </div>
 
-        <div class="coverage-map-frame">
+        <div class="home-base-card">
+          <div class="home-base-icon" aria-hidden="true">⌂</div>
+
+          <span class="home-base-label">WHERE IT ALL STARTS</span>
+
+          <h3>Durand, Michigan.</h3>
+
+          <p>
+            Proud to call Shiawassee County home.
+            From our hometown to the surrounding
+            communities, we bring a personal,
+            family-business approach to exterior work.
+          </p>
+
+          <a href="#regions" class="btn">
+            Explore Our Service Areas →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICE REGIONS -->
+    <section class="regions-section" id="regions">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">COMMUNITIES WE SERVE</span>
+
+          <h2>Find Your Area.</h2>
+
+          <p>
+            We serve communities across Mid-Michigan.
+            Browse our main service regions below.
+            Don't see your town? You can still reach out.
+          </p>
+        </div>
+
+        <div class="region-grid">
+
+          <!-- SHIAWASSEE -->
+          <article class="region-card featured">
+            <div class="region-top">
+              <span class="region-number">01 / OUR HOME AREA</span>
+              <h3>Shiawassee County</h3>
+              <p>Our hometown and surrounding communities.</p>
+            </div>
+
+            <div class="region-body">
+              <p>Some of the communities we serve include:</p>
+
+              <div class="city-list">
+                <span>Durand</span>
+                <span>Owosso</span>
+                <span>Corunna</span>
+                <span>Perry</span>
+                <span>Morrice</span>
+                <span>Laingsburg</span>
+                <span>Bancroft</span>
+                <span>Vernon</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- FLINT -->
+          <article class="region-card">
+            <div class="region-top">
+              <span class="region-number">02 / GREATER FLINT</span>
+              <h3>Flint & Surrounding Areas</h3>
+              <p>Serving communities throughout the greater Flint area.</p>
+            </div>
+
+            <div class="region-body">
+              <p>Some of the communities we serve include:</p>
+
+              <div class="city-list">
+                <span>Flint</span>
+                <span>Grand Blanc</span>
+                <span>Fenton</span>
+                <span>Linden</span>
+                <span>Swartz Creek</span>
+                <span>Flushing</span>
+                <span>Burton</span>
+                <span>Goodrich</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- LANSING -->
+          <article class="region-card">
+            <div class="region-top">
+              <span class="region-number">03 / GREATER LANSING</span>
+              <h3>Lansing & Surrounding Areas</h3>
+              <p>Exterior services for the greater Lansing region.</p>
+            </div>
+
+            <div class="region-body">
+              <p>Some of the communities we serve include:</p>
+
+              <div class="city-list">
+                <span>Lansing</span>
+                <span>East Lansing</span>
+                <span>Haslett</span>
+                <span>Williamston</span>
+                <span>Bath</span>
+                <span>DeWitt</span>
+                <span>Okemos</span>
+                <span>Holt</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- TRI-CITIES -->
+          <article class="region-card">
+            <div class="region-top">
+              <span class="region-number">04 / TRI-CITIES & BEYOND</span>
+              <h3>Saginaw, Midland & Bay City</h3>
+              <p>Serving select projects across the Tri-Cities region.</p>
+            </div>
+
+            <div class="region-body">
+              <p>Some of the communities we serve include:</p>
+
+              <div class="city-list">
+                <span>Saginaw</span>
+                <span>Midland</span>
+                <span>Bay City</span>
+                <span>Auburn</span>
+                <span>Freeland</span>
+                <span>Hemlock</span>
+                <span>Bridgeport</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="map-section">
+      <div class="container map-layout">
+
+        <div class="map-copy">
+          <span class="eyebrow">BASED IN DURAND, MICHIGAN</span>
+
+          <h2>
+            Your Local Crew.<br>
+            <span>A Wider Reach.</span>
+          </h2>
+
+          <p>
+            Our home base is in Durand, but our work
+            takes us to communities throughout
+            Mid-Michigan.
+          </p>
+
+          <p>
+            We don't want homeowners to feel like
+            they have to rule us out just because
+            their town isn't listed.
+          </p>
+
+          <div class="map-points">
+            <div class="map-point">Based in Shiawassee County</div>
+            <div class="map-point">Serving multiple Mid-Michigan regions</div>
+            <div class="map-point">Availability depends on the project and location</div>
+          </div>
+
+          <a href="#check-area" class="btn">
+            Ask About Your Location →
+          </a>
+        </div>
+
+        <div class="map-frame">
           <iframe
-            id="coverageMap"
-            title="Map of Just The Guy service area"
-            src="https://www.google.com/maps?q=Durand%2C%20Michigan&z=9&output=embed"
+            title="Map centered on Durand, Michigan"
+            src="https://www.google.com/maps?q=Durand%2C%20Michigan&z=8&output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             allowfullscreen>
           </iframe>
+
+          <div class="map-caption">
+            Map centered on our hometown of Durand, Michigan.
+            This is not an exact service-area boundary.
+          </div>
         </div>
 
-        <div class="coverage-map-footer">
-          <span class="coverage-location-dot"></span>
-          <span>Locally based in Durand, MI</span>
-        </div>
       </div>
+    </section>
 
-      <!-- REGION SELECTOR -->
-      <div class="coverage-regions">
-        <h3>Explore Our Service Regions</h3>
-        <p class="coverage-region-intro">
-          Click a region to explore its communities on the map.
+    <!-- LOCATION CHECK -->
+    <section class="check-section" id="check-area">
+      <div class="container">
+
+        <div class="check-card">
+
+          <div class="check-copy">
+            <span class="eyebrow">DON'T SEE YOUR TOWN?</span>
+
+            <h2>
+              Let's See If We<br>
+              Can Come to You.
+            </h2>
+
+            <p>
+              Enter your city or ZIP code to quickly
+              prepare a service-area inquiry.
+              We'll confirm whether we can take
+              on your project in that location.
+            </p>
+          </div>
+
+          <div class="check-form">
+            <form id="locationForm">
+              <label for="locationInput">
+                Enter Your City or ZIP Code
+              </label>
+
+              <input
+                id="locationInput"
+                type="text"
+                placeholder="Example: 48429 or Durand"
+                autocomplete="address-level2"
+                maxlength="100"
+                required>
+
+              <button type="submit" class="btn">
+                Ask About My Area →
+              </button>
+            </form>
+
+            <div class="check-result" id="checkResult" aria-live="polite">
+              We'll help you find out if your location
+              is within our current service area.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="final-cta-inner">
+
+        <span class="eyebrow">READY TO GET STARTED?</span>
+
+        <h2>
+          Wherever You Call Home,<br>
+          <span>Start With Just The Guy.</span>
+        </h2>
+
+        <p>
+          Tell us where your property is and
+          what kind of work you're looking for.
+          We'd be happy to discuss your project.
         </p>
 
-        <button class="coverage-region active"
-                data-location="Durand, Michigan"
-                data-zoom="10">
-          <span class="coverage-region-icon">01</span>
-          <span class="coverage-region-text">
-            <strong>Shiawassee County</strong>
-            <small>Durand, Owosso, Corunna, Perry, Morrice & More</small>
-          </span>
-          <span class="coverage-arrow">↗</span>
-        </button>
+        <div class="cta-actions">
+          <a href="index.html#contact" class="btn">
+            Get Your Free Estimate →
+          </a>
 
-        <button class="coverage-region"
-                data-location="Flint, Michigan"
-                data-zoom="10">
-          <span class="coverage-region-icon">02</span>
-          <span class="coverage-region-text">
-            <strong>Greater Flint</strong>
-            <small>Flint, Grand Blanc, Swartz Creek, Linden & Fenton</small>
-          </span>
-          <span class="coverage-arrow">↗</span>
-        </button>
-
-        <button class="coverage-region"
-                data-location="Lansing, Michigan"
-                data-zoom="10">
-          <span class="coverage-region-icon">03</span>
-          <span class="coverage-region-text">
-            <strong>Greater Lansing</strong>
-            <small>Lansing, East Lansing, Haslett & Nearby Areas</small>
-          </span>
-          <span class="coverage-arrow">↗</span>
-        </button>
-
-        <button class="coverage-region"
-                data-location="Saginaw, Michigan"
-                data-zoom="9">
-          <span class="coverage-region-icon">04</span>
-          <span class="coverage-region-text">
-            <strong>Tri-Cities & Beyond</strong>
-            <small>Saginaw, Bay City, Midland, Freeland & Auburn</small>
-          </span>
-          <span class="coverage-arrow">↗</span>
-        </button>
-
-        <div class="coverage-help">
-          <strong>Don't See Your City?</strong>
-          <p>
-            We travel beyond these communities for qualifying
-            projects. Contact us and we'll let you know
-            whether we can make it out to your property.
-          </p>
-          <a href="index.html#contact">
-            Check Your Location <span>→</span>
+          <a href="tel:+15178858953" class="btn btn-outline">
+            Call (517) 885-8953
           </a>
         </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <img
+            class="footer-logo"
+            src="images/LOGO.PNG"
+            alt="Just The Guy Gutters & Exteriors">
+
+          <p>
+            A family-owned Mid-Michigan exterior company,
+            specializing in seamless gutters and helping
+            homeowners care for their properties.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Our Services</a>
+          <a href="work.html">Gallery</a>
+          <a href="reviews.html">Reviews</a>
+        </div>
+
+        <div>
+          <h3>Services</h3>
+          <a href="gutters.html">Gutters</a>
+          <a href="siding.html">Siding</a>
+          <a href="roofing.html">Roofing</a>
+          <a href="service-area.html">Areas We Serve</a>
+          <a href="faqs.html">FAQs</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>Durand, Michigan</p>
+          <a href="tel:+15178858953">(517) 885-8953</a>
+          <a href="mailto:justtheguyguttersandexterior@gmail.com">
+            Email Us
+          </a>
+          <a href="contact.html">Contact Us</a>
+          <a href="index.html#contact">Request an Estimate</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year">2026</span>
+        Just The Guy Gutters & Exteriors.
+        All Rights Reserved.
       </div>
 
     </div>
-  </div>
-</section>
+  </footer>
 
-<style>
-  .coverage-section {
-    padding: 100px 4%;
-    background: #f4f7fa;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  <script>
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
 
-  .coverage-container {
-    max-width: 1350px;
-    margin: auto;
-  }
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
 
-  .coverage-heading {
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto 45px;
-  }
-
-  .coverage-eyebrow {
-    color: #2C9622;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
-  }
-
-  .coverage-heading h2 {
-    color: #031B40;
-    font-size: clamp(36px, 4vw, 54px);
-    letter-spacing: -1.5px;
-    margin: 12px 0 15px;
-  }
-
-  .coverage-heading p {
-    color: #627187;
-    font-size: 16px;
-    line-height: 1.8;
-  }
-
-  .coverage-layout {
-    display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 25px;
-    align-items: stretch;
-  }
-
-  .coverage-map-card {
-    background: white;
-    border: 1px solid #dfe7ee;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 40px rgba(3,27,64,.07);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .coverage-map-header {
-    padding: 23px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-  }
-
-  .coverage-map-header strong {
-    display: block;
-    color: #031B40;
-    font-size: 18px;
-    margin-bottom: 6px;
-  }
-
-  .coverage-map-header span:not(.coverage-map-badge) {
-    color: #738197;
-    font-size: 12px;
-  }
-
-  .coverage-map-badge {
-    color: #1762B5;
-    background: #e9f2fc;
-    border-radius: 7px;
-    padding: 9px 12px;
-    font-size: 10px;
-    font-weight: 800;
-    white-space: nowrap;
-  }
-
-  .coverage-map-frame {
-    flex: 1;
-    min-height: 480px;
-    background: #dce6ef;
-  }
-
-  .coverage-map-frame iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 480px;
-    border: 0;
-    display: block;
-  }
-
-  .coverage-map-footer {
-    padding: 17px 25px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #52657a;
-    font-size: 12px;
-    font-weight: 700;
-  }
-
-  .coverage-location-dot {
-    width: 9px;
-    height: 9px;
-    background: #2C9622;
-    border-radius: 50%;
-    box-shadow: 0 0 0 5px rgba(44,150,34,.12);
-  }
-
-  .coverage-regions {
-    background: white;
-    border: 1px solid #dfe7ee;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 15px 40px rgba(3,27,64,.07);
-  }
-
-  .coverage-regions h3 {
-    font-size: 22px;
-    color: #031B40;
-    margin: 0 0 8px;
-  }
-
-  .coverage-region-intro {
-    color: #6c7a8e;
-    font-size: 13px;
-    line-height: 1.7;
-    margin-bottom: 22px;
-  }
-
-  .coverage-region {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 17px 14px;
-    margin-bottom: 11px;
-    background: #f6f8fa;
-    border: 1px solid #e4ebf2;
-    border-radius: 12px;
-    cursor: pointer;
-    text-align: left;
-    transition: .25s ease;
-    font: inherit;
-  }
-
-  .coverage-region:hover {
-    border-color: #1762B5;
-    transform: translateX(3px);
-  }
-
-  .coverage-region.active {
-    background: #edf5ff;
-    border-color: #1762B5;
-    box-shadow: 0 0 0 1px #1762B5;
-  }
-
-  .coverage-region-icon {
-    flex-shrink: 0;
-    width: 42px;
-    height: 42px;
-    background: #e2ebf4;
-    color: #1762B5;
-    display: grid;
-    place-items: center;
-    border-radius: 10px;
-    font-size: 12px;
-    font-weight: 800;
-  }
-
-  .coverage-region.active .coverage-region-icon {
-    background: #1762B5;
-    color: white;
-  }
-
-  .coverage-region-text {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .coverage-region-text strong {
-    display: block;
-    color: #031B40;
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-
-  .coverage-region-text small {
-    display: block;
-    color: #69798c;
-    font-size: 11px;
-    line-height: 1.5;
-  }
-
-  .coverage-arrow {
-    color: #1762B5;
-    font-size: 19px;
-    font-weight: 800;
-  }
-
-  .coverage-help {
-    margin-top: 23px;
-    background: #031B40;
-    color: white;
-    padding: 24px;
-    border-radius: 13px;
-  }
-
-  .coverage-help strong {
-    font-size: 17px;
-  }
-
-  .coverage-help p {
-    font-size: 12px;
-    line-height: 1.8;
-    color: #c6d6e8;
-  }
-
-  .coverage-help a {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 8px;
-    color: #95e98b;
-    font-size: 13px;
-    font-weight: 800;
-    text-decoration: none;
-  }
-
-  @media (max-width: 900px) {
-    .coverage-layout {
-      grid-template-columns: 1fr;
-    }
-
-    .coverage-map-frame,
-    .coverage-map-frame iframe {
-      min-height: 420px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .coverage-section {
-      padding: 70px 5%;
-    }
-
-    .coverage-regions {
-      padding: 18px;
-    }
-
-    .coverage-map-header {
-      padding: 18px;
-    }
-
-    .coverage-map-badge {
-      display: none;
-    }
-
-    .coverage-map-frame,
-    .coverage-map-frame iframe {
-      min-height: 340px;
-    }
-  }
-</style>
-
-<script>
-  // INTERACTIVE SERVICE AREA MAP
-  const coverageButtons =
-    document.querySelectorAll(".coverage-region");
-
-  const coverageMap =
-    document.getElementById("coverageMap");
-
-  coverageButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      coverageButtons.forEach(item =>
-        item.classList.remove("active")
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
       );
 
-      button.classList.add("active");
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
 
-      const location = button.dataset.location;
-      const zoom = button.dataset.zoom || "10";
-
-      const mapURL =
-        "https://www.google.com/maps?q=" +
-        encodeURIComponent(location) +
-        "&z=" + zoom +
-        "&output=embed";
-
-      coverageMap.src = mapURL;
+      menuToggle.textContent = isOpen ? "×" : "☰";
     });
-  });
-</script>
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // LOCATION INQUIRY
+    // This opens an email draft; it does not check availability automatically.
+    const locationForm = document.getElementById("locationForm");
+    const locationInput = document.getElementById("locationInput");
+    const checkResult = document.getElementById("checkResult");
+
+    locationForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const location = locationInput.value.trim();
+
+      if (!location) {
+        checkResult.textContent = "Please enter your city or ZIP code.";
+        locationInput.focus();
+        return;
+      }
+
+      const subject = encodeURIComponent(
+        "Service Area Inquiry - " + location
+      );
+
+      const body = encodeURIComponent(
+        "Hello Just The Guy,\n\n" +
+        "I'd like to know whether you serve my area.\n\n" +
+        "City or ZIP Code: " + location + "\n" +
+        "Service Needed: \n" +
+        "Project Details: \n\n" +
+        "Thank you!"
+      );
+
+      checkResult.textContent =
+        "Your email app will open with a prepared inquiry. " +
+        "Send it to receive confirmation from our team.";
+
+      window.location.href =
+        "mailto:justtheguyguttersandexterior@gmail.com" +
+        "?subject=" + subject +
+        "&body=" + body;
+    });
+
+    // COPYRIGHT YEAR
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
