@@ -1,0 +1,1734 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Work | Just The Guy Gutters & Exteriors</title>
+  <meta name="description" content="Explore real gutter installations, downspouts, gutter guards, and exterior projects from Just The Guy Gutters & Exteriors, serving Durand and Mid-Michigan.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --deep: #031B40;
+      --navy: #06285C;
+      --blue: #1762B5;
+      --green: #2C9622;
+      --green-light: #91E887;
+      --text: #142033;
+      --muted: #5B6B7F;
+      --light: #F5F7FA;
+      --white: #FFFFFF;
+      --border: #E2E8EF;
+      --shadow: 0 20px 55px rgba(3,27,64,.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--text);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body.lightbox-open { overflow: hidden; }
+
+    h1, h2, h3 {
+      font-family: "Manrope", Arial, sans-serif;
+      letter-spacing: -.04em;
+      line-height: 1.2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button { font: inherit; cursor: pointer; }
+
+    .container {
+      width: min(1250px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 28px;
+      border: 0;
+      border-radius: 100px;
+      background: var(--green);
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      background: #247E1D;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,.65);
+      background: transparent;
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,.12); }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--green-light);
+      outline-offset: 4px;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--deep);
+      box-shadow: 0 5px 25px rgba(0,0,0,.12);
+    }
+
+    .nav-wrap {
+      max-width: 1600px;
+      min-height: 88px;
+      margin: auto;
+      padding: 10px 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand { flex-shrink: 0; }
+    .brand img { width: 195px; }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .main-nav a {
+      position: relative;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover { color: #A3E69A; }
+
+    .main-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      height: 2px;
+      background: var(--green-light);
+    }
+
+    .phone-btn {
+      flex-shrink: 0;
+      padding: 13px 19px;
+      border-radius: 50px;
+      background: var(--green);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 29px;
+    }
+
+    /* HERO */
+
+    .gallery-hero {
+      position: relative;
+      min-height: 565px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--deep);
+      color: white;
+    }
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(3,27,64,.97) 0%,
+          rgba(3,27,64,.82) 45%,
+          rgba(3,27,64,.30) 100%
+        ),
+        url("images/IMG_7603.JPEG");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 110px 0 120px;
+    }
+
+    .hero-copy { max-width: 810px; }
+
+    .gallery-hero .eyebrow { color: var(--green-light); }
+
+    .gallery-hero h1 {
+      margin: 0 0 25px;
+      font-size: clamp(43px, 6vw, 76px);
+    }
+
+    .gallery-hero h1 span { color: var(--green-light); }
+
+    .gallery-hero p {
+      max-width: 635px;
+      margin: 0 0 30px;
+      color: #E6EEF7;
+      font-size: 19px;
+      line-height: 1.85;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 25px;
+      color: #F0F6FC;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-trust span::before {
+      content: "✓";
+      margin-right: 8px;
+      color: var(--green-light);
+    }
+
+    /* INTRO */
+
+    .intro-section {
+      padding: 95px 0 85px;
+      background: white;
+    }
+
+    .intro-layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .intro-copy h2 {
+      margin: 0 0 24px;
+      color: var(--deep);
+      font-size: clamp(35px, 4.5vw, 53px);
+    }
+
+    .intro-copy h2 span { color: var(--green); }
+
+    .intro-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .intro-photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .intro-photo img {
+      width: 100%;
+      height: 415px;
+      object-fit: cover;
+    }
+
+    .photo-label {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      left: 18px;
+      padding: 15px 20px;
+      border-radius: 12px;
+      background: rgba(3,27,64,.91);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+      backdrop-filter: blur(8px);
+    }
+
+    /* GALLERY */
+
+    .gallery-section {
+      padding: 105px 0;
+      background: var(--light);
+    }
+
+    .section-heading {
+      max-width: 800px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 18px;
+      color: var(--deep);
+      font-size: clamp(34px, 4.5vw, 53px);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin-bottom: 45px;
+    }
+
+    .filter-btn {
+      padding: 12px 21px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      background: white;
+      color: var(--deep);
+      font-size: 13px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: var(--green);
+      background: var(--green);
+      color: white;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .gallery-item {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      border-radius: 19px;
+      background: #DDE6F0;
+      text-align: left;
+      box-shadow: 0 10px 25px rgba(3,27,64,.05);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      transition: transform .35s;
+    }
+
+    .gallery-item:hover img { transform: scale(1.045); }
+
+    .gallery-item.featured {
+      grid-column: span 2;
+    }
+
+    .gallery-item.featured img { height: 365px; }
+
+    .gallery-item.tall {
+      grid-row: span 2;
+    }
+
+    .gallery-item.tall img { height: 100%; min-height: 642px; }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 65px 24px 23px;
+      background: linear-gradient(transparent, rgba(3,27,64,.94));
+      color: white;
+    }
+
+    .gallery-category {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--green-light);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .gallery-overlay h3 {
+      margin: 0;
+      color: white;
+      font-size: 20px;
+    }
+
+    .gallery-zoom {
+      position: absolute;
+      top: 17px;
+      right: 17px;
+      display: grid;
+      place-items: center;
+      width: 39px;
+      height: 39px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.95);
+      color: var(--deep);
+      font-size: 22px;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(0,0,0,.15);
+    }
+
+    .gallery-empty {
+      display: none;
+      padding: 45px;
+      border-radius: 18px;
+      background: white;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .gallery-bottom {
+      max-width: 650px;
+      margin: 50px auto 0;
+      text-align: center;
+    }
+
+    .gallery-bottom p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* PROJECT HIGHLIGHT */
+
+    .highlight-section {
+      padding: 105px 0;
+      background: white;
+    }
+
+    .highlight-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .highlight-image {
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .highlight-image img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .highlight-copy h2 {
+      margin: 0 0 24px;
+      color: var(--deep);
+      font-size: clamp(34px, 4.5vw, 52px);
+    }
+
+    .highlight-copy h2 span { color: var(--green); }
+
+    .highlight-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .highlight-points {
+      display: grid;
+      gap: 14px;
+      margin: 26px 0 32px;
+    }
+
+    .highlight-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      color: var(--deep);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .highlight-point::before {
+      content: "✓";
+      display: grid;
+      flex-shrink: 0;
+      place-items: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #E8F5E6;
+      color: var(--green);
+      font-size: 13px;
+    }
+
+    /* TESTIMONIAL */
+
+    .testimonial-section {
+      padding: 95px 0;
+      background: var(--light);
+    }
+
+    .testimonial-card {
+      max-width: 960px;
+      margin: auto;
+      padding: 55px;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background: white;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .testimonial-stars {
+      margin-bottom: 20px;
+      color: #E8AD22;
+      font-size: 24px;
+      letter-spacing: 5px;
+    }
+
+    .testimonial-card blockquote {
+      margin: 0 0 25px;
+      color: var(--deep);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(20px, 2.7vw, 29px);
+      font-weight: 700;
+      line-height: 1.65;
+      letter-spacing: -.025em;
+    }
+
+    .testimonial-author {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    /* LIGHTBOX */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 65px 85px;
+      background: rgba(2,13,31,.97);
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      max-height: 100%;
+    }
+
+    .lightbox-image {
+      display: block;
+      max-width: 100%;
+      max-height: calc(100dvh - 190px);
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .lightbox-caption {
+      margin-top: 17px;
+      color: white;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .lightbox-count {
+      margin-top: 4px;
+      color: #B8C8D9;
+      font-size: 12px;
+    }
+
+    .lightbox-control {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 45px;
+      height: 45px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      background: rgba(255,255,255,.10);
+      color: white;
+      font-size: 28px;
+      transition: background .2s;
+    }
+
+    .lightbox-control:hover {
+      background: rgba(255,255,255,.25);
+    }
+
+    .lightbox-close {
+      top: 20px;
+      right: 25px;
+    }
+
+    .lightbox-prev {
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .lightbox-next {
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* CTA */
+
+    .final-cta {
+      padding: 105px 20px;
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(23,98,181,.3),
+          transparent 40%
+        ),
+        var(--deep);
+      color: white;
+      text-align: center;
+    }
+
+    .final-cta-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .final-cta .eyebrow { color: var(--green-light); }
+
+    .final-cta h2 {
+      margin: 0 0 23px;
+      font-size: clamp(37px, 5vw, 58px);
+    }
+
+    .final-cta h2 span { color: var(--green-light); }
+
+    .final-cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #D6E3F1;
+      font-size: 18px;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 70px 0 25px;
+      background: #02132D;
+      color: #D5E0EE;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 45px;
+      margin-bottom: 45px;
+    }
+
+    .footer-logo {
+      width: 185px;
+      margin-bottom: 18px;
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    footer h3 {
+      margin: 0 0 20px;
+      color: white;
+      font-size: 17px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 13px;
+    }
+
+    footer a:hover { color: var(--green-light); }
+    footer p { font-size: 13px; }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1250px) {
+      .main-nav { gap: 11px; }
+      .main-nav a { font-size: 11px; }
+      .brand img { width: 155px; }
+    }
+
+    @media (max-width: 1050px) {
+      .menu-toggle { display: block; }
+      .phone-btn { display: none; }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 18px 5%;
+        background: var(--deep);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 15px 30px rgba(0,0,0,.2);
+      }
+
+      .main-nav.open { display: flex; }
+
+      .main-nav a {
+        padding: 13px 5px;
+        font-size: 14px;
+      }
+
+      .intro-layout,
+      .highlight-layout { gap: 35px; }
+    }
+
+    @media (max-width: 800px) {
+      .gallery-hero { min-height: 490px; }
+      .hero-inner { padding: 85px 0; }
+      .gallery-hero p { font-size: 17px; }
+
+      .intro-section,
+      .gallery-section,
+      .highlight-section,
+      .testimonial-section {
+        padding: 75px 0;
+      }
+
+      .intro-layout,
+      .highlight-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-photo img,
+      .highlight-image img { height: 350px; }
+
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-item.featured { grid-column: span 2; }
+      .gallery-item.tall { grid-row: auto; }
+      .gallery-item.tall img { min-height: 0; height: 310px; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item.featured { grid-column: span 1; }
+
+      .gallery-item img,
+      .gallery-item.featured img,
+      .gallery-item.tall img {
+        height: 290px;
+        min-height: 0;
+      }
+
+      .lightbox {
+        padding: 65px 12px 100px;
+      }
+
+      .lightbox-image {
+        max-height: calc(100dvh - 210px);
+      }
+
+      .lightbox-prev,
+      .lightbox-next {
+        top: auto;
+        bottom: 22px;
+        transform: none;
+      }
+
+      .lightbox-prev { left: calc(50% - 62px); }
+      .lightbox-next { right: calc(50% - 62px); }
+
+      .testimonial-card { padding: 32px 24px; }
+    }
+
+    @media (max-width: 520px) {
+      .container { width: calc(100% - 34px); }
+      .nav-wrap { min-height: 75px; }
+      .brand img { width: 150px; }
+      .gallery-hero h1 { font-size: 43px; }
+      .intro-copy p { font-size: 16px; }
+
+      .cta-actions { flex-direction: column; }
+      .cta-actions .btn { width: 100%; }
+
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-wrap">
+
+      <a class="brand" href="index.html" aria-label="Just The Guy Home">
+        <img src="images/LOGO.PNG" alt="Just The Guy Gutters & Exteriors">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">home</a>
+        <a href="about.html">about us</a>
+        <a href="services.html">services</a>
+        <a href="service-area.html">areas we serve</a>
+        <a href="resources.html">resources</a>
+        <a href="reviews.html">reviews</a>
+        <a href="faqs.html">faqs</a>
+        <a class="active" href="work.html" aria-current="page">gallery</a>
+        <a href="contact.html">contact</a>
+      </nav>
+
+      <a class="phone-btn" href="tel:+15178858953">
+        (517) 885-8953
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="mainNav"
+        aria-expanded="false">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="gallery-hero">
+      <div class="hero-background" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+
+          <span class="eyebrow">A LOOK AT OUR WORK</span>
+
+          <h1>
+            Real Homes.<br>
+            <span>Real Craftsmanship.</span>
+          </h1>
+
+          <p>
+            We believe our work should speak for itself.
+            Take a look at some of the projects we've
+            worked on throughout Mid-Michigan.
+          </p>
+
+          <div class="hero-trust">
+            <span>Real Project Photos</span>
+            <span>Family-Owned Business</span>
+            <span>Mid-Michigan Work</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro-section">
+      <div class="container intro-layout">
+
+        <div class="intro-copy">
+          <span class="eyebrow">THE DETAILS MATTER</span>
+
+          <h2>
+            We're Proud of<br>
+            <span>What We Do.</span>
+          </h2>
+
+          <p>
+            There's something satisfying about
+            stepping back at the end of a job
+            and seeing everything come together.
+          </p>
+
+          <p>
+            From the clean lines of a seamless
+            gutter installation to the details
+            that make a finished project look
+            complete, we take pride in the
+            work we put our name on.
+          </p>
+
+          <p>
+            Below you'll find photos from our
+            gutter installations and exterior
+            projects. Click any photo to take
+            a closer look.
+          </p>
+        </div>
+
+        <div class="intro-photo">
+          <img
+            src="images/IMG_1945.JPEG"
+            alt="Completed gutter project by Just The Guy"
+            loading="lazy">
+
+          <div class="photo-label">
+            A closer look at the work behind the name.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">OUR PROJECT GALLERY</span>
+
+          <h2>Take a Look Around.</h2>
+
+          <p>
+            Browse our work, explore the details,
+            and get a better idea of what
+            Just The Guy can do for your home.
+          </p>
+        </div>
+
+        <div class="gallery-filters" aria-label="Filter gallery photos">
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">
+            All Projects
+          </button>
+
+          <button class="filter-btn" type="button" data-filter="gutters" aria-pressed="false">
+            Gutters
+          </button>
+
+          <button class="filter-btn" type="button" data-filter="guards" aria-pressed="false">
+            Gutter Guards
+          </button>
+
+          <button class="filter-btn" type="button" data-filter="exteriors" aria-pressed="false">
+            Exterior Projects
+          </button>
+        </div>
+
+        <!--
+          GALLERY PHOTO NOTES
+
+          The photos below use existing image filenames
+          from your website.
+
+          Update each photo's category and caption to
+          accurately describe the actual project.
+
+          Available categories:
+          gutters
+          guards
+          exteriors
+
+          To add another photo, duplicate a gallery-item
+          button and update the image path and description.
+        -->
+
+        <div class="gallery-grid" id="galleryGrid">
+
+          <button
+            class="gallery-item featured"
+            type="button"
+            data-category="gutters"
+            data-caption="Project Photo 01 — Seamless Gutters"
+            aria-label="Enlarge gutter project photo 1">
+
+            <img src="images/IMG_7603.JPEG" alt="Gutter project photo 1" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Seamless Gutters</span>
+              <h3>Project Photo 01</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="gutters"
+            data-caption="Project Photo 02 — Gutter Installation"
+            aria-label="Enlarge gutter project photo 2">
+
+            <img src="images/IMG_1945.JPEG" alt="Gutter project photo 2" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Gutter Installation</span>
+              <h3>Project Photo 02</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="gutters"
+            data-caption="Project Photo 03 — Gutter Work"
+            aria-label="Enlarge gutter project photo 3">
+
+            <img src="images/IMG_4443.JPEG" alt="Gutter project photo 3" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Gutter Work</span>
+              <h3>Project Photo 03</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item tall"
+            type="button"
+            data-category="exteriors"
+            data-caption="Project Photo 04 — Exterior Work"
+            aria-label="Enlarge exterior project photo 4">
+
+            <img src="images/IMG_4707.JPEG" alt="Exterior project photo 4" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Exterior Projects</span>
+              <h3>Project Photo 04</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="gutters"
+            data-caption="Project Photo 05 — Gutter Work"
+            aria-label="Enlarge gutter project photo 5">
+
+            <img src="images/IMG_4747.JPEG" alt="Gutter project photo 5" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Gutter Work</span>
+              <h3>Project Photo 05</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="gutters"
+            data-caption="Project Photo 06 — Gutter Work"
+            aria-label="Enlarge gutter project photo 6">
+
+            <img src="images/IMG_4754.JPEG" alt="Gutter project photo 6" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Gutter Work</span>
+              <h3>Project Photo 06</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="guards"
+            data-caption="Project Photo 07 — Gutter Guards"
+            aria-label="Enlarge gutter guard photo 7">
+
+            <img src="images/Guards.PNG" alt="Gutter guard photo 7" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Gutter Guards</span>
+              <h3>Project Photo 07</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item featured"
+            type="button"
+            data-category="gutters"
+            data-caption="Project Photo 08 — Gutter Installation"
+            aria-label="Enlarge gutter project photo 8">
+
+            <img src="images/IMG_6983.JPEG" alt="Gutter project photo 8" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Gutter Installation</span>
+              <h3>Project Photo 08</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="gutters"
+            data-caption="Project Photo 09 — Gutter Work"
+            aria-label="Enlarge gutter project photo 9">
+
+            <img src="images/IMG_7525.JPEG" alt="Gutter project photo 9" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Gutter Work</span>
+              <h3>Project Photo 09</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="exteriors"
+            data-caption="Project Photo 10 — Exterior Work"
+            aria-label="Enlarge exterior project photo 10">
+
+            <img src="images/IMG_8110.JPEG" alt="Exterior project photo 10" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Exterior Projects</span>
+              <h3>Project Photo 10</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="exteriors"
+            data-caption="Project Photo 11 — Exterior Work"
+            aria-label="Enlarge exterior project photo 11">
+
+            <img src="images/IMG_8146.JPEG" alt="Exterior project photo 11" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Exterior Projects</span>
+              <h3>Project Photo 11</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="gutters"
+            data-caption="Project Photo 12 — Gutter Work"
+            aria-label="Enlarge gutter project photo 12">
+
+            <img src="images/IMG_8226.JPEG" alt="Gutter project photo 12" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Gutter Work</span>
+              <h3>Project Photo 12</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="gutters"
+            data-caption="Project Photo 13 — Gutter Work"
+            aria-label="Enlarge gutter project photo 13">
+
+            <img src="images/IMG_8234.PNG" alt="Gutter project photo 13" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Gutter Work</span>
+              <h3>Project Photo 13</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="gutters"
+            data-caption="Project Photo 14 — Gutter Work"
+            aria-label="Enlarge gutter project photo 14">
+
+            <img src="images/IMG_9532.JPEG" alt="Gutter project photo 14" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Gutter Work</span>
+              <h3>Project Photo 14</h3>
+            </span>
+          </button>
+
+          <button
+            class="gallery-item"
+            type="button"
+            data-category="gutters"
+            data-caption="Project Photo 15 — Gutter Work"
+            aria-label="Enlarge gutter project photo 15">
+
+            <img src="images/IMG_9756.JPEG" alt="Gutter project photo 15" loading="lazy">
+
+            <span class="gallery-zoom" aria-hidden="true">+</span>
+
+            <span class="gallery-overlay">
+              <span class="gallery-category">Gutter Work</span>
+              <h3>Project Photo 15</h3>
+            </span>
+          </button>
+
+        </div>
+
+        <div class="gallery-empty" id="galleryEmpty" aria-live="polite">
+          No photos are currently shown in this category.
+        </div>
+
+        <div class="gallery-bottom">
+          <p>
+            Every property is different, and we're always
+            adding more photos from our projects.
+            Have something similar in mind?
+          </p>
+
+          <a href="index.html#contact" class="btn">
+            Let's Talk About Your Project →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECT HIGHLIGHT -->
+    <section class="highlight-section">
+      <div class="container highlight-layout">
+
+        <div class="highlight-image">
+          <img
+            src="images/IMG_7525.JPEG"
+            alt="Exterior gutter project"
+            loading="lazy">
+        </div>
+
+        <div class="highlight-copy">
+          <span class="eyebrow">MORE THAN JUST A FINISHED PHOTO</span>
+
+          <h2>
+            It's All About<br>
+            <span>The Details.</span>
+          </h2>
+
+          <p>
+            A good-looking gutter system is important,
+            but what matters just as much is how
+            it functions.
+          </p>
+
+          <p>
+            We focus on the details that make a
+            difference, from proper measurements
+            and clean gutter runs to downspout
+            placement and water flow.
+          </p>
+
+          <div class="highlight-points">
+            <div class="highlight-point">
+              Custom-formed seamless gutter runs.
+            </div>
+
+            <div class="highlight-point">
+              Attention to gutter alignment and drainage.
+            </div>
+
+            <div class="highlight-point">
+              Neat installation and finishing details.
+            </div>
+
+            <div class="highlight-point">
+              A finished result we're proud to put our name on.
+            </div>
+          </div>
+
+          <a href="gutters.html" class="btn">
+            Explore Our Gutter Services →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEW -->
+    <section class="testimonial-section">
+      <div class="container">
+
+        <div class="testimonial-card">
+          <span class="eyebrow">WORDS FROM A CUSTOMER</span>
+
+          <div class="testimonial-stars" aria-label="Five stars">
+            ★★★★★
+          </div>
+
+          <blockquote>
+            “FANTASTIC job! Once I contact Josh his team jumped
+            into action and installed a complete Gutter &
+            Downspout system on my home. The quality is top notch-
+            would highly recommend, and will plan to use again!”
+          </blockquote>
+
+          <div class="testimonial-author">
+            — Russell M.
+          </div>
+
+          <div style="margin-top:25px;">
+            <a href="reviews.html" class="btn">
+              Read More Customer Reviews →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="final-cta-inner">
+
+        <span class="eyebrow">LIKE WHAT YOU SEE?</span>
+
+        <h2>
+          Your Home Could<br>
+          <span>Be Next.</span>
+        </h2>
+
+        <p>
+          Whether you need new seamless gutters,
+          repairs, gutter guards, or help planning
+          an exterior project, we're ready to
+          hear what you have in mind.
+        </p>
+
+        <div class="cta-actions">
+          <a href="index.html#contact" class="btn">
+            Get Your Free Estimate →
+          </a>
+
+          <a href="tel:+15178858953" class="btn btn-outline">
+            Call (517) 885-8953
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Gallery photo viewer"
+    aria-hidden="true">
+
+    <button
+      class="lightbox-control lightbox-close"
+      id="lightboxClose"
+      type="button"
+      aria-label="Close photo viewer">
+      ×
+    </button>
+
+    <button
+      class="lightbox-control lightbox-prev"
+      id="lightboxPrev"
+      type="button"
+      aria-label="Previous photo">
+      ‹
+    </button>
+
+    <div class="lightbox-content">
+      <img
+        class="lightbox-image"
+        id="lightboxImage"
+        src=""
+        alt="">
+
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <div class="lightbox-count" id="lightboxCount"></div>
+    </div>
+
+    <button
+      class="lightbox-control lightbox-next"
+      id="lightboxNext"
+      type="button"
+      aria-label="Next photo">
+      ›
+    </button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <img
+            class="footer-logo"
+            src="images/LOGO.PNG"
+            alt="Just The Guy Gutters & Exteriors">
+
+          <p>
+            A family-owned Mid-Michigan exterior company,
+            specializing in seamless gutters and helping
+            homeowners care for their properties.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Our Services</a>
+          <a href="work.html">Gallery</a>
+          <a href="reviews.html">Reviews</a>
+        </div>
+
+        <div>
+          <h3>Services</h3>
+          <a href="gutters.html">Gutters</a>
+          <a href="siding.html">Siding</a>
+          <a href="roofing.html">Roofing</a>
+          <a href="service-area.html">Areas We Serve</a>
+          <a href="faqs.html">FAQs</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>Durand, Michigan</p>
+          <a href="tel:+15178858953">(517) 885-8953</a>
+          <a href="mailto:justtheguyguttersandexterior@gmail.com">
+            Email Us
+          </a>
+          <a href="contact.html">Contact Us</a>
+          <a href="index.html#contact">Request an Estimate</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year">2026</span>
+        Just The Guy Gutters & Exteriors.
+        All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
+
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // GALLERY FILTERS
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const galleryItems = Array.from(
+      document.querySelectorAll(".gallery-item")
+    );
+    const galleryEmpty = document.getElementById("galleryEmpty");
+
+    let activeFilter = "all";
+
+    function filterGallery() {
+      let visibleCount = 0;
+
+      galleryItems.forEach(item => {
+        const category = item.dataset.category;
+
+        const visible =
+          activeFilter === "all" ||
+          category === activeFilter;
+
+        item.hidden = !visible;
+        item.style.display = visible ? "" : "none";
+
+        if (visible) visibleCount++;
+      });
+
+      galleryEmpty.style.display =
+        visibleCount === 0 ? "block" : "none";
+    }
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+
+        filterButtons.forEach(btn => {
+          const selected = btn === button;
+          btn.classList.toggle("active", selected);
+          btn.setAttribute("aria-pressed", String(selected));
+        });
+
+        filterGallery();
+      });
+    });
+
+    // PHOTO LIGHTBOX
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxCaption = document.getElementById("lightboxCaption");
+    const lightboxCount = document.getElementById("lightboxCount");
+
+    const lightboxClose = document.getElementById("lightboxClose");
+    const lightboxPrev = document.getElementById("lightboxPrev");
+    const lightboxNext = document.getElementById("lightboxNext");
+
+    let currentIndex = 0;
+    let visiblePhotos = [];
+    let lastFocusedElement = null;
+
+    function getVisiblePhotos() {
+      return galleryItems.filter(item =>
+        item.style.display !== "none"
+      );
+    }
+
+    function updateLightbox() {
+      const item = visiblePhotos[currentIndex];
+      if (!item) return;
+
+      const img = item.querySelector("img");
+
+      lightboxImage.src = img.src;
+      lightboxImage.alt = img.alt;
+      lightboxCaption.textContent = item.dataset.caption;
+      lightboxCount.textContent =
+        (currentIndex + 1) + " of " + visiblePhotos.length;
+    }
+
+    function openLightbox(item) {
+      visiblePhotos = getVisiblePhotos();
+      currentIndex = visiblePhotos.indexOf(item);
+
+      if (currentIndex < 0) return;
+
+      lastFocusedElement = document.activeElement;
+
+      updateLightbox();
+
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.classList.add("lightbox-open");
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("lightbox-open");
+      lightboxImage.removeAttribute("src");
+
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
+    }
+
+    function changePhoto(direction) {
+      if (!visiblePhotos.length) return;
+
+      currentIndex =
+        (currentIndex + direction + visiblePhotos.length) %
+        visiblePhotos.length;
+
+      updateLightbox();
+    }
+
+    galleryItems.forEach(item => {
+      item.addEventListener("click", () => openLightbox(item));
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxPrev.addEventListener("click", () => changePhoto(-1));
+    lightboxNext.addEventListener("click", () => changePhoto(1));
+
+    lightbox.addEventListener("click", event => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", event => {
+      if (!lightbox.classList.contains("open")) return;
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      } else if (event.key === "ArrowLeft") {
+        changePhoto(-1);
+      } else if (event.key === "ArrowRight") {
+        changePhoto(1);
+      } else if (event.key === "Tab") {
+        const controls = [
+          lightboxClose,
+          lightboxPrev,
+          lightboxNext
+        ];
+
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+
+    // COPYRIGHT YEAR
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
