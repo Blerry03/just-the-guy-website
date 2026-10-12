@@ -1,0 +1,1828 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Homeowner Resources | Just The Guy Gutters & Exteriors</title>
+  <meta name="description" content="Helpful homeowner resources from Just The Guy Gutters & Exteriors. Learn about gutter maintenance, gutter guards, drainage, seasonal upkeep, and protecting your Mid-Michigan home.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --deep: #031B40;
+      --navy: #06285C;
+      --blue: #1762B5;
+      --green: #2C9622;
+      --green-light: #91E887;
+      --text: #142033;
+      --muted: #5B6B7F;
+      --light: #F5F7FA;
+      --white: #FFFFFF;
+      --border: #E2E8EF;
+      --shadow: 0 20px 55px rgba(3,27,64,.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--text);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Manrope", Arial, sans-serif;
+      letter-spacing: -.04em;
+      line-height: 1.2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1250px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 28px;
+      border: 0;
+      border-radius: 100px;
+      background: var(--green);
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      background: #247E1D;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,.65);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.12);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--green-light);
+      outline-offset: 4px;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--deep);
+      box-shadow: 0 5px 25px rgba(0,0,0,.12);
+    }
+
+    .nav-wrap {
+      max-width: 1600px;
+      min-height: 88px;
+      margin: auto;
+      padding: 10px 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      width: 195px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .main-nav a {
+      position: relative;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover {
+      color: #A3E69A;
+    }
+
+    .main-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      height: 2px;
+      background: var(--green-light);
+    }
+
+    .phone-btn {
+      flex-shrink: 0;
+      padding: 13px 19px;
+      border-radius: 50px;
+      background: var(--green);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 29px;
+    }
+
+    /* HERO */
+
+    .resources-hero {
+      position: relative;
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--deep);
+      color: white;
+    }
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(3,27,64,.97) 0%,
+          rgba(3,27,64,.85) 46%,
+          rgba(3,27,64,.42) 100%
+        ),
+        url("images/IMG_1945.JPEG");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 110px 0 120px;
+    }
+
+    .hero-copy {
+      max-width: 810px;
+    }
+
+    .resources-hero .eyebrow {
+      color: var(--green-light);
+    }
+
+    .resources-hero h1 {
+      margin: 0 0 25px;
+      font-size: clamp(43px, 6vw, 76px);
+    }
+
+    .resources-hero h1 span {
+      color: var(--green-light);
+    }
+
+    .resources-hero p {
+      max-width: 640px;
+      margin: 0 0 30px;
+      color: #E6EEF7;
+      font-size: 19px;
+      line-height: 1.85;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 25px;
+      color: #F0F6FC;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-trust span::before {
+      content: "✓";
+      margin-right: 8px;
+      color: var(--green-light);
+    }
+
+    /* INTRO */
+
+    .intro-section {
+      padding: 100px 0;
+      background: white;
+    }
+
+    .intro-layout {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .intro-copy h2 {
+      margin: 0 0 24px;
+      color: var(--deep);
+      font-size: clamp(35px, 4.5vw, 53px);
+    }
+
+    .intro-copy h2 span {
+      color: var(--green);
+    }
+
+    .intro-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .intro-image {
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .intro-image img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+
+    /* SECTION HEADING */
+
+    .section-heading {
+      max-width: 800px;
+      margin: 0 auto 52px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 18px;
+      color: var(--deep);
+      font-size: clamp(34px, 4.5vw, 53px);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* RESOURCE LIBRARY */
+
+    .library-section {
+      padding: 105px 0;
+      background: var(--light);
+    }
+
+    .resource-tools {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      padding: 11px 18px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      background: white;
+      color: var(--deep);
+      font-size: 12px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: var(--green);
+      background: var(--green);
+      color: white;
+    }
+
+    .search-box {
+      width: min(100%, 300px);
+      padding: 12px 17px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      background: white;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .resource-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: white;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .resource-image {
+      height: 210px;
+      overflow: hidden;
+      background: #E8EEF5;
+    }
+
+    .resource-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s;
+    }
+
+    .resource-card:hover .resource-image img {
+      transform: scale(1.045);
+    }
+
+    .resource-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 27px;
+    }
+
+    .resource-category {
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 15px;
+      padding: 7px 12px;
+      border-radius: 50px;
+      background: #EAF5E9;
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .resource-content h3 {
+      margin: 0 0 13px;
+      color: var(--deep);
+      font-size: 21px;
+    }
+
+    .resource-content p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .resource-link {
+      display: inline-block;
+      margin-top: auto;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .resource-link:hover {
+      text-decoration: underline;
+    }
+
+    .no-results {
+      display: none;
+      padding: 35px;
+      border-radius: 16px;
+      background: white;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* GUIDE DETAILS */
+
+    .guides-section {
+      padding: 105px 0;
+      background: white;
+    }
+
+    .guide-block {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      align-items: center;
+      gap: 65px;
+      margin-bottom: 105px;
+      scroll-margin-top: 110px;
+    }
+
+    .guide-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .guide-block.reverse {
+      grid-template-columns: 1.15fr .85fr;
+    }
+
+    .guide-block.reverse .guide-photo {
+      order: 2;
+    }
+
+    .guide-photo {
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .guide-photo img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+
+    .guide-copy h2 {
+      margin: 0 0 22px;
+      color: var(--deep);
+      font-size: clamp(31px, 4vw, 46px);
+    }
+
+    .guide-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .guide-copy ul {
+      margin: 20px 0;
+      padding-left: 22px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .guide-copy li {
+      margin-bottom: 10px;
+    }
+
+    .guide-copy li::marker {
+      color: var(--green);
+    }
+
+    .guide-note {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--green);
+      border-radius: 0 12px 12px 0;
+      background: var(--light);
+      color: var(--deep);
+      font-size: 14px;
+    }
+
+    /* SEASONAL CARE */
+
+    .seasonal-section {
+      padding: 105px 0;
+      background: var(--light);
+    }
+
+    .season-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .season-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: white;
+    }
+
+    .season-label {
+      display: inline-block;
+      margin-bottom: 17px;
+      padding: 8px 13px;
+      border-radius: 50px;
+      background: #EAF5E9;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .season-card h3 {
+      margin: 0 0 14px;
+      color: var(--deep);
+      font-size: 22px;
+    }
+
+    .season-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* FAQ PREVIEW */
+
+    .faq-section {
+      padding: 105px 0;
+      background: white;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      margin-bottom: 13px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: white;
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      position: relative;
+      padding: 22px 55px 22px 24px;
+      color: var(--deep);
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      right: 25px;
+      top: 17px;
+      color: var(--green);
+      font-size: 26px;
+      font-weight: 400;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 24px 24px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .faq-answer p {
+      margin: 0;
+    }
+
+    .faq-more {
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    /* CTA */
+
+    .final-cta {
+      padding: 105px 20px;
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(23,98,181,.3),
+          transparent 40%
+        ),
+        var(--deep);
+      color: white;
+      text-align: center;
+    }
+
+    .final-cta-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .final-cta .eyebrow {
+      color: var(--green-light);
+    }
+
+    .final-cta h2 {
+      margin: 0 0 23px;
+      font-size: clamp(37px, 5vw, 58px);
+    }
+
+    .final-cta h2 span {
+      color: var(--green-light);
+    }
+
+    .final-cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #D6E3F1;
+      font-size: 18px;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 70px 0 25px;
+      background: #02132D;
+      color: #D5E0EE;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 45px;
+      margin-bottom: 45px;
+    }
+
+    .footer-logo {
+      width: 185px;
+      margin-bottom: 18px;
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    footer h3 {
+      margin: 0 0 20px;
+      color: white;
+      font-size: 17px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 13px;
+    }
+
+    footer a:hover {
+      color: var(--green-light);
+    }
+
+    footer p {
+      font-size: 13px;
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1250px) {
+      .main-nav {
+        gap: 11px;
+      }
+
+      .main-nav a {
+        font-size: 11px;
+      }
+
+      .brand img {
+        width: 155px;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .phone-btn {
+        display: none;
+      }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 18px 5%;
+        background: var(--deep);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 15px 30px rgba(0,0,0,.2);
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+
+      .main-nav a {
+        padding: 13px 5px;
+        font-size: 14px;
+      }
+
+      .intro-layout,
+      .guide-block,
+      .guide-block.reverse {
+        gap: 35px;
+      }
+
+      .resource-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .season-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .resources-hero {
+        min-height: 490px;
+      }
+
+      .hero-inner {
+        padding: 85px 0;
+      }
+
+      .resources-hero p {
+        font-size: 17px;
+      }
+
+      .intro-section,
+      .library-section,
+      .guides-section,
+      .seasonal-section,
+      .faq-section {
+        padding: 75px 0;
+      }
+
+      .intro-layout,
+      .guide-block,
+      .guide-block.reverse {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-block.reverse .guide-photo {
+        order: 0;
+      }
+
+      .guide-block {
+        margin-bottom: 75px;
+      }
+
+      .intro-image img,
+      .guide-photo img {
+        height: 350px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .resource-grid,
+      .season-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .resource-tools {
+        align-items: stretch;
+      }
+
+      .search-box {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: calc(100% - 34px);
+      }
+
+      .nav-wrap {
+        min-height: 75px;
+      }
+
+      .brand img {
+        width: 150px;
+      }
+
+      .resources-hero h1 {
+        font-size: 43px;
+      }
+
+      .intro-copy p {
+        font-size: 16px;
+      }
+
+      .intro-image img,
+      .guide-photo img {
+        height: 290px;
+      }
+
+      .cta-actions {
+        flex-direction: column;
+      }
+
+      .cta-actions .btn {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-wrap">
+
+      <a class="brand" href="index.html" aria-label="Just The Guy Home">
+        <img src="images/LOGO.PNG" alt="Just The Guy Gutters & Exteriors">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">home</a>
+        <a href="about.html">about us</a>
+        <a href="services.html">services</a>
+        <a href="service-area.html">areas we serve</a>
+        <a class="active" href="resources.html" aria-current="page">resources</a>
+        <a href="reviews.html">reviews</a>
+        <a href="faqs.html">faqs</a>
+        <a href="work.html">gallery</a>
+        <a href="contact.html">contact</a>
+      </nav>
+
+      <a class="phone-btn" href="tel:+15178858953">
+        (517) 885-8953
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="mainNav"
+        aria-expanded="false">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="resources-hero">
+      <div class="hero-background" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+
+          <span class="eyebrow">
+            HELPFUL ADVICE FOR HOMEOWNERS
+          </span>
+
+          <h1>
+            A Little Knowledge<br>
+            <span>Goes a Long Way.</span>
+          </h1>
+
+          <p>
+            From keeping your gutters flowing to spotting
+            potential drainage problems, we're here to help
+            you better understand and care for your home.
+          </p>
+
+          <div class="hero-trust">
+            <span>Practical Homeowner Tips</span>
+            <span>Mid-Michigan Weather</span>
+            <span>Advice From a Local Crew</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro-section">
+      <div class="container intro-layout">
+
+        <div class="intro-copy">
+          <span class="eyebrow">THE JUST THE GUY RESOURCE CENTER</span>
+
+          <h2>
+            Good Information.<br>
+            <span>Better Decisions.</span>
+          </h2>
+
+          <p>
+            We know most homeowners don't spend their
+            free time thinking about gutters, downspouts,
+            drainage, or exterior maintenance.
+            That's our kind of thing.
+          </p>
+
+          <p>
+            But understanding a few basics can help you
+            recognize problems early, know what questions
+            to ask, and make informed decisions about
+            your home.
+          </p>
+
+          <p>
+            We've put together some straightforward
+            resources to help homeowners throughout
+            Mid-Michigan.
+          </p>
+        </div>
+
+        <div class="intro-image">
+          <img
+            src="images/IMG_4707.JPEG"
+            alt="Exterior work by Just The Guy Gutters & Exteriors"
+            loading="lazy">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESOURCE LIBRARY -->
+    <section class="library-section" id="library">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">BROWSE OUR RESOURCES</span>
+
+          <h2>Helpful Homeowner Guides.</h2>
+
+          <p>
+            Explore common questions, maintenance tips,
+            and useful information about protecting
+            your home's exterior.
+          </p>
+        </div>
+
+        <div class="resource-tools">
+
+          <div class="filter-buttons" aria-label="Filter resources">
+            <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">
+              All Resources
+            </button>
+            <button class="filter-btn" type="button" data-filter="gutters" aria-pressed="false">
+              Gutters
+            </button>
+            <button class="filter-btn" type="button" data-filter="maintenance" aria-pressed="false">
+              Maintenance
+            </button>
+            <button class="filter-btn" type="button" data-filter="drainage" aria-pressed="false">
+              Drainage
+            </button>
+          </div>
+
+          <input
+            type="search"
+            class="search-box"
+            id="resourceSearch"
+            placeholder="Search resources..."
+            aria-label="Search resources">
+
+        </div>
+
+        <div class="resource-grid" id="resourceGrid">
+
+          <!-- CARD 1 -->
+          <article class="resource-card" data-category="gutters maintenance">
+            <div class="resource-image">
+              <img src="images/IMG_7603.JPEG" alt="Residential gutter installation" loading="lazy">
+            </div>
+
+            <div class="resource-content">
+              <span class="resource-category">Gutter Maintenance</span>
+
+              <h3>How Often Should You Clean Your Gutters?</h3>
+
+              <p>
+                Learn what affects your gutter cleaning
+                schedule and which warning signs
+                shouldn't be ignored.
+              </p>
+
+              <a href="#cleaning-guide" class="resource-link">
+                Read the Guide →
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="resource-card" data-category="gutters maintenance">
+            <div class="resource-image">
+              <img src="images/Guards.PNG" alt="Gutter guard material" loading="lazy">
+            </div>
+
+            <div class="resource-content">
+              <span class="resource-category">Gutter Guards</span>
+
+              <h3>Are Gutter Guards Worth It?</h3>
+
+              <p>
+                A closer look at what gutter guards
+                can help with and what they
+                don't completely eliminate.
+              </p>
+
+              <a href="#guards-guide" class="resource-link">
+                Read the Guide →
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="resource-card" data-category="drainage gutters">
+            <div class="resource-image">
+              <img src="images/IMG_4443.JPEG" alt="Completed exterior gutter work" loading="lazy">
+            </div>
+
+            <div class="resource-content">
+              <span class="resource-category">Drainage</span>
+
+              <h3>Where Should Your Downspouts Drain?</h3>
+
+              <p>
+                Learn why moving water away from
+                your foundation is an important
+                part of a gutter system.
+              </p>
+
+              <a href="#drainage-guide" class="resource-link">
+                Read the Guide →
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 4 -->
+          <article class="resource-card" data-category="gutters maintenance">
+            <div class="resource-image">
+              <img src="images/IMG_4754.JPEG" alt="Home exterior and gutter system" loading="lazy">
+            </div>
+
+            <div class="resource-content">
+              <span class="resource-category">Gutter Problems</span>
+
+              <h3>Signs Your Gutters Need Attention</h3>
+
+              <p>
+                Overflowing water, sagging sections,
+                leaks, and other common signs
+                something may be wrong.
+              </p>
+
+              <a href="#warning-guide" class="resource-link">
+                Read the Guide →
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 5 -->
+          <article class="resource-card" data-category="maintenance drainage">
+            <div class="resource-image">
+              <img src="images/IMG_8146.JPEG" alt="Residential exterior project" loading="lazy">
+            </div>
+
+            <div class="resource-content">
+              <span class="resource-category">Seasonal Care</span>
+
+              <h3>Preparing Your Gutters for Michigan Weather</h3>
+
+              <p>
+                Seasonal maintenance ideas for
+                spring storms, falling leaves,
+                freezing temperatures, and snow.
+              </p>
+
+              <a href="#seasonal-tips" class="resource-link">
+                View Seasonal Tips →
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 6 -->
+          <article class="resource-card" data-category="gutters">
+            <div class="resource-image">
+              <img src="images/IMG_1945.JPEG" alt="Seamless gutter installation on a home" loading="lazy">
+            </div>
+
+            <div class="resource-content">
+              <span class="resource-category">Seamless Gutters</span>
+
+              <h3>What Makes Seamless Gutters Different?</h3>
+
+              <p>
+                Understand the benefits of
+                custom-formed seamless gutters
+                and how they compare to sectional systems.
+              </p>
+
+              <a href="#seamless-guide" class="resource-link">
+                Read the Guide →
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="no-results" id="noResults" aria-live="polite">
+          No resources match your search. Try a different keyword or category.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FULL GUIDES -->
+    <section class="guides-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">LEARN THE BASICS</span>
+
+          <h2>Let's Talk Gutters.</h2>
+
+          <p>
+            Straightforward answers to some of the
+            questions homeowners ask most often.
+          </p>
+        </div>
+
+        <!-- CLEANING -->
+        <article class="guide-block" id="cleaning-guide">
+
+          <div class="guide-photo">
+            <img
+              src="images/IMG_7603.JPEG"
+              alt="Gutters on a residential property"
+              loading="lazy">
+          </div>
+
+          <div class="guide-copy">
+            <span class="eyebrow">GUTTER MAINTENANCE</span>
+
+            <h2>How Often Should You Clean Your Gutters?</h2>
+
+            <p>
+              For many homes, checking and cleaning
+              gutters at least twice a year is a
+              reasonable starting point—often in
+              the spring and fall.
+            </p>
+
+            <p>
+              Homes surrounded by trees may need
+              attention more often, especially
+              during heavy leaf and seed drop.
+            </p>
+
+            <ul>
+              <li>Watch for water spilling over gutter edges.</li>
+              <li>Look for plants or debris growing inside gutters.</li>
+              <li>Check for staining or water collecting near your foundation.</li>
+              <li>Pay attention to downspouts that aren't draining properly.</li>
+            </ul>
+
+            <div class="guide-note">
+              <strong>Our tip:</strong> Avoid climbing onto your roof
+              or using an unstable ladder to inspect gutters.
+              Professional cleaning is the safer choice
+              when access is difficult.
+            </div>
+          </div>
+
+        </article>
+
+        <!-- GUARDS -->
+        <article class="guide-block reverse" id="guards-guide">
+
+          <div class="guide-copy">
+            <span class="eyebrow">GUTTER PROTECTION</span>
+
+            <h2>Are Gutter Guards Worth It?</h2>
+
+            <p>
+              Gutter guards can help reduce the amount
+              of leaves and larger debris entering
+              your gutters, which may make routine
+              maintenance easier.
+            </p>
+
+            <p>
+              However, no gutter guard completely
+              eliminates maintenance. Small debris
+              can still accumulate, and guards may
+              occasionally need to be inspected
+              or cleaned.
+            </p>
+
+            <ul>
+              <li>They can help reduce larger debris buildup.</li>
+              <li>Different styles work better in different conditions.</li>
+              <li>They should be installed with proper water flow in mind.</li>
+              <li>Periodic inspections are still important.</li>
+            </ul>
+
+            <div class="guide-note">
+              <strong>Our tip:</strong> The right guard depends
+              on your roof, surrounding trees,
+              and the type of debris your home receives.
+            </div>
+          </div>
+
+          <div class="guide-photo">
+            <img
+              src="images/Guards.PNG"
+              alt="Gutter guards used for debris protection"
+              loading="lazy">
+          </div>
+
+        </article>
+
+        <!-- DRAINAGE -->
+        <article class="guide-block" id="drainage-guide">
+
+          <div class="guide-photo">
+            <img
+              src="images/IMG_4443.JPEG"
+              alt="Gutter and downspout project"
+              loading="lazy">
+          </div>
+
+          <div class="guide-copy">
+            <span class="eyebrow">WATER MANAGEMENT</span>
+
+            <h2>Where Should Your Downspouts Drain?</h2>
+
+            <p>
+              Gutters collect water from your roof,
+              but downspouts determine where
+              that water ends up.
+            </p>
+
+            <p>
+              Ideally, water should be directed
+              away from the foundation to a
+              suitable drainage location.
+              The right solution depends on
+              your property's slope, soil,
+              landscaping, and drainage setup.
+            </p>
+
+            <ul>
+              <li>Watch for pooling near the foundation.</li>
+              <li>Make sure discharge points aren't blocked.</li>
+              <li>Check that extensions remain connected and positioned correctly.</li>
+              <li>Keep drainage directed away from neighboring properties.</li>
+            </ul>
+
+            <div class="guide-note">
+              <strong>Our tip:</strong> If water repeatedly collects
+              around your foundation, the gutter
+              system and property drainage should
+              both be evaluated.
+            </div>
+          </div>
+
+        </article>
+
+        <!-- WARNING SIGNS -->
+        <article class="guide-block reverse" id="warning-guide">
+
+          <div class="guide-copy">
+            <span class="eyebrow">WHEN TO CALL FOR HELP</span>
+
+            <h2>Signs Your Gutters Need Attention.</h2>
+
+            <p>
+              You don't have to wait until a
+              gutter falls off the house to
+              recognize that something isn't right.
+            </p>
+
+            <p>
+              Many gutter problems start small
+              and become more noticeable
+              during heavy rain.
+            </p>
+
+            <ul>
+              <li>Water overflowing from the gutters.</li>
+              <li>Sections pulling away from the fascia.</li>
+              <li>Visible leaks at corners or joints.</li>
+              <li>Standing water that doesn't drain after rainfall.</li>
+              <li>Downspouts that are loose, crushed, or disconnected.</li>
+            </ul>
+
+            <div class="guide-note">
+              <strong>Our tip:</strong> Some problems can be
+              corrected with cleaning, resealing,
+              or adjustments rather than replacing
+              the entire system.
+            </div>
+          </div>
+
+          <div class="guide-photo">
+            <img
+              src="images/IMG_4754.JPEG"
+              alt="Residential gutter system"
+              loading="lazy">
+          </div>
+
+        </article>
+
+        <!-- SEAMLESS -->
+        <article class="guide-block" id="seamless-guide">
+
+          <div class="guide-photo">
+            <img
+              src="images/IMG_1945.JPEG"
+              alt="Seamless gutters installed on a home"
+              loading="lazy">
+          </div>
+
+          <div class="guide-copy">
+            <span class="eyebrow">SEAMLESS GUTTERS</span>
+
+            <h2>What Makes Seamless Gutters Different?</h2>
+
+            <p>
+              Seamless gutters are formed to fit
+              the measurements of your home,
+              reducing the number of seams
+              along straight gutter runs.
+            </p>
+
+            <p>
+              Fewer seams can mean fewer
+              potential leak points compared
+              with sectional gutter systems.
+              Corners, end caps, and outlets
+              still require proper installation
+              and maintenance.
+            </p>
+
+            <ul>
+              <li>Custom-formed for the building.</li>
+              <li>Clean, continuous appearance.</li>
+              <li>Fewer joints along straight runs.</li>
+              <li>Available in different sizes and colors.</li>
+            </ul>
+
+            <a href="gutters.html" class="btn">
+              Explore Our Gutter Services →
+            </a>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SEASONAL TIPS -->
+    <section class="seasonal-section" id="seasonal-tips">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">YEAR-ROUND HOME CARE</span>
+
+          <h2>Michigan Weather Doesn't Take a Break.</h2>
+
+          <p>
+            Every season brings different challenges.
+            Here are a few things to keep in mind
+            throughout the year.
+          </p>
+        </div>
+
+        <div class="season-grid">
+
+          <div class="season-card">
+            <span class="season-label">Spring</span>
+            <h3>After the Thaw.</h3>
+            <p>
+              Look for winter damage, loose gutters,
+              blocked downspouts, and drainage
+              problems as snow melts and
+              spring rain arrives.
+            </p>
+          </div>
+
+          <div class="season-card">
+            <span class="season-label">Summer</span>
+            <h3>Storm Season.</h3>
+            <p>
+              Check for storm debris and watch
+              how your gutters handle heavy rain.
+              Overflowing water may point
+              to a blockage or drainage issue.
+            </p>
+          </div>
+
+          <div class="season-card">
+            <span class="season-label">Fall</span>
+            <h3>Leaf Season.</h3>
+            <p>
+              Falling leaves and debris can quickly
+              fill gutters. Clearing them before
+              freezing temperatures arrive
+              can help reduce winter problems.
+            </p>
+          </div>
+
+          <div class="season-card">
+            <span class="season-label">Winter</span>
+            <h3>Freezing Weather.</h3>
+            <p>
+              Watch for unusual ice buildup
+              and drainage problems.
+              Ice dams can involve insulation,
+              ventilation, snow, and roof conditions,
+              not just the gutters.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">COMMON QUESTIONS</span>
+
+          <h2>Questions? We've Got Answers.</h2>
+
+          <p>
+            A few quick answers to help you
+            understand your gutter system.
+          </p>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>Can overflowing gutters damage my home?</summary>
+            <div class="faq-answer">
+              <p>
+                Yes. Repeated overflow can contribute
+                to problems with fascia, siding,
+                landscaping, and drainage near the
+                foundation. The cause should be
+                identified and corrected.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do gutter guards mean I never have to clean my gutters?</summary>
+            <div class="faq-answer">
+              <p>
+                No. Gutter guards can reduce debris
+                entering the system, but periodic
+                inspection and maintenance are
+                still recommended.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can a leaking gutter be repaired instead of replaced?</summary>
+            <div class="faq-answer">
+              <p>
+                Often, yes. Some leaks can be addressed
+                with cleaning, resealing, or adjustments.
+                Severe damage or deterioration may
+                require replacement.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I know if I need larger gutters?</summary>
+            <div class="faq-answer">
+              <p>
+                Gutter sizing depends on factors
+                such as roof area, pitch, rainfall,
+                and downspout capacity. An evaluation
+                can help determine whether your
+                current system is appropriately sized.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you only work in Durand?</summary>
+            <div class="faq-answer">
+              <p>
+                No. We're based in Durand but serve
+                communities throughout Mid-Michigan.
+                Availability can vary depending
+                on your location and project.
+              </p>
+            </div>
+          </details>
+
+        </div>
+
+        <div class="faq-more">
+          <a href="faqs.html" class="btn">
+            View More FAQs →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="final-cta-inner">
+
+        <span class="eyebrow">NEED MORE THAN ADVICE?</span>
+
+        <h2>
+          When You're Ready,<br>
+          <span>You Need Just The Guy.</span>
+        </h2>
+
+        <p>
+          Whether you're dealing with a gutter
+          problem or planning an improvement,
+          we're happy to talk through your
+          project and help you get started.
+        </p>
+
+        <div class="cta-actions">
+          <a href="index.html#contact" class="btn">
+            Get Your Free Estimate →
+          </a>
+
+          <a href="tel:+15178858953" class="btn btn-outline">
+            Call (517) 885-8953
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <img
+            class="footer-logo"
+            src="images/LOGO.PNG"
+            alt="Just The Guy Gutters & Exteriors">
+
+          <p>
+            A family-owned Mid-Michigan exterior company,
+            specializing in seamless gutters and helping
+            homeowners care for their properties.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Our Services</a>
+          <a href="work.html">Gallery</a>
+          <a href="reviews.html">Reviews</a>
+        </div>
+
+        <div>
+          <h3>Services</h3>
+          <a href="gutters.html">Gutters</a>
+          <a href="siding.html">Siding</a>
+          <a href="roofing.html">Roofing</a>
+          <a href="service-area.html">Areas We Serve</a>
+          <a href="faqs.html">FAQs</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>Durand, Michigan</p>
+          <a href="tel:+15178858953">(517) 885-8953</a>
+          <a href="mailto:justtheguyguttersandexterior@gmail.com">
+            Email Us
+          </a>
+          <a href="contact.html">Contact Us</a>
+          <a href="index.html#contact">Request an Estimate</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year">2026</span>
+        Just The Guy Gutters & Exteriors.
+        All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
+
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // RESOURCE FILTERING AND SEARCH
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const resourceCards = document.querySelectorAll(".resource-card");
+    const resourceSearch = document.getElementById("resourceSearch");
+    const noResults = document.getElementById("noResults");
+
+    let activeFilter = "all";
+
+    function filterResources() {
+      const query = resourceSearch.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      resourceCards.forEach(card => {
+        const categories = card.dataset.category.split(" ");
+        const cardText = card.textContent.toLowerCase();
+
+        const matchesCategory =
+          activeFilter === "all" ||
+          categories.includes(activeFilter);
+
+        const matchesSearch =
+          query === "" ||
+          cardText.includes(query);
+
+        const visible = matchesCategory && matchesSearch;
+
+        card.hidden = !visible;
+        card.style.display = visible ? "" : "none";
+
+        if (visible) visibleCount++;
+      });
+
+      noResults.style.display =
+        visibleCount === 0 ? "block" : "none";
+    }
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+
+        filterButtons.forEach(btn => {
+          const isActive = btn === button;
+          btn.classList.toggle("active", isActive);
+          btn.setAttribute("aria-pressed", String(isActive));
+        });
+
+        filterResources();
+      });
+    });
+
+    resourceSearch.addEventListener("input", filterResources);
+
+    // COPYRIGHT YEAR
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
